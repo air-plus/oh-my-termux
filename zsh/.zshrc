@@ -16,20 +16,17 @@ zinit lucid light-mode for \
   OMZL::completion.zsh \
   OMZL::key-bindings.zsh
 
-zinit ice wait lucid blockf atload"zpcompinit; zpcdreplay"
+zinit ice wait"0" lucid blockf atload"zpcompinit; zpcdreplay"
 zinit light zsh-users/zsh-completions
 
-zinit ice wait lucid
+zinit ice wait"0" lucid
 zinit light Aloxaf/fzf-tab
 
-zinit ice wait lucid atload"_zsh_autosuggest_start"
+zinit ice wait"0" lucid atload"_zsh_autosuggest_start"
 zinit light zsh-users/zsh-autosuggestions
 
-zinit ice wait lucid atinit"ZINIT[COMPINIT_OPTS]=-C"
+zinit ice wait"0" lucid atinit"ZINIT[COMPINIT_OPTS]=-C"
 zinit light zdharma-continuum/fast-syntax-highlighting
-
-zinit ice lucid depth=1
-zinit light romkatv/powerlevel10k
 
 source <(fzf --zsh)
 eval "$(zoxide init --cmd cd zsh)"
@@ -37,3 +34,10 @@ eval "$(zoxide init --cmd cd zsh)"
 for file in "$HOME"/.config/zsh/{envs,aliases,funcs}.sh; do
   [[ -f "$file" ]] && source "$file"
 done
+
+eval "$(starship init zsh)"
+fastfetch -l nixos -c examples/10
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
