@@ -1,7 +1,11 @@
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-[ ! -d "$ZINIT_HOME" ] && mkdir -p "$(dirname "$ZINIT_HOME")"
-[ ! -d "$ZINIT_HOME/.git" ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-source "${ZINIT_HOME}/zinit.zsh"
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+  print -P "%F{33}▓%F{34}▓%F{35}▓%F{37} Installing Zinit Plugin Manager...%f"
+  command mkdir -p "$HOME/.local/share/zinit"
+  command chmod g-rwX "$HOME/.local/share/zinit"
+  git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" --depth=1 && \
+    print -P "%F{34}Installation successful!%f" || \
+    print -P "%F{196}The clone has failed.%f"
+fi
 
 zinit lucid light-mode for \
   zdharma-continuum/zinit-annex-as-monitor \
