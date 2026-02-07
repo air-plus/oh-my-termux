@@ -37,7 +37,3 @@ done
 
 eval "$(starship init zsh)"
 fastfetch -l nixos -c examples/10
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
