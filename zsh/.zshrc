@@ -31,7 +31,7 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
-for file in "$HOME"/.config/zsh/{envs,aliases,funcs}.sh; do
+for file in "$HOME"/.config/zsh/{env,aliases,functions}.sh; do
   [[ -f "$file" ]] && source "$file"
 done
 
