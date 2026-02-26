@@ -1,3 +1,5 @@
+[include]
+  path = ~/.config/delta/catppuccin.gitconfig
 [user]
 	name = air-plus
 	email = jyin1221@gmail.com
@@ -6,6 +8,7 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
+  features = catppuccin-mocha
   navigate = true
   side-by-side = true
 [merge]
