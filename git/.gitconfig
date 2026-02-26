@@ -1,3 +1,11 @@
 [user]
 	name = air-plus
 	email = jyin1221@gmail.com
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+[merge]
+	conflictStyle = zdiff3
