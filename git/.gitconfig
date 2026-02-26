@@ -1,5 +1,5 @@
 [include]
-  path = ~/.config/delta/catppuccin.gitconfig
+  path = ~/.config/delta/themes/catppuccin.gitconfig
 [user]
 	name = air-plus
 	email = jyin1221@gmail.com
