@@ -1,6 +1,8 @@
-gui:
-  paging:
+git:
+  pagers:
     - pager: delta --dark --paging=never
+
+gui:
   theme:
     activeBorderColor:
       - '#cba6f7'
