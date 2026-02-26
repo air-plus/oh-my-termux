@@ -1,4 +1,7 @@
 gui:
+  paging:
+    colorArg: always
+    pager: delta --paging=never
   theme:
     activeBorderColor:
       - '#cba6f7'
