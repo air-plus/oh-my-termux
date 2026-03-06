@@ -3,6 +3,7 @@ theme = "catppuccin_mocha"
 [editor]
 mouse = true
 cursorline = true
+cursorcolumn = true
 color-modes = true
 bufferline = "multiple"
 line-number = "relative"
