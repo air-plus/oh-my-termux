@@ -6,6 +6,10 @@ mouse = true
 cursorline = true
 cursorcolumn = true
 bufferline = "multiple"
+true-color = true
+color-modes = true
+completion-replace = true
+end-of-line-diagnostics = "hint"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -15,7 +19,14 @@ select = "underline"
 [editor.statusline]
 left = ["mode", "spinner"]
 center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = [
+  "diagnostics",
+  "selections",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+]
 separator = "|"
 mode.normal = "😄"
 mode.insert = "🤔"
@@ -23,7 +34,17 @@ mode.select = "😠"
 
 [editor.lsp]
 display-messages = true
+display-progress-messages = true
 display-inlay-hints = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "warning"
 
 [editor.file-picker]
 hidden = false
+
+[keys.normal]
+C-s = ":write"
+Cmd-s = ":write"
+A-q = ":write-buffer-close"
