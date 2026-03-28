@@ -4,4 +4,5 @@ pkg install -y termux-api fish git-delta fastfetch starship eza zoxide bat fd ri
 stow -t $HOME */ --adopt
 bat cache --build
 mkdir -p $HOME/projects && touch $HOME/.hushlogin
+cp $HOME/storage/downloads/back.jpg $HOME/.img/
 chsh -s fish
