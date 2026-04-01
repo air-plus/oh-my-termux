@@ -10,26 +10,7 @@
 ## ✨ 特性
 * **🐚 体验优化**: `fish` + `fisher` 和一些别名及有用的插件
 * **🎨 界面美化**: **Fira Code** + **Catppuccin Mocha**
-* **🛠 常用工具**:
-| 工具 | 替代对象/说明 |
-| :--- | :--- |
-| **`fish`** | 替代 `bash` 的交互式模式 |
-| **`bat`** | `cat` |
-| **`eza`** | `ls` |
-| **`fd`** | `find` |
-| **`ripgrep(rg)`** | `grep` |
-| **`htop`** | `top` |
-| **`git-delta(delta)`** | `git diff` |
-| **`zoxide(z)`** | `cd` |
-| **`helix(hx)`** | `nano` |
-| **`fastfetch`** | 信息展示 |
-| **`starship`** | Shell 提示符引擎 |
-| **`fzf`** | 模糊查找工具 |
-| **`jq`** | JSON 处理 |
-| **`yazi`** | 文件管理器 |
-| **`stow`** | 配置文件管理 |
-| **`git & lazygit`** | 版本控制工具 |
-| **`zellij`** | 终端复用器 |
+* **🛠 常用工具**: `bat`, `fd`, `rg`等很有用的工具!
 
 ## 🚀 快速开始
 ### 1. **环境准备**:
@@ -52,4 +33,4 @@ chmod +x setup.sh
 * `termux-setup-storage` 命令会弹出一个授权提示框, 请务必点击"允许"或类似选项!
 * `termux-change-repo` 命令会交互式的切换源, 需要手动操作!
 * 如果在 `pkg upgrade` 的过程中遇到交互式确认的步骤时直接回车即可
-* 完成后, 重启 Termux 即可看到效果
+* 完成后, 重启 Termux 即可看到效果(你可能需要双指捏合屏幕缩小)
