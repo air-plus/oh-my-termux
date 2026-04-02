@@ -33,15 +33,7 @@
 termux-setup-storage
 termux-change-repo
 pkg upgrade -y
-pkg install -y git
-```
-
-### 2. **克隆并应用配置**:
-```bash
-git clone https://github.com/air-plus/dotfiles.git
-cd dotfiles
-chmod +x setup.sh
-./setup.sh
+curl -fsSL --proto '=https' --tlsv1.2 https://raw.githubusercontent.com/air-plus/dotfiles/main/setup.sh | bash
 ```
 
 ## ⚠️ 注意事项
