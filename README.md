@@ -19,10 +19,10 @@
 * **🛠 常用工具**: `bat`, `fd`, `rg` 等很有用的工具!
 
 ## 📸 预览
-| 终端 | 美观的 `ls` 输出 |
+| 终端 | 美观的 `bat` 输出 |
 | :---: | :---: |
 | <img alt="image" src=".assets/screenshot-1.png" width="80%" /> | <img alt="image" src=".assets/screenshot-2.png" width="80%" /> |
-| `bat` 输出 | 工作流 |
+| 美观的 `la` (一个自定义的 `eza` 别名) 输出 | 工作流 |
 | <img alt="image" src=".assets/screenshot-3.png" width="80%" /> | <img alt="image" src=".assets/screenshot-4.png" width="80%" /> |
 > [!IMPORTANT]
 > 之所以能显示图片是因为使用了基于 Termux 和 ZeroTermux 的 Termux-X
