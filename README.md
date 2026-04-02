@@ -28,7 +28,7 @@
 > 之所以能显示图片是因为使用了基于 Termux 和 ZeroTermux 的 Termux-X
 
 ## 🚀 快速开始
-### 1. **环境准备**:
+在你的 Termux 执行下面这些命令 👇
 ```bash
 termux-setup-storage
 termux-change-repo
