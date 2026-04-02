@@ -21,9 +21,11 @@
 ## 📸 预览
 | 终端 | 美观的 `ls` 输出 |
 | :---: | :---: |
-| <img alt="image" src=".assets/screenshot-1.png" width="45%" /> | <img alt="image" src=".assets/screenshot-2.png" width="45%" /> |
+| <img alt="image" src=".assets/screenshot-1.png" width="80%" /> | <img alt="image" src=".assets/screenshot-2.png" width="80%" /> |
 | `bat` 输出 | 工作流 |
-| <img alt="image" src=".assets/screenshot-3.png" width="45%" /> | <img alt="image" src=".assets/screenshot-4.png" width="45%" /> |
+| <img alt="image" src=".assets/screenshot-3.png" width="80%" /> | <img alt="image" src=".assets/screenshot-4.png" width="80%" /> |
+> [!IMPORTNAT]
+> 之所以能显示图片是因为使用了基于 Termux 和 ZeroTermux 的 Termux-X
 
 ## 🚀 快速开始
 ### 1. **环境准备**:
