@@ -42,6 +42,7 @@
 > chmod +x setup.sh
 > ./setup.sh
 > ```
+
 </details>
 
 <details>
@@ -52,6 +53,7 @@
 > pkg update && pkg upgrade
 > fisher update
 > ```
+
 </details>
 
 <details>
@@ -63,6 +65,7 @@
 > git pull
 > stow -t ~ */
 > ```
+
 </details>
 
 ## ⚠️ 注意事项
