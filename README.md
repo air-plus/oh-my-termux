@@ -31,38 +31,38 @@
 <details>
   <summary>安装</summary>
 
-在你的 Termux 执行下面这些命令 👇
-```bash
-termux-setup-storage
-termux-change-repo
-pkg upgrade -y
-pkg install -y git
-git clone https://github.com/air-plus/dotfiles.git
-cd dotfiles
-chmod +x setup.sh
-./setup.sh
-```
+> 在你的 Termux 执行下面这些命令 👇
+> ```bash
+> termux-setup-storage
+> termux-change-repo
+> pkg upgrade -y
+> pkg install -y git
+> git clone https://github.com/air-plus/dotfiles.git
+> cd dotfiles
+> chmod +x setup.sh
+> ./setup.sh
+> ```
 </details>
 
 <details>
   <summary>更新</summary>
 
-在你的 Termux 执行下面这些命令 👇
-```bash
-pkg update && pkg upgrade
-fisher update
-```
+> 在你的 Termux 执行下面这些命令 👇
+> ```bash
+> pkg update && pkg upgrade
+> fisher update
+> ```
 </details>
 
 <details>
   <summary>更新 (仓库级)</summary>
 
-在你的 Termux 执行下面这些命令 👇
-```bash
-cd dotfiles
-git pull
-stow -t ~ */
-```
+> 在你的 Termux 执行下面这些命令 👇
+> ```bash
+> cd dotfiles
+> git pull
+> stow -t ~ */
+> ```
 </details>
 
 ## ⚠️ 注意事项
