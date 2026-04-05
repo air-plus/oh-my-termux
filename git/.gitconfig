@@ -5,7 +5,6 @@
 	email = jyin1221@gmail.com
 [core]
 	pager = delta
-	editor = hx
 [interactive]
 	diffFilter = delta --color-only
 [delta]
