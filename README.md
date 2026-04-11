@@ -44,18 +44,7 @@
 > pkg update && pkg upgrade
 > fisher update
 > ```
-
-</details>
-
-<details>
-  <summary>更新 (仓库级)</summary>
-
-> 在你的 Termux 执行下面这些命令 👇
-> ```bash
-> cd dotfiles
-> git pull
-> stow -t ~ */
-> ```
+> 然后输入 `nvim` , 输入 `:Lazy sync` 和 `:MasonUpdate`
 
 </details>
 
