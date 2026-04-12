@@ -23,7 +23,6 @@
 
 > 在你的 Termux 执行下面这些命令 👇
 > ```bash
-> termux-setup-storage
 > termux-change-repo
 > pkg upgrade -y
 > pkg install -y git
@@ -50,5 +49,5 @@
 ## ⚠️ 注意事项
 * `termux-setup-storage` 命令会弹出一个授权提示框, 请务必点击"允许"或类似选项!
 * `termux-change-repo` 命令会交互式的切换源, 需要手动操作!
-* 如果在 `pkg upgrade -y` 的过程中遇到交互式确认的步骤时直接回车即可
+* 如果在 `pkg upgrade -y` 的过程中遇到交互式确认时直接回车即可
 * 完成后, 重启 Termux 即可看到效果(你可能需要双指捏合屏幕缩小)
