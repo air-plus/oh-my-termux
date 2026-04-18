@@ -1,8 +1,8 @@
 <h1 align="center">✨「Oh My Termux」！✨</h1>
 
 <p align="center">
-  <a href="https://github.com/air-plus/dotfiles/stargazers"><img src="https://img.shields.io/github/stars/air-plus/dotfiles?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-  <a href="https://github.com/air-plus/dotfiles/issues"><img src="https://img.shields.io/github/issues/air-plus/dotfiles?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
+  <a href="https://github.com/air-plus/dotfiles/stargazers"><img src="https://img.shields.io/github/stars/air-plus/dotfiles?colorA=363a4f&colorB=b7bdf8&style=for-the-badge" /></a>
+  <a href="https://github.com/air-plus/dotfiles/issues"><img src="https://img.shields.io/github/issues/air-plus/dotfiles?colorA=363a4f&colorB=f5a97f&style=for-the-badge" /></a>
 </p>
 
 这是一个专为 **Termux** 环境打造的配置文件仓库，旨在实现移动端终端的“开箱即用”，提升效率并告别丑陋的默认界面
@@ -52,4 +52,7 @@
 * 如果在 `pkg upgrade -y` 的过程中遇到交互式确认时直接回车即可
 * 完成后，重启 Termux 即可看到效果（你可能需要双指捏合屏幕缩小）
 
----
+<p align="center">
+  Copyright &copy; 2026-present <a href="https://github.com/air-plus" target="_blank">air-plus</a>
+  <a href="https://github.com/air-plus/oh-my-termux/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8" /></a>
+</p>
