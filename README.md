@@ -51,7 +51,7 @@ fisher update
 * `termux-change-repo` 命令会交互式的切换源，需要手动操作
 * 如果在 `pkg upgrade` 的过程中遇到交互式确认时直接回车即可
 
-## 🙋‍♀️ FAQ
+## ❓ FAQ
 ### Q：我连不上 GitHub 啊
 A：用 VPN 或换个好点的节点
 
