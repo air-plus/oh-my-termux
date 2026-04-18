@@ -1,9 +1,9 @@
 <h1 align="center">✨「Oh My Termux」！✨</h1>
 
 <p align="center">
-  <a href="https://github.com/air-plus/dotfiles/stargazers"><img src="https://img.shields.io/github/stars/air-plus/dotfiles?colorA=363a4f&colorB=b7bdf8&style=for-the-badge" /></a>
-  <a href="https://github.com/air-plus/dotfiles/issues"><img src="https://img.shields.io/github/issues/air-plus/dotfiles?colorA=363a4f&colorB=f5a97f&style=for-the-badge" /></a>
-  <a href="https://github.com/catppuccin/nvim/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/nvim?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+  <a href="https://github.com/air-plus/oh-my-termux/stargazers"><img src="https://img.shields.io/github/stars/air-plus/oh-my-termux?colorA=363a4f&colorB=b7bdf8&style=for-the-badge" /></a>
+  <a href="https://github.com/air-plus/oh-my-termux/issues"><img src="https://img.shields.io/github/issues/air-plus/oh-my-termux?colorA=363a4f&colorB=f5a97f&style=for-the-badge" /></a>
+  <a href="https://github.com/air-plus/oh-my-termux/contributors"><img src="https://img.shields.io/github/contributors/air-plus/oh-my-termux?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
 这是一个专为 **Termux** 环境打造的配置文件仓库，旨在实现移动端终端的“开箱即用”，提升效率并告别丑陋的默认界面
