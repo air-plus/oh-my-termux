@@ -10,9 +10,10 @@
 
 这是一个专为 **Termux** 环境打造的配置文件仓库，旨在实现移动端终端的“开箱即用”，提升效率并告别丑陋的默认界面
 
-[特性](#-特性) ·
-[快速开始](#-快速开始) ·
-[注意事项](#-注意事项)
+[特性](#-特性) ・
+[快速开始](#-快速开始) ・
+[注意事项](#-注意事项)・
+[FAQ](#-faq)
 
 </div>
 
@@ -33,6 +34,8 @@ cd oh-my-termux
 chmod +x setup.sh
 ./setup.sh
 ```
+完成后，重启 Termux 即可
+输入 `nvim` 初始化 Neovim
 
 ### 更新
 在你的 Termux 执行下面这些命令 👇
@@ -45,7 +48,19 @@ fisher update
 ## 🚨 注意事项
 * `termux-change-repo` 命令会交互式的切换源，需要手动操作！
 * 如果在 `pkg upgrade` 的过程中遇到交互式确认时直接回车即可
-* 完成后，重启 Termux 即可看到效果（你可能需要双指捏合屏幕缩小）
+
+## 🙋‍♂️ FAQ
+Q：网络连接相关问题
+A：VPN或换个好点的节点
+
+Q：为什么安装 Node.js 和 build-essential？
+A：Neovim 的 LazyVim 可能依赖 Node.js，而 build-essential 是必要依赖
+
+Q：projects 目录是干什么的？
+A：纯个人爱好，如果用不到可以 `rm -r projects`
+
+Q：重启 Termux 后尺寸不对怎么办
+A：双指捏合屏幕缩小视图
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 <p align="center">Copyright &copy; 2026-present <a href="https://github.com/air-plus" target="_blank">air-plus</a></p>
