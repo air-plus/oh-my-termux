@@ -1,5 +1,7 @@
 <div align="center">
 
+![Logo](https://raw.githubusercontent.com/air-plus/oh-my-termux/main/logo.svg)
+
 <h1>✨「Oh My Termux」！✨</h1>
 
 <p>
