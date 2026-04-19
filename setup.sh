@@ -3,6 +3,7 @@ set -e
 
 if [ -n "$TERMUX_VERSION" ]; then
   pkg install -y termux-api git fish git-delta fastfetch eza zoxide bat fd ripgrep starship fzf jq htop yazi file stow lazygit neovim zellij build-essential nodejs-lts tur-repo
+
   stow -t $HOME */ --adopt
   git config --global --unset user.signingkey || true
   git config --global --unset commit.gpgsign || true
