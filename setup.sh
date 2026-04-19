@@ -1,19 +1,17 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 if [ -n "$TERMUX_VERSION" ]; then
-  pkg install -y termux-api git fish git-delta fastfetch eza zoxide bat fd ripgrep starship fzf jq htop yazi file stow lazygit neovim zellij build-essential nodejs-lts tur-repo
+  pkg install -y tur-repo &>/dev/null || echo '无法添加TUR'
+  pkg install -y termux-api git fish git-delta fastfetch eza zoxide bat fd ripgrep starship fzf jq htop yazi file stow lazygit neovim zellij build-essential nodejs-lts &>/dev/null || echo '无法安装软件包'
+  stow -t "$HOME" */ --adopt &>/dev/null
 
-  stow -t $HOME */ --adopt
-  git config --global --unset user.signingkey || true
-  git config --global --unset commit.gpgsign || true
-
-  bat cache --build
-  mkdir -p $HOME/projects && touch $HOME/.hushlogin
+  bat cache --build &>/dev/null
+  mkdir -p "$HOME/projects" && touch "$HOME/.hushlogin"
 
   if [ -d "$HOME/ZtInfo" ]; then
-    mkdir -p $HOME/.img
-    curl -o $HOME/.img/back.jpg https://imgs.search.brave.com/rb92mgsxpjQCAweuBbUbTjlBQS9VFUMMX6EXsVK0DKc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvMTIy/NTk3NDEuanBn
+    mkdir -p "$HOME/.img"
+    curl -o "$HOME/.img/back.jpg" https://raw.githubusercontent.com/zhichaoh/catppuccin-wallpapers/main/os/android-black-4k.png &>/dev/null || echo '无法获取背景图片'
   fi
 
   chsh -s fish
