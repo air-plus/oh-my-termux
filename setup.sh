@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if [ -n "$TERMUX_VERSION" ]; then
-  pkg install -y tur-repo &>/dev/null || echo '无法添加TUR'
+  pkg install -y tur-repo &>/dev/null || echo '无法添加 TUR'
   pkg install -y termux-api git fish git-delta fastfetch eza zoxide bat fd ripgrep starship fzf jq htop yazi file stow lazygit neovim zellij build-essential nodejs-lts &>/dev/null || echo '无法安装软件包'
   stow -t "$HOME" */ --adopt &>/dev/null
 
@@ -16,5 +16,5 @@ if [ -n "$TERMUX_VERSION" ]; then
 
   chsh -s fish
 else
-  echo '当前环境不是 termux'
+  echo '当前环境不是 Termux'
 fi
