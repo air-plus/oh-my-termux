@@ -1,27 +1,32 @@
-theme = "catppuccin_mocha"
+theme = "catppuccin_mocha" # 设置 Catppuccin Mocha 主题
 
+# 编辑器 - 主体设置
 [editor]
-line-number = "relative"
-mouse = true
-cursorline = true
-cursorcolumn = true
-bufferline = "multiple"
-true-color = true
-color-modes = true
-completion-replace = true
-end-of-line-diagnostics = "hint"
+line-number = "relative"         # 启用相对行号
+mouse = true                     # 启用鼠标支持
+cursorline = true                # 启用行高亮
+cursorcolumn = true              # 启用列高亮
+bufferline = "multiple"          # 启用 Bufferline（只在有 Buffer 时显示）
+indent-guides.render = true      # 显示缩进参考线
+true-color = true                # 启用真彩色支持
+color-modes = true               # 让编辑器模式 Logo 的背景显示颜色
+completion-replace = true        # 自动补全替换光标后的词
+end-of-line-diagnostics = "hint" #显示全部诊断信息
 
+# 编辑器 - 自动保存设置
 [editor.auto-save]
-focus-lost = true
+focus-lost = true # 丢失未保存文件时，强制保存
 
+# 编辑器 - 光标设置
 [editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
+insert = "bar"       # 插入模式呈竖线状
+normal = "block"     # 普通模式光标呈块状
+select = "underline" # 选择模式光标呈下划线
 
+# 编辑器 - 状态栏设置
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-name"]
+left = ["mode", "spinner"] # 左边
+center = ["file-name"]     # 中间
 right = [
   "diagnostics",
   "selections",
@@ -29,25 +34,29 @@ right = [
   "file-encoding",
   "file-line-ending",
   "file-type",
-]
-separator = "|"
-mode.normal = "😄"
-mode.insert = "🤔"
-mode.select = "😠"
+]                          # 右边
+separator = "|"            # 分割线
+mode.normal = "😄"         # 普通模式 Logo
+mode.insert = "🤔"         # 插入模式 Logo
+mode.select = "😠"         # 选择模式 Logo
 
+# 编辑器 - LSP 设置
 [editor.lsp]
-display-messages = true
-display-progress-messages = true
-display-inlay-hints = true
+display-messages = true          # 在底部状态栏显示 LSP 信息
+display-progress-messages = true # 显示 LSP 进度
+display-inlay-hints = true       # 显示内嵌提示
 
+# 编辑器 - 行内诊断显示设置
 [editor.inline-diagnostics]
-cursor-line = "warning"
-other-lines = "warning"
+cursor-line = "warning" # 光标所在行，显示警告及以上级别的诊断信息
+other-lines = "warning" # 其它行，同上
 
+# 编辑器 - 文件选择器设置
 [editor.file-picker]
-hidden = false
+hidden = false # 显示隐藏文件
 
+# 键映射 - 普通模式
 [keys.normal]
-C-s = ":write"
-Cmd-s = ":write"
-A-q = ":write-buffer-close"
+C-s = ":write"              # Ctrl + s：保存文件
+Cmd-s = ":write"            # Cmd + s：保存文件
+A-q = ":write-buffer-close" # Alt + q：保存文件并关闭 Buffer
