@@ -5,6 +5,7 @@
 	email = jyin1221@gmail.com
 [core]
 	pager = delta
+	editor = hx
 [interactive]
 	diffFilter = delta --color-only
 [delta]
@@ -12,3 +13,5 @@
 	navigate = true
 [merge]
 	conflictStyle = zdiff3
+[init]
+	defaultBranch = main
