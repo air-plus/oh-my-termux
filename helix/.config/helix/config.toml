@@ -2,12 +2,11 @@ theme = "catppuccin_mocha" # 设置 Catppuccin Mocha 主题
 
 # 编辑器 - 主体设置
 [editor]
-line-number = "relative"         # 启用相对行号
+line-number = "relative"         # 启用混合行号
 mouse = true                     # 启用鼠标支持
 cursorline = true                # 启用行高亮
 cursorcolumn = true              # 启用列高亮
 bufferline = "multiple"          # 启用 Bufferline（只在有 Buffer 时显示）
-indent-guides.render = true      # 显示缩进参考线
 true-color = true                # 启用真彩色支持
 color-modes = true               # 让编辑器模式 Logo 的背景显示颜色
 completion-replace = true        # 自动补全替换光标后的词
