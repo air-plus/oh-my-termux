@@ -3,13 +3,13 @@
 <h1>✨「Oh My Termux」！✨</h1>
 
 [
-  ![STARS](https://img.shields.io/github/stars/air-plus/oh-my-termux?logo=starship&style=for-the-badge)
+  ![STARS](https://img.shields.io/github/stars/air-plus/oh-my-termux?logo=starship&colorA=363a4f&colorB=b7bdf8&logoColor=cad3f5&style=for-the-badge)
 ](https://github.com/air-plus/oh-my-termux/stargazers)
 [
-  ![ISSUES](https://img.shields.io/github/issues/air-plus/oh-my-termux?logo=gitbook&style=for-the-badge)
+  ![ISSUES](https://img.shields.io/github/issues/air-plus/oh-my-termux?logo=gitbook&colorA=363a4f&colorB=f5a97f&logoColor=cad3f5&style=for-the-badge)
 ](https://github.com/air-plus/oh-my-termux/issues)
 [
-  ![CONTRIBUTORS](https://img.shields.io/github/contributors/air-plus/oh-my-termux?logo=git&style=for-the-badge)
+  ![CONTRIBUTORS](https://img.shields.io/github/contributors/air-plus/oh-my-termux?logo=git&colorA=363a4f&colorB=a6da95&logoColor=cad3f5&style=for-the-badge)
 ](https://github.com/air-plus/oh-my-termux/contributors)
 
 这是一个专为 **Termux** 环境打造的配置文件仓库，旨在实现移动端终端的“开箱即用”，提升效率并告别丑陋的默认界面
