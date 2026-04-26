@@ -55,8 +55,11 @@ fisher update
 * 如果在 `pkg upgrade` 的过程中遇到交互式确认时直接回车即可
 
 ## ❓ FAQ
-### Q：为什么安装 Node.js 和 build-essential？
-A：Neovim 的 LazyVim 可能依赖 Node.js，而 build-essential 是必要依赖
+<details>
+  <summary>为什么安装 Node.js 和 build-essential？</summary>
+> Neovim 的 LazyVim 可能依赖 Node.js，而 build-essential 是必要依赖
+
+</details>
 
 ### Q：projects 目录是干什么的？
 A：纯个人爱好，如果用不到可以 `rm -r projects`
