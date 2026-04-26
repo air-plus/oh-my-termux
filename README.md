@@ -38,7 +38,7 @@ cd oh-my-termux
 chmod +x setup.sh
 ./setup.sh
 ```
-完成后，重启 Termux 再输入 `nvim` 初始化编辑器即可
+完成后，重启 Termux 再输入 `nvim` 初始化编辑器即可（你应该需要双指捏合屏幕缩小视图）
 
 ### 更新
 在你的 Termux 执行下面这些命令 👇
@@ -50,22 +50,28 @@ fisher update
 
 ## 🚨 注意事项
 * 脚本执行时**尽量保持亮屏**且**留在 Termux**
-* 别手痒去删什么乱七八糟的文件，先问问 AI
+* 别去删什么乱七八糟的文件，先问问 AI
 * `termux-change-repo` 命令会交互式的切换源，需要手动操作
 * 如果在 `pkg upgrade` 的过程中遇到交互式确认时直接回车即可
 
 ## ❓ FAQ
 <details>
   <summary>为什么安装 Node.js 和 build-essential？</summary>
+
 > Neovim 的 LazyVim 可能依赖 Node.js，而 build-essential 是必要依赖
 
 </details>
 
-### Q：projects 目录是干什么的？
-A：纯个人爱好，如果用不到可以 `rm -r projects`
+<details>
+  <summary>projects 目录是干什么的？</summary>
 
-### Q：重启 Termux 后尺寸不对怎么办？
-A：双指捏合屏幕缩小/放大视图
+> 纯个人爱好，如果用不到可以 `rm -r projects`
 
-### Q：XXX 工具不好看，可以自定义吗？
-A：当然可以，但你应该看工具的文档
+</details>
+
+<details>
+  <summary>XXX 工具不好看，可以自定义吗？</summary>
+
+> 当然可以，但你应该看工具的文档
+
+</details>
