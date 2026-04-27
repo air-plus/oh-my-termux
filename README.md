@@ -72,6 +72,6 @@ fisher update
 <details>
   <summary>XXX 工具不好看，可以自定义吗？</summary>
 
-> 当然可以，但你应该看工具的文档
+> 当然可以，但你应该找工具的文档
 
 </details>
