@@ -21,7 +21,7 @@ main() {
       mkdir -p "$HOME/.img"
 
       echo '正在获取背景图片'
-      curl -fsSL "$HOME/.img/back.jpg" https://raw.githubusercontent.com/zhichaoh/catppuccin-wallpapers/main/os/android-black-4k.png
+      curl -fsSLo "$HOME/.img/back.jpg" https://raw.githubusercontent.com/zhichaoh/catppuccin-wallpapers/main/os/android-black-4k.png
     fi
 
     echo '正在切换默认 Shell'
