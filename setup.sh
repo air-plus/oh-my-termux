@@ -7,7 +7,12 @@ main() {
     pkg install -y tur-repo
 
     echo '正在安装基本工具包（此过程耗时较长）'
-    pkg install -y termux-api git fish git-delta fastfetch eza zoxide bat fd ripgrep starship fzf jq htop yazi file stow lazygit neovim zellij build-essential nodejs-lts
+    pkg install -y \
+      termux-api git fish git-delta fastfetch \
+      eza zoxide bat fd ripgrep \
+      starship fzf jq htop yazi \
+      duf dust file stow lazygit \
+      neovim zellij build-essential nodejs-lts
 
     echo '正在建立配置文件软链接'
     stow -t "$HOME" */ --adopt
@@ -21,7 +26,8 @@ main() {
       mkdir -p "$HOME/.img"
 
       echo '正在获取背景图片'
-      curl -fsSLo "$HOME/.img/back.jpg" https://raw.githubusercontent.com/zhichaoh/catppuccin-wallpapers/main/os/android-black-4k.png
+      curl -fsSLo "$HOME/.img/back.jpg" \
+        https://raw.githubusercontent.com/zhichaoh/catppuccin-wallpapers/main/os/android-black-4k.png
     fi
 
     echo '正在切换默认 Shell'
