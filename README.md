@@ -22,9 +22,9 @@
 </div>
 
 ## ✨ 特性
-* **🐚 体验优化**：`fish` + `fisher` 和一些有用的插件
+* **🐚 体验优化**：`fish` + `fisher` 和一些插件
 * **🎨 界面美化**：**Maple Mono** + **Catppuccin Mocha**
-* **🛠 常用工具**：`bat`，`fd`，`rg` 等很有用的工具
+* **🛠 常用工具**：`bat`，`fd`，`rg` 等现代化工具
 
 ## 🚀 快速开始
 ### 安装
@@ -46,7 +46,7 @@ chmod +x setup.sh
 pkg update && pkg upgrade
 fisher update
 ```
-随后输入 `nvim`，输入 `Lazy sync` 和 `MasonUpdate`
+随后输入 `nvim`，输入 `:Lazy sync` 和 `:MasonUpdate`
 
 ## 🚨 注意事项
 * 脚本执行时**尽量保持亮屏**且**留在 Termux**
