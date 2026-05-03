@@ -15,7 +15,6 @@ if [[ -t 1 ]]; then
 fi
 
 # --- 函数定义 ---
-
 error() {
   echo -e "${RED}↳ ❌ 错误：${COLOR_OFF}" "$@" >&2
   exit 1
@@ -25,12 +24,13 @@ info() {
   echo -e "${DIM}$@ ${COLOR_OFF}"
 }
 
+# --- 脚本主体 ---
 clear
 
 info '✨ 欢迎使用 Oh My Termux'
 info '↳ ⚡ 一个终极 Termux 配置'
 
-if [ -z "$TERMUX_VERSION" ]; then
+if [ -z "${TERMUX_VERSION:-}" ]; then
   error '当前环境不是 Termux'
 fi
 
@@ -43,8 +43,8 @@ apt install -yqq \
   eza zoxide bat fd ripgrep \
   starship fzf jq htop yazi \
   duf dust file stow lazygit \
-  neovim zellij build-essential nodejs-lts \
-  >/dev/null 2>&1 || error '基本工具包安装失败'
+  neovim zellij build-essential nodejs-lts ||
+  error '基本工具包安装失败'
 
 info '🔗 正在建立配置文件软链接'
 stow -vt "$HOME" */ --adopt || error '配置文件软链接建立失败'
