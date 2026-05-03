@@ -4,13 +4,13 @@ set -euo pipefail
 COLOR_OFF=''
 
 RED=''
-WHITE=''
+DIM=''
 
 if [[ -t 1 ]]; then
   COLOR_OFF='\033[0m'
 
   RED='\033[0;31m'
-  WHITE='\033[0;2m'
+  DIM='\033[0;2m'
 fi
 
 error() {
@@ -19,7 +19,7 @@ error() {
 }
 
 info() {
-  echo -e "${WHITE}$@ ${COLOR_OFF}"
+  echo -e "${DIM}$@ ${COLOR_OFF}"
 }
 
 if [ -z "$TERMUX_VERSION" ]; then
@@ -28,10 +28,10 @@ fi
 
 main() {
   info '正在添加 TUR'
-  apt install -y tur-repo >/dev/null 2>&1 || error 'TUR 添加失败'
+  apt install -yqq tur-repo || error 'TUR 添加失败'
 
   info '正在安装基本工具包（此过程耗时较长）'
-  apt install -y \
+  apt install -yqq \
     termux-api git fish git-delta fastfetch \
     eza zoxide bat fd ripgrep \
     starship fzf jq htop yazi \
@@ -40,7 +40,7 @@ main() {
     >/dev/null 2>&1 || error '基本工具包安装失败'
 
   info '正在建立配置文件软链接'
-  stow -t "$HOME" */ --adopt || error '配置文件软链接建立失败'
+  stow -vt "$HOME" */ --adopt || error '配置文件软链接建立失败'
 
   info '正在构建 Bat 缓存'
   bat cache --build || error 'Bat 缓存构建失败'
