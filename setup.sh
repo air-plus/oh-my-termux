@@ -27,39 +27,35 @@ if [ -z "$TERMUX_VERSION" ]; then
   error '当前环境不是 Termux'
 fi
 
-main() {
-  info '正在添加 TUR'
-  apt install -yqq tur-repo || error 'TUR 添加失败'
+info '正在添加 TUR'
+apt install -yqq tur-repo || error 'TUR 添加失败'
 
-  info '正在安装基本工具包（此过程耗时较长）'
-  apt install -yqq \
-    termux-api git fish git-delta fastfetch \
-    eza zoxide bat fd ripgrep \
-    starship fzf jq htop yazi \
-    duf dust file stow lazygit \
-    neovim zellij build-essential nodejs-lts \
-    >/dev/null 2>&1 || error '基本工具包安装失败'
+info '正在安装基本工具包（此过程耗时较长）'
+apt install -yqq \
+  termux-api git fish git-delta fastfetch \
+  eza zoxide bat fd ripgrep \
+  starship fzf jq htop yazi \
+  duf dust file stow lazygit \
+  neovim zellij build-essential nodejs-lts \
+  >/dev/null 2>&1 || error '基本工具包安装失败'
 
-  info '正在建立配置文件软链接'
-  stow -vt "$HOME" */ --adopt || error '配置文件软链接建立失败'
+info '正在建立配置文件软链接'
+stow -vt "$HOME" */ --adopt || error '配置文件软链接建立失败'
 
-  info '正在构建 Bat 缓存'
-  bat cache --build || error 'Bat 缓存构建失败'
+info '正在构建 Bat 缓存'
+bat cache --build || error 'Bat 缓存构建失败'
 
-  # 检查是否为 ZeroTermux 环境
-  if [ -d "$HOME/ZtInfo" ]; then
-    mkdir -p "$HOME/.img"
+# 检查是否为 ZeroTermux 环境
+if [ -d "$HOME/ZtInfo" ]; then
+  mkdir -p "$HOME/.img"
 
-    info '正在获取背景图片'
-    curl -fsSLo "$HOME/.img/back.jpg" \
-      https://raw.githubusercontent.com/zhichaoh/catppuccin-wallpapers/main/os/android-black-4k.png ||
-      error '无法获取背景图片'
-  fi
+  info '正在获取背景图片'
+  curl -fsSLo "$HOME/.img/back.jpg" \
+    https://raw.githubusercontent.com/zhichaoh/catppuccin-wallpapers/main/os/android-black-4k.png ||
+    error '无法获取背景图片'
+fi
 
-  info '正在切换默认 Shell'
-  chsh -s fish
+info '正在切换默认 Shell'
+chsh -s fish
 
-  info 'Oh My Termux 安装完成'
-}
-
-main "$@"
+info 'Oh My Termux 安装完成'
