@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-COLOR_OFF=''
+# 设置颜色
+COLOR_OFF='' # 无色
 
-RED=''
-DIM=''
+RED='' # 红色
+DIM='' # 灰色
 
 if [[ -t 1 ]]; then
-  COLOR_OFF='\033[0m'
+  COLOR_OFF='\033[0m' # 无色
 
-  RED='\033[0;31m'
-  DIM='\033[0;2m'
+  RED='\033[0;31m' # 红色
+  DIM='\033[0;2m'  # 灰色
 fi
 
 error() {
@@ -45,8 +46,7 @@ main() {
   info '正在构建 Bat 缓存'
   bat cache --build || error 'Bat 缓存构建失败'
 
-  touch "$HOME/.hushlogin"
-
+  # 检查是否为 ZeroTermux 环境
   if [ -d "$HOME/ZtInfo" ]; then
     mkdir -p "$HOME/.img"
 
