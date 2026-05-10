@@ -63,8 +63,8 @@ fisher update
 </details>
 
 <details>
-  <summary>XXX 工具不好看，可以自定义吗？</summary>
+  <summary>可以自定义吗？</summary>
 
-> 当然可以，但你应该找工具的文档
+> Oh My Termux 本身不支持自定义，但选用的工具可以，具体的方式可以去查阅工具的文档
 
 </details>
