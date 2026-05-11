@@ -31,8 +31,8 @@
 在你的 Termux 执行下面这些命令 👇
 ```bash
 termux-change-repo
-pkg upgrade -y
-pkg install -y git
+pkg up
+pkg in git
 git clone https://github.com/air-plus/oh-my-termux.git
 cd oh-my-termux
 chmod +x setup.sh
@@ -43,7 +43,7 @@ chmod +x setup.sh
 ### 更新
 在你的 Termux 执行下面这些命令 👇
 ```bash
-pkg update && pkg upgrade
+pkg up
 fisher update
 ```
 随后输入 `nvim`，输入 `:Lazy sync` 和 `:MasonUpdate`
