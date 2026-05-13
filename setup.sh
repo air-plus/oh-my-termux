@@ -35,25 +35,25 @@ if [[ -z ${TERMUX_VERSION:-} ]]; then
   error '当前环境不是 Termux'
 fi
 
-info '📥 正在添加 TUR'
+info '➕ 正在添加 TUR'
 apt install -y tur-repo &>/dev/null || error 'TUR 添加失败'
 
-info '↓\n📥 正在安装基本工具包（此过程耗时较长）'
+info '📥 正在安装基本工具包（此过程耗时较长）'
 apt install -y \
-  termux-api fish git-delta fastfetch eza \
-  zoxide bat fd ripgrep starship \
-  fzf jq htop yazi duf \
-  dust file stow lazygit neovim \
-  zellij build-essential nodejs-lts \
+  fish git-delta fastfetch eza \
+  zoxide bat fd ripgrep \
+  starship fzf jq htop yazi \
+  duf dust file stow lazygit \
+  neovim zellij build-essential nodejs-lts \
   &>/dev/null || error '基本工具包安装失败'
 
-info '↓\n🔗 正在建立配置文件软链接'
+info '🔗 正在建立配置文件软链接'
 stow --adopt --verbose=0 -t "$HOME" */ || error '配置文件软链接建立失败'
 
-info '↓\n📦 正在构建 Bat 缓存'
+info '📦 正在构建 Bat 缓存'
 bat cache --build &>/dev/null || error 'Bat 缓存构建失败'
 
-info '↓\n🐚 正在切换默认 Shell'
+info '🐚 正在切换默认 Shell'
 chsh -s fish
 
-info '↓\n✨ Oh My Termux 安装完成'
+info '✨ Oh My Termux 安装完成'
