@@ -53,16 +53,6 @@ stow --adopt --verbose=0 -t "$HOME" */ || error '配置文件软链接建立失�
 info '↓\n📦 正在构建 Bat 缓存'
 bat cache --build &>/dev/null || error 'Bat 缓存构建失败'
 
-# ZeroTermux 环境处理
-if [[ -d $HOME/ZtInfo ]]; then
-  mkdir -p "$HOME/.img"
-
-  info '↓\n🗺️ 正在获取背景图片'
-  curl -fsSLo "$HOME/.img/back.jpg" \
-    https://raw.githubusercontent.com/zhichaoh/catppuccin-wallpapers/main/os/android-black-4k.png ||
-    error '无法获取背景图片'
-fi
-
 info '↓\n🐚 正在切换默认 Shell'
 chsh -s fish
 

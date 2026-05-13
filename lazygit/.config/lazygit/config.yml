@@ -3,26 +3,26 @@ git:
     - pager: delta --paging=never
 
 gui:
+  nerdFontsVersion: "3"
   theme:
     activeBorderColor:
-      - '#cba6f7'
+      - "#ddc7a1"
       - bold
     inactiveBorderColor:
-      - '#a6adc8'
+      - "#928374"
     optionsTextColor:
-      - '#89b4fa'
+      - "#d8a657"
     selectedLineBgColor:
-      - '#313244'
+      - "#5a524c"
     cherryPickedCommitBgColor:
-      - '#45475a'
+      - "#5a524c"
     cherryPickedCommitFgColor:
-      - '#cba6f7'
+      - "#e78a4e"
+      - bold
+      - reverse
     unstagedChangesColor:
-      - '#f38ba8'
+      - "#ea6962"
     defaultFgColor:
-      - '#cdd6f4'
+      - "#d4be98"
     searchingActiveBorderColor:
-      - '#f9e2af'
-
-  authorColors:
-    '*': '#b4befe'
+      - "#ea6962"

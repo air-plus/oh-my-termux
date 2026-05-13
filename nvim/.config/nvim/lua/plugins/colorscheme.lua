@@ -1,8 +1,10 @@
 return {
+  { "ellisonleao/gruvbox.nvim" },
+
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin", -- 设置为 Catppuccin Mocha 主题
+      colorscheme = "gruvbox",
     },
   },
 }
