@@ -1,6 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dcolor\x3dfg\x3a\x23ebdbb2\x2cbg\x3a\x23282828\x2chl\x3a\x23b16286\x20\x2d\x2dcolor\x3dfg\x2b\x3a\x23689d6a\x2cbg\x2b\x3a\x2332302f\x2chl\x2b\x3a\x23d3869b\x20\x2d\x2dcolor\x3dinfo\x3a\x23d65d0e\x2cprompt\x3a\x23458588\x2cpointer\x3a\x23fe8019\x20\x2d\x2dcolor\x3dmarker\x3a\x238ec07c\x2cspinner\x3a\x23cc241d\x2cheader\x3a\x23fabd2f
 SETUVAR __fish_initialized:4300
 SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:\x7e/\x2econfig/fish/functions/_autopair_backspace\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_left\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_right\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_same\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_tab\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/autopair\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
