@@ -6,7 +6,7 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
-	features = catppuccin-mocha
+	features = gruvbox-dark
 	navigate = true
     dark = true
 [merge]
