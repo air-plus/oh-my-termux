@@ -6,7 +6,7 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
-	features = gruvbox-dark
+	syntax-theme = gruvbox-dark
 	navigate = true
 	dark = true
 [merge]
