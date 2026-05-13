@@ -1,5 +1,3 @@
-[include]
-	path = ~/.config/delta/themes/catppuccin.gitconfig
 [user]
 	name = air-plus
 	email = jyin1221@gmail.com
@@ -10,6 +8,7 @@
 [delta]
 	features = catppuccin-mocha
 	navigate = true
+    dark = true
 [merge]
 	conflictStyle = zdiff3
 [init]
