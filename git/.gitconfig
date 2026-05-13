@@ -8,7 +8,7 @@
 [delta]
 	features = gruvbox-dark
 	navigate = true
-    dark = true
+	dark = true
 [merge]
 	conflictStyle = zdiff3
 [init]
