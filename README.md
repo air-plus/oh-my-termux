@@ -23,7 +23,7 @@
 
 ## ✨ 特性
 * **🐚 体验优化**：`fish` + `fisher` 和一些插件
-* **🎨 界面美化**：**JetBrains Mono** + **Gruvbox**
+* **🎨 界面美化**：**FiraCode Mono** + **Gruvbox**
 * **🛠 常用工具**：`bat`，`fd`，`rg` 等现代化工具
 
 ## 🚀 快速开始
