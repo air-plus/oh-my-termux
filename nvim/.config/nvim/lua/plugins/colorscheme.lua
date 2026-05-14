@@ -6,7 +6,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox", --使用 Gruvbox 主题
+      colorscheme = "gruvbox", -- 使用 Gruvbox 主题
     },
   },
 }
