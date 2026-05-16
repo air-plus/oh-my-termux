@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>✨「Oh My Termux」！✨</h1>
+  <h1>✨「Oh My Termux」✨</h1>
 
 [
   ![STARS](https://img.shields.io/github/stars/air-plus/oh-my-termux?logo=starship&colorA=363a4f&colorB=b7bdf8&logoColor=cad3f5&style=for-the-badge)
