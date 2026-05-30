@@ -28,7 +28,6 @@ info() {
 clear
 
 info '✨ 欢迎使用 Oh My Termux'
-info '↳ ⚡ 终极 Termux 配置'
 echo
 
 if [[ -z ${TERMUX_VERSION:-} ]]; then
@@ -48,7 +47,7 @@ apt install -y \
   &>/dev/null || error '基本工具包安装失败'
 
 info '🔗 建立配置文件软链接'
-stow --adopt --verbose=0 -t "$HOME" */ || error '配置文件软链接建立失败'
+stow --adopt --verbose=0 -t "$HOME" $HOME/oh-my-termux/*/ || error '配置文件软链接建立失败'
 
 info '🔧 修改 Termux 原生配置'
 cat >$HOME/.termux/termux.properties <<'EOF'
