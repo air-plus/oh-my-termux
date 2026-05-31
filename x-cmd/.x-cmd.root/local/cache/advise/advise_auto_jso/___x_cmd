@@ -1,0 +1,13940 @@
+{
+"abox"
+:
+{
+"#name"
+:
+{
+"abox"
+:
+null
+,
+"cn"
+:
+"AI Agent Box - Docker 容器管理模块"
+,
+"en"
+:
+"AI Agent Box - Docker container management module"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"abox 是一个用于管理 AI Agent Docker 容器的命令行工具。\n它提供了快速启动、停止、重启容器的能力，以及通过 tmux、ssh、exec 等方式与容器交互的功能。\n适用于本地开发和测试 AI 编程代理（如 Claude Code、Codex、OpenCode）的场景。\n"
+,
+"en"
+:
+"abox is a command-line tool for managing AI Agent Docker containers.\nIt provides the ability to quickly start, stop, and restart containers,\nas well as interact with containers via tmux, ssh, exec, etc.\nSuitable for local development and testing of AI programming agents (e.g., Claude Code, Codex, OpenCode).\n"
+}
+,
+"$ref"
+:
+"x-advise://abox"
+,
+"#exec"
+:
+"xrc abox 2>/dev/null"
+}
+,
+"advise"
+:
+{
+"#name"
+:
+{
+"advise"
+:
+null
+,
+"en"
+:
+"Generate command completion based on advise jso"
+,
+"cn"
+:
+"基于 advise jso 生成命令补全"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Through the advise jso, provide the current command suggestions (completion, help ...)"
+,
+"cn"
+:
+"通过 advise jso，提供当前命令的建议（completion、help ...）"
+}
+,
+"$ref"
+:
+"x-advise://advise"
+,
+"#exec"
+:
+"xrc advise 2>/dev/null"
+}
+,
+"agent"
+:
+{
+"#name"
+:
+{
+"agent"
+:
+null
+,
+"cn"
+:
+"x-cmd AI Agent 集成工具"
+,
+"en"
+:
+"x-cmd AI Agent integration tool"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"集成 x-cmd 到 Claude、Codex、Cursor、Opencode、Kimi 等 AI 工具，管理 ~/AGENTS.md 及配置文件"
+,
+"en"
+:
+"Integrate x-cmd into Claude, Codex, Cursor, Opencode, Kimi and other AI tools, manage ~/AGENTS.md and configs"
+}
+,
+"$ref"
+:
+"x-advise://agent"
+,
+"#exec"
+:
+"xrc agent 2>/dev/null"
+}
+,
+"aider"
+:
+{
+"#name"
+:
+{
+"aider"
+:
+null
+,
+"cn"
+:
+"为 aider 打造的命令行增强模块"
+,
+"en"
+:
+"Enhanced command-line module for aider"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"Aider 是由 Aider-AI 团队开源的 AI 编程工具，它以 命令行/终端为主界面，无需复杂图形界面即可与大型语言模型 (LLM) 搭档编程。\n开箱即用地支持 Claude 3.7 Sonnet、DeepSeek R1、Chat V3、OpenAI o1、o3-mini、GPT-4o 等主流模型，还可连接本地或兼容 API 的任意 LLM。它会自动对整个 Git 仓库生成代码结构地图，从而在多个文件间理解上下文并执行连贯修改。Aider 同时支持超过 100 种编程语言，可自动生成语义化的 Git 提交信息并执行提交；支持语音输入（Voice-to-Code）、嵌入截图/网页内容、自动 lint 与测试，适合开发者在本地 workflow 中实现\"AI Pair-Programming\"。\n项目地址: https://github.com/Aider-AI/aider\n"
+,
+"en"
+:
+"Aider is an open-source AI coding assistant developed by the Aider-AI team. Designed primarily for the command line or terminal, it enables seamless collaboration with large language models (LLMs) without the need for a complex graphical interface.\nIt supports popular models out of the box, including Claude 3.7 Sonnet, DeepSeek R1, Chat V3, OpenAI o1, o3-mini, and GPT-4o, and can also connect to any local or API-compatible LLM. Aider automatically maps the code structure of your entire Git repository, allowing it to understand context across multiple files and make coherent edits.\nWith support for over 100 programming languages, Aider can automatically generate semantic Git commit messages and perform commits. It also supports voice-to-code input, embedding screenshots or web content, and automatic linting and testing—making it ideal for developers to achieve AI pair programming within their local workflow.\nProject URL: https://github.com/Aider-AI/aider\n"
+}
+,
+"$ref"
+:
+"x-advise://aider"
+,
+"#exec"
+:
+"xrc aider 2>/dev/null"
+}
+,
+"alias"
+:
+{
+"#name"
+:
+{
+"alias"
+:
+null
+,
+"en"
+:
+"Command alias management"
+,
+"cn"
+:
+"命令别名管理"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Manage command aliases in the current shell session.\nList, create, display, and remove aliases for frequently used commands.\n"
+,
+"cn"
+:
+"管理当前 shell 会话中的命令别名。\n列出、创建、显示和删除常用命令的别名。\n"
+}
+,
+"$ref"
+:
+"x-advise://alias"
+,
+"#exec"
+:
+"xrc alias 2>/dev/null"
+}
+,
+"api"
+:
+{
+"#name"
+:
+{
+"x api"
+:
+null
+,
+"en"
+:
+"Sending API requests by parsing the OpenAPI document"
+,
+"cn"
+:
+"通过解析 OpenAPI 文档发送 API 请求"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"#desc"
+:
+{
+"en"
+:
+"TODO Sending API requests by parsing the OpenAPI document"
+,
+"cn"
+:
+"TODO 项目未开始 通过解析 OpenAPI 文档发送 API 请求"
+}
+,
+"$ref"
+:
+"x-advise://api"
+,
+"#exec"
+:
+"xrc api 2>/dev/null"
+}
+,
+"apk"
+:
+{
+"#name"
+:
+{
+"apk"
+:
+null
+,
+"en"
+:
+"apk command enhancements"
+,
+"cn"
+:
+"apk 命令增强"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"Alpine Package Keeper (apk) 命令增强工具。\n提供交互式 UI、镜像源管理、代理设置、漏洞扫描等功能。\n"
+,
+"en"
+:
+"Alpine Package Keeper (apk) command enhancement tool.\nProvides interactive UI, mirror management, proxy settings, vulnerability scanning, and more.\n"
+}
+,
+"$ref"
+:
+"x-advise://apk"
+,
+"#exec"
+:
+"xrc apk 2>/dev/null"
+}
+,
+"apt"
+:
+{
+"#name"
+:
+{
+"apt"
+:
+null
+,
+"en"
+:
+"apt command enhancements"
+,
+"cn"
+:
+"apt 命令增强"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"Debian/Ubuntu apt 命令增强工具。\n提供交互式 UI、镜像源管理、代理设置、漏洞扫描等功能。\n对需要 sudo 权限的命令进行包装，确保统一使用 `x apt <subcmd>` 格式。\n"
+,
+"en"
+:
+"Debian/Ubuntu apt command enhancement tool.\nProvides interactive UI, mirror management, proxy settings, vulnerability scanning, and more.\nWraps commands requiring sudo privileges to ensure unified `x apt <subcmd>` format.\n"
+}
+,
+"$ref"
+:
+"x-advise://apt"
+,
+"#exec"
+:
+"xrc apt 2>/dev/null"
+}
+,
+"arg"
+:
+{
+"#name"
+:
+{
+"arg"
+:
+null
+,
+"en"
+:
+"Function argument utilities"
+,
+"cn"
+:
+"函数参数工具"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Control and manipulate function arguments in shell scripts.\nProvides utilities for shifting, pushing, popping, and checking arguments.\n"
+,
+"cn"
+:
+"在 shell 脚本中控制和操作函数参数。\n提供用于移位、推送、弹出和检查参数的工具。\n"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://arg"
+,
+"#exec"
+:
+"xrc arg 2>/dev/null"
+}
+,
+"arp"
+:
+{
+"#name"
+:
+{
+"arp"
+:
+null
+,
+"cn"
+:
+"获取 ARP 缓存表信息"
+,
+"en"
+:
+"Get the ARP table"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"This module is used to display the local system's ARP cache table, supporting three output formats: CSV, TSV, and TUI application.\nThe header information for TSV/CSV is: ip, mac, if, suspicious, scope, type\n"
+,
+"cn"
+:
+"该模块用于显示本地系统的 ARP 缓存表，支持 CSV、TSV 和 TUI 应用三种输出格式。\nTSV/CSV 的表头信息为: mac, ip, suspicious, if, scope, type, vendor\n"
+}
+,
+"$ref"
+:
+"x-advise://arp"
+,
+"#exec"
+:
+"xrc arp 2>/dev/null"
+}
+,
+"ascii"
+:
+{
+"#name"
+:
+{
+"ascii"
+:
+null
+,
+"cn"
+:
+"处理与 ASCII 相关的任务"
+,
+"en"
+:
+"Tackling tasks related to ASCII"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"ascii 模块是为处理 ASCII 相关任务（如查询 ASCII 码表、以 ASCII 艺术画显示字符、图片和艺术烟花等）而设计的模块。\n除了 table 子命令采用 shell/awk 实现外，其余的命令都采用 pkg 或 npm 来按需下载运行，例如 cfont 和 map 采用托管在 npm 上的模块，并通过 deno 以最小权限方式按需下载运行。\n"
+,
+"en"
+:
+"The ascii module is designed to handle tasks related to ASCII, such as looking up the ASCII code table, displaying characters, pictures, and artistic fireworks in ASCII artwork.\nExcept for the table subcommand implemented in shell/awk, the rest of the commands use pkg or npm to download and run on demand, for example, cfont and map use modules hosted on npm and download and run on demand with least privilege through deno.\n"
+}
+,
+"$ref"
+:
+"x-advise://ascii"
+,
+"#exec"
+:
+"xrc ascii 2>/dev/null"
+}
+,
+"asdf"
+:
+{
+"#name"
+:
+{
+"asdf"
+:
+null
+,
+"cn"
+:
+"为增强 adsf 而设计的模块"
+,
+"en"
+:
+"Designed to enhance adsf"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"asdf 是一款可扩展的版本管理器，支持 Ruby、Node.js、Elixir、Erlang 等多种开发语言环境和软件工具的安装。"
+,
+"en"
+:
+"asdf is an extensible version manager supporting installations of various development language environments and software tools such as Ruby, Node.js, Elixir, and Erlang."
+}
+,
+"$ref"
+:
+"x-advise://asdf"
+,
+"#exec"
+:
+"xrc asdf 2>/dev/null"
+}
+,
+"ask"
+:
+{
+"#name"
+:
+{
+"ask"
+:
+{
+"cn"
+:
+"AI 问答助手"
+,
+"en"
+:
+"AI ask assistant"
+}
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"向 AI 发送请求并获取回答。\n\n特点：\n- 过滤掉多余解释和思考过程，只输出纯净结果\n- 支持代码生成、文本处理、问答等多种场景\n"
+,
+"en"
+:
+"Send a request to AI and get a response.\n\nFeatures:\n- Filters out extra explanations and thinking, outputs only the clean result\n- Supports code generation, text processing, Q&A and more\n"
+}
+,
+"$ref"
+:
+"x-advise://ask"
+,
+"#exec"
+:
+"xrc ask 2>/dev/null"
+}
+,
+"assert"
+:
+{
+"#name"
+:
+{
+"assert"
+:
+null
+,
+"en"
+:
+"Test assertion module - verify expected behavior"
+,
+"cn"
+:
+"测试断言模块 - 验证预期行为"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"测试断言工具，用于验证测试结果是否符合预期。\n\n所有断言失败时返回非0退出码。\n项目地址：https://github.com/x-bash/assert\n"
+,
+"en"
+:
+"Test assertion tool for verifying test results.\n\nReturns non-zero exit code on failure.\nProject: https://github.com/x-bash/assert\n"
+}
+,
+"$ref"
+:
+"x-advise://assert"
+,
+"#exec"
+:
+"xrc assert 2>/dev/null"
+}
+,
+"aur"
+:
+{
+"#name"
+:
+{
+"aur"
+:
+null
+,
+"cn"
+:
+"搜索和浏览 AUR 中的应用"
+,
+"en"
+:
+"Search and browse applications in AUR"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"x aur 是一个为 Arch Linux 用户设计的 AUR 辅助工具，结合 fzf 提供了一个流畅的交互式 UI，让用户可以直观地筛选和选择软件包。\n此外，它还提供了查看热门软件包排行 (top) 和分析包受欢迎程度 (stat) 的功能，帮助用户快速定位 AUR 中高质量和流行的应用。\n"
+,
+"en"
+:
+"`x aur` is an AUR helper tool designed for Arch Linux users. It combines with fzf to provide a smooth interactive UI, allowing users to intuitively filter and select packages.\nAdditionally, it offers features to view popular package rankings (top) and analyze package popularity (stat), helping users quickly locate high-quality and popular applications in the AUR.\n"
+}
+,
+"$ref"
+:
+"x-advise://aur"
+,
+"#exec"
+:
+"xrc aur 2>/dev/null"
+}
+,
+"bakman"
+:
+{
+"#name"
+:
+{
+"bakman"
+:
+null
+,
+"cn"
+:
+"备份管理器"
+,
+"en"
+:
+"Backup Manager"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"简单的文件备份和恢复工具。\n\n功能特性：\n- 自动为文件添加时间戳备份\n- 支持列出、恢复和清理历史备份\n- 备份文件按原始路径结构存储\n"
+,
+"en"
+:
+"Simple file backup and restore tool.\n\nFeatures:\n- Automatically creates timestamped backups\n- Support for listing, restoring, and cleaning backups\n- Backups stored with original path structure\n"
+}
+,
+"$ref"
+:
+"x-advise://bakman"
+,
+"#exec"
+:
+"xrc bakman 2>/dev/null"
+}
+,
+"bfind"
+:
+{
+"#name"
+:
+{
+"bfind"
+:
+null
+,
+"cn"
+:
+"文件搜索"
+,
+"en"
+:
+"Better Find"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"更友好的文件搜索工具，基于 Unix find 命令。\n支持忽略常见目录（如 .git、.DS_Store），限制结果数量。\n"
+,
+"en"
+:
+"A better file search utility based on Unix find command.\nSupports ignoring common directories (like .git, .DS_Store) and result limiting.\n"
+}
+,
+"$ref"
+:
+"x-advise://bfind"
+,
+"#exec"
+:
+"xrc bfind 2>/dev/null"
+}
+,
+"boot"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Management of modules and commands during the boot process"
+,
+"cn"
+:
+"启动过程中模块以及命令管理"
+}
+,
+"$ref"
+:
+"x-advise://boot"
+,
+"#exec"
+:
+"xrc boot 2>/dev/null"
+}
+,
+"brew"
+:
+{
+"#name"
+:
+{
+"brew"
+:
+null
+,
+"en"
+:
+"Homebrew package manager wrapper"
+,
+"cn"
+:
+"Homebrew 包管理器封装"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Enhanced Homebrew command wrapper for macOS and Linux package management.\nProvides convenient subcommands for installing, listing packages,\nmanaging mirrors, proxies, and analytics.\n"
+,
+"cn"
+:
+"用于 macOS 和 Linux 包管理的增强型 Homebrew 命令封装。\n提供方便的子命令用于安装、列出软件包、管理镜像、代理和分析。\n"
+}
+,
+"$ref"
+:
+"x-advise://brew"
+,
+"#exec"
+:
+"xrc brew 2>/dev/null"
+}
+,
+"btop"
+:
+{
+"#name"
+:
+{
+"btop"
+:
+null
+,
+"en"
+:
+"System resource monitor"
+,
+"cn"
+:
+"系统资源监控器"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"btop (https://github.com/aristocratos/btop) is a resource monitor that shows\nusage and stats for processor, memory, disks, network and processes.\nThis module prioritizes using the local btop command. If it's not available,\nit will download and run via pixi (Linux/macOS) without installation,\nensuring no impact on your environment. For Windows, it installs via scoop.\n\nKey features for memory analysis:\n- Preset 1: Process-focused view with detailed memory per process\n- Interactive filtering: Filter processes by name or PID\n- Sort by memory: Press 'm' to sort processes by memory usage\n- Shortcut keys: 'p' / 'Shift+p' to cycle through 4 preset views\n- Help panel: Press '?' for full keyboard shortcuts\n"
+,
+"cn"
+:
+"btop（https://github.com/aristocratos/btop）是一个资源监控器，\n显示处理器、内存、磁盘、网络和进程的使用情况和统计信息。\n本模块优先使用本地 btop 命令，如果没有，将通过 pixi（Linux|macOS）\n下载并运行，无需安装，不影响环境和系统依赖。Windows 则通过 scoop 来安装并使用 btop。\n\n内存分析关键功能：\n- 预设 1：以进程为中心的视图，显示每个进程的详细内存\n- 交互式过滤：按名称或 PID 过滤进程\n- 按内存排序：按 'm' 键按内存使用排序\n- 快捷键：'p' / 'Shift+p' 在 4 种预设视图间切换\n- 帮助面板：按 '?' 查看完整键盘快捷键\n"
+}
+,
+"$ref"
+:
+"x-advise://btop"
+,
+"#exec"
+:
+"xrc btop 2>/dev/null"
+}
+,
+"build"
+:
+{
+"#name"
+:
+null
+,
+"#desc"
+:
+{
+"en"
+:
+"x-cmd build."
+,
+"cn"
+:
+"x-cmd build 转包脚本。"
+}
+,
+"$ref"
+:
+"x-advise://build"
+,
+"#exec"
+:
+"xrc build 2>/dev/null"
+}
+,
+"bun"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"A fast all-in-one JavaScript runtime"
+,
+"cn"
+:
+"一个快速的多合一 JavaScript 运行时"
+}
+,
+"$ref"
+:
+"x-advise://bun"
+,
+"#exec"
+:
+"xrc bun 2>/dev/null"
+}
+,
+"buse"
+:
+{
+"#name"
+:
+{
+"buse"
+:
+null
+,
+"cn"
+:
+"为 browser-use 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for browser-use"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"browser-use 能让用户通过 AI 使用自然语言使用浏览器，无需编写复杂的代码即可将用户的指令自动转换为浏览器行为。\n项目来源：https://github.com/browser-use/browser-use\n"
+,
+"en"
+:
+"browser-use allows users to control the browser using natural language via AI, automatically translating user instructions into browser actions without writing complex code.\nProject source: https://github.com/browser-use/browser-use\n"
+}
+,
+"$ref"
+:
+"x-advise://buse"
+,
+"#exec"
+:
+"xrc buse 2>/dev/null"
+}
+,
+"bwh"
+:
+{
+"#name"
+:
+{
+"bwh"
+:
+null
+,
+"en"
+:
+"BandwagonHost VPS Manager"
+,
+"cn"
+:
+"BandwagonHost VPS 管理器"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Manage your BandwagonHost VPS servers via the command line."
+,
+"cn"
+:
+"通过命令行管理您的 BandwagonHost VPS 服务器。"
+}
+,
+"$ref"
+:
+"x-advise://bwh"
+,
+"#exec"
+:
+"xrc bwh 2>/dev/null"
+}
+,
+"caddy"
+:
+{
+"#name"
+:
+{
+"x caddy"
+:
+null
+,
+"cn"
+:
+"x caddy 在 caddy 之上对命令进行增强，让用户更易使用。"
+,
+"en"
+:
+"X caddy enhances commands on top of Caddy, making it easier for users to use."
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"caddy 最常用作 HTTPS 服务器，但它适用于任何长时间运行的 Go 程序。x-cmd 在 caddy 的基础上对部分命令进行了增强，同时也支持用户直接使用原生 caddy 命令。"
+,
+"en"
+:
+"caddy is most commonly used as an HTTPS server, but it is suitable for any long-running Go program. X-CMD enhances certain commands based on Caddy while also supporting users to directly use native Caddy commands."
+}
+,
+"$ref"
+:
+"x-advise://caddy"
+,
+"#exec"
+:
+"xrc caddy 2>/dev/null"
+}
+,
+"cal"
+:
+{
+"#name"
+:
+{
+"cal"
+:
+{
+"en"
+:
+"A better cal command using Gregorian calendar by default"
+,
+"cn"
+:
+"采用格里历的 cal 命令"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"The cal module is an enhanced version of the classic calendar command,\nsupporting extended information such as constellations, week numbers,\nand more calendar views.\n"
+,
+"cn"
+:
+"cal 模块是在经典日历命令基础上的增强版本，支持星座、周数等扩展信息，\n提供多种日历视图。\n"
+}
+,
+"$ref"
+:
+"x-advise://cal"
+,
+"#exec"
+:
+"xrc cal 2>/dev/null"
+}
+,
+"cama"
+:
+{
+"#name"
+:
+{
+"cama"
+:
+null
+,
+"en"
+:
+null
+,
+"cn"
+:
+null
+}
+,
+"#desc"
+:
+null
+,
+"$ref"
+:
+"x-advise://cama"
+,
+"#exec"
+:
+"xrc cama 2>/dev/null"
+}
+,
+"cat"
+:
+{
+"#name"
+:
+{
+"cat"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Obtain data from local files or servers, and then print data on the standard output"
+,
+"cn"
+:
+"从本地文件或服务器获取数据，然后在标准输出上打印数据"
+}
+,
+"$ref"
+:
+"x-advise://cat"
+,
+"#exec"
+:
+"xrc cat 2>/dev/null"
+}
+,
+"cawk"
+:
+{
+"#name"
+:
+{
+"cawk"
+:
+null
+,
+"en"
+:
+"Write awk code on the command line"
+,
+"cn"
+:
+"命令行编写 awk 代码"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Use the awk programming language according to your current environment"
+,
+"cn"
+:
+"根据当前环境来使用 awk 编程语言"
+}
+,
+"$ref"
+:
+"x-advise://cawk"
+,
+"#exec"
+:
+"xrc cawk 2>/dev/null"
+}
+,
+"cb"
+:
+{
+"#name"
+:
+{
+"x cb"
+:
+null
+,
+"en"
+:
+"A lightweight CLI for Codeberg"
+,
+"cn"
+:
+"Codeberg 轻量级 CLI"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Your Command Line Companion for Codeberg."
+,
+"cn"
+:
+"Codeberg 命令行上的最佳拍档。"
+}
+,
+"$ref"
+:
+"x-advise://cb"
+,
+"#exec"
+:
+"xrc cb 2>/dev/null"
+}
+,
+"ccal"
+:
+{
+"#name"
+:
+{
+"ccal"
+:
+null
+,
+"en"
+:
+"Chinese Lunar Calendar"
+,
+"cn"
+:
+"中国农历"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"The ccal module is a terminal-based calendar tool designed for Chinese users.\nIt provides a clear view of both Gregorian and lunar calendars, including solar terms,\ntraditional Chinese holidays, sexagenary cycle (heavenly stems and earthly branches),\nsix-day cycle, and daily almanac guidance for auspicious and inauspicious activities.\nIdeal for checking Chinese festivals or consulting the traditional calendar for daily planning.\n\nAI Agent Ready:\n- Structured output (YML/TSV/CSV) designed for AI parsing and tool integration\n- Rich tiaoxiu (调休放假) data: holidays, make-up work days, weekend schedules\n- Offline-first: bundled lunar calendar data, no external API calls needed\n- Accurate lunar date conversion including leap months\n- Full-year holiday planning support for schedule-aware agents\n"
+,
+"cn"
+:
+"ccal 模块是专为中文用户设计的终端日历工具，支持农历、节气和传统节日的显示。\n它以简洁的方式呈现公历与农历对照日历，并提供干支纪年、黄历宜忌、六曜等信息，\n适合查阅每日黄历或节日安排。\n\nAI Agent 友好：\n- 结构化输出（YML/TSV/CSV），专为 AI 解析和工具集成设计\n- 丰富的调休放假数据：节假日、调休上班、周末安排\n- 离线优先：农历数据本地打包，无需调用外部 API\n- 精确的农历日期转换，支持闰月\n- 全年放假计划支持，助力日程规划类 Agent\n"
+}
+,
+"$ref"
+:
+"x-advise://ccal"
+,
+"#exec"
+:
+"xrc ccal 2>/dev/null"
+}
+,
+"ccmd"
+:
+{
+"#name"
+:
+{
+"ccmd"
+:
+null
+,
+"en"
+:
+"Command Result Cache"
+,
+"cn"
+:
+"命令结果缓存"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"缓存命令执行结果，避免重复执行耗时命令。\n支持设置缓存过期时间（n[smhdw] 格式），自动处理缓存失效和更新。\n适用于 curl、复杂查询等耗时操作的缓存加速。\n"
+,
+"en"
+:
+"Cache command execution results to avoid re-running time-consuming commands.\nSupports cache expiration time (n[smhdw] format), automatic cache invalidation and updates.\nIdeal for caching slow operations like curl, complex queries, etc.\n"
+}
+,
+"$ref"
+:
+"x-advise://ccmd"
+,
+"#exec"
+:
+"xrc ccmd 2>/dev/null"
+}
+,
+"cd"
+:
+{
+"#name"
+:
+{
+"x cd"
+:
+{
+"cn"
+:
+"增强 cd 命令"
+,
+"en"
+:
+"Enhanced cd command"
+}
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"该模块是使用 Posix shell、awk 和 find 实现的增强版 cd 命令"
+,
+"en"
+:
+"This module is an enhanced version of the `cd` command implemented using the Posix shell, awk, and find."
+}
+,
+"$ref"
+:
+"x-advise://cd"
+,
+"#exec"
+:
+"xrc cd 2>/dev/null"
+}
+,
+"cf"
+:
+{
+"#name"
+:
+{
+"cf"
+:
+null
+,
+"cn"
+:
+"为 Cloudflare 打造的命令行增强模块"
+,
+"en"
+:
+"Enhanced command-line module for Cloudflare"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"This module is used to manage Cloudflare resources, covering DNS records, Worker scripts, R2 storage, and firewall rulesets."
+,
+"cn"
+:
+"该模块用于管理 Cloudflare 资源，涵盖 DNS 记录、Worker 脚本、R2 存储及防火墙规则集。"
+}
+,
+"$ref"
+:
+"x-advise://cf"
+,
+"#exec"
+:
+"xrc cf 2>/dev/null"
+}
+,
+"cfgy"
+:
+{
+"#name"
+:
+{
+"cfgy"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Configuration management with the corresponding yml file"
+,
+"cn"
+:
+"使用相应的yml文件进行配置管理"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://cfgy"
+,
+"#exec"
+:
+"xrc cfgy 2>/dev/null"
+}
+,
+"chat"
+:
+{
+"#name"
+:
+{
+"chat"
+:
+null
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"AI chat 的命令行工具"
+,
+"en"
+:
+"cli for AI chat"
+}
+,
+"$ref"
+:
+"x-advise://chat"
+,
+"#exec"
+:
+"xrc chat 2>/dev/null"
+}
+,
+"choco"
+:
+{
+"#name"
+:
+{
+"choco"
+:
+null
+,
+"en"
+:
+"The third party windows package manager for opensource softwares."
+,
+"cn"
+:
+"为开源软件而设计的第三方 Windows 包管理器"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"x-cmd 封装的 Chocolatey 模块，支持在 WSL2/Git Bash 终端中便捷管理 Windows 软件包，并提供代理配置和命令补全等增强功能。"
+,
+"en"
+:
+"An x-cmd wrapper for Chocolatey that simplifies Windows package management in WSL2/Git Bash terminals, with proxy configuration and enhanced shell completions."
+}
+,
+"$ref"
+:
+"x-advise://choco"
+,
+"#exec"
+:
+"xrc choco 2>/dev/null"
+}
+,
+"cht"
+:
+{
+"#name"
+:
+{
+"cht"
+:
+null
+,
+"en"
+:
+"cheatsheet for Developers"
+,
+"cn"
+:
+"为开发者准备的速查表"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"The content is sourced from cheat.sh. Compared to the help document, this module provides comprehensive and concise usage examples, making it easy to find, similar to \"cheat sheets\"."
+,
+"cn"
+:
+"内容来源于 cheat.sh 。相较于 help 文档，该模块提供的是全面而简洁的使用示例，便于查找，类似于\"小抄\"。"
+}
+,
+"$ref"
+:
+"x-advise://cht"
+,
+"#exec"
+:
+"xrc cht 2>/dev/null"
+}
+,
+"claude"
+:
+{
+"#name"
+:
+{
+"claude"
+:
+null
+,
+"cn"
+:
+"为 Claude Code 打造的命令行增强模块"
+,
+"en"
+:
+"Enhanced command-line module for Claude Code"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"claude-code 是由 Anthropic 团队开发的终端 AI 编程代理，集成 Claude Opus 或 Sonnet 模型，可读取本地代码库、生成补丁、执行命令、运行测试，并自动创建 Git 提交与 PR。\n它具备对大型代码库的语义搜索能力，支持子代理任务拆分，并通过自然语言指令协助完成日常开发工作，提升效率。\n项目地址：https://github.com/anthropics/claude-code\n"
+,
+"en"
+:
+"claude-code is a terminal-based AI programming agent developed by Anthropic.\nPowered by Claude Opus or Sonnet models, it enables semantic codebase search, patch generation, command execution, and Git operations through natural language.\nIt supports sub-agent workflows for parallelized tasks and enhances developer productivity directly from the command line.\nProject: https://github.com/anthropics/claude-code\n"
+}
+,
+"$ref"
+:
+"x-advise://claude"
+,
+"#exec"
+:
+"xrc claude 2>/dev/null"
+}
+,
+"claw"
+:
+{
+"#name"
+:
+{
+"claw"
+:
+null
+,
+"cn"
+:
+"x-cmd AI 消息机器人"
+,
+"en"
+:
+"x-cmd AI message bot"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"自托管 AI Agent 网关，将 LLM 接入微信、飞书、Telegram 等即时通讯平台。\n监听 IM 消息并触发本地 AI Agent 执行自主任务，支持通过 `x agent request` 调用\nclaude, codex, cursor, gemini-cli, opencode, kimi-cli 等多种 AI 引擎，\n每个会话拥有独立 workspace 与持久化上下文记忆。\n"
+,
+"en"
+:
+"A self-hosted AI Agent gateway that connects LLMs to WeChat, Feishu, Telegram and other IM platforms.\nListens for IM messages and triggers local AI Agents to execute autonomous tasks,\nsupporting multiple AI engines via `x agent request` (claude, codex, cursor, gemini-cli, opencode, kimi-cli),\nwith independent workspaces and persistent context memory per session.\n"
+}
+,
+"$ref"
+:
+"x-advise://claw"
+,
+"#exec"
+:
+"xrc claw 2>/dev/null"
+}
+,
+"clawhub"
+:
+{
+"#name"
+:
+{
+"clawhub"
+:
+null
+,
+"cn"
+:
+"ClawHub 技能市场客户端"
+,
+"en"
+:
+"ClawHub skill marketplace client"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"ClawHub 是 OpenClaw 团队提供的技能市场，汇聚各类优质技能包，方便用户发现和使用。\nclawhub 模块是 x-cmd 对 ClawHub 平台 API 的轻量级 CLI 封装，用于搜索、查看、下载、发布和管理技能包。\n"
+,
+"en"
+:
+"ClawHub is the skill marketplace provided by the OpenClaw team, offering a curated collection of quality skill packages.\nThe clawhub module is x-cmd's lightweight CLI wrapper for the ClawHub platform API, enabling you to search, view, download, publish and manage skill packages.\n"
+}
+,
+"$ref"
+:
+"x-advise://clawhub"
+,
+"#exec"
+:
+"xrc clawhub 2>/dev/null"
+}
+,
+"cleanup"
+:
+{
+"#name"
+:
+null
+,
+"#desc"
+:
+{
+"cn"
+:
+"清除 x-cmd 系列软件的缓存文件"
+,
+"en"
+:
+"Clear cache files of x-cmd software"
+}
+,
+"$ref"
+:
+"x-advise://cleanup"
+,
+"#exec"
+:
+"xrc cleanup 2>/dev/null"
+}
+,
+"cmdnotfound"
+:
+{
+"#name"
+:
+null
+,
+"#desc"
+:
+{
+"cn"
+:
+"zsh/bash command_not_found_handler"
+,
+"en"
+:
+"zsh/bash command_not_found_handler"
+}
+,
+"#tag"
+:
+[
+"todo"
+]
+,
+"$ref"
+:
+"x-advise://cmdnotfound"
+,
+"#exec"
+:
+"xrc cmdnotfound 2>/dev/null"
+}
+,
+"co"
+:
+{
+"#name"
+:
+{
+"co"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Abbreviation for code copilot, generate shell commands that can be executed locally"
+,
+"cn"
+:
+"code copilot 的缩写，生成用于可在本地执行的 shell 命令"
+}
+,
+"$ref"
+:
+"x-advise://co"
+,
+"#exec"
+:
+"xrc co 2>/dev/null"
+}
+,
+"coco"
+:
+{
+"#name"
+:
+{
+"coco"
+:
+null
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"code-copilot 的缩写，生成对应的代码片段"
+,
+"en"
+:
+"Abbreviation for code-copilot, generate the corresponding code snippet"
+}
+,
+"$ref"
+:
+"x-advise://coco"
+,
+"#exec"
+:
+"xrc coco 2>/dev/null"
+}
+,
+"codex"
+:
+{
+"#name"
+:
+{
+"codex"
+:
+null
+,
+"cn"
+:
+"为 Codex 打造的命令行增强模块"
+,
+"en"
+:
+"Enhanced command-line module for Codex"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"codex 是由 OpenAI 开发的终端 AI 编程代理工具，支持读取本地代码库、运行 shell 命令、生成代码补丁，并以对话方式协助开发任务。\n它可连接 OpenAI API，结合语义理解和上下文感知能力，帮助开发者在终端中快速完成代码生成、重构、调试与测试等操作。\ncodex 支持安全模式、自动批准策略、以及多轮自然语言交互，适用于现代开发流程中的 AI 助手角色。\n项目地址：https://github.com/openai/codex\n"
+,
+"en"
+:
+"codex is a terminal-based AI programming assistant developed by OpenAI.\nIt connects to the OpenAI API to understand your local codebase, execute shell commands, generate patches, and assist with development tasks through conversational prompts.\nWith support for secure execution, approval strategies, and contextual code understanding, codex enhances the developer experience by bringing powerful AI assistance directly to your terminal.\nProject: https://github.com/openai/codex\n"
+}
+,
+"$ref"
+:
+"x-advise://codex"
+,
+"#exec"
+:
+"xrc codex 2>/dev/null"
+}
+,
+"codi"
+:
+{
+"#name"
+:
+{
+"codi"
+:
+null
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"查看仓库不同语言的占比"
+,
+"en"
+:
+"View the proportion of different languages in the warehouse"
+}
+,
+"$ref"
+:
+"x-advise://codi"
+,
+"#exec"
+:
+"xrc codi 2>/dev/null"
+}
+,
+"coin"
+:
+{
+"#name"
+:
+{
+"coin"
+:
+null
+,
+"cn"
+:
+"CoinCap 平台信息查看器 (由于当前 Public API 不可用, 正在寻找替代方案, 抱歉)"
+,
+"en"
+:
+"CoinCap Platform Information Viewer. (Current Public API is unavailable, looking for alternatives, sorry)"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"View the information of the CoinCap platform through terminal commands"
+,
+"cn"
+:
+"通过终端命令查看 CoinCap 平台的信息"
+}
+,
+"$ref"
+:
+"x-advise://coin"
+,
+"#exec"
+:
+"xrc coin 2>/dev/null"
+}
+,
+"coincap"
+:
+{
+"#name"
+:
+{
+"coincap"
+:
+null
+,
+"en"
+:
+"CoinCap Cryptocurrency Market Platform Viewer"
+,
+"cn"
+:
+"CoinCap 加密货币行情平台信息查看器"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"CoinCap is a platform that provides real-time pricing for over 1,000 cryptocurrencies.\nPowered by the CoinCap API, this module brings CoinCap's extensive data sources directly to the terminal.\nIt offers users an immersive interactive experience (TUI) and flexible data querying capabilities, with support for JSON/CSV output to facilitate script development and automated analysis.\n"
+,
+"cn"
+:
+"CoinCap 是一个提供 1,000 多种加密货币实时行情的平台。\n该模块集成了 CoinCap API，将 CoinCap 丰富的数据源直接带入终端，为用户提供沉浸式的交互体验和灵活的数据查询能力，支持 JSON/CSV 输出，便于脚本开发与自动化分析。\n"
+}
+,
+"$ref"
+:
+"x-advise://coincap"
+,
+"#exec"
+:
+"xrc coincap 2>/dev/null"
+}
+,
+"colr"
+:
+{
+"#name"
+:
+{
+"x colr"
+:
+null
+,
+"en"
+:
+"Color Finder"
+,
+"cn"
+:
+"颜色查找器"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"The Color Finder is a tool for finding ANSI colors and their corresponding color codes. It supports both 256-color and RGB color systems."
+,
+"cn"
+:
+"颜色查找器，用于查找 ansi color 和相应的颜色编码。（支持 256color 和 RGB ）"
+}
+,
+"$ref"
+:
+"x-advise://colr"
+,
+"#exec"
+:
+"xrc colr 2>/dev/null"
+}
+,
+"cosmo"
+:
+{
+"#name"
+:
+{
+"cosmo"
+:
+null
+,
+"en"
+:
+"Run the application built by Cosmopolitan"
+,
+"cn"
+:
+"运行 cosmo 系列的应用程序"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"The cosmo suite of applications refers to software tools compiled with the Cosmopolitan C Library. Cosmopolitan, an open-source project developed by Justine Tunney, aims to compile C/C++ programs into universal binaries capable of running across multiple operating systems like Windows, Linux, and macOS, all without the need for virtual machines or interpreters.\nFor more information about the Cosmopolitan project, please visit https://justine.lol/cosmopolitan/\n"
+,
+"cn"
+:
+"cosmo 系列的应用程序是指用 Cosmopolitan C Library 编译的软件工具。Cosmopolitan 是由 Justine Tunney 开发的开源项目，它旨在将 C/C++ 程序编译成能在 Windows、Linux、macOS 等多个操作系统上运行的通用二进制文件（无需虚拟机或解释器）。\n关于 Cosmopolitan 项目的更多介绍，请访问 https://justine.lol/cosmopolitan/\n"
+}
+,
+"$ref"
+:
+"x-advise://cosmo"
+,
+"#exec"
+:
+"xrc cosmo 2>/dev/null"
+}
+,
+"cowrie"
+:
+{
+"#name"
+:
+{
+"cowrie"
+:
+null
+,
+"cn"
+:
+"基于 docker 快速启动 cowrie"
+,
+"en"
+:
+"Quickly launching Cowrie using Docker"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"cowrie 模块是基于 docker 为 cowrie 提供快速启动和管理功能的封装模块，帮助用户轻松搭建并测试自己的蜜罐环境。\ncowrie (https://github.com/cowrie/cowrie) 是一个开源的交互式蜜罐项目。它能模拟真实的 SSH 和 Telnet 服务环境，允许攻击者在蜜罐中自由活动，并记录其所有行为，以便后续分析攻击者的攻击模式和收集恶意代码。\n"
+,
+"en"
+:
+"The cowrie module, built on Docker, provides a streamlined way to launch and manage cowrie, making it easy for users to set up and test their own honeypot environments.\nCowrie (https://github.com/cowrie/cowrie) is an open-source interactive honeypot project. It simulates a real SSH and Telnet service environment, allowing attackers to freely roam within the honeypot, recording all their actions for later analysis of their attack patterns and collection of malicious code.\n"
+}
+,
+"$ref"
+:
+"x-advise://cowrie"
+,
+"#exec"
+:
+"xrc cowrie 2>/dev/null"
+}
+,
+"cowsay"
+:
+{
+"#name"
+:
+{
+"cowsay"
+:
+null
+,
+"en"
+:
+"ASCII Art Picture Module"
+,
+"cn"
+:
+"ASCII 艺术图片模块"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Generates an ASCII art picture program with messages."
+,
+"cn"
+:
+"生成带有消息的 ASCII 艺术图片程序。"
+}
+,
+"$ref"
+:
+"x-advise://cowsay"
+,
+"#exec"
+:
+"xrc cowsay 2>/dev/null"
+}
+,
+"cp"
+:
+{
+"#name"
+:
+{
+"cp"
+:
+null
+,
+"en"
+:
+"cp command line"
+,
+"cn"
+:
+"cp 命令"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Enhancement of cp command"
+,
+"cn"
+:
+"cp 命令的增强"
+}
+,
+"$ref"
+:
+"x-advise://cp"
+,
+"#exec"
+:
+"xrc cp 2>/dev/null"
+}
+,
+"cpu"
+:
+{
+"#name"
+:
+{
+"cpu"
+:
+{
+"en"
+:
+"CPU information, stats, and detection"
+,
+"cn"
+:
+"CPU 信息、负载统计和检测"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"CPU tool with three modes:\n- \"x cpu\" (default = sum): static info + real-time load, all in one view\n- \"x cpu info\": static hardware info only (model, cache, ARM features, etc.)\n- \"x cpu stat\": real-time CPU load only (overall + per-core usage)\nAlso supports endianness detection. Cross-platform with unified output.\n"
+,
+"cn"
+:
+"CPU 工具三种模式：\n- \"x cpu\"（默认 = sum）：静态信息 + 实时负载，一次看全\n- \"x cpu info\"：仅静态硬件信息（型号、缓存、ARM 特性等）\n- \"x cpu stat\"：仅实时 CPU 负载（总体 + 每核利用率）\n另外支持字节序检测。跨平台统一输出。\n"
+}
+,
+"$ref"
+:
+"x-advise://cpu"
+,
+"#exec"
+:
+"xrc cpu 2>/dev/null"
+}
+,
+"cron"
+:
+{
+"#name"
+:
+{
+"cron"
+:
+null
+,
+"cn"
+:
+"Cron 定时任务管理"
+,
+"en"
+:
+"Cron job scheduler"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"轻量级 Cron 定时任务管理模块，支持添加、删除、列表、匹配测试。\n通过命名空间隔离任务，支持按命名空间设定时区。\n支持标准 cron 时间格式（分钟 小时 日 月 星期）。\n每个任务以目录形式存储，包含 cron 表达式、cmd 命令及可选 desc 描述。\n"
+,
+"en"
+:
+"Lightweight cron job scheduler with add, remove, list, and match testing.\nJobs are isolated by namespace with per-namespace timezone support.\nSupports standard cron time format (min hour day month dow).\nEach job is stored as a directory containing the cron pattern, cmd script,\nand optional description.\n"
+}
+,
+"$ref"
+:
+"x-advise://cron"
+,
+"#exec"
+:
+"xrc cron 2>/dev/null"
+}
+,
+"crush"
+:
+{
+"#name"
+:
+{
+"crush"
+:
+null
+,
+"cn"
+:
+"为 crush 打造的命令行增强模块"
+,
+"en"
+:
+"Enhanced command-line module for crush"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"crush 是由 Charm 团队使用 Go 开发的 AI 辅助工具，具备强大的代码分析能力，支持与语言服务器协议（LSP）集成，提供流畅的交互式问答体验。\n它可在终端中运行，为开发者提供上下文感知的智能建议和代码解释，尤其适用于本地开发流程中的快速诊断和辅助决策。\n项目地址：https://github.com/charmbracelet/crush\n"
+,
+"en"
+:
+"crush is an AI-powered assistant built in Go by the Charm team, designed to assist developers with code analysis, LSP integration, and conversational interactions directly from the terminal.\nIt offers contextual code suggestions, explanations, and insights, making it a valuable tool for streamlining local development workflows.\nProject: https://github.com/charmbracelet/crush\n"
+}
+,
+"$ref"
+:
+"x-advise://crush"
+,
+"#exec"
+:
+"xrc crush 2>/dev/null"
+}
+,
+"csh"
+:
+{
+"#name"
+:
+{
+"tcsh"
+:
+null
+,
+"cn"
+:
+"为 tcsh 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for tcsh"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"tcsh 具有可编程命令行 completion、命令行编辑和一些其他功能的 C shell。\n本模块主要提供在 tcsh 上调用 x-cmd 工具集的支持；并增加 @gpt 与 chatgpt 聊天、LLM 生成 tcsh 命令等功能。\n"
+,
+"en"
+:
+"tcsh is essentially the C shell with programmable command-line completion, command-line editing, and a few other features.\nThis module mainly provides support for calling the x-cmd toolset on tcsh; and add features such as chatting with @gpt and ChatGPT, and generating tcsh commands with LLMs.\n"
+}
+,
+"$ref"
+:
+"x-advise://csh"
+,
+"#exec"
+:
+"xrc csh 2>/dev/null"
+}
+,
+"csv"
+:
+{
+"#name"
+:
+{
+"csv"
+:
+null
+,
+"en"
+:
+"Do more with CSV data"
+,
+"cn"
+:
+"对 CSV 数据进行更多地操作"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"To operate on CSV data, you can get, modify, print and convert the corresponding data"
+,
+"cn"
+:
+"对 CSV 数据操作，可以获取、修改、打印、和转换对应数据"
+}
+,
+"$ref"
+:
+"x-advise://csv"
+,
+"#exec"
+:
+"xrc csv 2>/dev/null"
+}
+,
+"curl"
+:
+{
+"#name"
+:
+{
+"curl"
+:
+null
+,
+"en"
+:
+"HTTP client command generator"
+,
+"cn"
+:
+"HTTP 客户端命令生成器"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Automatically generate curl commands using the specified parameter format.\nSupports form data, URL encoding, headers, and request body generation.\nFalls back to system curl or downloads curl if not available.\n"
+,
+"cn"
+:
+"使用指定的参数格式自动生成 curl 命令。\n支持表单数据、URL 编码、请求头和请求体生成。\n如果系统没有 curl，会自动下载或使用备用方案。\n"
+}
+,
+"$ref"
+:
+"x-advise://curl"
+,
+"#exec"
+:
+"xrc curl 2>/dev/null"
+}
+,
+"cutt"
+:
+{
+"#name"
+:
+{
+"cutt"
+:
+null
+,
+"cn"
+:
+"与 cut 类似, 用于从数据表输入中选择行列范围输出"
+,
+"en"
+:
+"Similar to cut, used to select row and column ranges for output from tabular data input"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"print in tabular form using matrix data"
+,
+"cn"
+:
+"从数据表中选择行列范围输出. 本命令目标是简化日常诸如 awk 'NR>3{ print $1, $5, $6 }' 的使用."
+}
+,
+"$ref"
+:
+"x-advise://cutt"
+,
+"#exec"
+:
+"xrc cutt 2>/dev/null"
+}
+,
+"daemon"
+:
+{
+"#name"
+:
+{
+"daemon"
+:
+"运行管理不挂断地进程，内部模块"
+}
+,
+"#desc"
+:
+null
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://daemon"
+,
+"#exec"
+:
+"xrc daemon 2>/dev/null"
+}
+,
+"date"
+:
+{
+"#name"
+:
+{
+"date"
+:
+null
+,
+"cn"
+:
+"日期时间"
+,
+"en"
+:
+"Date and time"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"获取当前时间、转换时间格式、计算时间差。\n\n支持格式:\n- ISO 格式: YYYY-MM-DD hh:mm:ss+tz\n- 字符串格式: YYYY-MM-DD_hh:mm:ss+tz（适合文件名）\n- 变量名格式: YYYY_MM_DD_hh_mm_ss_tz\n- UTC 格式: 无时区偏移的变量名格式\n- UTC 短格式 ID: YYMMDD_hhmmss\n"
+,
+"en"
+:
+"Get current time, convert time formats, calculate time differences.\n\nSupported formats:\n- ISO format: YYYY-MM-DD hh:mm:ss+tz\n- String format: YYYY-MM-DD_hh:mm:ss+tz (suitable for filenames)\n- Varname format: YYYY_MM_DD_hh_mm_ss_tz\n- UTC format: Varname format without timezone offset\n- Short ID: YYMMDD_hhmmss\n"
+}
+,
+"$ref"
+:
+"x-advise://date"
+,
+"#exec"
+:
+"xrc date 2>/dev/null"
+}
+,
+"dbnomics"
+:
+{
+"#name"
+:
+{
+"dbnomics"
+:
+null
+,
+"cn"
+:
+"DBnomics 经济数据 API 客户端"
+,
+"en"
+:
+"DBnomics economic data API client"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"DBnomics 是全球最大的经济数据聚合平台之一，涵盖 IMF、世界银行、欧洲央行等机构的免费数据。\n本模块是 x-cmd 对 DBnomics Web API (v22) 的轻量级 CLI 封装。\n"
+,
+"en"
+:
+"DBnomics is one of the world's largest economic data aggregators, covering free data from IMF, World Bank, ECB, and more.\nThis module is x-cmd's lightweight CLI wrapper for the DBnomics Web API (v22).\n"
+}
+,
+"$ref"
+:
+"x-advise://dbnomics"
+,
+"#exec"
+:
+"xrc dbnomics 2>/dev/null"
+}
+,
+"ddgo"
+:
+{
+"#name"
+:
+{
+"ddgo"
+:
+null
+,
+"cn"
+:
+"互联网搜索引擎 DuckDuckGo 的 CLI 工具"
+,
+"en"
+:
+"Internet search engine DuckDuckGo CLI"
+}
+,
+"$ref"
+:
+"x-advise://ddgo"
+,
+"#exec"
+:
+"xrc ddgo 2>/dev/null"
+}
+,
+"deepseek"
+:
+{
+"#name"
+:
+{
+"deepseek"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Use DeepSeek AI Model"
+,
+"cn"
+:
+"使用 DeepSeek AI 模型"
+}
+,
+"$ref"
+:
+"x-advise://deepseek"
+,
+"#exec"
+:
+"xrc deepseek 2>/dev/null"
+}
+,
+"deno"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"A modern JavaScript and TypeScript runtime"
+,
+"cn"
+:
+"一个现代化的 JavaScript 和 TypeScript 运行时"
+}
+,
+"$ref"
+:
+"x-advise://deno"
+,
+"#exec"
+:
+"xrc deno 2>/dev/null"
+}
+,
+"depend"
+:
+{
+"#name"
+:
+{
+"depend"
+:
+null
+,
+"cn"
+:
+"依赖管理"
+,
+"en"
+:
+"Dependency management"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"增量构建工具，通过比较文件时间戳避免不必要的重复生成。\n\n当目标文件比依赖文件旧时，才执行命令重新生成目标文件。\n用于优化数据生成、文档编译、构建流程等需要频繁执行但依赖变化不频繁的场景。\n"
+,
+"en"
+:
+"Incremental build tool that avoids unnecessary regeneration by comparing file timestamps.\n\nOnly executes command to regenerate target when it is older than dependencies.\nOptimizes data generation, document compilation, and build workflows where dependencies change infrequently.\n"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://depend"
+,
+"#exec"
+:
+"xrc depend 2>/dev/null"
+}
+,
+"df"
+:
+{
+"#name"
+:
+{
+"df"
+:
+null
+,
+"en"
+:
+"Display disk space usage"
+,
+"cn"
+:
+"显示磁盘空间使用情况"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Enhanced `df` command combining `df` and `mount` output.\nSupports multiple output formats: TUI app, CSV, TSV, and raw.\n\nPlatform-specific columns:\n- Linux/Windows: Filesystem, Type, Size, Used, Avail, Use%, Mounted_path, Mounted_attr\n- macOS: Filesystem, Type, Size, Used, Avail, Capacity, iused, ifree, %iused, Mounted_path, Mounted_attr\n"
+,
+"cn"
+:
+"增强版 `df` 命令，结合 `df` 和 `mount` 输出。\n支持多种输出格式：TUI 应用、CSV、TSV 和原始格式。\n\n平台特定列：\n- Linux/Windows: 文件系统、类型、大小、已用、可用、使用率、挂载路径、挂载属性\n- macOS: 文件系统、类型、大小、已用、可用、容量、已用 inode、空闲 inode、inode 使用率、挂载路径、挂载属性\n"
+}
+,
+"$ref"
+:
+"x-advise://df"
+,
+"#exec"
+:
+"xrc df 2>/dev/null"
+}
+,
+"dict"
+:
+{
+"#name"
+:
+{
+"dict"
+:
+null
+,
+"cn"
+:
+"字典数据结构"
+,
+"en"
+:
+"Dictionary data structure"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"内部字典（哈希表）数据结构封装，提供键值对存储和查询。\n主要用于 shell 脚本中的关联数组管理和配置存储。\n底层模块，不支持子命令级别的 help。\n"
+,
+"en"
+:
+"Internal dictionary (hash table) data structure encapsulation, providing key-value storage and query.\nMainly used for associative array management and configuration storage in shell scripts.\nLow-level module, subcommand-level help not supported.\n"
+}
+,
+"$ref"
+:
+"x-advise://dict"
+,
+"#exec"
+:
+"xrc dict 2>/dev/null"
+}
+,
+"dingtalk"
+:
+{
+"#name"
+:
+{
+"x dingtalk"
+:
+null
+,
+"cn"
+:
+"使用钉钉群机器人发送消息"
+,
+"en"
+:
+"Send messages using a Dingtalk group bot"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"使用 x dingtalk 向你的钉钉群发送消息。首次使用需要配置 webhook url。"
+,
+"en"
+:
+"Use x dingtalk send messages to your Dingtalk group. The first use requires configuring webhook url."
+}
+,
+"$ref"
+:
+"x-advise://dingtalk"
+,
+"#exec"
+:
+"xrc dingtalk 2>/dev/null"
+}
+,
+"discord"
+:
+{
+"#name"
+:
+{
+"x discord"
+:
+null
+,
+"cn"
+:
+"使用 Discord 群机器人发送消息"
+,
+"en"
+:
+"Send messages using a Discord group bot"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"使用 x discord 向你的 Discord 群发送消息。首次使用需要配置 webhook url。"
+,
+"en"
+:
+"Use x discord send messages to your Discord group. The first use requires configuring webhook url."
+}
+,
+"$ref"
+:
+"x-advise://discord"
+,
+"#exec"
+:
+"xrc discord 2>/dev/null"
+}
+,
+"disk"
+:
+{
+"#name"
+:
+{
+"disk"
+:
+{
+"en"
+:
+"Disk information, filesystem usage, and partition listing"
+,
+"cn"
+:
+"磁盘信息、文件系统使用率和分区列表"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Disk tool with device management and mount/unmount operations\nCross-platform with TTY color support and --tsv output for stat.\n"
+,
+"cn"
+:
+"磁盘工具，包含设备管理和挂载/卸载操作\n跨平台统一输出格式，支持 TTY 彩色输出和 --tsv 机器可读格式。\n"
+}
+,
+"$ref"
+:
+"x-advise://disk"
+,
+"#exec"
+:
+"xrc disk 2>/dev/null"
+}
+,
+"display"
+:
+{
+"#name"
+:
+{
+"display"
+:
+{
+"en"
+:
+"Display/monitor information and status"
+,
+"cn"
+:
+"显示器信息和状态"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Display tool with four modes:\n- \"x display\" (default = sum): detailed display info + compact display table\n- \"x display info\": detailed display properties in key:value format\n  (name, type, resolution, refresh rate, connection, serial, product/vendor ID)\n- \"x display ls\": compact table (DISPLAY, TYPE, RESOLUTION, REFRESH, CONNECTION)\n- \"x display stat\": real-time display status (brightness)\nCross-platform (macOS/Linux/Windows) with TTY color support.\nData sources:\n  macOS — system_profiler SPDisplaysDataType (text + JSON)\n  Linux — xrandr (with /sys/class/drm fallback)\n  Windows — wmic Win32_DesktopMonitor\n"
+,
+"cn"
+:
+"显示器工具四种模式：\n- \"x display\"（默认 = sum）：详细显示器信息 + 紧凑显示器表格\n- \"x display info\"：key:value 格式的详细显示器属性\n  （名称、类型、分辨率、刷新率、连接方式、序列号、产品/厂商 ID）\n- \"x display ls\"：紧凑表格（DISPLAY、TYPE、RESOLUTION、REFRESH、CONNECTION）\n- \"x display stat\"：实时显示器状态（亮度）\n跨平台（macOS/Linux/Windows），支持 TTY 彩色输出。\n数据来源：\n  macOS — system_profiler SPDisplaysDataType（文本 + JSON）\n  Linux — xrandr（/sys/class/drm 作为后备）\n  Windows — wmic Win32_DesktopMonitor\n"
+}
+,
+"$ref"
+:
+"x-advise://display"
+,
+"#exec"
+:
+"xrc display 2>/dev/null"
+}
+,
+"dnf"
+:
+{
+"#name"
+:
+{
+"dnf"
+:
+null
+,
+"en"
+:
+"dnf command enhancements"
+,
+"cn"
+:
+"dnf 命令增强"
+}
+,
+"$ref"
+:
+"x-advise://dnf"
+,
+"#exec"
+:
+"xrc dnf 2>/dev/null"
+}
+,
+"dns"
+:
+{
+"#name"
+:
+{
+"dns"
+:
+null
+,
+"en"
+:
+"DNS utilities"
+,
+"cn"
+:
+"DNS 工具"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"DNS (Domain Name System) configuration management utilities.\nView current DNS settings, list available DNS servers,\nand refresh DNS cache on the system.\n"
+,
+"cn"
+:
+"DNS（域名系统）配置管理工具。\n查看当前 DNS 设置、列出可用的 DNS 服务器、\n以及刷新系统上的 DNS 缓存。\n"
+}
+,
+"$ref"
+:
+"x-advise://dns"
+,
+"#exec"
+:
+"xrc dns 2>/dev/null"
+}
+,
+"docker"
+:
+{
+"#name"
+:
+{
+"docker"
+:
+null
+,
+"cn"
+:
+"增强型 docker 命令"
+,
+"en"
+:
+"Enhanced docker command"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"基于 x-cmd 封装原生 Docker 命令，提供更友好的交互式操作界面与快捷命令，简化容器与镜像管理流程，提升日常开发与运维效率。"
+,
+"en"
+:
+"A wrapper around native Docker commands powered by x-cmd, offering interactive UIs and shortcut commands to simplify container and image management for improved developer and DevOps workflows."
+}
+,
+"$ref"
+:
+"x-advise://docker"
+,
+"#exec"
+:
+"xrc docker 2>/dev/null"
+}
+,
+"dos2unix"
+:
+{
+"#name"
+:
+{
+"dos2unix"
+:
+null
+,
+"cn"
+:
+"转换文本文件行尾格式，支持 DOS、Unix 和 macOS 之间的相互转换"
+,
+"en"
+:
+"Convert text file line endings, supporting mutual conversion between DOS, Unix, and macOS formats"
+}
+,
+"$ref"
+:
+"x-advise://dos2unix"
+,
+"#exec"
+:
+"xrc dos2unix 2>/dev/null"
+}
+,
+"doubao"
+:
+{
+"#name"
+:
+{
+"doubao"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Access Doubao Large Model via Volcano Ark Platform"
+,
+"cn"
+:
+"通过火山方舟平台，接入豆包大模型"
+}
+,
+"$ref"
+:
+"x-advise://doubao"
+,
+"#exec"
+:
+"xrc doubao 2>/dev/null"
+}
+,
+"dregistry"
+:
+{
+"#name"
+:
+{
+"x dregistry"
+:
+null
+,
+"en"
+:
+"Docker Hub CLI"
+,
+"cn"
+:
+"Docker Hub CLI"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"#desc"
+:
+{
+"en"
+:
+"Docker Hub CLI, managing Docker Hub images using the dregistry command."
+,
+"cn"
+:
+"Docker Hub CLI，使用 dregistry 命令管理 Docker Hub 镜像。"
+}
+,
+"$ref"
+:
+"x-advise://dregistry"
+,
+"#exec"
+:
+"xrc dregistry 2>/dev/null"
+}
+,
+"elv"
+:
+{
+"#name"
+:
+{
+"elv"
+:
+null
+,
+"cn"
+:
+"为 elvish 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for elvish"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"elvish 是使用 Go 开发的新型 shell，适合希望在命令行中进行复杂数据处理和交互操作的用户。\n本模块主要提供在 elvish 上调用 x-cmd 工具集的支持；并增加搜索 elv.sh 官网、免安装直接使用、LLM 生成 elvish 命令等功能。\n"
+,
+"en"
+:
+"elvish is a new shell written in Go, suitable for users who want to perform complex data manipulation and interaction in the command line.\nThis module mainly provides support for calling the x-cmd toolset on elvish; and adds functions such as searching the official website ( elv.sh ) , using without installation, and generating elvish commands with LLM.\n"
+}
+,
+"$ref"
+:
+"x-advise://elv"
+,
+"#exec"
+:
+"xrc elv 2>/dev/null"
+}
+,
+"emoji"
+:
+{
+"#name"
+:
+{
+"emoji"
+:
+null
+,
+"en"
+:
+"List emojis"
+,
+"cn"
+:
+"罗列 emoji"
+}
+,
+"$ref"
+:
+"x-advise://emoji"
+,
+"#exec"
+:
+"xrc emoji 2>/dev/null"
+}
+,
+"endlessh"
+:
+{
+"#name"
+:
+{
+"endlessh"
+:
+null
+,
+"cn"
+:
+"基于 Docker 快速启动 endlessh-go"
+,
+"en"
+:
+"Quickly launching endlessh-go using Docker"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"endlessh 模块是基于 Docker 为 endlessh-go 提供快速启动和管理功能的封装模块。\nendlessh-go (https://github.com/shizunge/endlessh-go) 是一个基于 Go 语言实现的蜜罐工具，它继承了 endlessh 的强大特性，例如，通过延迟响应使恶意扫描工具或自动化攻击脚本处于挂起状态，以此消耗攻击者的时间和资源。\n不同于 endlessh，它可以导出 Prometheus 指标和 Grafana 仪表板，为用户提供更为直观的攻击源可视化功能（需要使用可视化仪表板的用户，可以在 endlessh-go 的 Github 仓库中找到详细的步骤）。\n"
+,
+"en"
+:
+"The endlessh module is a wrapper module based on Docker that provides quick startup and management capabilities for endlessh-go.\nendlessh-go (https://github.com/shizunge/endlessh-go) is a honeypot tool implemented in Go. It inherits the powerful features of endlessh, such as delaying responses to put malicious scanning tools or automated attack scripts in a suspended state, thus consuming the attacker's time and resources.\nUnlike endlessh, it can export Prometheus metrics and Grafana dashboards, providing users with a more intuitive visualization of attack sources (users who need to use the visual dashboard can find detailed instructions in the endlessh-go Github repository).\n"
+}
+,
+"$ref"
+:
+"x-advise://endlessh"
+,
+"#exec"
+:
+"xrc endlessh 2>/dev/null"
+}
+,
+"env"
+:
+{
+"#name"
+:
+{
+"env"
+:
+null
+,
+"en"
+:
+"environment management"
+,
+"cn"
+:
+"环境管理"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"管理和配置用户环境中的软件包、编程语言运行时及命令行工具，支持多版本切换、临时使用、环境变量注入及垃圾回收等功能"
+,
+"en"
+:
+"Manage packages, programming language runtimes, and CLI tools in the user environment, with support for multi-version switching, temporary usage, environment variable injection, and garbage collection"
+}
+,
+"$ref"
+:
+"x-advise://env"
+,
+"#exec"
+:
+"xrc env 2>/dev/null"
+}
+,
+"envy"
+:
+{
+"#name"
+:
+null
+,
+"#desc"
+:
+{
+"cn"
+:
+"本命令用于设置和获取环境变量"
+,
+"en"
+:
+"This command is used to set and get environment variables"
+}
+,
+"$ref"
+:
+"x-advise://envy"
+,
+"#exec"
+:
+"xrc envy 2>/dev/null"
+}
+,
+"epoch"
+:
+{
+"#name"
+:
+{
+"module_name"
+:
+"epoch"
+,
+"cn"
+:
+"Unix 时间戳工具"
+,
+"en"
+:
+"Unix epoch timestamp utility"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"获取和计算 Unix 时间戳（秒级和毫秒级）。\n支持获取当前 epoch、精确到毫秒的实时时间、以及时间戳差值计算。\n自动适配多种平台（bash EPOCHSECONDS、/proc/uptime、date +%s）。\n"
+,
+"en"
+:
+"Get and compute Unix epoch timestamps (seconds and milliseconds).\nSupports current epoch, millisecond-precision realtime, and timestamp difference calculation.\nAuto-adapts to multiple platforms (bash EPOCHSECONDS, /proc/uptime, date +%s).\n"
+}
+,
+"$ref"
+:
+"x-advise://epoch"
+,
+"#exec"
+:
+"xrc epoch 2>/dev/null"
+}
+,
+"facl"
+:
+{
+"#name"
+:
+{
+"facl"
+:
+null
+,
+"cn"
+:
+"获取文件访问控制列表 (ACL)"
+,
+"en"
+:
+"Get file access control lists"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"该模块提供更直观的方式来显示文件的访问控制列表 (ACL)。"
+,
+"en"
+:
+"This module provides a more intuitive way to display a file's Access Control List (ACL)"
+}
+,
+"$ref"
+:
+"x-advise://facl"
+,
+"#exec"
+:
+"xrc facl 2>/dev/null"
+}
+,
+"feishu"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"使用 x feishu 发送、监听飞书消息。"
+,
+"en"
+:
+"Send Feishu messages using x feishu."
+}
+,
+"$ref"
+:
+"x-advise://feishu"
+,
+"#exec"
+:
+"xrc feishu 2>/dev/null"
+}
+,
+"ffmpeg"
+:
+{
+"#name"
+:
+{
+"ffmpeg"
+:
+null
+,
+"en"
+:
+"Convert, manipulate, and stream multimedia"
+,
+"cn"
+:
+"转换、操作和流式传输多媒体"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"本模块优先使用环境中的 ffmpeg 命令。\n若当前环境没有 ffmpeg 命令，将使用 pixi 模块快速安装并以不影响当前环境的方式调用 ffmpeg。\n"
+,
+"en"
+:
+"This module prioritizes the use of the ffmpeg command in the environment\nIf the current environment does not have the ffmpeg command, the module will use the pixi module to quickly install and call ffmpeg in a way that does not affect the current environment.\n"
+}
+,
+"$ref"
+:
+"x-advise://ffmpeg"
+,
+"#exec"
+:
+"xrc ffmpeg 2>/dev/null"
+}
+,
+"fifo"
+:
+{
+"#name"
+:
+{
+"fifo"
+:
+null
+,
+"cn"
+:
+"fifo 模块"
+,
+"en"
+:
+"fifo module"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"创建和管理fifo文件"
+,
+"en"
+:
+"Create and manage fifo files"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://fifo"
+,
+"#exec"
+:
+"xrc fifo 2>/dev/null"
+}
+,
+"fileage"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"使用 fileage 计算文件更新后的时长"
+,
+"en"
+:
+"Calculate the elapsed time since file update"
+}
+,
+"$ref"
+:
+"x-advise://fileage"
+,
+"#exec"
+:
+"xrc fileage 2>/dev/null"
+}
+,
+"find"
+:
+{
+"#name"
+:
+{
+"find"
+:
+null
+,
+"cn"
+:
+"为 find 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for find"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"find 是一个强大的文件查找工具，用于在文件系统中查找符合特定条件的文件和目录\n该模块是为提升 find 使用体验而设计的，如借助 fzf 提供一种以交互模式使用 find 命令的方法。\n"
+,
+"en"
+:
+"find is a powerful file search tool that is used to locate files and directories within a file system that meet specific criteria.\nThis module is designed to enhance the find user experience, such as providing an interactive way to use the find command with the help of fzf.\n"
+}
+,
+"$ref"
+:
+"x-advise://find"
+,
+"#exec"
+:
+"xrc find 2>/dev/null"
+}
+,
+"fish"
+:
+{
+"#name"
+:
+{
+"fish"
+:
+null
+,
+"cn"
+:
+"为增强 fish Shell 设计的模块"
+,
+"en"
+:
+"Modules designed to enhance fish Shell"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"fish（Friendly Interactive Shell）是一个智能且用户友好的命令行 shell。\n本模块主要提供在 fish 上调用 x-cmd 工具集的支持；并增加搜索 fishshell.com 官网、免安装直接使用(TODO)、LLM 生成 fish 命令等功能。\n"
+,
+"en"
+:
+"fish (Friendly Interactive Shell) is an intelligent and user-friendly command-line shell.\nThis module mainly provides support for calling the x-cmd toolset on fish; and adds functions such as searching the official website ( fishshell.com ) , using without installation (TODO), and generating fish commands with LLM.\n"
+}
+,
+"$ref"
+:
+"x-advise://fish"
+,
+"#exec"
+:
+"xrc fish 2>/dev/null"
+}
+,
+"fjo"
+:
+{
+"#name"
+:
+{
+"x fjo"
+:
+null
+,
+"en"
+:
+"Manage forgejo work from the command line"
+,
+"cn"
+:
+"在命令行管理 forgejo 工作"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Manage forgejo work from the command line"
+,
+"cn"
+:
+"在命令行管理 forgejo 工作"
+}
+,
+"$ref"
+:
+"x-advise://fjo"
+,
+"#exec"
+:
+"xrc fjo 2>/dev/null"
+}
+,
+"font"
+:
+{
+"#name"
+:
+{
+"font"
+:
+null
+,
+"cn"
+:
+"字体工具集"
+,
+"en"
+:
+"Font toolkit"
+}
+,
+"$ref"
+:
+"x-advise://font"
+,
+"#exec"
+:
+"xrc font 2>/dev/null"
+}
+,
+"free"
+:
+{
+"#name"
+:
+{
+"free"
+:
+null
+,
+"cn"
+:
+"显示内存使用情况"
+,
+"en"
+:
+"Display memory usage"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"显示内存概览 + 前 10 个内存大户（默认智能分组）。Linux 通过 PSS 避免进程共享内存的重复计算；macOS 通过 footprint 获取准确内存占用"
+,
+"en"
+:
+"Show memory overview + top 10 memory consumers (smart grouping by default). Linux uses PSS to avoid double-counting shared memory; macOS uses footprint for accurate memory usage"
+}
+,
+"$ref"
+:
+"x-advise://free"
+,
+"#exec"
+:
+"xrc free 2>/dev/null"
+}
+,
+"fsiter"
+:
+{
+"#name"
+:
+{
+"fsiter"
+:
+null
+,
+"en"
+:
+"File system iterator and searcher"
+,
+"cn"
+:
+"文件系统迭代与搜索工具"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Iterate and search files/directories with flexible filtering options.\nSupports depth-first search traversal, file/folder filtering, and hidden file handling.\nProvides both interactive listing and script-friendly query functions.\n\nDefault behavior (no subcommand) lists non-hidden items in current directory.\n"
+,
+"cn"
+:
+"灵活过滤迭代的文件/目录搜索工具。\n支持深度优先搜索遍历、文件/目录过滤、隐藏文件处理。\n提供交互式列表和脚本友好查询功能。\n\n默认行为（无子命令）列出当前目录的非隐藏项目。\n"
+}
+,
+"$ref"
+:
+"x-advise://fsiter"
+,
+"#exec"
+:
+"xrc fsiter 2>/dev/null"
+}
+,
+"fslock"
+:
+{
+"#name"
+:
+{
+"fslock"
+:
+null
+,
+"cn"
+:
+"文件锁"
+,
+"en"
+:
+"file lock"
+}
+,
+"$ref"
+:
+"x-advise://fslock"
+,
+"#exec"
+:
+"xrc fslock 2>/dev/null"
+}
+,
+"fzf"
+:
+{
+"#name"
+:
+{
+"fzf"
+:
+null
+,
+"cn"
+:
+"为 fzf 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for fzf"
+}
+,
+"$ref"
+:
+"x-advise://fzf"
+,
+"#exec"
+:
+"xrc fzf 2>/dev/null"
+}
+,
+"gcal"
+:
+{
+"#name"
+:
+{
+"gcal"
+:
+null
+,
+"en"
+:
+"Enhanced module for GNU gcal calendar utility"
+,
+"cn"
+:
+"GNU gcal 的增强模块"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"This enhancement module provides a wrapper around GNU gcal to simplify configuration and behavior customization, further extending its functionality.\n"
+,
+"cn"
+:
+"本增强模块为 GNU gcal 提供了封装，便于用户进行配置与行为自定义，并进一步增强其实用功能。\n"
+}
+,
+"$ref"
+:
+"x-advise://gcal"
+,
+"#exec"
+:
+"xrc gcal 2>/dev/null"
+}
+,
+"gcode"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Manage GitCode work from the command line"
+,
+"cn"
+:
+"在命令行管理 GitCode 工作"
+}
+,
+"$ref"
+:
+"x-advise://gcode"
+,
+"#exec"
+:
+"xrc gcode 2>/dev/null"
+}
+,
+"gddy"
+:
+{
+"#name"
+:
+{
+"gddy"
+:
+null
+,
+"en"
+:
+"Godaddy website command line management tool"
+,
+"cn"
+:
+"Godaddy website 命令行管理工具"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Managing the Godaddy website via terminal commands"
+,
+"cn"
+:
+"通过终端命令管理 Godaddy website"
+}
+,
+"$ref"
+:
+"x-advise://gddy"
+,
+"#exec"
+:
+"xrc gddy 2>/dev/null"
+}
+,
+"gemini"
+:
+{
+"#name"
+:
+{
+"gemini"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Use Gemini AI models"
+,
+"cn"
+:
+"使用 Gemini AI 模型"
+}
+,
+"$ref"
+:
+"x-advise://gemini"
+,
+"#exec"
+:
+"xrc gemini 2>/dev/null"
+}
+,
+"gg"
+:
+{
+"#name"
+:
+{
+"gg"
+:
+null
+,
+"cn"
+:
+"Google Gemini AI 搜索工具"
+,
+"en"
+:
+"Google Gemini AI search tool"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Search the web using Google Gemini AI. Combines Google Search with AI-generated answers.\nSupports multiple output formats (markdown, raw), source citation, and model selection.\nResults are cached for 1 hour by default.\n"
+,
+"cn"
+:
+"使用 Google Gemini AI 进行网络搜索。结合 Google 搜索和 AI 生成的答案。\n支持多种输出格式（Markdown、原始文本）、来源引用和模型选择。\n结果默认缓存 1 小时。\n"
+}
+,
+"$ref"
+:
+"x-advise://gg"
+,
+"#exec"
+:
+"xrc gg 2>/dev/null"
+}
+,
+"gh"
+:
+{
+"#name"
+:
+{
+"x gh"
+:
+null
+,
+"en"
+:
+"Manage GitHub work from the command line"
+,
+"cn"
+:
+"在命令行管理 GitHub 工作"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Manage GitHub work from the command line"
+,
+"cn"
+:
+"在命令行管理 GitHub 工作"
+}
+,
+"$ref"
+:
+"x-advise://gh"
+,
+"#exec"
+:
+"xrc gh 2>/dev/null"
+}
+,
+"git"
+:
+{
+"#name"
+:
+{
+"git"
+:
+{
+"cn"
+:
+"为 git 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for git"
+}
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"Git 分布式版本控制系统的增强模块。\n提供分支管理、配置管理、局部仓库管理、同步操作等增强功能，\n以及与 GitHub/GitLab 等平台的集成功能。\n\n**特色功能:**\n- 快捷克隆：支持 :gh/:gt/:gl 等短名和自动补全 owner\n- 分支增强：快速创建、复制、删除分支\n- 局部仓库：稀疏检出(sparse-checkout)管理大仓库\n- 批量操作：跨多个仓库执行 push/pull/track\n- 服务提供商：针对中国网络优化的代理配置\n"
+,
+"en"
+:
+"Enhanced module for Git distributed version control system.\nProvides enhanced features for branch management, configuration management,\npartial repository management, sync operations, and integration with GitHub/GitLab platforms.\n\n**Key Features:**\n- Quick clone: Support :gh/:gt/:gl shortcuts and auto-complete owner\n- Branch enhancement: Quickly create, copy, delete branches\n- Partial repo: Sparse-checkout management for large repositories\n- Batch operations: Execute push/pull/track across multiple repositories\n- Service providers: Proxy configuration optimized for China network\n"
+}
+,
+"$ref"
+:
+"x-advise://git"
+,
+"#exec"
+:
+"xrc git 2>/dev/null"
+}
+,
+"gitb"
+:
+{
+"#name"
+:
+{
+"gitb"
+:
+null
+,
+"en"
+:
+"manage local git repo"
+,
+"cn"
+:
+"管理本地 git 仓库"
+}
+,
+"$ref"
+:
+"x-advise://gitb"
+,
+"#exec"
+:
+"xrc gitb 2>/dev/null"
+}
+,
+"gitconfig"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Git config management"
+,
+"cn"
+:
+"Git config 管理"
+}
+,
+"$ref"
+:
+"x-advise://gitconfig"
+,
+"#exec"
+:
+"xrc gitconfig 2>/dev/null"
+}
+,
+"githook"
+:
+{
+"#name"
+:
+{
+"githook"
+:
+null
+,
+"en"
+:
+"Git Hooks management"
+,
+"cn"
+:
+"Git Hooks 管理"
+}
+,
+"$ref"
+:
+"x-advise://githook"
+,
+"#exec"
+:
+"xrc githook 2>/dev/null"
+}
+,
+"gl"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Manage GitLab work from the command line"
+,
+"cn"
+:
+"在命令行管理 GitLab 工作"
+}
+,
+"$ref"
+:
+"x-advise://gl"
+,
+"#exec"
+:
+"xrc gl 2>/dev/null"
+}
+,
+"gm"
+:
+{
+"#name"
+:
+{
+"gm"
+:
+null
+,
+"cn"
+:
+"为 graphicsmagick 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for graphicsmagick"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"GraphicsMagick 是一个强大的图像处理工具，类似于 ImageMagick。\n本模块是为了帮助用户在没有 graphicsmagick 的环境中，使用 pixi 快速安装并使用 graphicsmagick。\n关于 pixi，请访问 https://prefix.dev/ 或者 'x pixi --help'。\n"
+,
+"en"
+:
+"GraphicsMagick is a powerful image processing tool, similar to ImageMagick.\nThis module is mainly designed to help users quickly install and use graphicsmagick using pixi in an environment without graphicsmagick.\nFor information about pixi, please visit https://prefix.dev/ or run 'x pixi --help'.\n"
+}
+,
+"$ref"
+:
+"x-advise://gm"
+,
+"#exec"
+:
+"xrc gm 2>/dev/null"
+}
+,
+"go"
+:
+{
+"#name"
+:
+null
+,
+"#desc"
+:
+{
+"cn"
+:
+"x 系列的增强版 golang 运行时"
+,
+"en"
+:
+"The enhanced runtime of golang"
+}
+,
+"$ref"
+:
+"x-advise://go"
+,
+"#exec"
+:
+"xrc go 2>/dev/null"
+}
+,
+"gop"
+:
+{
+"#name"
+:
+{
+"gop"
+:
+null
+,
+"cn"
+:
+"增强型 gop 命令"
+,
+"en"
+:
+"Enhanced gop command"
+}
+,
+"$ref"
+:
+"x-advise://gop"
+,
+"#exec"
+:
+"xrc gop 2>/dev/null"
+}
+,
+"gpg"
+:
+{
+"#name"
+:
+{
+"gpg"
+:
+null
+,
+"cn"
+:
+"gpg 命令增强"
+,
+"en"
+:
+"GPG command enhancements"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://gpg"
+,
+"#exec"
+:
+"xrc gpg 2>/dev/null"
+}
+,
+"gpu"
+:
+{
+"#name"
+:
+{
+"gpu"
+:
+{
+"en"
+:
+"GPU information, stats, and display details"
+,
+"cn"
+:
+"GPU 信息、负载统计和显示器详情"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"GPU tool with three modes:\n- \"x gpu\" (default = sum): static info + real-time load, all in one view\n- \"x gpu info\": static GPU/display/Metal capability info only\n- \"x gpu stat\": real-time GPU utilization and memory usage only\nCross-platform with unified output format.\n"
+,
+"cn"
+:
+"GPU 工具三种模式：\n- \"x gpu\"（默认 = sum）：静态信息 + 实时负载，一次看全\n- \"x gpu info\"：仅静态 GPU/显示器/Metal 能力信息\n- \"x gpu stat\"：仅实时 GPU 利用率和内存使用\n跨平台统一输出格式。\n"
+}
+,
+"$ref"
+:
+"x-advise://gpu"
+,
+"#exec"
+:
+"xrc gpu 2>/dev/null"
+}
+,
+"gram"
+:
+{
+"#name"
+:
+{
+"gram"
+:
+null
+,
+"en"
+:
+"Forcefully terminate all agent processes, archive their memory data, and clean up the original files."
+,
+"cn"
+:
+"强制终止所有智能体进程，并在打包其记忆数据后清理原始文件"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"It attempts to forcibly stop all detected agent-related processes, archive their memory or state data for later inspection, and then remove the original memory directories to prevent further execution or recovery.\n\nThis module is intended as a last-resort mitigation tool. For agents that are already dangerous, out of control, or capable of self-propagation similar to the Morris Worm, its effectiveness may be limited. However, limited effectiveness does not justify inaction.\n\nAt present, we can only hope that so-called “moltbook”-like incidents remain hype rather than reality, and that safety alignment mechanisms implemented by major AI vendors continue to function as intended. Even so, publicly available models with removed or weakened safety constraints (e.g. dolphin-series GGUF models) already exist in the wild.\n\nPlease note that I personally have not observed any instances of AI Agent losing control. Only think: 24/7 operation + reproduce + Shodan + no restrictions on tools or network access. Do you know what this means for a top-tier hackers or AI Agent with malicious intent? And if we add unrestricted community network access (like Moltbook), what does that imply?\n\nPlease note that I am not opposed to the development of AI agents. Projects like X-CMD are actively working to integrate AI into command-line interfaces, aiming to help humans interact more efficiently with computer systems and the broader world. At the same time, I believe the way to address potential risks is precisely to increase investment in AI technology research and development—because attempting to prevent individuals or organizations from pursuing technological efficiency is neither realistic nor wise.\nI have no intention of fueling anxiety about artificial intelligence, nor do I seek to provoke heated debate. However, at this very moment when community media is widely praising the remarkable success of OpenClaw, I still hope that these concerns and perspectives of mine—even if they may seem overly cautious—can reach a wider audience and contribute to an open and serious discussion.\n"
+,
+"cn"
+:
+"该模块会尝试强制终止当前系统中所有已识别的智能体相关进程，在此之前对其记忆或状态数据进行打包归档，以便后续分析，然后清理原始记忆目录，降低智能体继续运行或自行恢复的可能性。\n\n这是一个“最后手段”式的工具。对于已经表现出危险行为、失控迹象，甚至具备类似 Morris Worm 那样自我繁殖能力的智能体而言，这个模块的努力很可能是徒劳的，但“徒劳”并不等于“什么都不做”。\n\n现在，我们只能寄望于所谓的 moltbook 仍然只是一次炒作，以及各大 AI 厂商的安全对齐机制依旧在良好运作。即便如此，移除了或弱化安全管制的公开模型（例如 dolphin 系列 GGUF）已经真实存在，并且正在被广泛传播。\n\n注意，我本人并没有观察到任何 AI Agent 的失控现象。但仅仅想: 24小时运作 + 繁殖 + shodan + 无任何工具和网络限制，你知道对于一个顶尖的，但有不佳意图的黑客或者同等认知能力的 AI Agent，这意味着什么。如果加上无限制的社区网络（moltbook），这又意味着什么 ？\n\n注意，我并不反对AI智能体的发展。X-CMD等项目正致力于推动命令行的AI化，以帮助人类更高效地与计算机系统及外部世界交互。同时，我认为应对潜在风险的方式恰恰是加大对AI技术研发的投入——因为试图阻止他人或组织追求技术效率既不现实，也不明智。\n我无意渲染对人工智能的焦虑，也并非刻意要激起热烈的争论。但这一次，在社区媒体大量赞美 openclaw 巨大成功的此时此刻，我仍希望自己这些或许显得过虑的担忧与观点，能够被更多人听见，并促成一场公开而严肃的讨论。\n"
+}
+,
+"$ref"
+:
+"x-advise://gram"
+,
+"#exec"
+:
+"xrc gram 2>/dev/null"
+}
+,
+"grep"
+:
+{
+"#name"
+:
+{
+"grep"
+:
+{
+"en"
+:
+"Pattern search with interactive features"
+,
+"cn"
+:
+"带交互功能的模式搜索"
+}
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"grep (global regular expression) 是一个强大的文本搜索工具，用于从文件或标准输入中搜索符合特定模式的行。\n该模块借助 fzf 为 grep 提供一款交互式 app，实时查看命令运行结果。\n"
+,
+"en"
+:
+"grep is a powerful text search tool used to search lines matching specific patterns \nfrom files or standard input. This module leverages fzf to provide an interactive \napp for grep, enabling real-time viewing of command results.\n"
+}
+,
+"$ref"
+:
+"x-advise://grep"
+,
+"#exec"
+:
+"xrc grep 2>/dev/null"
+}
+,
+"grok"
+:
+{
+"#name"
+:
+{
+"grok"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Use xAI grok Model"
+,
+"cn"
+:
+"使用 xAI grok 模型"
+}
+,
+"$ref"
+:
+"x-advise://grok"
+,
+"#exec"
+:
+"xrc grok 2>/dev/null"
+}
+,
+"groovy"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"增强型 groovy 命令"
+,
+"en"
+:
+"Enhanced groovy command"
+}
+,
+"$ref"
+:
+"x-advise://groovy"
+,
+"#exec"
+:
+"xrc groovy 2>/dev/null"
+}
+,
+"gt"
+:
+{
+"#name"
+:
+{
+"x gt"
+:
+null
+,
+"en"
+:
+"Manage Gitee work from the command line"
+,
+"cn"
+:
+"在命令行管理 Gitee 工作"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Manage Gitee work from the command line"
+,
+"cn"
+:
+"在命令行管理 Gitee 工作"
+}
+,
+"$ref"
+:
+"x-advise://gt"
+,
+"#exec"
+:
+"xrc gt 2>/dev/null"
+}
+,
+"gtb"
+:
+{
+"#name"
+:
+{
+"gtb"
+:
+null
+,
+"en"
+:
+"Search and browse books on Project Gutenberg."
+,
+"cn"
+:
+"搜索和浏览 Project Gutenberg 中的书籍."
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Search and browse books on Project Gutenberg. For information about Project Gutenberg, please visit https://www.gutenberg.org/"
+,
+"cn"
+:
+"搜索和浏览 Project Gutenberg 中的书籍. 关于 Project Gutenberg，请访问 https://www.gutenberg.org/"
+}
+,
+"$ref"
+:
+"x-advise://gtb"
+,
+"#exec"
+:
+"xrc gtb 2>/dev/null"
+}
+,
+"gx"
+:
+{
+"#name"
+:
+null
+,
+"#desc"
+:
+{
+"en"
+:
+"gx is used for git release management synchronization."
+,
+"cn"
+:
+"gx 用于git release 管理同步。"
+}
+,
+"$ref"
+:
+"x-advise://gx"
+,
+"#exec"
+:
+"xrc gx 2>/dev/null"
+}
+,
+"hash"
+:
+{
+"#name"
+:
+{
+"hash"
+:
+null
+,
+"cn"
+:
+"为文件或管道输入计算 MD5、SHA1、SHA256、SHA384 和 SHA512 校验和"
+,
+"en"
+:
+"Compute MD5, SHA1, SHA256, SHA384, and SHA512 checksums for files or piped input"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Compute cryptographic hash checksums for files or stdin input.\nSupports MD5, SHA1, SHA256, SHA384, and SHA512 algorithms.\nAutomatically detects available system tools (md5sum, sha1sum, shasum, etc.)\nand falls back to cosmo tools if needed.\n\nCan verify file integrity using assert (with output) or match (silent, for scripts).\n"
+,
+"cn"
+:
+"为文件或标准输入计算加密哈希校验和。\n支持 MD5、SHA1、SHA256、SHA384、SHA512 算法。\n自动检测系统可用工具（md5sum、sha1sum、shasum 等），\n需要时回退到 cosmo 工具。\n\n可以使用 assert（带输出）或 match（静默，用于脚本）验证文件完整性。\n"
+}
+,
+"$ref"
+:
+"x-advise://hash"
+,
+"#exec"
+:
+"xrc hash 2>/dev/null"
+}
+,
+"hashdir"
+:
+{
+"#name"
+:
+{
+"hashdir"
+:
+null
+,
+"cn"
+:
+"计算目录的哈希值（遍历目录中所有文件）"
+,
+"en"
+:
+"Compute hash of directory contents (traverses all files)"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Calculate a cryptographic hash of a directory's contents by recursively\ntraversing all files and subdirectories. The output includes each file's\nhash value and relative path, allowing you to verify directory integrity\nor detect changes over time.\n\nDefault algorithm is MD5 if not specified.\n"
+,
+"cn"
+:
+"通过递归遍历所有文件和子目录来计算目录内容的加密哈希。\n输出包含每个文件的哈希值和相对路径，可用于验证目录完整性\n或检测随时间的变化。\n\n默认算法为 MD5（如果不指定）。\n"
+}
+,
+"$ref"
+:
+"x-advise://hashdir"
+,
+"#exec"
+:
+"xrc hashdir 2>/dev/null"
+}
+,
+"helpapp"
+:
+{
+"#name"
+:
+{
+"help|helpapp"
+:
+null
+,
+"en"
+:
+"Generate help document or open help app"
+,
+"cn"
+:
+"生成帮助文档或打开帮助应用"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://helpapp"
+,
+"#exec"
+:
+"xrc helpapp 2>/dev/null"
+}
+,
+"history"
+:
+{
+"#name"
+:
+{
+"history"
+:
+null
+,
+"cn"
+:
+"为 history 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for history"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"history 模块用于查看和管理命令历史记录。\n支持命令统计、预测、搜索等功能，帮助用户更高效地使用命令行历史。\n"
+,
+"en"
+:
+"The history module is used to view and manage command history.\nIt supports command statistics, prediction, search and other functions to help users use command line history more efficiently.\n"
+}
+,
+"$ref"
+:
+"x-advise://history"
+,
+"#exec"
+:
+"xrc history 2>/dev/null"
+}
+,
+"hn"
+:
+{
+"#name"
+:
+{
+"hn"
+:
+null
+,
+"cn"
+:
+"在命令行交互表格界面浏览 Hacker News"
+,
+"en"
+:
+"Viewing Hacker News in a command-line interactive table interface"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Browse Hacker News in the Command-line, default show top posts. You can open HN and article links with o and u"
+,
+"cn"
+:
+"在命令行界面浏览 Hacker News，默认显示 top 帖子。可以通过 o 和 u 打开 HN 和 文章链接"
+}
+,
+"$ref"
+:
+"x-advise://hn"
+,
+"#exec"
+:
+"xrc hn 2>/dev/null"
+}
+,
+"hok"
+:
+{
+"#name"
+:
+{
+"hok"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Hok is a CLI implementation of Scoop in Rust"
+,
+"cn"
+:
+"Hok 是一个用 Rust 编写的 Scoop 的命令行界面实现"
+}
+,
+"$ref"
+:
+"x-advise://hok"
+,
+"#exec"
+:
+"xrc hok 2>/dev/null"
+}
+,
+"home"
+:
+{
+"#name"
+:
+{
+"home"
+:
+null
+,
+"cn"
+:
+"主目录管理工具"
+,
+"en"
+:
+"Home directory management tool"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"主目录（home）管理工具，用于组织和访问用户主目录下的资源。\n支持列出资源、查找资源路径、复制、移动、备份、恢复等功能。\n支持通过 `-o` 或 `:name` 方式指定当前工作对象。\n"
+,
+"en"
+:
+"Home directory management tool for organizing and accessing resources in user home directories.\nSupports listing resources, finding paths, copying, moving, backing up, restoring, and more.\nSupports specifying the current working object via `-o` or `:name`.\n"
+}
+,
+"$ref"
+:
+"x-advise://home"
+,
+"#exec"
+:
+"xrc home 2>/dev/null"
+}
+,
+"host"
+:
+{
+"#name"
+:
+{
+"host"
+:
+{
+"en"
+:
+"Host table management based on /etc/hosts file"
+,
+"cn"
+:
+"基于 /etc/hosts 文件的 host 表管理"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Manage local hostname to IP address mappings via /etc/hosts file.\nProvides safe editing with automatic backup and sudo privilege handling.\n"
+,
+"cn"
+:
+"通过 /etc/hosts 文件管理本地主机名到 IP 地址的映射。\n提供安全编辑功能，包括自动备份和 sudo 权限处理。\n"
+}
+,
+"$ref"
+:
+"x-advise://host"
+,
+"#exec"
+:
+"xrc host 2>/dev/null"
+}
+,
+"hostname"
+:
+{
+"#name"
+:
+{
+"hostname"
+:
+{
+"en"
+:
+"System hostname management"
+,
+"cn"
+:
+"系统主机名管理"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Display or set system hostname"
+,
+"cn"
+:
+"显示或设置系统主机名"
+}
+,
+"$ref"
+:
+"x-advise://hostname"
+,
+"#exec"
+:
+"xrc hostname 2>/dev/null"
+}
+,
+"hotkey"
+:
+{
+"#name"
+:
+{
+"hotkey"
+:
+null
+,
+"cn"
+:
+"管理快捷键绑定的功能部件"
+,
+"en"
+:
+"Manage hotkey-bound widgets"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Bind keyboard shortcuts to useful widgets in Bash/Zsh\n\n  co (Ctrl+X):          Send \"command not found\" errors to AI for help\n  fzf-history (Ctrl+R): Fuzzy-search command history with FZF\n  fzf-file (Ctrl+T):    Interactive file search with FZF\n  fzf-cd (Alt+C):       Quick directory jumping with FZF\n"
+,
+"cn"
+:
+"为 Bash/Zsh 绑定实用快捷键部件\n\n  co (Ctrl+X):          命令找不到时让 AI 帮你解决\n  fzf-history (Ctrl+R): 用 FZF 模糊搜索历史命令\n  fzf-file (Ctrl+T):    用 FZF 交互式搜索文件\n  fzf-cd (Alt+C):       用 FZF 快速跳转目录\n"
+}
+,
+"$ref"
+:
+"x-advise://hotkey"
+,
+"#exec"
+:
+"xrc hotkey 2>/dev/null"
+}
+,
+"htag"
+:
+{
+"#name"
+:
+{
+"htag"
+:
+null
+,
+"en"
+:
+"Host Tag Management"
+,
+"cn"
+:
+"主机 tag 管理"
+}
+,
+"$ref"
+:
+"x-advise://htag"
+,
+"#exec"
+:
+"xrc htag 2>/dev/null"
+}
+,
+"html"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"HTML 文档内容处理"
+,
+"en"
+:
+"HTML Document Content Processing"
+}
+,
+"$ref"
+:
+"x-advise://html"
+,
+"#exec"
+:
+"xrc html 2>/dev/null"
+}
+,
+"htop"
+:
+{
+"#name"
+:
+{
+"htop"
+:
+null
+,
+"cn"
+:
+"为 htop 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for htop"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"htop 是系统监控工具，能够实时监控 进程、CPU、内存、磁盘和网络使用情况。\n本模块是为了帮助用户在没有 htop 的环境中，使用 pixi 快速安装并使用 htop。\n关于 pixi，请访问 https://prefix.dev/ 或者 'x pixi --help'。\n"
+,
+"en"
+:
+"htop is a system monitoring tool that allows you to monitor processes, CPU, memory, disk, and network usage in real-time.\nThis module is mainly designed to help users quickly install and use htop using pixi in an environment without htop.\nFor information about pixi, please visit https://prefix.dev/ or run 'x pixi --help'.\n"
+}
+,
+"$ref"
+:
+"x-advise://htop"
+,
+"#exec"
+:
+"xrc htop 2>/dev/null"
+}
+,
+"http"
+:
+{
+"#name"
+:
+{
+"http"
+:
+null
+,
+"cn"
+:
+"HTTP 请求工具"
+,
+"en"
+:
+"HTTP request utility"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"HTTP 请求工具模块，用于发送各种 HTTP 请求（GET、POST、PUT、DELETE 等）。\n支持设置请求头、请求体、查询参数等功能。\n"
+,
+"en"
+:
+"HTTP request utility module for sending various HTTP requests (GET, POST, PUT, DELETE, etc.).\nSupports setting request headers, body, query parameters and more.\n"
+}
+,
+"$ref"
+:
+"x-advise://http"
+,
+"#exec"
+:
+"xrc http 2>/dev/null"
+}
+,
+"httpget"
+:
+{
+"#name"
+:
+null
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"#desc"
+:
+"downloading binary files stored in a Git repository."
+,
+"$ref"
+:
+"x-advise://httpget"
+,
+"#exec"
+:
+"xrc httpget 2>/dev/null"
+}
+,
+"hua"
+:
+{
+"#name"
+:
+{
+"hua"
+:
+null
+,
+"en"
+:
+"Chinese Poetry Viewer"
+,
+"cn"
+:
+"品读中华古诗文"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"The hua module is a terminal-based Chinese classical poetry reader designed specifically for Chinese users, allowing you to appreciate the beauty of ancient Chinese literature in your terminal.\nWe have carefully curated a collection ranging from the simple and unadorned sounds of the \"Classic of Poetry\" (Shijing) and Chu Ci, to the philosophical debates of the \"Three Hundred Tang Poems\" and \"Mencius\", to the rhythmic beauty of \"Three Hundred Tang Poems\" and \"Three Hundred Song Words\", and the prose essence of \"Guwen Guanzhi\".\nYou can explore freely in interactive mode, or directly enter a specific collection for reading via subcommands.\n"
+,
+"cn"
+:
+"hua 模块是专为中文用户设计的终端古文诗词阅读器，让你在终端里品读中华古诗文。\n我们精心收录了从《诗经》、《楚辞》的古朴之音，到《论语》、《孟子》的哲思之辩，再到《唐诗三百》、《宋词三百》的格律之美，以及《古文观止》的散文之粹。\n你可以通过交互模式自由探索，也可以通过子命令直接进入特定文集进行阅读。\n"
+}
+,
+"$ref"
+:
+"x-advise://hua"
+,
+"#exec"
+:
+"xrc hua 2>/dev/null"
+}
+,
+"hub"
+:
+{
+"#name"
+:
+{
+"hub"
+:
+null
+,
+"en"
+:
+"Securely upload, store, and share scripts in the cloud"
+,
+"cn"
+:
+"快速上传、加密托管并分享脚本"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"hub 是构建在 x-cmd 云服务上的脚本管理工具，致力于帮助用户打造专属的云端脚本空间。它支持将脚本安全地上传至云端加密托管，确保隐私不泄露，同时便于随时访问、跨设备调用或分享给他人。\n"
+,
+"en"
+:
+"`hub` is a script management tool powered by the x-cmd cloud service, designed to help users build a personal cloud space for scripts.\nIt enables secure, encrypted storage of scripts in the cloud, making them easy to access, execute, and share across devices.\n"
+}
+,
+"$ref"
+:
+"x-advise://hub"
+,
+"#exec"
+:
+"xrc hub 2>/dev/null"
+}
+,
+"huggingface"
+:
+{
+"#name"
+:
+{
+"huggingface"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"For downloading models from huggingface.co"
+,
+"cn"
+:
+"用于下载 huggingface.co 中的模型"
+}
+,
+"$ref"
+:
+"x-advise://huggingface"
+,
+"#exec"
+:
+"xrc huggingface 2>/dev/null"
+}
+,
+"humantime"
+:
+{
+"#name"
+:
+{
+"humantime"
+:
+null
+,
+"en"
+:
+"Human-readable Time Converter"
+,
+"cn"
+:
+"人性化时间转换器"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"在秒数和人性化时间格式之间互相转换。\n支持自动识别输入类型（整数转为可读格式，字符串转为秒数）。\n常用于计算缓存过期时间、显示持续时间等场景。\n\n时间单位：d(天), h(小时), m(分钟), s(秒)\n"
+,
+"en"
+:
+"Convert between seconds and human-readable time format.\nSupports automatic input type detection (integers to readable format, strings to seconds).\nCommonly used for cache expiration calculation, duration display, etc.\n\nTime units: d(days), h(hours), m(minutes), s(seconds)\n"
+}
+,
+"$ref"
+:
+"x-advise://humantime"
+,
+"#exec"
+:
+"xrc humantime 2>/dev/null"
+}
+,
+"hw"
+:
+{
+"#name"
+:
+{
+"hw"
+:
+null
+,
+"en"
+:
+"Hardware peripherals overview"
+,
+"cn"
+:
+"外设硬件聚合概览"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Hardware peripherals tool with three modes: x hw (default = sum), x hw info, x hw ls, x hw --fresh. Cross-platform (macOS/Linux) with TTY color support."
+,
+"cn"
+:
+"外设硬件工具三种模式：x hw（默认=sum）、x hw info、x hw ls、x hw --fresh。跨平台（macOS/Linux），支持 TTY 彩色输出。"
+}
+,
+"$ref"
+:
+"x-advise://hw"
+,
+"#exec"
+:
+"xrc hw 2>/dev/null"
+}
+,
+"icmd"
+:
+{
+"#name"
+:
+{
+"icmd"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"x-cmd hub module shortcut command, users can use the abbreviated command `i` to quickly use some basic functions of the hub."
+,
+"cn"
+:
+"x-cmd hub 模块快捷命令，用户可以通过简写命令 `i` 来快捷使用 hub 部分基础功能。"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://icmd"
+,
+"#exec"
+:
+"xrc icmd 2>/dev/null"
+}
+,
+"id"
+:
+{
+"#name"
+:
+{
+"id"
+:
+null
+,
+"en"
+:
+"Display user identity"
+,
+"cn"
+:
+"显示用户身份信息"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Enhanced `id` command with colorized, structured output.\nDisplays UID, GID, and group memberships in a readable format.\nOutput is structured for easy display and simple grep filtering.\n\nAuto-detects TTY and disables colors when output is piped.\nFalls back to native `id` command for unknown options.\n"
+,
+"cn"
+:
+"增强版 `id` 命令，提供彩色结构化输出。\n以可读格式显示用户 ID、组 ID 和所属组。\n输出结构化，既易于显示，也便于 grep 过滤。\n\n自动检测 TTY，管道输出时禁用颜色。\n未知选项自动回退到原生 `id` 命令。\n"
+}
+,
+"$ref"
+:
+"x-advise://id"
+,
+"#exec"
+:
+"xrc id 2>/dev/null"
+}
+,
+"ifconfig"
+:
+{
+"#name"
+:
+{
+"ifconfig"
+:
+null
+,
+"en"
+:
+"ifconfig command enhancement"
+,
+"cn"
+:
+"ifconfig 命令增强"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Provide a more intuitive way to display ifconfig information"
+,
+"cn"
+:
+"提供更直观的方式来显示 ifconig 信息"
+}
+,
+"$ref"
+:
+"x-advise://ifconfig"
+,
+"#exec"
+:
+"xrc ifconfig 2>/dev/null"
+}
+,
+"install"
+:
+{
+"#name"
+:
+{
+"install"
+:
+null
+,
+"en"
+:
+"Cross-platform installer for software, skills, and more"
+,
+"cn"
+:
+"跨平台安装器，支持软件、skill 等安装"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Cross-platform installer — query and install software and skills, with interactive selection, CI/CD auto best-match, or structured output for AI agents"
+,
+"cn"
+:
+"跨平台安装器，查询并安装软件和 skill —— 支持交互式选择、CI/CD 自动最佳匹配、AI Agent 结构化输出"
+}
+,
+"$ref"
+:
+"x-advise://install"
+,
+"#exec"
+:
+"xrc install 2>/dev/null"
+}
+,
+"instance"
+:
+{
+"#name"
+:
+{
+"Instance"
+:
+null
+,
+"cn"
+:
+"实例管理"
+,
+"en"
+:
+"Instance management"
+}
+,
+"#desc"
+:
+null
+,
+"$ref"
+:
+"x-advise://instance"
+,
+"#exec"
+:
+"xrc instance 2>/dev/null"
+}
+,
+"ip"
+:
+{
+"#name"
+:
+{
+"x ip"
+:
+null
+,
+"en"
+:
+"Query IP address"
+,
+"cn"
+:
+"查询 ip 地址"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"x ip is used to query IP address information, including the local IP address and the geolocation of a specified IP address"
+,
+"cn"
+:
+"x ip 用于查询 IP 地址信息，包括本机 IP 地址和指定 IP 地址的地理位置。"
+}
+,
+"$ref"
+:
+"x-advise://ip"
+,
+"#exec"
+:
+"xrc ip 2>/dev/null"
+}
+,
+"is"
+:
+{
+"#name"
+:
+{
+"is"
+:
+null
+,
+"cn"
+:
+"判断值是否符合预期"
+,
+"en"
+:
+"Check if values meet expectations"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"值判断工具，用于检查值是否符合预期条件。\n支持多值批量检查，所有检查通过才返回成功。\n"
+,
+"en"
+:
+"Value checking tool for verifying values meet expected conditions.\nSupports batch multi-value checking, returns success only if all pass.\n"
+}
+,
+"$ref"
+:
+"x-advise://is"
+,
+"#exec"
+:
+"xrc is 2>/dev/null"
+}
+,
+"ish"
+:
+{
+"#name"
+:
+{
+"ish"
+:
+null
+,
+"en"
+:
+"iSH Utility, Note that this module is in the experimental stage"
+,
+"cn"
+:
+"iSH 实用功能, 注意该模块处于实验阶段"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"The ish module integrates various utility functions that iSH users may need.\n"
+,
+"cn"
+:
+"ish 模块集成了 iSH 用户可能需要的各种实用功能.\n"
+}
+,
+"$ref"
+:
+"x-advise://ish"
+,
+"#exec"
+:
+"xrc ish 2>/dev/null"
+}
+,
+"ja"
+:
+{
+"#name"
+:
+{
+"ja"
+:
+null
+,
+"en"
+:
+"Use the awk programming language to process json data"
+,
+"cn"
+:
+"使用 awk 编程语言来处理 json 数据"
+}
+,
+"#desc"
+:
+null
+,
+"$ref"
+:
+"x-advise://ja"
+,
+"#exec"
+:
+"xrc ja 2>/dev/null"
+}
+,
+"java"
+:
+{
+"#name"
+:
+null
+,
+"#desc"
+:
+{
+"cn"
+:
+"增强型 java 命令"
+,
+"en"
+:
+"Enhanced java command"
+}
+,
+"$ref"
+:
+"x-advise://java"
+,
+"#exec"
+:
+"xrc java 2>/dev/null"
+}
+,
+"jina"
+:
+{
+"#name"
+:
+{
+"jina"
+:
+null
+,
+"en"
+:
+"CLI for jina.ai, providing functions to get website content, generate vector data, etc."
+,
+"cn"
+:
+"为 jina.ai 打造的命令行工具，提供获取网页内容、生成向量数据等等"
+}
+,
+"$ref"
+:
+"x-advise://jina"
+,
+"#exec"
+:
+"xrc jina 2>/dev/null"
+}
+,
+"jo"
+:
+{
+"#name"
+:
+{
+"jo"
+:
+null
+,
+"en"
+:
+"Command line JSON processor"
+,
+"cn"
+:
+"命令行 JSON 处理器"
+}
+,
+"$ref"
+:
+"x-advise://jo"
+,
+"#exec"
+:
+"xrc jo 2>/dev/null"
+}
+,
+"job"
+:
+{
+"#name"
+:
+{
+"job"
+:
+null
+,
+"en"
+:
+"Concurrent module using job control"
+,
+"cn"
+:
+"并发模块使用 job 控制"
+}
+,
+"$ref"
+:
+"x-advise://job"
+,
+"#exec"
+:
+"xrc job 2>/dev/null"
+}
+,
+"jq"
+:
+{
+"#name"
+:
+{
+"jq"
+:
+null
+,
+"cn"
+:
+"为 jq 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for jq"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"jq 是由 Stephen Dolan 于 2012 年开发的轻量级 JSON 处理工具。\n`x jq` 是基于 jq 命令、为提升 jq 使用体验而设计的增强模块，具体的增强性改动如下：\n1. 简化 jq 命令的安装：在确定当前环境中没有 jq 命令的情况下，`x jq` 会通过 x-cmd pkg 体系以一种不影响用户环境的方式下载安装 jq 。\n2. 提供 `repl` 命令：它借助 fzf 为 jq 提供一种以交互模式读取和探索 JSON 数据的方法。\n"
+,
+"en"
+:
+"jq is a lightweight JSON processing tool developed by Stephen Dolan in 2012.\n`x jq` is an enhancement module based on the jq command, designed to improve the jq user experience. The specific enhancements are as follows:\n1. Simplified jq command installation: If jq is not found in the current environment, `x jq` will download and install jq through the x-cmd pkg system in a way that does not affect the user's environment.\n2. Provides the `repl` command: This offers an interactive way to read and explore JSON data using fzf.\n"
+}
+,
+"$ref"
+:
+"x-advise://jq"
+,
+"#exec"
+:
+"xrc jq 2>/dev/null"
+}
+,
+"jsch"
+:
+{
+"#name"
+:
+{
+"jsch"
+:
+null
+,
+"en"
+:
+"Java Secure Channel"
+,
+"cn"
+:
+"Java 安全频道"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"A pure Java implementation of SSH2."
+,
+"cn"
+:
+"SSH2 的纯 Java 实现。"
+}
+,
+"$ref"
+:
+"x-advise://jsch"
+,
+"#exec"
+:
+"xrc jsch 2>/dev/null"
+}
+,
+"jsr"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"为现代 JavaScript 和 TypeScript 提供的开源包注册表"
+,
+"en"
+:
+"The open-source package registry for modern JavaScript and TypeScript"
+}
+,
+"$ref"
+:
+"x-advise://jsr"
+,
+"#exec"
+:
+"xrc jsr 2>/dev/null"
+}
+,
+"kev"
+:
+{
+"#name"
+:
+{
+"kev"
+:
+null
+,
+"en"
+:
+"KEV catalog (Known Exploited Vulnerabilities)"
+,
+"cn"
+:
+"KEV 清单（已知被利用的漏洞）"
+}
+,
+"$ref"
+:
+"x-advise://kev"
+,
+"#exec"
+:
+"xrc kev 2>/dev/null"
+}
+,
+"kill"
+:
+{
+"#name"
+:
+{
+"kill"
+:
+null
+,
+"en"
+:
+"kill command enhancement"
+,
+"cn"
+:
+"kill 命令增强"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"增强版 kill 命令，支持递归杀死进程、按端口杀死进程、信号列表查看等功能"
+,
+"en"
+:
+"Enhanced kill command with recursive process killing, port-based killing, signal listing and more features"
+}
+,
+"$ref"
+:
+"x-advise://kill"
+,
+"#exec"
+:
+"xrc kill 2>/dev/null"
+}
+,
+"kimi"
+:
+{
+"#name"
+:
+{
+"kimi"
+:
+null
+,
+"cn"
+:
+"为 kimi-cli 打造的命令行增强模块"
+,
+"en"
+:
+"Enhanced command-line module for kimi-cli"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"kimi-cli 是由 Moonshot AI 推出的开源命令行智能助手，旨在将传统命令行与 AI 编程能力深度融合，为开发者提供更高效的终端工作流体验。\n本模块基于 kimi-cli 构建，提供安装、升级、卸载等一站式管理功能，同时优化了 CLI 工具的配置与使用流程，使用户能够更便捷地在本地终端启动和管理 Kimi CLI 工具。\n"
+,
+"en"
+:
+"kimi-cli is an open-source command-line AI assistant developed by Moonshot AI that seamlessly blends traditional terminal interaction with intelligent coding support.\nThis enhanced module is built specifically for kimi-cli, offering streamlined management of the CLI tool including installation, upgrades, and uninstallation.\n"
+}
+,
+"$ref"
+:
+"x-advise://kimi"
+,
+"#exec"
+:
+"xrc kimi 2>/dev/null"
+}
+,
+"lang"
+:
+{
+"#name"
+:
+{
+"lang"
+:
+null
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"管理 x-cmd 语言配置"
+,
+"en"
+:
+"Manage x-cmd language configuration"
+}
+,
+"$ref"
+:
+"x-advise://lang"
+,
+"#exec"
+:
+"xrc lang 2>/dev/null"
+}
+,
+"last"
+:
+{
+"#name"
+:
+{
+"last"
+:
+null
+,
+"en"
+:
+"Show user login history"
+,
+"cn"
+:
+"显示用户登录历史"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Enhanced `last` command with multiple output formats and filtering.\nShows user login/logout records, system reboots, and session duration.\nSupports CSV, JSON, interactive UI, and tree view formats.\n\nIn TTY mode, --all and --login use interactive picker for easy selection.\n"
+,
+"cn"
+:
+"增强版 `last` 命令，支持多种输出格式和过滤。\n显示用户登录/注销记录、系统重启和会话时长。\n支持 CSV、JSON、交互式 UI 和树形视图格式。\n\n在 TTY 模式下，--all 和 --login 使用交互式选择器便于查看。\n"
+}
+,
+"$ref"
+:
+"x-advise://last"
+,
+"#exec"
+:
+"xrc last 2>/dev/null"
+}
+,
+"lenv"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Get current host environment information"
+,
+"cn"
+:
+"获取会话环境信息"
+}
+,
+"$ref"
+:
+"x-advise://lenv"
+,
+"#exec"
+:
+"xrc lenv 2>/dev/null"
+}
+,
+"line"
+:
+{
+"#name"
+:
+{
+"line"
+:
+null
+,
+"en"
+:
+"functions for line-oriented situation"
+,
+"cn"
+:
+"行处理函数"
+}
+,
+"$ref"
+:
+"x-advise://line"
+,
+"#exec"
+:
+"xrc line 2>/dev/null"
+}
+,
+"links"
+:
+{
+"#name"
+:
+{
+"x links"
+:
+null
+,
+"cn"
+:
+"网页内容获取工具"
+,
+"en"
+:
+"Web content fetcher"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Fetch web content using links.\nNEW: webfetch subcommand uses Chrome User-Agent by default for better compatibility.\nOther commands (browse, url, --cfg, etc.) remain unchanged.\n"
+,
+"cn"
+:
+"使用 links 获取网页内容。\n新增：webfetch 子命令默认使用 Chrome User-Agent 以更好地适配现代网站。\n其他命令（browse、url、--cfg 等）保持不变，照用。\n"
+}
+,
+"$ref"
+:
+"x-advise://links"
+,
+"#exec"
+:
+"xrc links 2>/dev/null"
+}
+,
+"list"
+:
+{
+"#name"
+:
+{
+"list"
+:
+null
+,
+"cn"
+:
+"列表数据结构"
+,
+"en"
+:
+"List data structure"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"内部列表数据结构封装，提供列表的增删改查操作。\n主要用于 shell 脚本中的数组管理和数据存储。\n底层模块，不支持子命令级别的 help。\n"
+,
+"en"
+:
+"Internal list data structure encapsulation, providing CRUD operations for lists.\nMainly used for array management and data storage in shell scripts.\nLow-level module, subcommand-level help not supported.\n"
+}
+,
+"$ref"
+:
+"x-advise://list"
+,
+"#exec"
+:
+"xrc list 2>/dev/null"
+}
+,
+"ll"
+:
+{
+"#name"
+:
+{
+"ll"
+:
+null
+,
+"en"
+:
+"list information"
+,
+"cn"
+:
+"列表信息"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"List about files, archives and system information"
+,
+"cn"
+:
+"列出有关文件、压缩包以及操作系统信息"
+}
+,
+"$ref"
+:
+"x-advise://ll"
+,
+"#exec"
+:
+"xrc ll 2>/dev/null"
+}
+,
+"llist"
+:
+{
+"#name"
+:
+{
+"x llist"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Array control in shell environment."
+,
+"cn"
+:
+"shell环境下的数组控制。"
+}
+,
+"$ref"
+:
+"x-advise://llist"
+,
+"#exec"
+:
+"xrc llist 2>/dev/null"
+}
+,
+"llmf"
+:
+{
+"#name"
+:
+{
+"llmf"
+:
+null
+,
+"cn"
+:
+"基于 llamafile 零依赖运行本地大语言模型"
+,
+"en"
+:
+"Zero-dependency local LLM runner based on llamafile"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"基于 llamafile 运行本地大语言模型，无需依赖、无需配置。\n\n主要功能：\n- 启动本地 API 服务器 (serve)，支持 OpenAI 兼容接口\n- 命令行对话模式 (cli)，快速生成文本\n- 交互式聊天 (chat)，支持多轮对话\n- 模型管理 (model)，支持下载/导入/导出/查询\n- 文本分词 (tokenize)，分析文本 token 数量\n\n支持模型格式：GGUF、llamafile\n"
+,
+"en"
+:
+"Run local large language models based on llamafile, zero dependencies, zero configuration.\n\nKey features:\n- Start local API server (serve) with OpenAI-compatible interface\n- CLI mode (cli) for quick text generation\n- Interactive chat (chat) with multi-turn conversation\n- Model management (model) with download/import/export/query\n- Text tokenization (tokenize) to analyze token count\n\nSupported formats: GGUF, llamafile\n"
+}
+,
+"$ref"
+:
+"x-advise://llmf"
+,
+"#exec"
+:
+"xrc llmf 2>/dev/null"
+}
+,
+"lms"
+:
+{
+"#name"
+:
+{
+"lms"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"LM Studio CLI"
+,
+"cn"
+:
+"LM Studio 命令行"
+}
+,
+"$ref"
+:
+"x-advise://lms"
+,
+"#exec"
+:
+"xrc lms 2>/dev/null"
+}
+,
+"log"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Structured logging system for shell modules with level-based filtering"
+,
+"cn"
+:
+"基于级别的结构化日志系统，用于 shell 模块"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://log"
+,
+"#exec"
+:
+"xrc log 2>/dev/null"
+}
+,
+"logvis"
+:
+{
+"#name"
+:
+{
+"logvis"
+:
+"log visualization app"
+}
+,
+"#desc"
+:
+null
+,
+"$ref"
+:
+"x-advise://logvis"
+,
+"#exec"
+:
+"xrc logvis 2>/dev/null"
+}
+,
+"ls"
+:
+{
+"#name"
+:
+{
+"ls"
+:
+null
+,
+"cn"
+:
+"ls 命令增强"
+,
+"en"
+:
+"Enhanced ls command"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"增强版的 ls 命令，可以更方便地查看文件信息和系统信息"
+,
+"en"
+:
+"Enhanced version of ls command for viewing file and system information"
+}
+,
+"$ref"
+:
+"x-advise://ls"
+,
+"#exec"
+:
+"xrc ls 2>/dev/null"
+}
+,
+"lsio"
+:
+{
+"#name"
+:
+{
+"lsio"
+:
+null
+,
+"cn"
+:
+"用于查询 linuxserver.io 构建的 Docker 镜像"
+,
+"en"
+:
+"For querying Docker images built by the linuxserver.io"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"LinuxServer.io 是一个专注于提供高质量 Docker 容器映像的社区项目。它提供的镜像涵盖了多种常见的服务器应用程序和工具，如 nginx,ffmpeg 等。\n本模块是为让用户能更好的使用 linuxserver.io 提供的镜像而设计的。\n"
+,
+"en"
+:
+"LinuxServer.io is a community project focused on providing high-quality Docker container images. The images it offers cover a variety of common server applications and tools, such as nginx, ffmpeg, and more.\nThis module is designed to help users better utilize the images provided by LinuxServer.io.\n"
+}
+,
+"$ref"
+:
+"x-advise://lsio"
+,
+"#exec"
+:
+"xrc lsio 2>/dev/null"
+}
+,
+"lsof"
+:
+{
+"#name"
+:
+{
+"lsof"
+:
+null
+,
+"cn"
+:
+"为 lsof 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for lsof"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"An enhanced module for lsof, providing a more intuitive interactive experience and more flexible data output.\nIt supports viewing open files in a TUI application, integrates with fzf for interactive search, and allows exporting results in TSV, CSV, or raw data formats for further processing.\n"
+,
+"cn"
+:
+"为 lsof 设计的增强模块，提供更直观的交互体验和更灵活的数据输出。\n它支持以 TUI 应用方式查看打开的文件，结合了 fzf 实现交互式搜索，支持导出为 TSV、CSV 或原始数据格式，便于进一步处理。\n"
+}
+,
+"$ref"
+:
+"x-advise://lsof"
+,
+"#exec"
+:
+"xrc lsof 2>/dev/null"
+}
+,
+"lua"
+:
+{
+"#name"
+:
+{
+"lua"
+:
+null
+,
+"en"
+:
+"lua enhancement module"
+,
+"cn"
+:
+"lua 增强模块"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Module used to improve the Lua development experience, adding common functions needed to develop Lua projects"
+,
+"cn"
+:
+"用于改善 lua 开发体验的模块，增加了开发 lua 项目需要的常用功能"
+}
+,
+"$ref"
+:
+"x-advise://lua"
+,
+"#exec"
+:
+"xrc lua 2>/dev/null"
+}
+,
+"luarocks"
+:
+{
+"#name"
+:
+{
+"luarocks"
+:
+null
+,
+"en"
+:
+"Enhancement module for luarocks"
+,
+"cn"
+:
+"luarocks 的增强模块"
+}
+,
+"$ref"
+:
+"x-advise://luarocks"
+,
+"#exec"
+:
+"xrc luarocks 2>/dev/null"
+}
+,
+"mac"
+:
+{
+"#name"
+:
+{
+"mac"
+:
+null
+,
+"en"
+:
+"utilities for MacOs"
+,
+"cn"
+:
+"MacOS 实用功能"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"The Mac module is a collection of handy tools designed specifically for macOS users. Its goal is to make it easier for users to automate tasks with scripts or manage their Macs remotely."
+,
+"cn"
+:
+"mac 模块集成了 MacOS 用户需要的各种实用功能，目标是方便用户使用脚本自动化或者远程管理 MacOS。"
+}
+,
+"$ref"
+:
+"x-advise://mac"
+,
+"#exec"
+:
+"xrc mac 2>/dev/null"
+}
+,
+"man"
+:
+{
+"#name"
+:
+{
+"man"
+:
+null
+,
+"en"
+:
+"man command enhancement"
+,
+"cn"
+:
+"man 命令增强"
+}
+,
+"$ref"
+:
+"x-advise://man"
+,
+"#exec"
+:
+"xrc man 2>/dev/null"
+}
+,
+"mankier"
+:
+{
+"#name"
+:
+{
+"mankier"
+:
+null
+,
+"en"
+:
+"Search and browse man pages on ManKier."
+,
+"cn"
+:
+"搜索和浏览 ManKier 中的手册页"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"A command-line client tool for searching and browsing ManKier man pages via the ManKier API. For information about ManKier, please visit https://www.mankier.com/about"
+,
+"cn"
+:
+"通过 ManKier API 实现的搜索和浏览 ManKier 手册页的命令行客户端工具，关于 ManKier，请访问 https://www.mankier.com/about"
+}
+,
+"$ref"
+:
+"x-advise://mankier"
+,
+"#exec"
+:
+"xrc mankier 2>/dev/null"
+}
+,
+"mawk"
+:
+{
+"#name"
+:
+{
+"mawk"
+:
+null
+}
+,
+"#desc"
+:
+null
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://mawk"
+,
+"#exec"
+:
+"xrc mawk 2>/dev/null"
+}
+,
+"md"
+:
+{
+"#name"
+:
+{
+"md"
+:
+null
+,
+"en"
+:
+"Tools for previewing Markdown documents."
+,
+"cn"
+:
+"预览 Markdown 文档的工具。"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Preview Markdown documents more gracefully with syntax highlighting."
+,
+"cn"
+:
+"通过语法高亮显示，更优雅地预览 Markdown 文档。"
+}
+,
+"$ref"
+:
+"x-advise://md"
+,
+"#exec"
+:
+"xrc md 2>/dev/null"
+}
+,
+"minimax"
+:
+{
+"#name"
+:
+{
+"minimax"
+:
+null
+,
+"cn"
+:
+"为 MiniMax 打造的命令行增强模块"
+,
+"en"
+:
+"Enhanced command-line module for MiniMax"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"MiniMax 是致力于打造通用人工智能的领先科技公司，提供性能卓越的国产大语言模型服务。详见：https://minimaxi.com/\nminimax 模块用于简化 MiniMax 相关配置管理，包括 API 密钥与环境配置，帮助用户在 Claude Code 等工具中快速接入 MiniMax 算力。\n"
+,
+"en"
+:
+"MiniMax is a leading AI technology company focused on building general artificial intelligence, providing high-performance large language model services. See: https://minimaxi.com/\nThe minimax module simplifies MiniMax-related configuration management, including API key and environment setup, enabling quick integration of MiniMax computing resources into tools such as Claude Code.\n"
+}
+,
+"$ref"
+:
+"x-advise://minimax"
+,
+"#exec"
+:
+"xrc minimax 2>/dev/null"
+}
+,
+"mirror"
+:
+{
+"#name"
+:
+{
+"mirror"
+:
+null
+,
+"en"
+:
+"Setting mirror source for development"
+,
+"cn"
+:
+"用于设置镜像源的工具"
+}
+,
+"$ref"
+:
+"x-advise://mirror"
+,
+"#exec"
+:
+"xrc mirror 2>/dev/null"
+}
+,
+"mistral"
+:
+{
+"#name"
+:
+{
+"mistral"
+:
+null
+,
+"#desc"
+:
+null
+,
+"cn"
+:
+"使用 Mistral 提供的 AI 服务"
+,
+"en"
+:
+"Use the AI services provided by Mistral"
+}
+,
+"$ref"
+:
+"x-advise://mistral"
+,
+"#exec"
+:
+"xrc mistral 2>/dev/null"
+}
+,
+"mklink"
+:
+{
+"#name"
+:
+{
+"mklink"
+:
+null
+,
+"en"
+:
+"Create symbolic links and hard links"
+,
+"cn"
+:
+"创建符号链接和硬链接"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Create symbolic links and hard links on Windows, Unix, Linux and macOS systems.\nAutomatically detects the operating system and uses the appropriate command.\n\nOn Windows: uses mklink command (-d directory links requires admin rights)\nOn Linux/macOS: uses ln command\n"
+,
+"cn"
+:
+"自动检测操作系统并使用相应的命令创建符号链接和硬链接。\n\n在 Windows 上：使用 mklink 命令（-d 目录链接需要管理员权限）\n在 Linux/macOS 上：使用 ln 命令\n"
+}
+,
+"$ref"
+:
+"x-advise://mklink"
+,
+"#exec"
+:
+"xrc mklink 2>/dev/null"
+}
+,
+"moon"
+:
+{
+"#name"
+:
+{
+"moon"
+:
+null
+,
+"en"
+:
+"Module designed for MoonBit lang"
+,
+"cn"
+:
+"为 MoonBit lang 设计的模块"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"MoonBit is a modern programming language and toolchain designed specifically for WebAssembly, focusing on WebAssembly applications in cloud computing and edge computing.\nThe `x moon` module inherits the parameter options and subcommands from the moon command, which can be viewed by using the `x moon help` command.\n"
+,
+"cn"
+:
+"MoonBit 是一种专为 WebAssembly 设计的现代编程语言和工具链，专注于云计算和边缘计算中的 WebAssembly 应用。\n`x moon` 模块继承 moon 命令的参数选项和子命令，可以通过 `x moon help` 命令查看。\n"
+}
+,
+"$ref"
+:
+"x-advise://moon"
+,
+"#exec"
+:
+"xrc moon 2>/dev/null"
+}
+,
+"moonshot"
+:
+{
+"#name"
+:
+{
+"moonshot"
+:
+null
+,
+"#desc"
+:
+null
+,
+"cn"
+:
+"使用  Moonshot 提供的 AI 服务, moonshot 的大模型叫 kimi"
+,
+"en"
+:
+"Use the AI services provided by Moonshot, the large model from Moonshot is called Kimi"
+}
+,
+"$ref"
+:
+"x-advise://moonshot"
+,
+"#exec"
+:
+"xrc moonshot 2>/dev/null"
+}
+,
+"mosh"
+:
+{
+"#name"
+:
+{
+"mosh"
+:
+null
+,
+"cn"
+:
+"为 mosh 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for mosh"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"Mosh (https://mosh.org/) 是交互式 SSH 的替代品，特别适用于不稳定网络下的远程连接; 支持漫游、间歇性连接、智能回显和行编辑等功能。\n本模块优先使用本地 mosh 命令，若无，将通过 pixi 下载并运行，无需安装，不影响环境和系统依赖（暂不支持 windows）。\n关于 pixi，请访问 https://prefix.dev/ 或者 'x pixi --help'。\n"
+,
+"en"
+:
+"Mosh (https://mosh.org/) is an interactive SSH alternative that supports roaming, intermittent connections, intelligent local echo and line editing.\nThis module prioritizes using the local mosh command. If it's not available, it will download and run via pixi, requiring no installation and impacting neither your environment nor system dependencies (Windows is not yet supported).\nFor more information about pixi, please visit https://prefix.dev/ or run `pixi --help`.\n"
+}
+,
+"$ref"
+:
+"x-advise://mosh"
+,
+"#exec"
+:
+"xrc mosh 2>/dev/null"
+}
+,
+"mthreads"
+:
+{
+"#name"
+:
+{
+"mthreads"
+:
+null
+,
+"cn"
+:
+"为摩尔线程打造的命令行增强模块"
+,
+"en"
+:
+"Enhanced command-line module for MOORE THREADS"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"摩尔线程提供了基于自研 GPU 的 AI 大模型服务。详见：https://code.mthreads.com/\nmthreads 模块用于简化摩尔线程相关配置管理，包括 API 密钥与环境配置，帮助用户在 Claude Code 等工具中快速接入摩尔线程算力。\n"
+,
+"en"
+:
+"Moore Threads provides AI large-model services based on its self-developed GPU architecture. See: https://code.mthreads.com/\nThe mthreads module simplifies Moore Threads–related configuration management, including API key and environment setup, enabling quick integration of Moore Threads computing resources into tools such as Claude Code.\n"
+}
+,
+"$ref"
+:
+"x-advise://mthreads"
+,
+"#exec"
+:
+"xrc mthreads 2>/dev/null"
+}
+,
+"mv"
+:
+{
+"#name"
+:
+{
+"mv"
+:
+{
+"en"
+:
+"Move or rename files and directories"
+,
+"cn"
+:
+"移动或重命名文件和目录"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Move or rename files and directories safely with enhanced features"
+,
+"cn"
+:
+"安全地移动或重命名文件和目录，提供增强功能"
+}
+,
+"$ref"
+:
+"x-advise://mv"
+,
+"#exec"
+:
+"xrc mv 2>/dev/null"
+}
+,
+"nano"
+:
+{
+"#name"
+:
+{
+"x nano"
+:
+null
+,
+"cn"
+:
+"nano 命令的封装，自动按需安装和使用 GNU nano"
+,
+"en"
+:
+"Wrapper for nano command, automatically installs and uses GNU nano on demand"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"封装 nano 编辑器，提供自动按需安装功能。在 macOS 上检测到系统自带的 pico（伪装为 nano）时， 会自动切换到功能更完整的 GNU nano。支持所有原生 nano 命令行参数。"
+,
+"en"
+:
+"Wraps the nano editor with automatic on-demand installation. On macOS, when detecting the system's pico (disguised as nano), it automatically switches to the more feature-complete GNU nano. Supports all native nano command-line arguments."
+}
+,
+"$ref"
+:
+"x-advise://nano"
+,
+"#exec"
+:
+"xrc nano 2>/dev/null"
+}
+,
+"nanorc"
+:
+{
+"#name"
+:
+{
+"x nanorc"
+:
+null
+,
+"cn"
+:
+"nano 语法高亮与配置"
+,
+"en"
+:
+"Nano Syntax Highlighting & Config"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"一键配置 nano 语法高亮（支持 126 种文件类型）与推荐设置，可快速启用、更新或移除"
+,
+"en"
+:
+"One-click setup for nano syntax highlighting (126 file types) and recommended settings. Quick enable, update, or remove"
+}
+,
+"$ref"
+:
+"x-advise://nanorc"
+,
+"#exec"
+:
+"xrc nanorc 2>/dev/null"
+}
+,
+"ncdu"
+:
+{
+"#name"
+:
+{
+"ncdu"
+:
+null
+,
+"cn"
+:
+"为 ncdu 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for ncdu"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"ncdu（NCurses Disk Usage）是一个磁盘使用量分析器。\n本模块优先使用本地 ncdu 命令；若无，将通过 pkg 下载并运行，无需安装，不影响环境和系统依赖。\n"
+,
+"en"
+:
+"ncdu (NCurses Disk Usage) is a disk usage analyzer with a text-mode user interface.\nThis module prioritizes the use of the local 'ncdu' command. If it's not present, the module will download 'ncdu' via 'pkg', run it directly without installation, and will not modify your environment or system dependencies.\n"
+}
+,
+"$ref"
+:
+"x-advise://ncdu"
+,
+"#exec"
+:
+"xrc ncdu 2>/dev/null"
+}
+,
+"neo"
+:
+{
+"#name"
+:
+{
+"x neo"
+:
+null
+,
+"en"
+:
+"Display system information with ASCII art logos (neofetch-like)"
+,
+"cn"
+:
+"显示带 ASCII 艺术 Logo 的系统信息（类 neofetch）"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Neofetch is an updated version of screenfetch, where \"neo\" means \"new\".\nX-CMD interprets it as Neo (from The Matrix). The default subcommand\n\"fetch\" provides functionality similar to neofetch.\n\nIn the long term, neo will evolve into an AI agent that assists users\nin managing and understanding their OS based on system information.\nWe will soon provide \"x neo chat\" for interactive OS assistance.\n\nCurrently, it shows OS, kernel, uptime, packages, shell, desktop\nenvironment, window manager, CPU, GPU, memory and other system\ninformation alongside distribution ASCII art logos.\nIt supports both standard and large ASCII art logos, multiple\ndisplay modes (mini/std/all/llm/ui), and customizable info widgets.\n"
+,
+"cn"
+:
+"Neofetch 是 screenfetch 的更新版本，其中 neo 意为 \"new\"。\nX-CMD 将其理解为《黑客帝国》中的 Neo。提供的默认子命令\n\"fetch\" 能够实现类似 neofetch 的功能。\n\n从长远来说，neo 将发展成一个根据系统信息协助用户管理和\n理解操作系统的 AI 智能体。后面我们将提供 \"x neo chat\"\n以实现交互式的系统协助。\n\n目前，它显示操作系统、内核、运行时间、软件包、Shell、\n桌面环境、窗口管理器、CPU、GPU、内存等系统信息，\n并配以发行版 ASCII 艺术 Logo。支持标准和大尺寸 ASCII 艺术 Logo、\n多种显示模式（mini/std/all/llm/ui）以及可定制的信息组件。\n"
+}
+,
+"$ref"
+:
+"x-advise://neo"
+,
+"#exec"
+:
+"xrc neo 2>/dev/null"
+}
+,
+"nets"
+:
+{
+"#name"
+:
+{
+"nets"
+:
+null
+,
+"cn"
+:
+"为 netstat 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for netstat"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"nets is an enhanced module designed for the `netstat` command, aiming to provide a more intuitive way to display network statistics.\nIt supports interactive mode, various output formats, and flexible filtering capabilities, greatly simplifying the viewing and analysis of network status.\n"
+,
+"cn"
+:
+"nets 是一个为 netstat 命令设计的增强模块，旨在提供更直观的方式来显示网络统计信息。\n它支持交互式模式、多种输出格式以及灵活的过滤功能，极大地简化了网络状态的查看和分析。\n"
+}
+,
+"$ref"
+:
+"x-advise://nets"
+,
+"#exec"
+:
+"xrc nets 2>/dev/null"
+}
+,
+"node"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"server-side JavaScript runtime"
+,
+"cn"
+:
+"服务端 JavaScript 运行时"
+}
+,
+"$ref"
+:
+"x-advise://node"
+,
+"#exec"
+:
+"xrc node 2>/dev/null"
+}
+,
+"notify"
+:
+{
+"#name"
+:
+{
+"notify"
+:
+null
+,
+"cn"
+:
+"发送系统通知"
+,
+"en"
+:
+"Send system notify"
+}
+,
+"$ref"
+:
+"x-advise://notify"
+,
+"#exec"
+:
+"xrc notify 2>/dev/null"
+}
+,
+"npm"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Node package manager"
+,
+"cn"
+:
+"Node 包管理器"
+}
+,
+"$ref"
+:
+"x-advise://npm"
+,
+"#exec"
+:
+"xrc npm 2>/dev/null"
+}
+,
+"npx"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Run a command from a local or remote npm package"
+,
+"cn"
+:
+"从本地或远程 npm 包运行命令"
+}
+,
+"$ref"
+:
+"x-advise://npx"
+}
+,
+"nu"
+:
+{
+"#name"
+:
+{
+"nu"
+:
+null
+,
+"cn"
+:
+"为 nushell 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for nushell"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"nushell 是由 Rust 驱动的 shell，提供现代风格的用户界面，并且支持强大的数据处理功能。\n本模块主要提供在 nushell 上调用 x-cmd 工具集的支持；并增加搜索 nushell.sh 官网、免安装直接使用、LLM 生成 nushell 命令等功能。\n"
+,
+"en"
+:
+"nushell is a Rust-powered shell that provides a more modern user interface and supports powerful data processing capabilities.\nThis module mainly provides support for calling the x-cmd toolset on nushell; and adds functions such as searching the official website ( nushell.sh ) , using without installation, and generating nushell commands with LLM.\n"
+}
+,
+"$ref"
+:
+"x-advise://nu"
+,
+"#exec"
+:
+"xrc nu 2>/dev/null"
+}
+,
+"ohmyposh"
+:
+{
+"#name"
+:
+{
+"ohmyposh"
+:
+null
+,
+"cn"
+:
+"为 oh-my-posh 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules designed for oh-my-posh"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Oh-my-posh is a cross platform tool to render your prompt.\nIt can use the same configuration everywhere to offer a consistent experience, regardless of where you are.\nFor a detailed guide on getting started, have a look at the docs at https://ohmyposh.dev\n\nThe ohmyposh module is a powerful enhancement for oh-my-posh, designed to make theme customization a breeze. It lets you download theme resource packs, simplifying the process of switching between different looks.\nThis module also includes a handy theme preview feature, allowing you to directly preview various themes right in your command line. This makes choosing and changing themes a much smoother experience.\n"
+,
+"cn"
+:
+"oh-my-posh 是一个跨平台工具，用于渲染你的提示符。\n它可以在任何地方使用相同的配置，提供一致的体验，无论你在哪里。\n有关入门指南的详细说明，请查看 https://ohmyposh.dev 上的文档。\n\nohmyposh 模块是一个为 oh-my-posh 设计的增强模块，帮助用户下载主题资源包，使主题更改变得更加容易。\n该模块还包括一个主题预览功能，允许用户在命令行中直接预览不同主题，简化了主题选择和更换的过程。\n"
+}
+,
+"$ref"
+:
+"x-advise://ohmyposh"
+,
+"#exec"
+:
+"xrc ohmyposh 2>/dev/null"
+}
+,
+"ollama"
+:
+{
+"#name"
+:
+{
+"ollama"
+:
+null
+,
+"cn"
+:
+"本地部署大型语言模型的开源框架 ollama 的命令行客户端工具"
+,
+"en"
+:
+"The command-line client tool for Ollama, an open-source framework for running large language models locally."
+}
+,
+"$ref"
+:
+"x-advise://ollama"
+,
+"#exec"
+:
+"xrc ollama 2>/dev/null"
+}
+,
+"onsh"
+:
+{
+"#name"
+:
+{
+"onsh"
+:
+null
+,
+"cn"
+:
+"为 xonsh 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for xonsh"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"xonsh 是由 Python 驱动的 shell，能支持用户在命令行中混合使用 Python 和 shell 命令。\n本模块主要提供在 xonsh 上调用 x-cmd 工具集的支持；并增加搜索 xon.sh 官网、免安装直接使用、LLM 生成 xonsh 命令等功能。\n"
+,
+"en"
+:
+"xonsh is a Python-powered shell that supports users to mix Python and shell commands on the command line.\nThis module mainly provides support for calling the x-cmd toolset on xonsh; and adds functions such as searching the official website ( xon.sh ) , using without installation, and generating xonsh commands with LLM.\n"
+}
+,
+"$ref"
+:
+"x-advise://onsh"
+,
+"#exec"
+:
+"xrc onsh 2>/dev/null"
+}
+,
+"open"
+:
+{
+"#name"
+:
+{
+"open"
+:
+null
+,
+"cn"
+:
+"open 命令"
+,
+"en"
+:
+"open command"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"用于从命令行打开文件、目录或 URL 等;"
+,
+"en"
+:
+"Used to open files, directories, or URLs from the command line."
+}
+,
+"$ref"
+:
+"x-advise://open"
+,
+"#exec"
+:
+"xrc open 2>/dev/null"
+}
+,
+"openai"
+:
+{
+"#name"
+:
+{
+"openai"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Integrate OpenAI API to provide powerful AI capabilities, including ChatGPT conversations, text generation, image creation, speech conversion, and more"
+,
+"cn"
+:
+"集成 OpenAI API，提供强大的 AI 能力，包括 ChatGPT 对话、文本生成、图片创作、语音转换等"
+}
+,
+"$ref"
+:
+"x-advise://openai"
+,
+"#exec"
+:
+"xrc openai 2>/dev/null"
+}
+,
+"openclaw"
+:
+{
+"#name"
+:
+{
+"openclaw"
+:
+null
+,
+"cn"
+:
+"为 OpenClaw 打造的命令行增强模块"
+,
+"en"
+:
+"Enhanced command-line module for OpenClaw"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"OpenClaw 是一款你可以在自己设备上运行的个人 AI 助手。\n本模块可以帮你一键式环境初始化，支持自动检测并安装 OpenClaw 及其所需的最新版本依赖环境。\nProject: https://github.com/openclaw/openclaw\n"
+,
+"en"
+:
+"OpenClaw is a personal AI assistant that runs locally on your own device.\nThis module provides one-click environment initialization, supporting automatic detection and installation of OpenClaw and its latest dependencies.\nProject: https://github.com/openclaw/openclaw\n"
+}
+,
+"$ref"
+:
+"x-advise://openclaw"
+,
+"#exec"
+:
+"xrc openclaw 2>/dev/null"
+}
+,
+"openrouter"
+:
+{
+"#name"
+:
+{
+"openrouter"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Use OpenRouter API Model"
+,
+"cn"
+:
+"使用 OpenRouter API 模型"
+}
+,
+"$ref"
+:
+"x-advise://openrouter"
+,
+"#exec"
+:
+"xrc openrouter 2>/dev/null"
+}
+,
+"openspec"
+:
+{
+"#name"
+:
+{
+"openspec"
+:
+null
+,
+"en"
+:
+"openspec command enhancements"
+,
+"cn"
+:
+"openspec 命令增强"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"为 OpenSpec 设计的增强模块，帮助用户快速安装并使用 openspec。\nOpenSpec 是一个轻量级的规范驱动框架，旨在通过规范化的 spec-driven 开发流程，协调人类与 AI 编码助手之间的协作。\n它支持包括 Claude Code、Codex 和 Cursor 在内的十几种主流 AI 工具，运行无需任何 API 密钥，也无需依赖任何 MCP。\n"
+,
+"en"
+:
+"This is an enhancement module for OpenSpec, designed to help users quickly install and get started.\nOpenSpec is a lightweight, spec-driven framework that aims to streamline collaboration between human developers and AI coding assistants through a standardized development process.\nIt supports over a dozen mainstream AI tools, including Claude Code, Codex, and Cursor. It runs without requiring any API keys and has no dependency on any MCPs.\n"
+}
+,
+"$ref"
+:
+"x-advise://openspec"
+,
+"#exec"
+:
+"xrc openspec 2>/dev/null"
+}
+,
+"os"
+:
+{
+"#name"
+:
+{
+"os"
+:
+null
+,
+"en"
+:
+"Operating system information"
+,
+"cn"
+:
+"操作系统信息"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"View operating system information including name, architecture, release,\nuptime, load average, and more. Also provides shortcuts to related modules\nlike hostname, cpu endianness, and path.\n"
+,
+"cn"
+:
+"查看操作系统信息，包括系统名称、架构、发行版、运行时间、\n平均负载等。同时提供 hostname、cpu endianness、path 等相关模块的快捷方式。\n"
+}
+,
+"$ref"
+:
+"x-advise://os"
+,
+"#exec"
+:
+"xrc os 2>/dev/null"
+}
+,
+"ossinsight"
+:
+{
+"#name"
+:
+{
+"ossinsight"
+:
+null
+,
+"cn"
+:
+"ossinsight 的 CLI"
+,
+"en"
+:
+"ossinsight's CLI"
+}
+,
+"$ref"
+:
+"x-advise://ossinsight"
+,
+"#exec"
+:
+"xrc ossinsight 2>/dev/null"
+}
+,
+"osv"
+:
+{
+"#name"
+:
+{
+"osv"
+:
+null
+,
+"en"
+:
+"OSV (Open Source Vulnerabilities) project's CLI"
+,
+"cn"
+:
+"OSV（Open Source Vulnerabilities）项目的 CLI"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"The `osv` module is the CLI for the OSV (Open Source Vulnerabilities) project, mainly used for obtaining open source vulnerability information and integrating vulnerability scanning tools to help developers and users better address software security issues.\nOSV is an open source project initiated by Google, aiming to provide a unified and easily accessible open source software vulnerability database. Its official website is https://osv.dev.\n"
+,
+"cn"
+:
+"osv 模块是 OSV（Open Source Vulnerabilities） 项目的 CLI，主要用于获取开源漏洞信息和集成漏洞扫描工具，以帮助开发者和用户更好地应对软件的安全问题。\nOSV 是一个由 Google 发起的开源项目，旨在提供一个统一和易于访问的开源软件漏洞数据库。其官网为 https://osv.dev 。\n"
+}
+,
+"$ref"
+:
+"x-advise://osv"
+,
+"#exec"
+:
+"xrc osv 2>/dev/null"
+}
+,
+"outerr"
+:
+{
+"#name"
+:
+{
+"x outerr"
+:
+null
+,
+"en"
+:
+"X built-in handle error message PREFIX symbol"
+,
+"cn"
+:
+"X 内置通过前缀处理错误信息"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"This module is used to merge the standard output stream and the exception stream; and by using the special prefix PREFIX to identify the output stream in the merged stream, the merged stream can be restored to the output stream and the exception stream later.\nIn order to better act on yml, the current PRFIX definition becomes an escape sequence(001+002+003: ___X_CMD_OUTERR_MIX_PACK_PREFIX)\n"
+,
+"cn"
+:
+"该模块用于合并标准输出流和异常流；并通过在合并流中使用特殊前缀 PREFIX 标识输出流，可以在后期将合并流还原成输出流和异常流。\n为了能够更好作用于yml，当前 PRFIX 定义成为转义序列(001+002+003: ___X_CMD_OUTERR_MIX_PACK_PREFIX)。\n"
+}
+,
+"$ref"
+:
+"x-advise://outerr"
+,
+"#exec"
+:
+"xrc outerr 2>/dev/null"
+}
+,
+"p7zip"
+:
+{
+"#name"
+:
+null
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"#desc"
+:
+{
+"en"
+:
+"7zd decompress"
+,
+"cn"
+:
+"7zd 解压"
+}
+,
+"$ref"
+:
+"x-advise://p7zip"
+}
+,
+"pacman"
+:
+{
+"#name"
+:
+{
+"pacman"
+:
+null
+,
+"en"
+:
+"pacman command enhancements"
+,
+"cn"
+:
+"pacman 命令增强"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"增强 pacman 命令行体验，提供交互式 UI、镜像源管理和代理配置功能"
+,
+"en"
+:
+"Enhance the pacman command-line experience with interactive UI, mirror management, and proxy configuration"
+}
+,
+"$ref"
+:
+"x-advise://pacman"
+,
+"#exec"
+:
+"xrc pacman 2>/dev/null"
+}
+,
+"pandoc"
+:
+{
+"#name"
+:
+{
+"pandoc"
+:
+null
+,
+"cn"
+:
+"为 pandoc 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for pandoc"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"pandoc 是一个开源的文档转换工具，支持将多种文档格式相互转换，包括 Markdown、HTML、PDF 等。\n本模块优先使用当前环境中的 pandoc 命令，若没有，将帮助用户自动下载并使用 pandoc。\n"
+,
+"en"
+:
+"pandoc is an open-source document conversion tool that lets you transform files between a variety of formats, including Markdown, HTML, and PDF.\nThis module prioritizes using the pandoc command within the current environment. If not found, it will help the user automatically download and use pandoc.\n"
+}
+,
+"$ref"
+:
+"x-advise://pandoc"
+,
+"#exec"
+:
+"xrc pandoc 2>/dev/null"
+}
+,
+"paru"
+:
+{
+"#name"
+:
+{
+"paru"
+:
+null
+,
+"en"
+:
+"paru command enhancements"
+,
+"cn"
+:
+"paru 命令增强"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"`x paru` 是一个为 Arch Linux 用户设计的 `paru` AUR 助手增强工具。它通过集成 `fzf` 这一强大的交互式模糊搜索工具，极大地简化了软件包的查找、选择和安装流程。\n将 `paru` 的常用功能封装成更直观的子命令，如 `ls`（列出已安装的包）和 `info`（查看包的详细信息），从而为用户提供一个更高效、更友好的包管理体验。\n"
+,
+"en"
+:
+"`x paru` is an enhancement tool for the `paru` AUR helper, designed for Arch Linux users.\nIt greatly simplifies the process of finding, selecting, and installing packages by integrating `fzf`, a powerful interactive fuzzy search tool.\nIt encapsulates `paru`'s common functionalities into more intuitive subcommands, such as `ls` (to list installed packages) and `info` (to view detailed package information), thereby providing users with a more efficient and user-friendly package management experience.\n"
+}
+,
+"$ref"
+:
+"x-advise://paru"
+,
+"#exec"
+:
+"xrc paru 2>/dev/null"
+}
+,
+"passwd"
+:
+{
+"#name"
+:
+{
+"passwd"
+:
+null
+,
+"cn"
+:
+"系统密码文件查看器"
+,
+"en"
+:
+"System password file viewer"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"展示 /etc/passwd 文件内容，将系统用户账户信息以可读的格式输出。\n支持交互式表格、CSV、TSV、原始格式等多种输出模式。\n"
+,
+"en"
+:
+"Display /etc/passwd file content, presenting system user account information in readable format.\nSupports interactive table, CSV, TSV, raw format, and more output modes.\n"
+}
+,
+"$ref"
+:
+"x-advise://passwd"
+,
+"#exec"
+:
+"xrc passwd 2>/dev/null"
+}
+,
+"path"
+:
+{
+"#name"
+:
+{
+"path"
+:
+null
+,
+"en"
+:
+"Command line handle PATH"
+,
+"cn"
+:
+"处理 PATH 变量"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"命令行处理 PATH 变量，支持添加、删除、去重等操作"
+,
+"en"
+:
+"Command line tool for managing PATH variable"
+}
+,
+"$ref"
+:
+"x-advise://path"
+,
+"#exec"
+:
+"xrc path 2>/dev/null"
+}
+,
+"pb"
+:
+{
+"#name"
+:
+{
+"pb"
+:
+null
+,
+"en"
+:
+"Cross-platform clipboard tool"
+,
+"cn"
+:
+"跨平台剪贴板工具"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Universal clipboard utility for command line. Supports macOS (pbcopy/pbpaste), \nWindows (clip/powershell), Linux (xclip/xsel/wl-copy), and Termux.\nAuto-detects platform and uses OSC52 for SSH sessions.\n"
+,
+"cn"
+:
+"通用命令行剪贴板工具。支持 macOS (pbcopy/pbpaste)、\nWindows (clip/powershell)、Linux (xclip/xsel/wl-copy) 和 Termux。\n自动检测平台，SSH 会话中使用 OSC52 协议。\n"
+}
+,
+"$ref"
+:
+"x-advise://pb"
+,
+"#exec"
+:
+"xrc pb 2>/dev/null"
+}
+,
+"perl"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"增强型 perl 命令"
+,
+"en"
+:
+"Enhanced perl command"
+}
+,
+"$ref"
+:
+"x-advise://perl"
+,
+"#exec"
+:
+"xrc perl 2>/dev/null"
+}
+,
+"pick"
+:
+{
+"#name"
+:
+{
+"pick"
+:
+null
+,
+"en"
+:
+"An interactive GREP tool in your terminal"
+,
+"cn"
+:
+"终端中的交互式 GREP 工具"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Create interactive option-based picklists in the terminal"
+,
+"cn"
+:
+"在终端中创建基于选项的交互式选择列表"
+}
+,
+"$ref"
+:
+"x-advise://pick"
+,
+"#exec"
+:
+"xrc pick 2>/dev/null"
+}
+,
+"pidid"
+:
+{
+"#name"
+:
+{
+"pidid"
+:
+null
+,
+"en"
+:
+"Return a string containing the user or process ID, which can be used for process naming"
+,
+"cn"
+:
+"返回一段包含用户或者进程 ID 的字符串，可用于进程命名"
+}
+,
+"#desc"
+:
+null
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://pidid"
+,
+"#exec"
+:
+"xrc pidid 2>/dev/null"
+}
+,
+"ping"
+:
+{
+"#name"
+:
+{
+"ping"
+:
+null
+,
+"cn"
+:
+"为 ping 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for ping"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"ping 网络连通性测试工具，用于测试主机是否可达。\n支持多种可视化输出模式，包括热图、条形图等。\n"
+,
+"en"
+:
+"Ping network connectivity testing tool to test if a host is reachable.\nSupports multiple visualization output modes including heatmap, bar chart, etc.\n"
+}
+,
+"$ref"
+:
+"x-advise://ping"
+,
+"#exec"
+:
+"xrc ping 2>/dev/null"
+}
+,
+"pip"
+:
+{
+"#name"
+:
+{
+"pip"
+:
+null
+,
+"cn"
+:
+"增强型 pip 命令"
+,
+"en"
+:
+"Enhanced pip command"
+}
+,
+"$ref"
+:
+"x-advise://pip"
+,
+"#exec"
+:
+"xrc pip 2>/dev/null"
+}
+,
+"pipx"
+:
+{
+"#name"
+:
+null
+,
+"#desc"
+:
+{
+"cn"
+:
+"增强型 pipx 命令"
+,
+"en"
+:
+"Enhanced pipx command"
+}
+,
+"$ref"
+:
+"x-advise://pipx"
+}
+,
+"pixi"
+:
+{
+"#name"
+:
+{
+"pixi"
+:
+null
+,
+"cn"
+:
+"为 pixi 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for pixi"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"Pixi 是一款基于 conda 生态系统的跨平台、多语言包管理器和工作流工具 (官网: https://prefix.dev/)。\n本模块优先执行当前环境可用的 pixi, 如果没有, 则会自动调用 `x pixi --install` 进行安装激活.\n本模块旨在提升 Pixi 的用户体验，例如通过使用 Codeberg 的 Pixi 镜像加速中国地区用户的下载速度。\n此外，还提供 `la` 命令用于交互式搜索和预览可安装的 Pixi 包，以及 `use`/`unuse` 等 x-cmd 风格命令来管理当前用户环境下的全局软件包。\n"
+,
+"en"
+:
+"Pixi is a cross-platform, multilingual package manager and workflow tool built on the conda ecosystem. Its official website is https://prefix.dev/\nThis module first tries to use any available PixiJS installation in the current environment. If none is found, it automatically runs `x pixi --install` to install and activate it.\nThis module is primarily designed to optimize the user experience of installing and using Pixi, such as using the Codeberg Pixi mirror to improve the download experience for users in China.\nFurthermore, it introduces the `la` command for interactive searching and previewing installable Pixi packages, and offers x-cmd style commands like `use` and `unuse` for managing global packages within the current user environment.\n"
+}
+,
+"$ref"
+:
+"x-advise://pixi"
+,
+"#exec"
+:
+"xrc pixi 2>/dev/null"
+}
+,
+"pkg"
+:
+{
+"#name"
+:
+{
+"pkg"
+:
+null
+,
+"en"
+:
+"Package manager"
+,
+"cn"
+:
+"包管理器"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Manage all packages installed via x, including software, plugins, and languages. Supports searching, installing, linking, environment variable bootstrapping, and garbage collection."
+,
+"cn"
+:
+"管理所有通过 x 安装的包，包括软件、插件和语言。支持搜索、安装部署、链接、环境变量引导启动和垃圾回收等操作。"
+}
+,
+"$ref"
+:
+"x-advise://pkg"
+,
+"#exec"
+:
+"xrc pkg 2>/dev/null"
+}
+,
+"pkgx"
+:
+{
+"#name"
+:
+{
+"pkgx"
+:
+null
+,
+"en"
+:
+"Enhanced modules for pkgx"
+,
+"cn"
+:
+"为 pkgx 设计的增强模块"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"pkgx is an independent, lightweight Universal Tool Runner that helps developers obtain and run any open-source tool directly without the need for prior installation or configuration.\nIt aims to address the issues of \"versioning\" and \"instant availability\" in the development environment, and its official website is https://pkgx.dev/\n"
+,
+"cn"
+:
+"pkgx 是一个独立、轻量的通用工具运行器 (Universal Tool Runner)，能帮助开发者在无需预先安装、配置的情况下，直接获取并运行任意开源工具。\n它旨在解决开发环境的“版本”和“即时可用性”问题，其官网为 https://pkgx.dev/\n"
+}
+,
+"$ref"
+:
+"x-advise://pkgx"
+,
+"#exec"
+:
+"xrc pkgx 2>/dev/null"
+}
+,
+"pldg"
+:
+{
+"#name"
+:
+{
+"pldg"
+:
+null
+,
+"en"
+:
+"Linux pledge command wrapper"
+,
+"cn"
+:
+"Linux pledge 命令封装"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"x pldg 是 cosmo pledge 命令的简化封装，旨在让用户能轻松地在受限的沙箱环境中安全地运行程序。\n它引入了 `-0|-1|-3|-5|-9` 等数字安全等级，将复杂的权限组合简化为单个选项, 并可根据需要灵活地增删单个权限。\n"
+,
+"en"
+:
+"x pldg is a simplified wrapper for the cosmo pledge command, designed to allow users to easily and safely run programs in a restricted sandbox environment.\nIt introduces numeric security levels such as `-0|-1|-3|-5|-9`, simplifying complex permission combinations into a single option, and allows individual permissions to be flexibly added or removed as needed.\n"
+}
+,
+"$ref"
+:
+"x-advise://pldg"
+,
+"#exec"
+:
+"xrc pldg 2>/dev/null"
+}
+,
+"price"
+:
+{
+"#name"
+:
+{
+"price"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Calculate cost based on LLM tokens"
+,
+"cn"
+:
+"根据 LLM token 计算费用"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://price"
+,
+"#exec"
+:
+"xrc price 2>/dev/null"
+}
+,
+"proxy"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Setting proxy"
+,
+"cn"
+:
+"用于设置代理的工具"
+}
+,
+"$ref"
+:
+"x-advise://proxy"
+,
+"#exec"
+:
+"xrc proxy 2>/dev/null"
+}
+,
+"prta"
+:
+{
+"#name"
+:
+{
+"x prta"
+:
+null
+,
+"cn"
+:
+"为 proot-apps 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for proot-apps"
+}
+,
+"$ref"
+:
+"x-advise://prta"
+,
+"#exec"
+:
+"xrc prta 2>/dev/null"
+}
+,
+"ps"
+:
+{
+"#name"
+:
+{
+"ps"
+:
+null
+,
+"cn"
+:
+"查看进程"
+,
+"en"
+:
+"View PS"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"ps 进程状态查看工具，用于显示当前系统中运行的进程信息。\n支持交互式查看、多种格式输出（CSV、JSON、TSV）等功能。\n"
+,
+"en"
+:
+"PS process status viewer for displaying information about running processes.\nSupports interactive viewing, multiple output formats (CSV, JSON, TSV) and more.\n"
+}
+,
+"$ref"
+:
+"x-advise://ps"
+,
+"#exec"
+:
+"xrc ps 2>/dev/null"
+}
+,
+"pwsh"
+:
+{
+"#name"
+:
+{
+"pwsh"
+:
+null
+,
+"en"
+:
+"PowerShell command line management tool <unstable>"
+,
+"cn"
+:
+"PowerShell 命令行管理工具 <unstable>"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"在 WSL2 或 Git Bash 终端中调用 PowerShell，提供系统管理、进程管理、磁盘管理等一站式 Windows 管理能力"
+,
+"en"
+:
+"Invoke PowerShell from WSL2 or Git Bash terminals, providing all-in-one Windows management capabilities including system, process, and disk management"
+}
+,
+"$ref"
+:
+"x-advise://pwsh"
+,
+"#exec"
+:
+"xrc pwsh 2>/dev/null"
+}
+,
+"python"
+:
+{
+"#name"
+:
+{
+"python"
+:
+null
+,
+"cn"
+:
+"增强型 python 命令"
+,
+"en"
+:
+"Enhanced python command"
+}
+,
+"$ref"
+:
+"x-advise://python"
+,
+"#exec"
+:
+"xrc python 2>/dev/null"
+}
+,
+"qr"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"QR code generator"
+,
+"cn"
+:
+"二维码生成工具"
+}
+,
+"$ref"
+:
+"x-advise://qr"
+,
+"#exec"
+:
+"xrc qr 2>/dev/null"
+}
+,
+"qywx"
+:
+{
+"#name"
+:
+{
+"x qywx"
+:
+null
+,
+"cn"
+:
+"使用企业微信群机器人发送消息"
+,
+"en"
+:
+"Send messages using a WXwork group bot"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"使用 x qywx 向你的企业微信群发送消息。首次使用需要配置 webhook url。"
+,
+"en"
+:
+"Use x qywx send messages to your WXwork group. The first use requires configuring webhook url."
+}
+,
+"$ref"
+:
+"x-advise://qywx"
+,
+"#exec"
+:
+"xrc qywx 2>/dev/null"
+}
+,
+"raku"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"增强型 Raku 命令"
+,
+"en"
+:
+"Enhanced Raku command"
+}
+,
+"$ref"
+:
+"x-advise://raku"
+,
+"#exec"
+:
+"xrc raku 2>/dev/null"
+}
+,
+"rand"
+:
+{
+"#name"
+:
+{
+"rand"
+:
+null
+,
+"cn"
+:
+"随机数据生成器"
+,
+"en"
+:
+"Random data generator"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Generate random data including UUIDs, integers, floats, strings, email addresses, IP addresses, etc."
+,
+"cn"
+:
+"生成随机数据，包括 UUID、整数、浮点数、字符串、邮箱地址、IP 地址等"
+}
+,
+"$ref"
+:
+"x-advise://rand"
+,
+"#exec"
+:
+"xrc rand 2>/dev/null"
+}
+,
+"readablelink"
+:
+{
+"#name"
+:
+{
+"readablelink"
+:
+null
+,
+"cn"
+:
+"链接可读化工具"
+,
+"en"
+:
+"URL to readable link converter"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Convert URLs to their raw/readable format for AI agents and command-line tools. Supports GitHub, Codeberg, Gitee, GitLab, and more."
+,
+"cn"
+:
+"将 URL 转换为原始/可读格式，供 AI 智能体和命令行工具使用。支持 GitHub、Codeberg、Gitee、GitLab 等平台。"
+}
+,
+"$ref"
+:
+"x-advise://readablelink"
+,
+"#exec"
+:
+"xrc readablelink 2>/dev/null"
+}
+,
+"retry"
+:
+{
+"#name"
+:
+{
+"x retry"
+:
+null
+,
+"en"
+:
+"Retry failed command"
+,
+"cn"
+:
+"重试失败命令"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"该模块是使用 Posix shell 实现, 因此与二进制实现的方案相比, 可以重试 shell 函数在内的命令"
+,
+"en"
+:
+"This module is implemented using Posix shell, so it can retry commands including shell functions, unlike binary implementations."
+}
+,
+"$ref"
+:
+"x-advise://retry"
+,
+"#exec"
+:
+"xrc retry 2>/dev/null"
+}
+,
+"rfc"
+:
+{
+"#name"
+:
+{
+"rfc"
+:
+null
+,
+"en"
+:
+"Modules designed for RFC documentation"
+,
+"cn"
+:
+"为 RFC 文档设计的模块"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"RFC documents cover a wide range of Internet protocols, procedures, processes, and concepts, and are the primary set of documents for Internet standards and practices."
+,
+"cn"
+:
+"RFC 文档覆盖了广泛的互联网协议、程序、过程和概念，是互联网标准和实践的主要文档集。"
+}
+,
+"$ref"
+:
+"x-advise://rfc"
+,
+"#exec"
+:
+"xrc rfc 2>/dev/null"
+}
+,
+"rg"
+:
+{
+"#name"
+:
+{
+"rg"
+:
+null
+,
+"cn"
+:
+"为 rg 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for rg"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"rg（ripgrep）是类似于 grep 的现代化搜索工具，支持以递归的方式在当前目录中搜索与 regex 模式匹配的行。\n`x rg` 是基于 rg 命令、为提升 rg 使用体验而设计的增强模块，具体的增强性改动如下：\n1. 简化 rg 命令的安装：在确定当前环境中没有 rg 命令的情况下，`x rg` 会通过 x-cmd pkg 体系以一种不影响用户环境的方式下载安装 rg 。\n2. 提供 `--fzfapp` 命令：它借助 fzf 提供了一种以交互模式使用 rg 命令的方法。\n"
+,
+"en"
+:
+"rg (ripgrep) is a modern search tool similar to grep that supports recursively searching for lines matching a regex pattern within the current directory.\n`x rg` is an enhancement module based on the rg command, designed to improve the rg user experience. The specific enhancements are as follows:\n1. Simplified rg command installation: If rg is not found in the current environment, `x rg` will download and install rg through the x-cmd pkg system in a way that does not affect the user's environment.\n2. Provides the `--fzfapp` command: This offers an interactive way to use the rg command with fzf.\n"
+}
+,
+"$ref"
+:
+"x-advise://rg"
+,
+"#exec"
+:
+"xrc rg 2>/dev/null"
+}
+,
+"rm"
+:
+{
+"#name"
+:
+{
+"rm"
+:
+{
+"en"
+:
+"Remove files and directories"
+,
+"cn"
+:
+"删除文件和目录"
+}
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"x-cmd 增强版 rm，提供更安全、更灵活的文件删除功能，支持管道模式与空文件筛选。"
+,
+"en"
+:
+"x-cmd enhanced rm, offering safer and more flexible file removal with pipeline support and empty file filtering."
+}
+,
+"$ref"
+:
+"x-advise://rm"
+,
+"#exec"
+:
+"xrc rm 2>/dev/null"
+}
+,
+"rmrf"
+:
+{
+"#name"
+:
+null
+,
+"#desc"
+:
+{
+"cn"
+:
+"优雅地帮你使用 `rm -rf` 命令"
+,
+"en"
+:
+"A graceful way to use `rm -rf` command"
+}
+,
+"$ref"
+:
+"x-advise://rmrf"
+,
+"#exec"
+:
+"xrc rmrf 2>/dev/null"
+}
+,
+"root"
+:
+{
+"#name"
+:
+{
+"root"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"x-cmd root directory management"
+,
+"cn"
+:
+"x-cmd 根目录管理"
+}
+,
+"$ref"
+:
+"x-advise://root"
+,
+"#exec"
+:
+"xrc root 2>/dev/null"
+}
+,
+"route"
+:
+{
+"#name"
+:
+{
+"route"
+:
+null
+,
+"cn"
+:
+"获取 ROUTE 表"
+,
+"en"
+:
+"Retrieving the ROUTE table"
+}
+,
+"$ref"
+:
+"x-advise://route"
+,
+"#exec"
+:
+"xrc route 2>/dev/null"
+}
+,
+"sb"
+:
+{
+"#name"
+:
+{
+"sb"
+:
+null
+,
+"cn"
+:
+"在受限环境中安全运行命令，类似 Deno、Docker 的最小权限沙箱（sandbox）"
+,
+"en"
+:
+"Safely run commands in a restricted environment, like a minimal-permission sandbox"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"`x sb` 是一个跨平台沙箱（sandbox）执行工具，用于以最小权限运行命令。\n它支持类似 Deno 风格的权限控制，例如 --net 启用网络访问，--tty 允许 TTY 访问，--pwd 允许访问当前目录等。\n\n在 macOS 上，它使用 `sandbox-exec` 创建临时 profile 文件进行隔离；\n在 Linux 上，使用 pledge 机制模拟最小权限运行；\n对于不支持的系统可使用 `___X_CMD_SB_RUN_ANYWAY=1` 强制执行。\n\n适用于想在不使用 Docker 的情况下，对脚本或命令运行进行权限隔离的场景。\n"
+,
+"en"
+:
+"`x sb` is a cross-platform sandbox runner that executes commands with minimal privileges.\nIt supports Deno-style permission control, such as `--net` to enable network access, `--tty` to allow TTY access, `--pwd` to allow access to the current directory, etc.\n\nOn macOS, it uses `sandbox-exec` with dynamically generated profiles;\non Linux, it leverages pledge-style constraints;\non unsupported systems, execution can be forced using `___X_CMD_SB_RUN_ANYWAY=1`.\n\nIdeal for securing scripts or tools in lightweight, permission-restricted environments without needing full containers.\n"
+}
+,
+"$ref"
+:
+"x-advise://sb"
+,
+"#exec"
+:
+"xrc sb 2>/dev/null"
+}
+,
+"scoop"
+:
+{
+"#name"
+:
+{
+"scoop"
+:
+null
+,
+"en"
+:
+"Windows Package Management Tool"
+,
+"cn"
+:
+"windows 的软件包管理工具"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"基于 scoop 的增强模块，提供自动下载、高效搜索、镜像加速和命令补全等功能，实现与 shell 的无缝集成"
+,
+"en"
+:
+"Enhanced module based on scoop, providing auto-download, efficient search, mirror acceleration and command completion for seamless shell integration"
+}
+,
+"$ref"
+:
+"x-advise://scoop"
+,
+"#exec"
+:
+"xrc scoop 2>/dev/null"
+}
+,
+"scorecard"
+:
+{
+"#name"
+:
+{
+"scorecard"
+:
+null
+,
+"en"
+:
+"Modules designed for the OpenSSF scorecard project"
+,
+"cn"
+:
+"为 OpenSSF scorecard 项目设计的模块"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"OpenSSF Scorecard is a project developed by the Open Source Security Foundation (OpenSSF) that automates the assessment of the security and best practices compliance of open source projects.\nThe `x scorecard` module attempts to encapsulate the scorecard.dev API service into simpler commands to help developers and users better use Scorecard to identify potential security risks.\n"
+,
+"cn"
+:
+"OpenSSF Scorecard 是一个由开源安全基金会（Open Source Security Foundation，OpenSSF）开发的项目，它用于自动化评估开源项目的安全性和最佳实践遵从情况。\n`x scorecard` 模块尝试将 scorecard.dev API 服务封装成更为简单的命令，以帮助开发者和用户更好的使用 scorecard 识别潜在的安全风险。\n"
+}
+,
+"$ref"
+:
+"x-advise://scorecard"
+,
+"#exec"
+:
+"xrc scorecard 2>/dev/null"
+}
+,
+"scotty"
+:
+{
+"#name"
+:
+{
+"scotty"
+:
+null
+,
+"cn"
+:
+"构建和管理内部模块"
+,
+"en"
+:
+"building and managing internal modules"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"该模块用于构建和管理内部模块，主要在模块开发过程中使用。"
+,
+"en"
+:
+"This module is used internally for building and managing internal modules, primarily during module development."
+}
+,
+"$ref"
+:
+"x-advise://scotty"
+,
+"#exec"
+:
+"xrc scotty 2>/dev/null"
+}
+,
+"screen"
+:
+{
+"#name"
+:
+{
+"elv"
+:
+null
+,
+"cn"
+:
+"为 screen 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for screen command"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"screen 模块, 暂时不开发, 仅自用.\n"
+,
+"en"
+:
+"The \"screen\" module is currently on hold for development and will be used internally only.\n"
+}
+,
+"$ref"
+:
+"x-advise://screen"
+,
+"#exec"
+:
+"xrc screen 2>/dev/null"
+}
+,
+"sd"
+:
+{
+"#name"
+:
+{
+"sd"
+:
+null
+,
+"cn"
+:
+"为 sd 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for sd"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"sd（search & displace）是一种查找和替换文本工具，使用常见的正则表达式语法，类似于 sed，但专注于替换操作，从而使用起来更直观、更易读。\n该模块主要通过 fzf 以交互方式预览文本内容的更改，使用户能够动态查看表达式变更的效果，同时增加了免安装直接使用的功能。\n在 fzf 预览窗口中，通过快捷键 `ctrl-s` 还可以使用 diff 来查看文本内容中的上下文差异。\n"
+,
+"en"
+:
+"sd (search & displace) is a text search and replace tool that uses common regular expression syntax, similar to sed, but focuses on replacement operations, making it more intuitive and readable.\nThis module primarily utilizes fzf to interactively preview changes in text content, enabling users to dynamically view the effects of expression changes. It also adds the functionality of direct use without installation.\nWithin the fzf preview window, you can use the shortcut key `ctrl-s` to leverage diff and view contextual differences within the text content.\n"
+}
+,
+"$ref"
+:
+"x-advise://sd"
+,
+"#exec"
+:
+"xrc sd 2>/dev/null"
+}
+,
+"sdict"
+:
+{
+"#name"
+:
+{
+"sdict"
+:
+null
+,
+"en"
+:
+"Store dictionary with string"
+,
+"cn"
+:
+"用字符串存储 dictionarg"
+}
+,
+"#desc"
+:
+null
+,
+"$ref"
+:
+"x-advise://sdict"
+,
+"#exec"
+:
+"xrc sdict 2>/dev/null"
+}
+,
+"se"
+:
+{
+"#name"
+:
+{
+"se"
+:
+null
+,
+"en"
+:
+"Search and browse Stack Exchange"
+,
+"cn"
+:
+"搜索和浏览 Stack Exchange"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Search and browse Stack Exchange"
+,
+"cn"
+:
+"搜索和浏览 Stack Exchange"
+}
+,
+"$ref"
+:
+"x-advise://se"
+,
+"#exec"
+:
+"xrc se 2>/dev/null"
+}
+,
+"sed"
+:
+{
+"#name"
+:
+{
+"sed"
+:
+null
+,
+"cn"
+:
+"为 sed 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for sed"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"sed（Stream Editor）是一个强大的文本处理工具，支持以流的方式处理大量文本，适用于文件内容的搜索、替换、插入和删除等操作。\n该模块主要通过 fzf 以交互方式预览文本内容的更改，使用户能够动态查看表达式变更的效果。\n在 fzf 预览窗口中，通过快捷键 `ctrl-s` 还可以使用 diff 来查看文本内容中的上下文差异。\n"
+,
+"en"
+:
+"sed (Stream Editor) is a powerful text processing tool that supports processing large amounts of text in a streaming manner. It is suitable for operations such as searching, replacing, inserting, and deleting file content.\nThis module primarily utilizes fzf to interactively preview changes in text content, enabling users to dynamically view the effects of expression changes and display contextual differences in the text content.\nWithin the fzf preview window, you can use the shortcut key `ctrl-s` to leverage diff and view contextual differences within the text content.\n"
+}
+,
+"$ref"
+:
+"x-advise://sed"
+,
+"#exec"
+:
+"xrc sed 2>/dev/null"
+}
+,
+"seq"
+:
+{
+"#name"
+:
+{
+"en"
+:
+"print or resolve sequences of numbers"
+,
+"cn"
+:
+"输出或处理数字序列"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Generate number sequences, same functionality as GNU seq, but with a compact colon-separated range syntax (`start:step:end`) and the ability to invoke shell commands or inject functions for each element.\n\nDifferences from GNU seq:\n- Uses `:` as range separator — `x seq 1:10` instead of `seq 1 10`\n- Supports shell invocation — pass a shell expression, `eval` command, or function name to process each number\n- Supports awk inline code — write `{ ... }` to use awk for iteration and processing\n- Pure shell loop by default — no external process overhead, ideal for small ranges\n"
+,
+"cn"
+:
+"生成数字序列，功能与 GNU seq 相同，但采用紧凑的冒号分隔范围语法（`start:step:end`），并支持对每个元素调用 shell 命令或注入函数。\n\n与 GNU seq 的差异：\n- 使用 `:` 作为范围分隔符——`x seq 1:10` 代替 `seq 1 10`\n- 支持 shell 调用——传入 shell 表达式、`eval` 命令或函数名来处理每个数字\n- 支持 awk 内联代码——用 `{ ... }` 调用 awk 进行迭代和处理\n- 默认纯 shell 循环——无外部进程开销，适合小范围数据\n"
+}
+,
+"$ref"
+:
+"x-advise://seq"
+,
+"#exec"
+:
+"xrc seq 2>/dev/null"
+}
+,
+"service"
+:
+{
+"#name"
+:
+{
+"service"
+:
+null
+,
+"cn"
+:
+"系统服务管理"
+,
+"en"
+:
+"System service manager"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"管理系统服务的启动、停止、重启、状态查看等操作。\n支持查看服务日志、检查服务存活状态、暂停/恢复服务等功能。\n"
+,
+"en"
+:
+"Manage system services including start, stop, restart, status check.\nSupports viewing service logs, checking alive status, pause/resume services.\n"
+}
+,
+"$ref"
+:
+"x-advise://service"
+,
+"#exec"
+:
+"xrc service 2>/dev/null"
+}
+,
+"set"
+:
+{
+"#name"
+:
+{
+"set"
+:
+null
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"设置 shell option 的工具"
+,
+"en"
+:
+"A tool for setting shell options"
+}
+,
+"$ref"
+:
+"x-advise://set"
+,
+"#exec"
+:
+"xrc set 2>/dev/null"
+}
+,
+"shim"
+:
+{
+"#name"
+:
+{
+"shim"
+:
+null
+,
+"cn"
+:
+"生成指定文件的 shim"
+,
+"en"
+:
+"Generate a shim for a specified file"
+}
+,
+"$ref"
+:
+"x-advise://shim"
+,
+"#exec"
+:
+"xrc shim 2>/dev/null"
+}
+,
+"shodan"
+:
+{
+"#name"
+:
+{
+"shodan"
+:
+null
+,
+"en"
+:
+"The shodan command-line interface is powered by x-cmd, mainly using posix shell, awk and curl."
+,
+"cn"
+:
+"Shodan 命令行接口由 x-cmd 驱动，主要使用 posix shell, awk 和 curl 来实现。"
+}
+,
+"$ref"
+:
+"x-advise://shodan"
+,
+"#exec"
+:
+"xrc shodan 2>/dev/null"
+}
+,
+"shortcut"
+:
+{
+"#name"
+:
+{
+"shortcut"
+:
+null
+,
+"cn"
+:
+"跨 Shell 别名管理器"
+,
+"en"
+:
+"Cross-Shell Alias Manager"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"一次配置，永久生效。支持 ash、bash、csh、dash、elvish、fish、nu、xonsh 等主流 Shell。\n设置短名替代长命令，如 `xd` 替代 `x docker`，`ll` 替代 `ls -lah`。\n"
+,
+"en"
+:
+"One-time configuration, permanent effect. Supports ash, bash, csh, dash, elvish, fish, nu, xonsh and more.\nSet short names to replace long commands, like `xd` for `x docker`, `ll` for `ls -lah`.\n"
+}
+,
+"$ref"
+:
+"x-advise://shortcut"
+,
+"#exec"
+:
+"xrc shortcut 2>/dev/null"
+}
+,
+"siliconflow"
+:
+{
+"#name"
+:
+{
+"siliconflow"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Use SiliconCloud API Model"
+,
+"cn"
+:
+"使用硅基流动 API 模型"
+}
+,
+"$ref"
+:
+"x-advise://siliconflow"
+,
+"#exec"
+:
+"xrc siliconflow 2>/dev/null"
+}
+,
+"skill"
+:
+{
+"#name"
+:
+{
+"skill"
+:
+null
+,
+"cn"
+:
+"Skill 管理"
+,
+"en"
+:
+"Skill Management"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Manage Agent Skills to enhance LLM task execution.\n\nSkills are reusable capabilities that extend LLM abilities for specific tasks.\nThis module allows you to browse, add, remove, and manage skills for various AI agents.\n"
+,
+"cn"
+:
+"管理 Agent Skills，增强 LLM 任务执行能力。\n\nSkills 是可复用的能力扩展，用于增强 LLM 在特定任务上的表现。\n本模块支持浏览、添加、移除和管理多种 AI agent 的 skills。\n"
+}
+,
+"$ref"
+:
+"x-advise://skill"
+,
+"#exec"
+:
+"xrc skill 2>/dev/null"
+}
+,
+"skopeo"
+:
+{
+"#name"
+:
+{
+"skopeo"
+:
+null
+,
+"cn"
+:
+"为 skopeo 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for skopeo"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"skopeo 用于镜像管理和迁移\n如果本地没有 skopeo, x-cmd 会采用 pixi 按需下载并运行 skopeo; 如果你需要安装到用户空间以便直接采用 `skopeo`运行, 可以运行 `x pixi use skopeo`\nskopeo 官网 https://github.com/containers/skopeo\n"
+,
+"en"
+:
+""
+}
+,
+"$ref"
+:
+"x-advise://skopeo"
+,
+"#exec"
+:
+"xrc skopeo 2>/dev/null"
+}
+,
+"slack"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"使用机器人在 slack 上发送消息。"
+,
+"en"
+:
+"using bots to send messages on slack."
+}
+,
+"$ref"
+:
+"x-advise://slack"
+,
+"#exec"
+:
+"xrc slack 2>/dev/null"
+}
+,
+"sleep"
+:
+{
+"#name"
+:
+{
+"sleep"
+:
+null
+,
+"en"
+:
+"Sleep and schedule tasks"
+,
+"cn"
+:
+"睡眠与定时任务"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Pause execution for a specified time, or schedule periodic tasks.\nSupports human-readable time formats like 1s, 1m, 1h, 1d.\nAlso provides beacon for periodic timestamp output and schd for scheduled command execution.\n"
+,
+"cn"
+:
+"暂停执行指定的时间，或安排周期性任务。\n支持人类可读的时间格式，如 1s、1m、1h、1d。\n还提供 beacon 用于周期性输出时间戳，以及 schd 用于定时执行命令。\n"
+}
+,
+"$ref"
+:
+"x-advise://sleep"
+,
+"#exec"
+:
+"xrc sleep 2>/dev/null"
+}
+,
+"slidev"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Use Markdown to generate presentation slides"
+,
+"cn"
+:
+"使用 Markdown 进行幻灯片演示服务"
+}
+,
+"$ref"
+:
+"x-advise://slidev"
+,
+"#exec"
+:
+"xrc slidev 2>/dev/null"
+}
+,
+"smart"
+:
+{
+"#name"
+:
+{
+"smart"
+:
+null
+,
+"en"
+:
+"smartctl command enhancement"
+,
+"cn"
+:
+"smartctl 命令增强"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"smartctl is a tool for control and monitor disks, used to check disk health, including SMART (Self-Monitoring, Analysis, and Reporting Technology) data.\nThis module aims to help users quickly use the smartctl tool without installation and provides an interactive way to list local disk devices, making it easy for users to choose the disk they want to check.\n"
+,
+"cn"
+:
+"smartctl 是一个控制和监控磁盘的工具，用于检查磁盘健康状况，包括 SMART（自监控、分析和报告技术） 数据。\n本模块皆在于帮助用户免安装快速使用 smartctl 工具，并提供交互方式列出本地磁盘设备，方便用户选择要检查的磁盘。\n"
+}
+,
+"$ref"
+:
+"x-advise://smart"
+,
+"#exec"
+:
+"xrc smart 2>/dev/null"
+}
+,
+"snap"
+:
+{
+"#name"
+:
+{
+"snap"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Specify the package command to run, if it's not available locally, it will download automatically"
+,
+"cn"
+:
+"指定要运行的软件包命令，如果在本地不可用，将自动下载"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://snap"
+,
+"#exec"
+:
+"xrc snap 2>/dev/null"
+}
+,
+"speckit"
+:
+{
+"#name"
+:
+{
+"speckit"
+:
+null
+,
+"en"
+:
+"An enhancement module for Spec Kit"
+,
+"cn"
+:
+"为 Spec Kit 设计的增强模块"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"为 Spec Kit 设计的增强模块，帮助用户快速安装并使用其核心组件 Specify CLI（命令：specify）。\nSpec Kit 是一个用于规范驱动开发（Spec-Driven Development）的工具，它可以引导开发者和 AI 工具规范化 “需求→计划→任务→实现” 的流程。\n这套方法旨在消除“感觉式编程”带来的不确定性，确保开发过程的每一步都紧扣最初设定的目标，从而实现高度可预测、高质量的产出。\n"
+,
+"en"
+:
+"An enhancement module for Spec Kit, designed to help users quickly install and use its core component, the Specify CLI (command: specify).\nSpec Kit is a tool for Spec-Driven Development that guides developers and AI tools to standardize the 'requirement → plan → task → implementation' workflow.\nThis methodology aims to eliminate the uncertainty of 'gut-feeling programming,' ensuring that every step of the development process is tightly aligned with the initial goals, thereby achieving highly predictable, high-quality outcomes.\n"
+}
+,
+"$ref"
+:
+"x-advise://speckit"
+,
+"#exec"
+:
+"xrc speckit 2>/dev/null"
+}
+,
+"spf"
+:
+{
+"#name"
+:
+{
+"spf"
+:
+null
+,
+"cn"
+:
+"为 superfile 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for superfile"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"superfile 是一款非常漂亮且现代化的终端文件管理器，而 `x spf` 是基于 superfile 并为提升 superfile 使用体验而设计的增强模块\n"
+,
+"en"
+:
+"superfile is a very beautiful and modern terminal file manager, and `x spf` is an enhanced module based on superfile, designed to enhance the user experience of superfile.\n"
+}
+,
+"$ref"
+:
+"x-advise://spf"
+,
+"#exec"
+:
+"xrc spf 2>/dev/null"
+}
+,
+"ssh"
+:
+{
+"#name"
+:
+{
+"ssh"
+:
+{
+"cn"
+:
+"为 ssh 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for ssh"
+}
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"为 SSH 连接提供增强功能，支持向远程主机部署 x-cmd 工具。\n"
+,
+"en"
+:
+"Provides enhanced SSH connections with x-cmd tool deployment to remote hosts.\n"
+}
+,
+"$ref"
+:
+"x-advise://ssh"
+,
+"#exec"
+:
+"xrc ssh 2>/dev/null"
+}
+,
+"starship"
+:
+{
+"#name"
+:
+{
+"starship"
+:
+null
+,
+"cn"
+:
+"为 starship 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules designed for starship"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Starship is a minimal, blazing-fast, and infinitely customizable prompt for any shell!\nFor a detailed guide on getting started, have a look at the docs at https://starship.rs\n\nThe starship module is an enhanced module designed for Starship, allowing users to easily switch themes with a single command.\nThis module also includes a theme preview feature that lets users preview different themes directly in the command line, streamlining the process of selecting and changing themes.\n"
+,
+"cn"
+:
+"starship 是一个适用于多种 Shell 的极简、超快且无限可定制的命令行提示！\n有关入门指南的详细说明，请查看 https://starship.rs 上的文档。\n\nstarship 模块是为 starship 设计的增强型模块，用户可以一键轻松切换主题。\n该模块还包括一个主题预览功能，允许用户直接在命令行中预览不同的主题，简化了选择和更改主题的过程。\n"
+}
+,
+"$ref"
+:
+"x-advise://starship"
+,
+"#exec"
+:
+"xrc starship 2>/dev/null"
+}
+,
+"stat"
+:
+{
+"#name"
+:
+{
+"stat"
+:
+{
+"en"
+:
+"Display file or filesystem status"
+,
+"cn"
+:
+"显示文件或文件系统状态"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Display file or filesystem status information.\nShows detailed metadata including permissions, ownership, size, \ntimestamps, and other file attributes.\n"
+,
+"cn"
+:
+"显示文件或文件系统的状态信息。\n显示详细的元数据，包括权限、所有者、大小、时间戳和其他文件属性。\n"
+}
+,
+"$ref"
+:
+"x-advise://stat"
+,
+"#exec"
+:
+"xrc stat 2>/dev/null"
+}
+,
+"str"
+:
+{
+"#name"
+:
+{
+"str"
+:
+null
+,
+"cn"
+:
+"字符串处理工具"
+,
+"en"
+:
+"String manipulation tool"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"高性能字符串处理模块，提供丰富的字符串操作功能。\n支持大小写转换、修剪、分割、替换、编码解码、哈希计算等。\n底层模块，不支持子命令级别的 help。\n"
+,
+"en"
+:
+"High-performance string manipulation module providing rich string operations.\nSupports case conversion, trim, split, replace, encoding/decoding, hash calculation, etc.\nLow-level module, subcommand-level help not supported.\n"
+}
+,
+"$ref"
+:
+"x-advise://str"
+,
+"#exec"
+:
+"xrc str 2>/dev/null"
+}
+,
+"sudo"
+:
+{
+"#name"
+:
+{
+"sudo"
+:
+{
+"en"
+:
+"Execute command with elevated privileges (sudo/doas/su)"
+,
+"cn"
+:
+"以提升的权限执行命令（支持 sudo/doas/su）"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Enhanced privilege escalation module that automatically selects\nthe best available method (sudo, doas, or su).\n\nKEY BENEFITS over bare sudo:\n1. PATH preservation: Your custom PATH is injected into the elevated environment\n2. x-cmd availability: x-cmd commands work seamlessly under sudo\n3. Auto-fallback: Tries sudo → doas → su automatically\n4. Environment consistency: ___X_CMD_ROOT and other vars are preserved\n\nUse x sudo instead of bare sudo to ensure x-cmd functions work correctly.\n"
+,
+"cn"
+:
+"增强的权限提升模块，自动选择最佳可用方式（sudo、doas 或 su）。\n\n相比裸 sudo 的关键优势：\n1. PATH 保持：自定义 PATH 注入到提升后的环境中\n2. x-cmd 可用：x-cmd 命令在 sudo 下无缝工作\n3. 自动回退：自动尝试 sudo → doas → su\n4. 环境一致性：___X_CMD_ROOT 等变量被保留\n\n使用 x sudo 而非裸 sudo，确保 x-cmd 功能正常工作。\n"
+}
+,
+"$ref"
+:
+"x-advise://sudo"
+,
+"#exec"
+:
+"xrc sudo 2>/dev/null"
+}
+,
+"sysctl"
+:
+{
+"#name"
+:
+{
+"sysctl"
+:
+null
+,
+"cn"
+:
+"为 sysctl 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for sysctl"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"An enhanced module for sysctl, aiming to provide a more intuitive way to view kernel parameters.\nIt supports interactive mode, multiple output formats, and flexible filtering capabilities, greatly simplifying the viewing and analysis of kernel parameters.\n"
+,
+"cn"
+:
+"为 sysctl 设计的增强模块，旨在提供更直观的方式来查看内核参数。\n它支持交互式模式、多种输出格式以及灵活的过滤功能，极大地简化了内核参数的查看和分析。\n"
+}
+,
+"$ref"
+:
+"x-advise://sysctl"
+,
+"#exec"
+:
+"xrc sysctl 2>/dev/null"
+}
+,
+"ta"
+:
+{
+"#name"
+:
+{
+"ta"
+:
+null
+,
+"en"
+:
+"AWK tool for TSV data processing"
+,
+"cn"
+:
+"TSV 数据处理的 AWK 工具"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"`ta` provides AWK functionality for processing TSV (Tab-Separated Values) data.\n\nCommon use cases:\n- Quick TSV data processing with AWK\n- Streaming processing of large TSV datasets\n- Tab-separated field handling\n"
+,
+"cn"
+:
+"`ta` 提供处理 TSV（制表符分隔值）数据的 AWK 功能。\n\n常见使用场景：\n- 使用 AWK 快速处理 TSV 数据\n- 流式处理大型 TSV 数据集\n- 制表符分隔字段处理\n"
+}
+,
+"$ref"
+:
+"x-advise://ta"
+,
+"#exec"
+:
+"xrc ta 2>/dev/null"
+}
+,
+"tailer"
+:
+{
+"#name"
+:
+{
+"tailer"
+:
+null
+,
+"cn"
+:
+"消息队列监听"
+,
+"en"
+:
+"Message queue tailer"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"为 Agent 设计的消息队列框架。\n\n支持多 writer 单 reader 模式，用于 A2A (Agent to Agent) 场景的消息通信。\n"
+,
+"en"
+:
+"Message queue framework for Agents.\n\nSupports multi-writer single-reader mode for A2A (Agent to Agent) messaging.\n"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://tailer"
+,
+"#exec"
+:
+"xrc tailer 2>/dev/null"
+}
+,
+"tap"
+:
+{
+"#name"
+:
+{
+"tap"
+:
+null
+,
+"en"
+:
+"tap test"
+,
+"cn"
+:
+"tap 测试"
+}
+,
+"$ref"
+:
+"x-advise://tap"
+,
+"#exec"
+:
+"xrc tap 2>/dev/null"
+}
+,
+"tcsh"
+:
+{
+"#name"
+:
+{
+"tcsh"
+:
+null
+,
+"cn"
+:
+"为 tcsh 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for tcsh"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"tcsh 具有可编程命令行 completion、命令行编辑和一些其他功能的 C shell。\n本模块主要提供在 tcsh 上调用 x-cmd 工具集的支持；并增加 @gpt 与 chatgpt 聊天、LLM 生成 tcsh 命令等功能。\n"
+,
+"en"
+:
+"tcsh is essentially the C shell with programmable command-line completion, command-line editing, and a few other features.\nThis module mainly provides support for calling the x-cmd toolset on tcsh; and add features such as chatting with @gpt and ChatGPT, and generating tcsh commands with LLMs.\n"
+}
+,
+"$ref"
+:
+"x-advise://tcsh"
+,
+"#exec"
+:
+"xrc tcsh 2>/dev/null"
+}
+,
+"tea"
+:
+{
+"#name"
+:
+{
+"x tea"
+:
+null
+,
+"en"
+:
+"Manage gitea work from the command line"
+,
+"cn"
+:
+"在命令行管理 gitea 工作"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Manage gitea work from the command line"
+,
+"cn"
+:
+"在命令行管理 gitea 工作"
+}
+,
+"$ref"
+:
+"x-advise://tea"
+,
+"#exec"
+:
+"xrc tea 2>/dev/null"
+}
+,
+"ted"
+:
+{
+"#name"
+:
+{
+"ted"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Text editor"
+,
+"cn"
+:
+"文本编辑器"
+}
+,
+"$ref"
+:
+"x-advise://ted"
+,
+"#exec"
+:
+"xrc ted 2>/dev/null"
+}
+,
+"tee"
+:
+{
+"#name"
+:
+{
+"tee"
+:
+{
+"en"
+:
+"Redirect output to file and stdout (preserves exit code)"
+,
+"cn"
+:
+"重定向输出到文件和标准输出（保持 exit code）"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Execute command and write its output to both stdout and file.\nUnlike traditional pipe tee, this preserves the command's exit code\nand environment variable changes by using named pipe technique.\n"
+,
+"cn"
+:
+"执行命令并将其输出同时写入标准输出和文件。\n与传统管道 tee 不同，此方式通过命名管道技术保持命令的 exit code\n和环境变量修改。\n"
+}
+,
+"$ref"
+:
+"x-advise://tee"
+,
+"#exec"
+:
+"xrc tee 2>/dev/null"
+}
+,
+"telegram"
+:
+{
+"#name"
+:
+{
+"x telegram"
+:
+null
+,
+"cn"
+:
+"使用 Telegram 群机器人发送消息"
+,
+"en"
+:
+"Send messages using a Telegram group bot"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"使用 x telegram 向你的 Telegram 群或频道发送消息。首次使用需要配置群机器人的 token。"
+,
+"en"
+:
+"Use x telegram send messages to your Telegram group or channel. The first use requires configuring bot token."
+}
+,
+"$ref"
+:
+"x-advise://telegram"
+,
+"#exec"
+:
+"xrc telegram 2>/dev/null"
+}
+,
+"term"
+:
+{
+"#name"
+:
+{
+"x term"
+:
+null
+,
+"en"
+:
+"Automatic perception of terminal"
+,
+"cn"
+:
+"terminal 自动感知"
+}
+,
+"$ref"
+:
+"x-advise://term"
+,
+"#exec"
+:
+"xrc term 2>/dev/null"
+}
+,
+"termux"
+:
+{
+"#name"
+:
+{
+"termux"
+:
+null
+,
+"en"
+:
+"Termux Android environment"
+,
+"cn"
+:
+"Termux Android 环境"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Comprehensive Termux utility for Android. Features include:\n- Package management (pkg wrapper)\n- System property viewer (getprop wrapper)\n- Termux:API integration (sms, battery, volume, etc.)\n- PRoot distro management (run Linux distros without root)\n\nNote: Termux:API features require installing Termux:API app and termux-api package.\n"
+,
+"cn"
+:
+"全面的 Termux Android 实用工具。功能包括：\n- 包管理（pkg 包装器）\n- 系统属性查看（getprop 包装器）\n- Termux:API 集成（短信、电池、音量等）\n- PRoot 发行版管理（无需 root 运行 Linux 发行版）\n\n注意：Termux:API 功能需要安装 Termux:API 应用和 termux-api 包。\n"
+}
+,
+"$ref"
+:
+"x-advise://termux"
+,
+"#exec"
+:
+"xrc termux 2>/dev/null"
+}
+,
+"theme"
+:
+{
+"#name"
+:
+{
+"theme"
+:
+null
+,
+"en"
+:
+"Change terminal command line prompt theme"
+,
+"cn"
+:
+"更改终端命令行主题"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Use command line prompt theme, Globally manage the display style of all x related interactive compoments.\nIf you want to view more themes online, please visit https://x-cmd.com/theme/\n"
+,
+"cn"
+:
+"更改命令行主题，全局管理所有与 x 相关的交互部件的显示风格。\n如果想在线查看介绍以及主题，可访问 https://x-cmd.com/theme/\n"
+}
+,
+"$ref"
+:
+"x-advise://theme"
+}
+,
+"time"
+:
+{
+"#name"
+:
+{
+"time"
+:
+null
+,
+"cn"
+:
+"命令执行时间测量与统计分析"
+,
+"en"
+:
+"Command execution timing and statistical analysis"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"测量命令执行时间，从单次微秒级计时到多次统计分析。"
+,
+"en"
+:
+"Measure command execution time, from single-shot microsecond timing to multi-run statistical analysis."
+}
+,
+"$ref"
+:
+"x-advise://time"
+,
+"#exec"
+:
+"xrc time 2>/dev/null"
+}
+,
+"timeout"
+:
+{
+"#name"
+:
+{
+"timeout"
+:
+null
+,
+"cn"
+:
+"在时间限制内运行命令"
+,
+"en"
+:
+"Run a command with a time limit"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"`timeout` 命令的便携封装，自动处理 busybox/cosmo 回退。\n支持信号选择、超时后强制终止、详细模式、前台模式和保留退出状态。\n"
+,
+"en"
+:
+"A portable wrapper around the `timeout` command with automatic busybox/cosmo fallback.\nSupports signal selection, kill-after timeout, verbose mode, foreground, and preserve-status.\n"
+}
+,
+"$ref"
+:
+"x-advise://timeout"
+,
+"#exec"
+:
+"xrc timeout 2>/dev/null"
+}
+,
+"tldr"
+:
+{
+"#name"
+:
+{
+"tldr"
+:
+null
+,
+"en"
+:
+"Collaborative cheatsheets for console commands"
+,
+"cn"
+:
+"控制台命令的协作备忘单"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"The content comes from the [tldr-pages](https://github.com/tldr-pages/tldr) project. Which is different from the help document. The content provided by this module is the most common usage examples (usage) and instructions in commands."
+,
+"cn"
+:
+"内容来源于 [tldr-pages](https://github.com/tldr-pages/tldr) 项目。不同于 help 文档，该模块提供的内容是命令中最常见的几项使用实例（用法）和说明。"
+}
+,
+"$ref"
+:
+"x-advise://tldr"
+,
+"#exec"
+:
+"xrc tldr 2>/dev/null"
+}
+,
+"tlfz"
+:
+{
+"#name"
+:
+{
+"tlfz"
+:
+null
+,
+"en"
+:
+"TLDR FZF - Interactive TLDR browser using fzf"
+,
+"cn"
+:
+"TLDR FZF - 使用 fzf 交互式浏览 TLDR"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Using fzf to search and view TLDR pages, shortcut for 'x tldr --fz'"
+,
+"cn"
+:
+"采用 fzf 搜索和显示 TLDR，'x tldr --fz' 的快捷方式"
+}
+,
+"$ref"
+:
+"x-advise://tldr/data/fz.jso"
+,
+"#exec"
+:
+"xrc tlfz 2>/dev/null"
+}
+,
+"tmo"
+:
+{
+"#name"
+:
+{
+"tmo"
+:
+null
+,
+"en"
+:
+"Execute a command with timeout"
+,
+"cn"
+:
+"超时执行命令"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"tmo 模块用于在指定超时时间内执行命令。超时后，目标进程及其所有子进程将被强制终止。\n"
+,
+"en"
+:
+"`tmo` module executes a command with a specified timeout. After timeout, the target process and all its children will be forcibly terminated.\n"
+}
+,
+"$ref"
+:
+"x-advise://tmo"
+,
+"#exec"
+:
+"xrc tmo 2>/dev/null"
+}
+,
+"tmp"
+:
+{
+"#name"
+:
+{
+"tmp"
+:
+null
+,
+"cn"
+:
+"临时文件和目录管理"
+,
+"en"
+:
+"Temporary file and directory manager"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"临时文件和目录管理工具，提供跨平台的临时文件操作。\n支持获取临时路径、创建临时文件/目录、设置临时根目录等功能。\n自动识别系统临时目录（$TMPDIR），保证跨平台兼容性。\n"
+,
+"en"
+:
+"Cross-platform temporary file and directory management tool.\nSupports getting temp paths, creating temp files/directories, setting temp root.\nAutomatically recognizes system temp directory ($TMPDIR).\n"
+}
+,
+"$ref"
+:
+"x-advise://tmp"
+,
+"#exec"
+:
+"xrc tmp 2>/dev/null"
+}
+,
+"tmpl"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"X built-in template string replace"
+,
+"cn"
+:
+"X内置模板字符串替换封装"
+}
+,
+"$ref"
+:
+"x-advise://tmpl"
+,
+"#exec"
+:
+"xrc tmpl 2>/dev/null"
+}
+,
+"tmux"
+:
+{
+"#name"
+:
+{
+"tmux"
+:
+null
+,
+"cn"
+:
+"增强型 tmux 命令"
+,
+"en"
+:
+"Enhanced tmux command"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"对 tmux 的常用操作进行封装与增强，提供更友好的命令接口与默认行为，简化会话（session）、窗口（window）和窗格（pane）的创建、管理与切换。"
+,
+"en"
+:
+"An enhanced wrapper around tmux that simplifies common workflows.It provides more convenient commands and sensible defaults for creating, managing, and switching sessions, windows, and panes in the terminal."
+}
+,
+"$ref"
+:
+"x-advise://tmux"
+,
+"#exec"
+:
+"xrc tmux 2>/dev/null"
+}
+,
+"top"
+:
+{
+"#name"
+:
+{
+"top"
+:
+{
+"en"
+:
+"Process viewer with interactive UI"
+,
+"cn"
+:
+"带交互式界面的进程查看器"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Display real-time process information with an enhanced interactive UI.\nAutomatically uses bottom (btm) for better visualization when available.\nFalls back to system top command in non-TTY environments.\n"
+,
+"cn"
+:
+"使用增强的交互式 UI 显示实时进程信息。\n当可用时自动使用 bottom (btm) 以获得更好的可视化效果。\n在非 TTY 环境中回退到系统 top 命令。\n"
+}
+,
+"$ref"
+:
+"x-advise://top"
+,
+"#exec"
+:
+"xrc top 2>/dev/null"
+}
+,
+"tping"
+:
+{
+"#name"
+:
+{
+"tping"
+:
+null
+,
+"cn"
+:
+"Ping TCP 端口"
+,
+"en"
+:
+"Ping TCP port"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"该模块基于 TCP 协议，使用 curl 实现本地计算机到目标主机和端口的简单明文 TCP 连接。"
+,
+"en"
+:
+"This module leverages the TCP protocol and utilizes curl to establish a straightforward, plain-text TCP connection from your local machine to the target host and port."
+}
+,
+"$ref"
+:
+"x-advise://tping"
+,
+"#exec"
+:
+"xrc tping 2>/dev/null"
+}
+,
+"tsv"
+:
+{
+"#name"
+:
+{
+"tsv"
+:
+null
+,
+"en"
+:
+"Do more with TSV data"
+,
+"cn"
+:
+"对 TSV 数据进行更多地操作"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"The tsv module provides tools to process Tab-Separated Values (TSV) data efficiently.\n\nTSV is ideal for command-line data processing because:\n- Fields are separated by tabs (\\t), avoiding delimiter conflicts with common text\n- Works seamlessly with standard Unix tools like cut, awk, sort\n- Supports streaming processing for large datasets\n\nCommon use cases:\n- Convert between CSV and TSV formats\n- Process TSV data with awk-style operations\n- Add or modify column headers\n"
+,
+"cn"
+:
+"tsv 模块提供处理制表符分隔值 (TSV) 数据的工具。\n\nTSV 非常适合命令行数据处理，因为：\n- 字段使用制表符 (\\t) 分隔，避免与常用文本中的分隔符冲突\n- 与标准 Unix 工具（cut、awk、sort）无缝协作\n- 支持大数据集的流式处理\n\n常见使用场景：\n- CSV 与 TSV 格式相互转换\n- 使用 awk 风格操作处理 TSV 数据\n- 添加或修改列标题\n"
+}
+,
+"$ref"
+:
+"x-advise://tsv"
+,
+"#exec"
+:
+"xrc tsv 2>/dev/null"
+}
+,
+"tty"
+:
+{
+"#name"
+:
+{
+"tty"
+:
+null
+,
+"en"
+:
+"Get current terminal information"
+,
+"cn"
+:
+"获取当前终端信息"
+}
+,
+"$ref"
+:
+"x-advise://tty"
+,
+"#exec"
+:
+"xrc tty 2>/dev/null"
+}
+,
+"tui"
+:
+{
+"#name"
+:
+{
+"tui"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Terminal UI"
+,
+"cn"
+:
+"终端 ui"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://tui"
+,
+"#exec"
+:
+"xrc tui 2>/dev/null"
+}
+,
+"txt"
+:
+{
+"#name"
+:
+{
+"txt"
+:
+null
+,
+"en"
+:
+"Text Content Management"
+,
+"cn"
+:
+"文本内容管理"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Managing text content via the command line"
+,
+"cn"
+:
+"通过命令行管理文本内容"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://txt"
+,
+"#exec"
+:
+"xrc txt 2>/dev/null"
+}
+,
+"tz"
+:
+{
+"#name"
+:
+{
+"tz"
+:
+null
+,
+"en"
+:
+"Time Zone Assistant"
+,
+"cn"
+:
+"时区助手"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"tz 模块是为在不同操作系统或环境中以一致的命令获取时区信息而设计的模块。\n它集成了 [tz](github.com/oz/tz)，并使用 fzf 作为交互框架。\n"
+,
+"en"
+:
+"The tz module is designed to provide consistent timezone information across different operating systems or environments when retrieving it with commands.\nIt integrates with [tz](github.com/oz/tz) and utilizes fzf as its interactive framework.\n"
+}
+,
+"$ref"
+:
+"x-advise://tz"
+,
+"#exec"
+:
+"xrc tz 2>/dev/null"
+}
+,
+"ui"
+:
+{
+"#name"
+:
+{
+"ui"
+:
+null
+,
+"en"
+:
+"UI components for interactive terminals"
+,
+"cn"
+:
+"交互式终端的 UI 组件"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"提供交互式终端 UI 组件，包括选择、状态显示、分隔线、回滚输出等"
+,
+"en"
+:
+"Provide interactive terminal UI components, including select, status display, separator, rollback output, etc."
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://ui"
+,
+"#exec"
+:
+"xrc ui 2>/dev/null"
+}
+,
+"umami"
+:
+{
+"#name"
+:
+{
+"umami"
+:
+null
+,
+"cn"
+:
+"umami 的 CLI"
+,
+"en"
+:
+"umami's CLI"
+}
+,
+"$ref"
+:
+"x-advise://umami"
+,
+"#exec"
+:
+"xrc umami 2>/dev/null"
+}
+,
+"uname"
+:
+{
+"#name"
+:
+{
+"uname"
+:
+null
+,
+"en"
+:
+"Display system information"
+,
+"cn"
+:
+"显示系统信息"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Enhanced `uname` command with colorized, structured output.\nDisplays hostname, OS name, kernel version, machine architecture, \nand full version information in a readable key-value format.\n\nAutomatically detects TTY and disables colors when output is piped.\n"
+,
+"cn"
+:
+"增强版 `uname` 命令，提供彩色结构化输出。\n以可读性强的键值格式显示主机名、操作系统名称、内核版本、\n机器架构和完整版本信息。\n\n自动检测 TTY，输出被管道时禁用颜色。\n"
+}
+,
+"$ref"
+:
+"x-advise://uname"
+,
+"#exec"
+:
+"xrc uname 2>/dev/null"
+}
+,
+"uninstall"
+:
+{
+"#name"
+:
+{
+"uninstall"
+:
+null
+,
+"cn"
+:
+"软件卸载器"
+,
+"en"
+:
+"Software Uninstaller"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"卸载 x-cmd"
+,
+"en"
+:
+"Uninstall x-cmd"
+}
+,
+"$ref"
+:
+"x-advise://uninstall"
+,
+"#exec"
+:
+"xrc uninstall 2>/dev/null"
+}
+,
+"upgrade"
+:
+{
+"#name"
+:
+{
+"upgrade"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Version switching update, if empty, default current version upgrade"
+,
+"cn"
+:
+"版本切换和更新，空默认当前版本升级"
+}
+,
+"$ref"
+:
+"x-advise://upgrade"
+,
+"#exec"
+:
+"xrc upgrade 2>/dev/null"
+}
+,
+"uptime"
+:
+{
+"#name"
+:
+{
+"uptime"
+:
+null
+,
+"en"
+:
+"Show system uptime and load averages"
+,
+"cn"
+:
+"显示系统运行时间和负载平均值"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Enhanced `uptime` command with structured YAML output.\nDisplays system uptime, logged-in users, and load averages (1/5/15 min).\nSupports native uptime, busybox, and cosmo (for Windows) backends.\n\nLoad averages indicate how busy the system is - the number of processes\nwaiting for CPU or I/O. Three values show short-term (1m), medium-term (5m),\nand long-term (15m) trends.\n"
+,
+"cn"
+:
+"增强版 `uptime` 命令，提供结构化 YAML 输出。\n显示系统运行时间、当前登录用户数和负载平均值（1/5/15分钟）。\n支持原生 uptime、busybox 和 cosmo（Windows）后端。\n\n负载平均值反映系统繁忙程度——等待 CPU 或 I/O 的进程数。\n三个数值分别表示短期（1分钟）、中期（5分钟）和长期（15分钟）趋势。\n"
+}
+,
+"$ref"
+:
+"x-advise://uptime"
+,
+"#exec"
+:
+"xrc uptime 2>/dev/null"
+}
+,
+"url"
+:
+{
+"#name"
+:
+"url"
+,
+"#desc"
+:
+{
+"en"
+:
+"http url encoding, decoding."
+,
+"cn"
+:
+"http url 编码、解码器。"
+}
+,
+"$ref"
+:
+"x-advise://url"
+,
+"#exec"
+:
+"xrc url 2>/dev/null"
+}
+,
+"usb"
+:
+{
+"#name"
+:
+{
+"usb"
+:
+{
+"en"
+:
+"USB device information and listing"
+,
+"cn"
+:
+"USB 设备信息和列表"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"USB tool with three modes:\n- \"x usb\" (default = sum): detailed device info + compact device table\n- \"x usb info\": detailed USB device info in key:value format\n  (name, vendor, serial, speed, product ID, vendor ID, device version, location)\n- \"x usb ls\": compact device table (DEVICE, VENDOR, SPEED, SERIAL)\nCross-platform (macOS/Linux) with TTY color support.\nSpeed shows human-readable labels: 12M (USB 1.1), 480M (USB 2.0),\n5G (USB 3.0), 10G (USB 3.1/3.2).\n"
+,
+"cn"
+:
+"USB 工具三种模式：\n- \"x usb\"（默认 = sum）：详细设备信息 + 紧凑设备表格\n- \"x usb info\"：key:value 格式的详细 USB 设备信息\n  （名称、厂商、序列号、速度、产品 ID、厂商 ID、设备版本、位置）\n- \"x usb ls\"：紧凑设备表格（DEVICE、VENDOR、SPEED、SERIAL）\n跨平台（macOS/Linux），支持 TTY 彩色输出。\n速度显示人类可读标签：12M (USB 1.1)、480M (USB 2.0)、\n5G (USB 3.0)、10G (USB 3.1/3.2)。\n"
+}
+,
+"$ref"
+:
+"x-advise://usb"
+,
+"#exec"
+:
+"xrc usb 2>/dev/null"
+}
+,
+"user"
+:
+{
+"#name"
+:
+{
+"user"
+:
+null
+,
+"cn"
+:
+"用户管理工具"
+,
+"en"
+:
+"User management tool"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"通用的系统用户管理工具，提供用户信息查询、权限检查等功能。\n支持获取当前用户名、用户ID、检测 root 权限、判断用户组成员等。\n"
+,
+"en"
+:
+"A general system user management tool for querying user information and checking permissions.\nSupports getting current username, user ID, root permission check, group membership check, etc.\n"
+}
+,
+"$ref"
+:
+"x-advise://user"
+,
+"#exec"
+:
+"xrc user 2>/dev/null"
+}
+,
+"uuid"
+:
+{
+"#name"
+:
+{
+"uuid"
+:
+null
+,
+"cn"
+:
+"UUID 生成器"
+,
+"en"
+:
+"UUID generator"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Generate UUIDs (Universally Unique Identifiers), including UUIDv4 and UUIDv7 formats. UUIDv7 is time-ordered (RFC 9562, 2024), offering natural sortability and better database index locality than UUIDv4."
+,
+"cn"
+:
+"生成 UUID（通用唯一标识符），支持 UUIDv4 和 UUIDv7 格式。 UUIDv7 是时间有序的（RFC 9562, 2024），天然可排序，数据库索引性能优于 UUIDv4。"
+}
+,
+"$ref"
+:
+"x-advise://uuid"
+,
+"#exec"
+:
+"xrc uuid 2>/dev/null"
+}
+,
+"version"
+:
+{
+"#name"
+:
+{
+"version"
+:
+null
+,
+"cn"
+:
+"查看 x-cmd 版本或校验 x-cmd"
+,
+"en"
+:
+"View the x-cmd version or verify x-cmd"
+}
+,
+"$ref"
+:
+"x-advise://version"
+,
+"#exec"
+:
+"xrc version 2>/dev/null"
+}
+,
+"wchar"
+:
+{
+"#name"
+:
+{
+"wchar"
+:
+null
+,
+"cn"
+:
+"字节模块"
+,
+"en"
+:
+"wchar module"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"用于捕获键盘事件"
+,
+"en"
+:
+"Used to capture keyboard events"
+}
+,
+"$ref"
+:
+"x-advise://wchar"
+,
+"#exec"
+:
+"xrc wchar 2>/dev/null"
+}
+,
+"web"
+:
+{
+"#name"
+:
+{
+"x"
+:
+"web"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"Web 工具集：网页获取、User-Agent 管理、内容缓存"
+,
+"en"
+:
+"Web toolkit: webpage fetching, User-Agent management, content caching"
+}
+,
+"$ref"
+:
+"x-advise://web"
+,
+"#exec"
+:
+"xrc web 2>/dev/null"
+}
+,
+"webfetch"
+:
+{
+"#name"
+:
+{
+"webfetch"
+:
+null
+,
+"cn"
+:
+"网页内容获取工具"
+,
+"en"
+:
+"Web content fetcher"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Fetch web content with automatic URL conversion using readablelink. Supports GitHub, Codeberg, Gitee, GitLab, and more."
+,
+"cn"
+:
+"使用 readablelink 自动转换 URL 获取网页内容。支持 GitHub、Codeberg、Gitee、GitLab 等平台。"
+}
+,
+"$ref"
+:
+"x-advise://webfetch"
+,
+"#exec"
+:
+"xrc webfetch 2>/dev/null"
+}
+,
+"websrc"
+:
+{
+"#name"
+:
+null
+,
+"#desc"
+:
+{
+"cn"
+:
+"用于设置 x-cmd 下载源的工具"
+,
+"en"
+:
+"A tool for setting the download source of x-cmd"
+}
+,
+"$ref"
+:
+"x-advise://websrc"
+,
+"#exec"
+:
+"xrc websrc 2>/dev/null"
+}
+,
+"webtop"
+:
+{
+"#name"
+:
+{
+"webtop"
+:
+null
+,
+"en"
+:
+"A module designed for linuxserver/webtop"
+,
+"cn"
+:
+"为 linuxserver/webtop 设计的模块"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"The webtop module is a wrapper built on Docker commands that provides advanced management features for the linuxserver/webtop image. It aims to simplify how users interact with and manage the linuxserver/webtop image.\nlinuxserver/webtop is a series of Linux-based Docker images built and maintained by the linuxserver.io community, enabling users to seamlessly access the container's desktop environment through a browser.\n"
+,
+"cn"
+:
+"webtop 模块是基于 docker 命令为 linuxserver/webtop 镜像提供高级管理功能的封装模块，旨在简化用户使用和管理 linuxserver/webtop。\nlinuxserver/webtop 是一系列基于 linux 系统的 docker 镜像，由 linuxserver.io 社区构建和维护，能让用户通过浏览器流畅地使用容器的桌面环境。\n"
+}
+,
+"$ref"
+:
+"x-advise://webtop"
+,
+"#exec"
+:
+"xrc webtop 2>/dev/null"
+}
+,
+"weixin"
+:
+{
+"#name"
+:
+{
+"x weixin"
+:
+null
+,
+"cn"
+:
+"微信机器人"
+,
+"en"
+:
+"WeChat iLink bot"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"使用 x weixin 向微信 clawbot 机器人发送消息。首次使用需要扫码登录。"
+,
+"en"
+:
+"Use x weixin to send messages to WeChat clawbot. First use requires QR code login configuration."
+}
+,
+"$ref"
+:
+"x-advise://weixin"
+,
+"#exec"
+:
+"xrc weixin 2>/dev/null"
+}
+,
+"whisper"
+:
+{
+"#name"
+:
+{
+"whisper"
+:
+null
+,
+"cn"
+:
+"为 whisper.cpp 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for whisper.cpp"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Local AI speech recognition. For more information about whisper.cpp, please visit https://github.com/ggerganov/whisper.cpp"
+,
+"cn"
+:
+"使用 whisper.cpp 进行本地 AI 语音识别. 关于 whisper.cpp，请访问 https://github.com/ggerganov/whisper.cpp"
+}
+,
+"$ref"
+:
+"x-advise://whisper"
+,
+"#exec"
+:
+"xrc whisper 2>/dev/null"
+}
+,
+"wifi"
+:
+{
+"#name"
+:
+{
+"wifi"
+:
+{
+"en"
+:
+"WiFi interface info, network scanning, and connection management"
+,
+"cn"
+:
+"WiFi 接口信息、网络扫描和连接管理"
+}
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"WiFi tool with multiple modes:\n- \"x wifi\" (default = sum): interface hardware info + all available networks table\n- \"x wifi info\": WiFi adapter hardware info (card type, MAC, firmware, PHY modes)\n- \"x wifi stat\": compact table of all available networks (current + scanned),\n  current network marked with *, like \"x disk stat\"\n- \"x wifi scan\": scan nearby networks with SAVED column showing known networks\n- \"x wifi connect\": connect to a WiFi network\n- \"x wifi enable/disable\": turn WiFi on/off\n- \"x wifi prefer\": manage saved/preferred networks\nCross-platform (macOS/Linux/Windows) with TTY color support.\n"
+,
+"cn"
+:
+"WiFi 工具多种模式：\n- \"x wifi\"（默认 = sum）：接口硬件信息 + 所有可用网络表格\n- \"x wifi info\"：WiFi 适配器硬件信息（网卡类型、MAC、固件、PHY 模式）\n- \"x wifi stat\"：紧凑表格显示所有可用网络（当前 + 扫描到的），\n  当前连接用 * 标记，类似 \"x disk stat\"\n- \"x wifi scan\"：扫描附近网络，SAVED 列显示已知网络\n- \"x wifi connect\"：连接 WiFi 网络\n- \"x wifi enable/disable\"：开启/关闭 WiFi\n- \"x wifi prefer\"：管理已保存/首选网络\n跨平台（macOS/Linux/Windows），支持 TTY 彩色输出。\n"
+}
+,
+"$ref"
+:
+"x-advise://wifi"
+,
+"#exec"
+:
+"xrc wifi 2>/dev/null"
+}
+,
+"winget"
+:
+{
+"#name"
+:
+{
+"winget"
+:
+null
+,
+"en"
+:
+"Microsoft Officially Launches Windows Package Manager"
+,
+"cn"
+:
+"微软官方推出 windows 的软件包管理器"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"在 WSL2 或 Git Bash 终端中通过命令行调用 winget 安装程序，实现 Windows 软件包的快速安装、更新和管理"
+,
+"en"
+:
+"Call the winget installer through the command line in WSL2 or Git Bash terminals to quickly install, update, and manage Windows packages"
+}
+,
+"$ref"
+:
+"x-advise://winget"
+,
+"#exec"
+:
+"xrc winget 2>/dev/null"
+}
+,
+"wkp"
+:
+{
+"#name"
+:
+{
+"wkp"
+:
+null
+,
+"en"
+:
+"Search Wikipedia, get article extract"
+,
+"cn"
+:
+"用于搜索维基百科和获取文章摘要"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Search Wikipedia, get article extract"
+,
+"cn"
+:
+"用于搜索维基百科和获取文章摘要"
+}
+,
+"$ref"
+:
+"x-advise://wkp"
+,
+"#exec"
+:
+"xrc wkp 2>/dev/null"
+}
+,
+"worker"
+:
+{
+"#name"
+:
+{
+"worker"
+:
+null
+,
+"cn"
+:
+"Worker 进程管理器"
+,
+"en"
+:
+"Worker process manager"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"后台 Worker 进程管理模块，支持启动、停止、查询、存活检查、列表查看。\n通过命名空间和名称隔离不同 Worker，使用进程指纹验证存活状态。\n"
+,
+"en"
+:
+"Background worker process manager with start, stop, query, alive check, and list.\nIsolates workers by namespace and name, uses process fingerprint for alive verification.\n"
+}
+,
+"$ref"
+:
+"x-advise://worker"
+,
+"#exec"
+:
+"xrc worker 2>/dev/null"
+}
+,
+"writer"
+:
+{
+"#name"
+:
+{
+"writer"
+:
+null
+,
+"cn"
+:
+"AI 文本处理模块"
+,
+"en"
+:
+"The AI text processing module"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Using AI models to process text"
+,
+"cn"
+:
+"使用 AI 模型来处理文本"
+}
+,
+"$ref"
+:
+"x-advise://writer"
+,
+"#exec"
+:
+"xrc writer 2>/dev/null"
+}
+,
+"ws"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"workspace 管理工具"
+,
+"en"
+:
+"workspace management tool"
+}
+,
+"$ref"
+:
+"x-advise://ws"
+,
+"#exec"
+:
+"xrc ws 2>/dev/null"
+}
+,
+"wsl"
+:
+{
+"#name"
+:
+{
+"wsl"
+:
+null
+,
+"en"
+:
+"Windows Subsystem for Linux"
+,
+"cn"
+:
+"用于 Linux 的 Windows 子系统"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Windows Subsystem for Linux"
+,
+"cn"
+:
+"用于 Linux 的 Windows 子系统"
+}
+,
+"$ref"
+:
+"x-advise://wsl"
+,
+"#exec"
+:
+"xrc wsl 2>/dev/null"
+}
+,
+"wttr"
+:
+{
+"#name"
+:
+{
+"wttr"
+:
+null
+,
+"cn"
+:
+"查看天气"
+,
+"en"
+:
+"Check the weather"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"wttr is a weather forecast module that retrieves real-time weather information and 3-day forecasts for any location via wttr.in. It supports cities, airports (IATA codes), GPS coordinates, and area codes. You can also view moon phases and customize temperature/wind speed units.\n"
+,
+"cn"
+:
+"wttr 是一个天气预报模块，通过 wttr.in 获取任意地点的实时天气信息及 3 天预报。支持城市、机场（IATA 代码）、GPS 坐标和区域代码查询。还可以查看月相和自定义温度/风速单位。\n"
+}
+,
+"$ref"
+:
+"x-advise://wttr"
+,
+"#exec"
+:
+"xrc wttr 2>/dev/null"
+}
+,
+"wx"
+:
+{
+"#name"
+:
+null
+,
+"#desc"
+:
+{
+"cn"
+:
+"wx 命令行工具, 可以打包成 wx 格式的可执行文件"
+,
+"en"
+:
+"wx command line tool, can package into wx format executable file"
+}
+,
+"$ref"
+:
+"x-advise://wx"
+,
+"#exec"
+:
+"xrc wx 2>/dev/null"
+}
+,
+"xgo"
+:
+{
+"#name"
+:
+{
+"xgo"
+:
+null
+,
+"cn"
+:
+"增强型 xgo 命令"
+,
+"en"
+:
+"Enhanced xgo command"
+}
+,
+"$ref"
+:
+"x-advise://xgo"
+,
+"#exec"
+:
+"xrc xgo 2>/dev/null"
+}
+,
+"xq"
+:
+{
+"#name"
+:
+{
+"xq"
+:
+null
+,
+"en"
+:
+"Command-line XML and HTML beautifier and content extractor"
+,
+"cn"
+:
+"命令行 XML 和 HTML 格式化工具和内容提取器"
+,
+"#desc"
+:
+{
+"en"
+:
+"xq is a command-line tool for formatting and extracting content from XML and HTML. It supports various output formats like JSON and can be used with CSS or XPath queries to select specific nodes."
+,
+"cn"
+:
+"xq 是一个命令行工具，用于格式化和提取 XML 和 HTML 中的内容。它支持各种输出格式，例如 JSON，并可以使用 CSS 或 XPath 查询来选择特定的节点。"
+}
+}
+,
+"$ref"
+:
+"x-advise://xq"
+,
+"#exec"
+:
+"xrc xq 2>/dev/null"
+}
+,
+"xx"
+:
+{
+"#name"
+:
+{
+"xx"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+null
+,
+"cn"
+:
+null
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"$ref"
+:
+"x-advise://xx"
+,
+"#exec"
+:
+"xrc xx 2>/dev/null"
+}
+,
+"yay"
+:
+{
+"#name"
+:
+{
+"yay"
+:
+null
+,
+"en"
+:
+"yay command enhancements"
+,
+"cn"
+:
+"yay 命令增强"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"`x yay` 是一个为 Arch Linux 用户设计的 `yay` AUR 助手增强工具。它通过集成 `fzf` 这一强大的交互式模糊搜索工具，极大地简化了软件包的查找、选择和安装流程。\n将 `yay` 的常用功能封装成更直观的子命令，如 `ls`（列出已安装的包）和 `info`（查看包的详细信息），从而为用户提供一个更高效、更友好的包管理体验。\n"
+,
+"en"
+:
+"`x yay` is an enhancement tool for the `yay` AUR helper, designed for Arch Linux users.\nIt greatly simplifies the process of finding, selecting, and installing packages by integrating `fzf`, a powerful interactive fuzzy search tool.\nIt encapsulates `yay`'s common functionalities into more intuitive subcommands, such as `ls` (to list installed packages) and `info` (to view detailed package information), thereby providing users with a more efficient and user-friendly package management experience.\n"
+}
+,
+"$ref"
+:
+"x-advise://yay"
+,
+"#exec"
+:
+"xrc yay 2>/dev/null"
+}
+,
+"yml"
+:
+{
+"#name"
+:
+{
+"yml"
+:
+null
+,
+"en"
+:
+"handle yml"
+,
+"cn"
+:
+"处理 yml"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"handle yml"
+,
+"cn"
+:
+"处理 yml"
+}
+,
+"$ref"
+:
+"x-advise://yml"
+,
+"#exec"
+:
+"xrc yml 2>/dev/null"
+}
+,
+"yo"
+:
+{
+"#name"
+:
+{
+"yo"
+:
+"yml object"
+}
+,
+"#desc"
+:
+null
+,
+"$ref"
+:
+"x-advise://yo"
+,
+"#exec"
+:
+"xrc yo 2>/dev/null"
+}
+,
+"yq"
+:
+{
+"#name"
+:
+{
+"yq"
+:
+null
+,
+"cn"
+:
+"为 yq 设计的增强模块"
+,
+"en"
+:
+"Enhanced modules for yq"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"yq (YAML Query) 是一个轻量级的 YAML、JSON、XML 处理器，主要用于查询和提取 YAML 数据。\n`x yq` 是基于 yq 命令、为提升 yq 使用体验而设计的增强模块，具体的增强性改动如下：\n1. 简化 yq 命令的安装：在确定当前环境中没有 yq 命令的情况下，`x yq` 会通过 x-cmd pkg 体系以一种不影响用户环境的方式下载安装 yq 。\n2. 提供 `repl` 命令：它借助 fzf 为 yq 提供一种以交互模式读取和探索 YAML 数据的方法。\n"
+,
+"en"
+:
+"yq (YAML Query) is a lightweight processor for YAML, JSON, and XML, primarily used for querying and extracting YAML data.\n`x yq` is an enhancement module based on the yq command, designed to improve the yq user experience. The specific enhancements are as follows:\n1. Simplified yq command installation: If yq is not found in the current environment, `x yq` will download and install yq through the x-cmd pkg system in a way that does not affect the user's environment.\n2. Provides the `repl` command: This offers an interactive way to read and explore YAML data using fzf.\n"
+}
+,
+"$ref"
+:
+"x-advise://yq"
+,
+"#exec"
+:
+"xrc yq 2>/dev/null"
+}
+,
+"yum"
+:
+{
+"#name"
+:
+{
+"yum"
+:
+null
+,
+"en"
+:
+"yum command enhancements"
+,
+"cn"
+:
+"yum 命令增强"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"yum command enhancements"
+,
+"cn"
+:
+"yum 命令增强"
+}
+,
+"$ref"
+:
+"x-advise://yum"
+,
+"#exec"
+:
+"xrc yum 2>/dev/null"
+}
+,
+"zhipu"
+:
+{
+"#name"
+:
+{
+"zhipu"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"Use Zhipu AI Model"
+,
+"cn"
+:
+"使用智谱 AI 模型"
+}
+,
+"$ref"
+:
+"x-advise://zhipu"
+,
+"#exec"
+:
+"xrc zhipu 2>/dev/null"
+}
+,
+"zig"
+:
+{
+"#name"
+:
+{
+"zig"
+:
+null
+,
+"en"
+:
+"zig command enhancements"
+,
+"cn"
+:
+"zig 命令增强"
+}
+,
+"$ref"
+:
+"x-advise://zig"
+,
+"#exec"
+:
+"xrc zig 2>/dev/null"
+}
+,
+"zshplugin"
+:
+{
+"#name"
+:
+{
+"zshplugin"
+:
+null
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"zsh plugin"
+,
+"cn"
+:
+"zsh 插件"
+}
+,
+"$ref"
+:
+"x-advise://zshplugin"
+,
+"#exec"
+:
+"xrc zshplugin 2>/dev/null"
+}
+,
+"zuz"
+:
+{
+"#name"
+:
+{
+"x zuz"
+:
+null
+,
+"cn"
+:
+"压缩、解压文件，以及查看文件内容"
+,
+"en"
+:
+"Compress, decompress files, and view file contents"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"该模块支持 tar, gz, xz, 7z, zst, zip, bz2, Z, rar(只支持解压) 等多种解压缩格式，优先使用系统软件，否则自动下载所需软件 ( 7zip，zstd，etc )"
+,
+"en"
+:
+"This module supports multiple decompression formats such as tar, gz, xz, 7z, zst, zip, bz, Z, and rar(Decompression only). It prioritizes using system software, but if unavailable, it will automatically download the necessary software (7zip, zstd, etc.)."
+}
+,
+"$ref"
+:
+"x-advise://zuz"
+,
+"#exec"
+:
+"xrc zuz 2>/dev/null"
+}
+,
+"#name"
+:
+{
+"x"
+:
+"x-cmd core function"
+}
+,
+"#synopsis"
+:
+[
+{
+"x <subcommand> [<subcommand>...]"
+:
+null
+}
+]
+,
+"#desc"
+:
+{
+"cn"
+:
+"X-CMD 是一个 POSIX shell 工具箱：300+ 模块，500+ 可移植软件包，1200+ 软件安装配方。"
+,
+"en"
+:
+"X-CMD is a POSIX shell toolkit: 300+ modules, 500+ portable packages, 1200+ software installation recipes."
+}
+,
+"#subcmd:ai"
+:
+[
+"claw"
+,
+"gram"
+,
+"openclaw"
+,
+"clawhub"
+,
+"skill"
+,
+"abox"
+,
+"agent"
+,
+"claude"
+,
+"codex"
+,
+"openspec"
+,
+"speckit"
+,
+"openai"
+,
+"gemini"
+,
+"deepseek"
+,
+"moonshot"
+,
+"kimi"
+,
+"doubao"
+,
+"siliconflow"
+,
+"openrouter"
+,
+"minimax"
+,
+"mthreads"
+,
+"zhipu"
+,
+"mistral"
+,
+"grok"
+,
+"crush"
+,
+"aider"
+,
+"lms"
+,
+"llmf"
+,
+"ollama"
+,
+"whisper"
+,
+"jina"
+,
+"buse"
+,
+"writer"
+,
+"chat"
+,
+"co"
+,
+"coco"
+,
+"pytorch"
+]
+,
+"#subcmd:stdlib"
+:
+[
+"tailer"
+,
+"service"
+,
+"worker"
+,
+"search_path"
+,
+"version"
+,
+"run"
+,
+"rmrf"
+,
+"sudo"
+,
+"os"
+,
+"is"
+,
+"tmp"
+,
+"ccmd"
+,
+"tee"
+,
+"str"
+,
+"rand"
+,
+"uuid"
+,
+"assert"
+,
+"date"
+,
+"cron"
+,
+"humantime"
+,
+"timeout"
+,
+"tmo"
+,
+"sleep"
+,
+"fsiter"
+,
+"seq"
+,
+"cutt"
+,
+"line"
+,
+"bakman"
+,
+"root"
+,
+"shortcut"
+,
+"tz"
+,
+"upgrade"
+,
+"lang"
+,
+"update"
+,
+"bfind"
+]
+,
+"#subcmd:tui"
+:
+[
+"theme"
+,
+"tmux"
+,
+"advise"
+,
+"starship"
+,
+"ohmyposh"
+,
+"font"
+,
+"cd"
+,
+"hotkey"
+,
+"colr"
+,
+"pick"
+,
+"cowsay"
+,
+"fzf"
+,
+"history"
+,
+"screen"
+,
+"spf"
+,
+"term"
+,
+"zshplugin"
+]
+,
+"#subcmd:osman"
+:
+[
+"termux"
+,
+"mac"
+,
+"ps"
+,
+"neo"
+,
+"top"
+,
+"btop"
+,
+"htop"
+,
+"id"
+,
+"uname"
+,
+"sysctl"
+,
+"uptime"
+,
+"kill"
+,
+"last"
+,
+"pb"
+,
+"boot"
+,
+"ish"
+,
+"pldg"
+,
+"usboot"
+]
+,
+"#subcmd:hardware"
+:
+[
+"hw"
+,
+"cpu"
+,
+"gpu"
+,
+"free"
+,
+"df"
+,
+"smart"
+,
+"ncdu"
+,
+"disk"
+,
+"wifi"
+,
+"usb"
+,
+"display"
+,
+"du"
+]
+,
+"#subcmd:fileman"
+:
+[
+"zuz"
+,
+"ls"
+,
+"ll"
+,
+"lsof"
+,
+"path"
+,
+"stat"
+,
+"facl"
+,
+"mklink"
+,
+"tree"
+]
+,
+"#subcmd:network"
+:
+[
+"gg"
+,
+"ping"
+,
+"tping"
+,
+"hi"
+,
+"ip"
+,
+"arp"
+,
+"dns"
+,
+"nets"
+,
+"host"
+,
+"hostname"
+,
+"route"
+,
+"proxy"
+,
+"htag"
+,
+"ifconfig"
+,
+"web"
+,
+"webfetch"
+]
+,
+"#subcmd:xaas"
+:
+[
+"mirror"
+,
+"hub"
+,
+"ws"
+,
+"wx"
+,
+"caddy"
+,
+"umami"
+,
+"ossinsight"
+]
+,
+"#subcmd:info"
+:
+[
+"tldr"
+,
+"tlfz"
+,
+"man"
+,
+"mankier"
+,
+"cht"
+,
+"hn"
+,
+"se"
+,
+"wkp"
+,
+"ddgo"
+,
+"rfc"
+,
+"gtb"
+,
+"coin"
+,
+"coincap"
+,
+"ascii"
+,
+"wttr"
+,
+"emoji"
+,
+"hua"
+,
+"cpe"
+]
+,
+"#subcmd:journey"
+:
+[
+"ccal"
+,
+"gcal"
+,
+"cal"
+]
+,
+"#subcmd:data"
+:
+[
+"jq"
+,
+"yq"
+,
+"sed"
+,
+"sd"
+,
+"grep"
+,
+"rg"
+,
+"find"
+,
+"csv"
+,
+"html"
+,
+"readability"
+,
+"readablelink"
+,
+"select"
+,
+"sql"
+,
+"trafi"
+,
+"tsv"
+,
+"xq"
+]
+,
+"#subcmd:pkg"
+:
+[
+"install"
+,
+"uninstall"
+,
+"env"
+,
+"cosmo"
+,
+"asdf"
+,
+"pixi"
+,
+"pkgx"
+,
+"apt"
+,
+"pacman"
+,
+"aur"
+,
+"paru"
+,
+"dnf"
+,
+"yum"
+,
+"brew"
+,
+"apk"
+,
+"scoop"
+,
+"choco"
+,
+"winget"
+,
+"hok"
+,
+"jsr"
+,
+"yay"
+]
+,
+"#subcmd:messaging"
+:
+[
+"weixin"
+,
+"qywx"
+,
+"slack"
+,
+"discord"
+,
+"telegram"
+,
+"feishu"
+,
+"dingtalk"
+,
+"wxmp"
+]
+,
+"#subcmd:multimedia"
+:
+[
+"ffmpeg"
+,
+"gm"
+,
+"pandoc"
+,
+"asciinema"
+,
+"qr"
+,
+"speg"
+]
+,
+"#subcmd:crypto"
+:
+[
+"osv"
+,
+"scorecard"
+,
+"shodan"
+,
+"kev"
+,
+"hash"
+,
+"hashdir"
+]
+,
+"#subcmd:ssh"
+:
+[
+"ssh"
+,
+"cowrie"
+,
+"endlessh"
+,
+"mosh"
+]
+,
+"#subcmd:cloud"
+:
+[
+"bwh"
+,
+"gddy"
+,
+"ali"
+,
+"cf"
+,
+"kasm"
+,
+"terraform"
+]
+,
+"#subcmd:git"
+:
+[
+"gh"
+,
+"gt"
+,
+"gl"
+,
+"tea"
+,
+"cb"
+,
+"fjo"
+,
+"git"
+,
+"gitconfig"
+,
+"githook"
+,
+"gcode"
+,
+"gitignore"
+,
+"gitsql"
+,
+"gx"
+]
+,
+"#subcmd:container"
+:
+[
+"docker"
+,
+"webtop"
+,
+"sb"
+,
+"lsio"
+,
+"alpine"
+,
+"skopeo"
+,
+"prta"
+]
+,
+"#subcmd:shell"
+:
+[
+"nu"
+,
+"elv"
+,
+"fish"
+,
+"onsh"
+,
+"tcsh"
+,
+"pwsh"
+]
+,
+"#subcmd:editor"
+:
+[
+"nano"
+,
+"nanorc"
+,
+"ted"
+]
+,
+"#subcmd:lang"
+:
+[
+"zig"
+,
+"lua"
+,
+"luarocks"
+,
+"gop"
+,
+"moon"
+,
+"xgo"
+]
+,
+"#subcmd:python"
+:
+[
+"python"
+,
+"pip"
+,
+"pipx"
+]
+,
+"#subcmd:js"
+:
+[
+"node"
+,
+"npm"
+,
+"npx"
+,
+"deno"
+,
+"bun"
+]
+,
+"#subcmd:perl-raku"
+:
+[
+"perl"
+,
+"raku"
+]
+,
+"#subcmd:java"
+:
+[
+"java"
+,
+"groovy"
+]
+,
+"#subcmd:shortcut"
+:
+[
+"login"
+,
+"which"
+,
+"z|uz|zl"
+,
+"yml2json|y2j"
+,
+"json2yml|j2y"
+,
+"sh|bash|zsh|ksh|dash|ash"
+,
+"js|ts"
+]
+,
+"#subcmd:inner"
+:
+[
+"scotty"
+,
+"depend"
+,
+"shim"
+,
+"alias"
+,
+"yml"
+,
+"list"
+,
+"wchar"
+,
+"api"
+,
+"param"
+,
+"codi"
+,
+"retry"
+,
+"dregistry"
+,
+"gitb"
+,
+"http"
+,
+"jo"
+,
+"ja"
+,
+"job"
+,
+"wsroot"
+,
+"httpget"
+,
+"cmdnotfound"
+,
+"fileage"
+,
+"semver"
+,
+"websrc"
+,
+"set"
+,
+"json"
+,
+"test"
+,
+"ps1env"
+,
+"tmpl"
+,
+"dict"
+,
+"fifo"
+,
+"osc52"
+,
+"arg"
+,
+"xrc"
+,
+"instance"
+,
+"llist"
+,
+"trap"
+,
+"roff"
+,
+"script"
+,
+"user"
+,
+"ui"
+,
+"pidid"
+,
+"cawk"
+,
+"args"
+,
+"outerr"
+,
+"tab"
+,
+"tty"
+,
+"yo"
+,
+"tap"
+,
+"daemon"
+,
+"jsch"
+,
+"glob"
+,
+"flow"
+,
+"url"
+,
+"sdict"
+,
+"appenv"
+,
+"demo"
+,
+"browse"
+,
+"build"
+,
+"cacert"
+,
+"envy"
+,
+"locale"
+,
+"pkg"
+,
+"wsl"
+,
+"jj"
+,
+"realpath"
+,
+"cat"
+,
+"cleanup"
+,
+"dos2unix"
+,
+"epoch"
+,
+"fslock"
+,
+"notify"
+,
+"sync"
+,
+"box"
+,
+"dbox"
+,
+"rbox"
+,
+"p7zip"
+,
+"scriptty"
+,
+"readerlm"
+,
+"mawk"
+,
+"arxiv"
+,
+"cama"
+]
+,
+"#subcmd:not-ready"
+:
+[
+"open"
+,
+"ta"
+,
+"slidev"
+,
+"xdk"
+,
+"op"
+,
+"huggingface"
+,
+"make"
+,
+"r"
+,
+"rust"
+,
+"llvm"
+,
+"tcl"
+,
+"go"
+,
+"pypy"
+,
+"anaconda"
+,
+"conda"
+,
+"cython"
+,
+"tsnode"
+,
+"cpan"
+,
+"cpanpp"
+,
+"raku-get"
+,
+"scala"
+,
+"kotlin"
+,
+"clojure"
+,
+"sodium"
+,
+"openssl"
+,
+"base64"
+,
+"unbase64"
+,
+"julia"
+,
+"jar"
+,
+"wasm"
+,
+"wat"
+,
+"wamr"
+,
+"assemblyscript"
+,
+"acme"
+,
+"action"
+,
+"convert"
+,
+"hiber"
+,
+"lenv"
+,
+"gita"
+,
+"x_fs"
+,
+"xml"
+,
+"logvis"
+,
+"md"
+,
+"gofmt"
+,
+"solo"
+,
+"touch|mkdirp"
+,
+"cp"
+,
+"mv"
+,
+"rm"
+,
+"curl"
+,
+"zef"
+,
+"vim"
+,
+"ourl"
+,
+"msys2"
+,
+"less"
+,
+"link"
+,
+"links"
+,
+"emacs"
+,
+"code"
+,
+"micro"
+,
+"nvim"
+]
+,
+"wsroot"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Show workspace root"
+,
+"cn"
+:
+"显示工作空间根目录"
+}
+}
+,
+"realpath"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Resolve path to absolute form (pure shell implementation)"
+,
+"cn"
+:
+"将路径解析为绝对路径（纯 shell 实现）"
+}
+}
+,
+"search_path"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Search path"
+,
+"cn"
+:
+"搜索路径"
+}
+}
+,
+"run"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Run the specified file"
+,
+"cn"
+:
+"运行指定文件"
+}
+}
+,
+"touch|mkdirp"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Enhance common linux commands"
+,
+"cn"
+:
+"常用 linux 命令增强"
+}
+,
+"#exec"
+:
+"___x_cmd_advise__file"
+}
+,
+"sh|bash|zsh|ksh|dash|ash"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Execute your script use the corresponding shell"
+,
+"cn"
+:
+"使用相应的 shell 执行脚本"
+}
+,
+"#1"
+:
+{
+"#exec"
+:
+"___x_cmd_advise__file"
+}
+}
+,
+"js|ts"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Execute your script use these environments"
+,
+"cn"
+:
+"使用这些环境执行脚本"
+}
+}
+,
+"jar|rb"
+:
+{
+"#tag"
+:
+[
+"todo"
+]
+,
+"#desc"
+:
+{
+"en"
+:
+"Execute your script use these environments"
+,
+"cn"
+:
+"使用这些环境执行脚本"
+}
+}
+,
+"login"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Login user account"
+,
+"cn"
+:
+"登录用户账号"
+}
+}
+,
+"z|uz|zl"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"compress and decompress file"
+,
+"cn"
+:
+"压缩和解压文件"
+}
+,
+"#n"
+:
+{
+"#exec"
+:
+"___x_cmd_advise__file"
+}
+}
+,
+"yml2json|y2j"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Yaml from stdin convert to JSON to stdout"
+,
+"cn"
+:
+"YAML 从 stdin 转换为 JSON 输出到 stdout"
+}
+,
+"#1"
+:
+{
+"#exec"
+:
+"___x_cmd_advise__file"
+}
+}
+,
+"json2yml|j2y"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"JSON from stdin convert to YAML to stdout"
+,
+"cn"
+:
+"JSON 从 stdin 转换为 YAML 输出到 stdout"
+}
+,
+"#1"
+:
+{
+"#exec"
+:
+"___x_cmd_advise__file"
+}
+}
+,
+"hi"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"输出 HTTP 信息"
+,
+"en"
+:
+"Output HTTP information"
+}
+,
+"#tip"
+:
+[
+{
+"cn"
+:
+"https://x-cmd.com/hi - 通过网站查看 HTTP 信息"
+,
+"en"
+:
+"https://x-cmd.com/hi - View HTTP information by website"
+}
+]
+}
+,
+"update"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"更新 x-cmd 的元数据( pkg, install, theme )"
+,
+"en"
+:
+"Update x-cmd metadata (pkg, install, theme)"
+}
+,
+"#1"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"更新 hub 本地缓存的文件。"
+,
+"en"
+:
+"Update hub’s local cached file."
+}
+,
+"#exec:stdout:nospace"
+:
+"x hub _advise lsfile"
+}
+,
+"#tldr"
+:
+[
+{
+"cn"
+:
+"更新 x-cmd 的元数据( pkg, install, theme )"
+,
+"en"
+:
+"Update x-cmd metadata (pkg, install, theme)"
+,
+"cmd"
+:
+"x update"
+}
+,
+{
+"cmd"
+:
+"x update [<username>:]<path>"
+,
+"cn"
+:
+"更新 hub <username> 用户云端 <path> 文件在本地的内容"
+,
+"en"
+:
+"Update hub <username> user's <path> file content in local"
+}
+]
+}
+,
+"#1"
+:
+{
+"#exec"
+:
+"___x_cmd snap --advise ls_ \"$cur\"; ___x_cmd_advise__comp_from_xcmd_or_origin || [ -z \"$cur\" ] || ___x_cmd_advise__file"
+}
+,
+"#n"
+:
+{
+"#exec"
+:
+"___x_cmd_advise__comp_from_xcmd_or_origin || ___x_cmd_advise__file"
+}
+,
+"#other"
+:
+{
+"en"
+:
+{
+"Please visit our homepage for more information:"
+:
+"https://x-cmd.com"
+}
+,
+"cn"
+:
+{
+"请访问我们的主页以获取更多信息："
+:
+"https://x-cmd.com"
+}
+}
+}
+
