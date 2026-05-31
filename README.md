@@ -12,7 +12,7 @@
   ![CONTRIBUTORS](https://img.shields.io/github/contributors/air-plus/oh-my-termux?logo=git&colorA=363a4f&colorB=a6da95&logoColor=cad3f5&style=for-the-badge)
 ](https://github.com/air-plus/oh-my-termux/contributors)
 
-现在就开始吧，让你的 Termux 真正有用
+现在就开始吧，为了 Termux！
 
 </div>
 
