@@ -52,7 +52,6 @@ stow --adopt --verbose=0 -t "$HOME" $HOME/oh-my-termux/*/ || error '配置文件
 info '🔧 修改 Termux 原生配置'
 cat >$HOME/.termux/termux.properties <<'EOF'
 volume-keys = volume
-terminal-cursor-style = bar
 terminal-cursor-blink-rate = 500
 extra-keys-style = arrows-all
 EOF
