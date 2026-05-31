@@ -1,0 +1,31 @@
+{
+  "lang": "python",
+  "homepage": "https://github.com/jarun/buku",
+  "desc": {
+    "cn": "buku 是一个书签管理器和个人文本迷你网络",
+    "en": "buku is a powerful bookmark manager and a personal textual mini-web"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use buku",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/pip3": {
+      "cmd": "pip3 install buku",
+      "reference": "https://github.com/jarun/buku?tab=readme-ov-file#from-a-package-manager"
+    },
+    "/pip": {
+      "cmd": "pip install buku",
+      "reference": "https://pypi.org/project/buku/",
+      "dsnap": "buku"
+    },
+    "darwin/brew": {
+      "cmd": "brew install buku",
+      "reference": "https://formulae.brew.sh/formula/buku#default"
+    },
+    "arch/yay": {
+      "cmd": "yay -S buku",
+      "reference": "https://aur.archlinux.org/packages/buku"
+    }
+  }
+}

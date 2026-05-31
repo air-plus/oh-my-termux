@@ -1,0 +1,33 @@
+{
+  "homepage": "https://github.com/anthropics/claude-code",
+  "desc": {
+    "cn": "Claude Code 是一种代理编码工具，它存在于您的终端中，可以理解您的代码库，并通过执行常规任务、解释复杂代码和处理 git 工作流程来帮助您更快地编写代码 - 所有这些都通过自然语言命令完成。",
+    "en": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands."
+  },
+  "license": "© Anthropic PBC. All rights reserved.",
+  "bin": "claude",
+  "v2.1.69": {
+    "info": null
+  },
+  "v2.1.76": {
+    "info": null
+  },
+  "v2.1.87": {
+    "info": null
+  },
+  "v2.1.97": {
+    "info": null
+  },
+  "v2.1.112": {
+    "info": null
+  },
+  "v2.1.116": {
+    "info": null
+  },
+  "v2.1.123": {
+    "info": null
+  },
+  "v2.1.139": {
+    "info": null
+  }
+}

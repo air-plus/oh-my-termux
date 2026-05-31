@@ -1,0 +1,50 @@
+# shellcheck shell=dash
+
+___x_cmd_claude_ds(){
+    local op="$1"
+    case "$op" in
+        -h|--help)      ___x_cmd help -m claude ds; return 0 ;;
+        --)             shift ;;
+    esac
+
+    claude:provider:fetch:init
+
+    ___x_cmd_claude_ds___fetch_ || return $?
+
+    ANTHROPIC_API_KEY="" API_TIMEOUT_MS="$x_timeout"    \
+        ___x_cmd_claude_other___use     ds              \
+        "$x_url" "$x_apikey" "$x_model" "$x_fastmodel" "$x_nonessential_traffic" "$x_effortlevel" "$@"
+}
+
+___x_cmd_claude_ds___fetch_(){
+    local model=""
+    local apikey=""
+
+    ___x_cmd deepseek --cur model:= apikey:= 2>/dev/null
+
+    [ -n "$apikey" ]    || {
+        claude:warn \
+            --tip1 'x deepseek --cfg'                       \
+            --tip2 'x deepseek --cfg apikey=<YOUR-API-KEY>' \
+            "Please setup DeepSeek API-KEY."
+
+        if ___x_cmd_is_stdout2tty && ___x_cmd_runmode_allow_manual; then
+            ___x_cmd deepseek --cfg || return $?
+            ___x_cmd deepseek --cur model:= apikey:= 2>/dev/null
+        fi
+        [ -n "$apikey" ] || N=claude M="Failed to retrieve API-KEY. Please check your configuration." log:ret:1
+    }
+
+    x_url="https://api.deepseek.com/anthropic"
+    x_apikey="$apikey"
+
+    case "$model" in
+        deepseek-v4-pro|"")     x_model="deepseek-v4-pro[1m]"   ;;
+        *)                      x_model="${model}"              ;;
+    esac
+
+    x_fastmodel='deepseek-v4-flash'
+    x_effortlevel=max
+
+    x_timeout="${API_TIMEOUT_MS:-"3000000"}"
+}

@@ -1,0 +1,22 @@
+{
+  "lang": "Rust",
+  "homepage": "https://github.com/graykode/abtop",
+  "desc": {
+    "cn": "abtop 是一个类似 top 的 CLI 工具，用于实时监控多个 AI 编程助手（Claude Code、Codex CLI 等）的 Token 用量、上下文窗口和速率限制。",
+    "en": "abtop is a top-like CLI tool for real-time monitoring of multiple AI coding agents, showing token usage, context window, and rate limits."
+  },
+  "rule": {
+    "(darwin|linux)/curl": {
+      "cmd": "curl --proto '=https' --tlsv1.2 -LsSf https://github.com/graykode/abtop/releases/latest/download/abtop-installer.sh | sh",
+      "reference": "https://github.com/graykode/abtop?tab=readme-ov-file#install"
+    },
+    "/cargo": {
+      "cmd": "cargo install abtop",
+      "reference": "https://github.com/graykode/abtop?tab=readme-ov-file#install",
+      "dsnap": "abtop"
+    }
+  },
+  "binlist": [
+    "abtop"
+  ]
+}

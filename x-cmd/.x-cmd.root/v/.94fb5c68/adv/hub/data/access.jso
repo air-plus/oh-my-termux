@@ -1,0 +1,216 @@
+{
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x hub access set --public <path>"
+,
+"cn"
+:
+"将云端文件设为公开可访问"
+,
+"en"
+:
+"Make a cloud file publicly accessible"
+}
+,
+{
+"cmd"
+:
+"x hub access set --user <username> <path>"
+,
+"cn"
+:
+"授权指定用户访问云端文件"
+,
+"en"
+:
+"Grant a user access to the cloud file"
+}
+,
+{
+"cmd"
+:
+"x hub access set --user <user1>,<user2>,<user3> <path>"
+,
+"cn"
+:
+"授权多个用户访问云端文件（逗号分隔）"
+,
+"en"
+:
+"Grant multiple users access to the cloud file (comma-separated)"
+}
+,
+{
+"cmd"
+:
+"x hub access unset <path>"
+,
+"cn"
+:
+"移除文件所有非拥有者的访问权限"
+,
+"en"
+:
+"Remove all non-owner access to the file"
+}
+,
+{
+"cmd"
+:
+"x hub access unset --user <username> <path>"
+,
+"cn"
+:
+"移除指定用户的访问权限"
+,
+"en"
+:
+"Revoke a specific user's access"
+}
+]
+,
+"set"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"设置文件访问权限（公开或指定用户）"
+,
+"en"
+:
+"Set file access permissions (public or specific users)"
+}
+,
+"#1"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"云端文件路径"
+,
+"en"
+:
+"Cloud file path"
+}
+,
+"#exec:stdout:nospace"
+:
+"x hub _advise lsfile"
+}
+,
+"--public"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"设为公开（任何人可访问）"
+,
+"en"
+:
+"Make publicly accessible (anyone can access)"
+}
+}
+,
+"--user"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"授权指定用户（多人用逗号分隔，如 alice,bob）"
+,
+"en"
+:
+"Grant access to specific users (comma-separated, e.g., alice,bob)"
+}
+,
+"#1"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"用户名或逗号分隔的用户名列表"
+,
+"en"
+:
+"Username or comma-separated list"
+}
+}
+}
+}
+,
+"unset"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"撤销访问权限；不用 --user 时移除所有非拥有者，用 --user 时移除指定用户"
+,
+"en"
+:
+"Revoke access; without --user removes all non-owners, with --user removes specific users"
+}
+,
+"--user"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"指定要撤销权限的用户（逗号分隔）"
+,
+"en"
+:
+"Users to revoke (comma-separated)"
+}
+,
+"#1"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"用户名或逗号分隔的用户名列表"
+,
+"en"
+:
+"Username or comma-separated list"
+}
+}
+}
+,
+"#1"
+:
+{
+"#exec:stdout:nospace"
+:
+"x hub _advise lsfile"
+}
+}
+}
+

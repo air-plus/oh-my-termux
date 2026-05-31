@@ -1,0 +1,87 @@
+{
+  "lang": "C",
+  "homepage": "https://midnight-commander.org/",
+  "desc": {
+    "cn": "可视化文件管理器，提供了类似 Norton Commander 的界面和功能, 左右两侧显示文件系统的不同目录，支持多种文件操作以及内置的文本编辑器和文件查看器。它是一个跨平台的工具，支持多种操作系统，包括 Linux 和 macOS。",
+    "en": "A visual file manager, providing a Norton Commander-like interface and functionality, displaying different directories of the file system on the left and right sides, supporting various file operations, and including built-in text editors and file viewers. It is a cross-platform tool that supports multiple operating systems, including Linux and macOS."
+  },
+  "rule": {
+    "darwin/brew": {
+      "cmd": "brew install midnight-commander",
+      "reference": "https://formulae.brew.sh/formula/midnight-commander#default"
+    },
+    "(win|wsl2)/scoop": {
+      "cmd": "x scoop bucket add extras && x scoop install extras/mc",
+      "reference": "https://scoop.sh/#/apps?q=mc&id=4ae94213f5c7b87d4ed614f6aa257cdca3d6fc08"
+    },
+    "debian/apt": {
+      "cmd": "sudo apt-get install mc",
+      "reference": "https://command-not-found.com/mc",
+      "dsnap": "mc"
+    },
+    "ubuntu/apt": {
+      "cmd": "sudo apt-get install mc",
+      "reference": "https://command-not-found.com/mc",
+      "dsnap": "mc"
+    },
+    "alpine/apk": {
+      "cmd": "sudo apk add mc",
+      "reference": "https://command-not-found.com/mc",
+      "dsnap": "mc"
+    },
+    "arch/pacman": {
+      "cmd": "sudo pacman -S mc",
+      "reference": "https://command-not-found.com/mc"
+    },
+    "kali/apt": {
+      "cmd": "sudo apt-get install mc",
+      "reference": "https://command-not-found.com/mc",
+      "dsnap": "mc"
+    },
+    "centos/yum": {
+      "cmd": "sudo yum install mc",
+      "reference": "https://command-not-found.com/mc"
+    },
+    "fedora/dnf": {
+      "cmd": "sudo dnf install mc",
+      "reference": "https://command-not-found.com/mc",
+      "dsnap": "mc"
+    },
+    "fedora/yum": {
+      "cmd": "sudo yum install mc",
+      "reference": "https://www.tecmint.com/linux-terminal-file-managers/"
+    },
+    "rhel/yum": {
+      "cmd": "sudo yum install mc",
+      "reference": "https://www.tecmint.com/linux-terminal-file-managers/"
+    },
+    "rocky/yum": {
+      "cmd": "sudo yum install mc",
+      "reference": "https://www.tecmint.com/linux-terminal-file-managers/"
+    },
+    "alma/yum": {
+      "cmd": "sudo yum install mc",
+      "reference": "https://www.tecmint.com/linux-terminal-file-managers/"
+    },
+    "raspbian/apt": {
+      "cmd": "sudo apt-get install mc",
+      "reference": "https://command-not-found.com/mc"
+    },
+    "(win|wsl2)/choco": {
+      "cmd": "x choco install mc",
+      "reference": "https://community.chocolatey.org/packages/mc"
+    },
+    "(win|wsl2)/winget": {
+      "cmd": "x winget install -e --id GNU.MidnightCommander",
+      "reference": "https://winget.run/pkg/GNU/MidnightCommander"
+    },
+    "gentoo/emerge": {
+      "cmd": "sudo emerge -a sys-apps/mc",
+      "reference": "https://www.tecmint.com/linux-terminal-file-managers/"
+    },
+    "opensuse/zypper": {
+      "cmd": "sudo zypper install mc",
+      "reference": "https://www.tecmint.com/linux-terminal-file-managers/"
+    }
+  }
+}

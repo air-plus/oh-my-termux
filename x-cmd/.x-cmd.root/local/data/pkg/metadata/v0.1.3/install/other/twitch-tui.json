@@ -1,0 +1,23 @@
+{
+  "lang": "Rust",
+  "homepage": "https://xithrius.github.io/twitch-tui/",
+  "desc": {
+    "cn": "twitch-tui 是一个终端用户界面（TUI）工具，用于读取和与 Twitch 聊天用户互动。",
+    "en": "twitch-tui is a Terminal User Interface for reading and interacting with Twitch chat users."
+  },
+  "rule": {
+    "/cargo": {
+      "cmd": "cargo install twitch-tui",
+      "reference": "https://xithrius.github.io/twitch-tui/guide/installation.html",
+      "dsnap": "twitch-tui"
+    },
+    "nix/run": {
+      "cmd": "nix run github:Xithrius/twitch-tui",
+      "reference": "https://xithrius.github.io/twitch-tui/guide/installation.html"
+    },
+    "arch/yay": {
+      "cmd": "yay -S twitch-tui-git",
+      "reference": "https://aur.archlinux.org/packages/twitch-tui-git"
+    }
+  }
+}

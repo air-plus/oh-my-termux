@@ -1,0 +1,38 @@
+{
+  "lang": "Go",
+  "homepage": "https://github.com/peak/s5cmd",
+  "desc": {
+    "cn": "一款非常快速的 S3 和本地文件系统执行工具",
+    "en": "A very fast S3 and local filesystem execution tool."
+  },
+  "rule": {
+    "darwin/brew": {
+      "cmd": "brew install peak/tap/s5cmd",
+      "reference": "https://github.com/peak/s5cmd?tab=readme-ov-file#installation"
+    },
+    "arch/yay": {
+      "cmd": "yay -S s5cmd",
+      "reference": "https://aur.archlinux.org/packages/s5cmd"
+    },
+    "darwin/port": {
+      "cmd": "sudo port selfupdate\nsudo port install s5cmd\n",
+      "reference": "https://github.com/peak/s5cmd?tab=readme-ov-file#installation"
+    },
+    "/conda": {
+      "cmd": "conda install s5cmd",
+      "reference": "https://github.com/peak/s5cmd?tab=readme-ov-file#installation"
+    },
+    "freebsd/pkg": {
+      "cmd": "pkg install s5cmd",
+      "reference": "https://github.com/peak/s5cmd?tab=readme-ov-file#installation"
+    },
+    "/go": {
+      "cmd": "go install github.com/peak/s5cmd/v2@master",
+      "reference": "https://github.com/peak/s5cmd?tab=readme-ov-file#installation",
+      "dsnap": "github.com/peak/s5cmd/v2@master"
+    }
+  },
+  "binlist": [
+    "s5cmd"
+  ]
+}

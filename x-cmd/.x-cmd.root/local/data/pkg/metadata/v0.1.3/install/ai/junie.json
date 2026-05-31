@@ -1,0 +1,30 @@
+{
+  "lang": "Shell",
+  "homepage": "https://github.com/JetBrains/junie",
+  "desc": {
+    "en": "AI coding assistant developed by JetBrains",
+    "cn": "JetBrains 开发的 AI 编码助手"
+  },
+  "rule": {
+    "(darwin|linux)/curl": {
+      "cmd": "curl -fsSL https://junie.jetbrains.com/install.sh | bash",
+      "reference": "https://github.com/JetBrains/junie?tab=readme-ov-file#-install"
+    },
+    "win/powershell": {
+      "cmd": "x pwsh -NoProfile -ExecutionPolicy Bypass -Command \"iex (irm 'https://junie.jetbrains.com/install.ps1')\"",
+      "reference": "https://github.com/JetBrains/junie?tab=readme-ov-file#-install"
+    },
+    "darwin/brew": {
+      "cmd": "brew tap jetbrains-junie/junie\nbrew install junie\n",
+      "reference": "https://github.com/JetBrains/junie?tab=readme-ov-file#-install"
+    },
+    "/npm": {
+      "cmd": "npm install -g @jetbrains/junie",
+      "reference": "https://github.com/JetBrains/junie?tab=readme-ov-file#-install",
+      "dsnap": "@jetbrains/junie"
+    }
+  },
+  "binlist": [
+    "junie"
+  ]
+}

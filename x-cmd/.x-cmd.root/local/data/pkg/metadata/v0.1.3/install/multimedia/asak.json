@@ -1,0 +1,22 @@
+{
+  "lang": "Rust",
+  "homepage": "https://github.com/chaosprint/asak",
+  "desc": {
+    "cn": "一个用 Rust 编写的带有 TUI 的跨平台音频录制/播放 CLI 工具",
+    "en": "A cross-platform audio recording/playback CLI tool with TUI, written in Rust."
+  },
+  "rule": {
+    "/cargo": {
+      "cmd": "cargo install asak",
+      "reference": "https://github.com/chaosprint/asak?tab=readme-ov-file#install",
+      "dsnap": "asak"
+    },
+    "arch/yay": {
+      "cmd": "yay -S asak",
+      "reference": "https://aur.archlinux.org/packages/asak"
+    }
+  },
+  "binlist": [
+    "asak"
+  ]
+}

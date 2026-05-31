@@ -1,0 +1,23 @@
+{
+  "lang": "node",
+  "homepage": "https://github.com/rastapasta/mapscii",
+  "desc": {
+    "cn": "ASCII 世界地图渲染器",
+    "en": "ASCII world map renderer"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use mapscii",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/npm": {
+      "cmd": "npm install -g mapscii",
+      "reference": "https://github.com/rastapasta/mapscii",
+      "dsnap": "mapscii"
+    },
+    "arch/yay": {
+      "cmd": "yay -S nodejs-mapscii",
+      "reference": "https://aur.archlinux.org/packages/nodejs-mapscii"
+    }
+  }
+}

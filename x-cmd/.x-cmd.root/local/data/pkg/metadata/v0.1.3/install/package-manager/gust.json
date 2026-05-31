@@ -1,0 +1,22 @@
+{
+  "lang": "Rust",
+  "homepage": "https://github.com/quantbagel/gust",
+  "desc": {
+    "cn": "一个用 Rust 编写的极速 Swift 包和项目管理器。",
+    "en": "An extremely fast Swift package and project manager, written in Rust."
+  },
+  "rule": {
+    "/curl": {
+      "cmd": "curl -fsSL quantbagel.vercel.app/gust/install.sh | sh",
+      "reference": "https://github.com/quantbagel/gust/blob/main/docs/installation.md#quick-install-macoslinux"
+    },
+    "darwin/brew": {
+      "cmd": "brew tap quantbagel/tap &&\nbrew install gust\n",
+      "reference": "https://github.com/quantbagel/gust/blob/main/docs/installation.md#homebrew"
+    },
+    "/cargo": {
+      "cmd": "cargo install gust",
+      "reference": "https://github.com/quantbagel/gust/blob/main/docs/installation.md#cargo"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "lang": "Swift",
+  "homepage": "https://app.bilibili.com/",
+  "desc": {
+    "cn": "哔哩哔哩官方客户端",
+    "en": "Bilibili Official Client"
+  },
+  "rule": {
+    "darwin/brew": {
+      "cmd": "brew install --cask bilibili",
+      "reference": "https://formulae.brew.sh/cask/bilibili#default"
+    },
+    "arch/yay": {
+      "cmd": "yay -S bilibili-bin",
+      "reference": "https://aur.archlinux.org/packages/bilibili-bin"
+    }
+  }
+}

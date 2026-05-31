@@ -1,0 +1,15 @@
+{
+  "homepage": "https://github.com/Aider-AI/aider",
+  "license": "Apache-2.0",
+  "desc": {
+    "cn": "aider 是一个终端中的 AI 配对编程工具。",
+    "en": "aider is AI pair programming in your terminal"
+  },
+  "bin": "aider",
+  "v0.85.0": {
+    "info": null
+  },
+  "v0.86.0": {
+    "info": null
+  }
+}

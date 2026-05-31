@@ -1,0 +1,19 @@
+{
+  "lang": "javascript",
+  "homepage": "https://github.com/sindresorhus/fkill-cli",
+  "desc": {
+    "cn": "绝妙地杀死进程。跨平台",
+    "en": "Fabulously kill processes. Cross-platform."
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use fkill-cli",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/npm": {
+      "cmd": "npm install --global fkill-cli",
+      "reference": "https://github.com/sindresorhus/fkill-cli?tab=readme-ov-file#install",
+      "dsnap": "fkill-cli"
+    }
+  }
+}

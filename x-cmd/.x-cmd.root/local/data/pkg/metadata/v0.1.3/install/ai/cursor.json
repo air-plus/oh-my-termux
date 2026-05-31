@@ -1,0 +1,29 @@
+{
+  "lang": "Typescript",
+  "homepage": "https://cursor.com",
+  "desc": {
+    "cn": "深度集成了 AI 辅助编程功能的现代化代码编辑器",
+    "en": "A modern code editor with deep AI-assisted coding integration"
+  },
+  "rule": {
+    "/curl": {
+      "cmd": "curl https://cursor.com/install -fsS | bash",
+      "reference": "https://cursor.com/download"
+    },
+    "darwin/brew": {
+      "cmd": "brew install --cask cursor",
+      "reference": "https://formulae.brew.sh/cask/cursor#default"
+    },
+    "arch/yay": {
+      "cmd": "yay -S cursor-bin",
+      "reference": "https://aur.archlinux.org/packages/cursor-bin"
+    },
+    "win/winget": {
+      "cmd": "winget install Cursor.Cursor",
+      "reference": "https://winstall.app/apps/Anysphere.Cursor"
+    }
+  },
+  "binlist": [
+    "cursor"
+  ]
+}

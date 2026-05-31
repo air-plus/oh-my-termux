@@ -1,0 +1,18 @@
+
+___x_cmd_kimi___runmain(){
+    # TODO：How to inject the configuration of cfg into kimi-cli
+    local proxy=""
+    ___x_cmd_kimi_cur proxy:= 2>/dev/null
+
+    ___x_cmd proxy runifset "$proxy"  \
+    ___x_cmd_kimi___runcmd "$@"
+}
+
+___x_cmd_kimi___runcmd(){
+    if ___x_cmd_hascmd kimi;then
+        ___x_cmd_kimi___runcmd(){  ___x_cmd_cmds kimi "$@"; }
+    else
+        ___x_cmd_kimi___install "$@" || return $?
+        ___x_cmd_kimi___runcmd(){  ___x_cmd uv tool run --from kimi-cli kimi "$@"; }
+    fi && ___x_cmd_kimi___runcmd "$@"
+}

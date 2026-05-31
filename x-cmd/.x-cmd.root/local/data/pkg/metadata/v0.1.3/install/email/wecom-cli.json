@@ -1,0 +1,22 @@
+{
+  "lang": "Rust",
+  "homepage": "https://github.com/WecomTeam/wecom-cli",
+  "desc": {
+    "cn": "企业微信开放平台命令行工具",
+    "en": "A command-line tool for WeCom Open Platform"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use wecom-cli",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/npm": {
+      "cmd": "npm install -g @wecom/cli",
+      "reference": "https://github.com/larksuite/cli?tab=readme-ov-file#install-cli",
+      "dsnap": "@wecom/cli"
+    }
+  },
+  "binlist": [
+    "wecom-cli"
+  ]
+}

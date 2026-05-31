@@ -1,0 +1,28 @@
+{
+  "lang": "Go",
+  "homepage": "https://github.com/jpillora/chisel",
+  "desc": {
+    "cn": "基于 HTTP 的快速 TCP/UDP 隧道",
+    "en": "Fast TCP/UDP tunnel over HTTP"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use chisel",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "fedora/dnf": {
+      "cmd": "sudo dnf -y install chisel",
+      "reference": "https://github.com/jpillora/chisel?tab=readme-ov-file#fedora",
+      "dsnap": "chisel"
+    },
+    "arch/yay": {
+      "cmd": "yay -S chisel-bin",
+      "reference": "https://aur.archlinux.org/packages/chisel-bin"
+    },
+    "/go": {
+      "cmd": "go install github.com/jpillora/chisel@latest",
+      "reference": "https://github.com/jpillora/chisel?tab=readme-ov-file#source",
+      "dsnap": "github.com/jpillora/chisel@latest"
+    }
+  }
+}

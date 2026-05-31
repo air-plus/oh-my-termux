@@ -1,0 +1,14 @@
+{
+  "lang": "Rust",
+  "homepage": "https://github.com/ipconfiger/ru-cdc",
+  "desc": {
+    "cn": "用 Rust 实现的 CDC 工具",
+    "en": "Another CDC Tool Written by Rust"
+  },
+  "rule": {
+    "/curl": {
+      "cmd": "curl -L -o ru-cdc-ver-0.1.1-x86.zip https://github.com/ipconfiger/ru-cdc/releases/download/x86-ver-0.1.1/ru-cdc-ver-0.1.1-x86.zip",
+      "reference": "https://github.com/ipconfiger/ru-cdc/releases"
+    }
+  }
+}

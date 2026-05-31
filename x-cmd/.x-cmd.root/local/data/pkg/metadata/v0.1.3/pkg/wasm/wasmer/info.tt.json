@@ -1,0 +1,12 @@
+{
+  "homepage": "https://github.com/wasmerio/wasmer",
+  "license": "MIT",
+  "desc": {
+    "cn": "Wasmer 是一个快速和安全的 WebAssembly 运行时",
+    "en": "Wasmer is a blazing fast and secure WebAssembly runtime"
+  },
+  "bin": "wasmer",
+  "v6.1.0": {
+    "info": null
+  }
+}

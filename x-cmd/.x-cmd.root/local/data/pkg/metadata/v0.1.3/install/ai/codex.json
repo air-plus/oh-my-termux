@@ -1,0 +1,30 @@
+{
+  "lang": "Rust",
+  "homepage": "https://github.com/openai/codex",
+  "desc": {
+    "cn": "OpenAI Codex CLI - 在您的终端中运行的轻量级编码代理",
+    "en": "OpenAI Codex CLI - Lightweight coding agent that runs in your terminal"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use codex",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/npm": {
+      "cmd": "npm install -g @openai/codex",
+      "reference": "https://github.com/openai/codex?tab=readme-ov-file#quickstart",
+      "dsnap": "@openai/codex"
+    },
+    "darwin/brew": {
+      "cmd": "brew install --cask codex",
+      "reference": "https://github.com/openai/codex?tab=readme-ov-file#quickstart"
+    },
+    "arch/yay": {
+      "cmd": "yay -S openai-codex-bin",
+      "reference": "https://aur.archlinux.org/packages/openai-codex-bin"
+    }
+  },
+  "binlist": [
+    "codex"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "lang": "c",
+  "homepage": "https://wiki.freedesktop.org/www/Software/fontconfig/",
+  "desc": {
+    "en": "Fontconfig is a library for configuring and customizing font access",
+    "cn": "Fontconfig 是一个用于配置和自定义字体访问的库"
+  },
+  "rule": {
+    "darwin/brew": {
+      "cmd": "brew install fontconfig",
+      "reference": "https://formulae.brew.sh/formula/fontconfig#default"
+    },
+    "debian/apt": {
+      "cmd": "sudo apt-get install fontconfig",
+      "reference": "https://command-not-found.com/fc-cache"
+    },
+    "ubuntu/apt": {
+      "cmd": "sudo apt-get install fontconfig",
+      "reference": "https://command-not-found.com/fc-cache"
+    },
+    "kali/apt": {
+      "cmd": "sudo apt-get install fontconfig",
+      "reference": "https://command-not-found.com/fc-cache"
+    },
+    "alpine/apk": {
+      "cmd": "sudo apk add fontconfig",
+      "reference": "https://command-not-found.com/fc-cache"
+    },
+    "arch/pacman": {
+      "cmd": "pacman -S fontconfig",
+      "reference": "https://command-not-found.com/fc-cache"
+    },
+    "centos/yum": {
+      "cmd": "sudo yum install fontconfig",
+      "reference": "https://command-not-found.com/fc-cache"
+    },
+    "fedora/dnf": {
+      "cmd": "sudo dnf install fontconfig",
+      "reference": "https://command-not-found.com/fc-cache"
+    }
+  }
+}

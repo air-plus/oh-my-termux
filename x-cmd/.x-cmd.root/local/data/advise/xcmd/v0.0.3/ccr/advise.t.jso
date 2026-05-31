@@ -1,0 +1,146 @@
+{
+"start"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Start Claude service."
+,
+"cn"
+:
+"启动 Claude 服务"
+}
+}
+,
+"stop"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Stop Claude service."
+,
+"cn"
+:
+"停止 Claude 服务"
+}
+}
+,
+"restart"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Restart Claude service."
+,
+"cn"
+:
+"重启 Claude 服务"
+}
+}
+,
+"status"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Show Claude service status."
+,
+"cn"
+:
+"显示 Claude 服务状态"
+}
+}
+,
+"statusline"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Display integrated statusline."
+,
+"cn"
+:
+"显示集成状态栏信息"
+}
+}
+,
+"code"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Execute Claude command directly from terminal."
+,
+"cn"
+:
+"在终端中直接执行 Claude 指令"
+}
+,
+"#1"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"提示词内容"
+,
+"en"
+:
+"prompt"
+}
+}
+}
+,
+"model"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Open interactive model selection and configuration."
+,
+"cn"
+:
+"打开交互式模型选择与配置界面"
+}
+}
+,
+"ui"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Open Claude Web UI in browser."
+,
+"cn"
+:
+"在浏览器中打开 Claude Web 界面"
+}
+}
+}
+

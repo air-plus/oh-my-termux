@@ -1,0 +1,22 @@
+{
+  "lang": "Python",
+  "homepage": "https://github.com/QuentinFuxa/WhisperLiveKit",
+  "desc": {
+    "cn": "超低延迟、自托管的语音转文本功能，并且能够区分音频中不同说话人",
+    "en": "Ultra-low-latency, self-hosted speech-to-text with speaker identification"
+  },
+  "rule": {
+    "/pip": {
+      "cmd": "pip install whisperlivekit",
+      "reference": "https://github.com/QuentinFuxa/WhisperLiveKit#installation",
+      "dsnap": "whisperlivekit"
+    },
+    "arch/yay": {
+      "cmd": "yay -S whisperlivekit",
+      "reference": "https://aur.archlinux.org/packages/whisperlivekit"
+    }
+  },
+  "binlist": [
+    "wlk"
+  ]
+}

@@ -1,0 +1,316 @@
+{
+"#name"
+:
+{
+"wifi"
+:
+{
+"en"
+:
+"WiFi interface info, network scanning, and connection management"
+,
+"cn"
+:
+"WiFi 接口信息、网络扫描和连接管理"
+}
+}
+,
+"#synopsis"
+:
+[
+{
+"x wifi [subcommand]"
+:
+null
+}
+]
+,
+"#desc"
+:
+{
+"en"
+:
+"WiFi tool with multiple modes:\n- \"x wifi\" (default = sum): interface hardware info + all available networks table\n- \"x wifi info\": WiFi adapter hardware info (card type, MAC, firmware, PHY modes)\n- \"x wifi stat\": compact table of all available networks (current + scanned),\n  current network marked with *, like \"x disk stat\"\n- \"x wifi scan\": scan nearby networks with SAVED column showing known networks\n- \"x wifi connect\": connect to a WiFi network\n- \"x wifi enable/disable\": turn WiFi on/off\n- \"x wifi prefer\": manage saved/preferred networks\nCross-platform (macOS/Linux/Windows) with TTY color support.\n"
+,
+"cn"
+:
+"WiFi 工具多种模式：\n- \"x wifi\"（默认 = sum）：接口硬件信息 + 所有可用网络表格\n- \"x wifi info\"：WiFi 适配器硬件信息（网卡类型、MAC、固件、PHY 模式）\n- \"x wifi stat\"：紧凑表格显示所有可用网络（当前 + 扫描到的），\n  当前连接用 * 标记，类似 \"x disk stat\"\n- \"x wifi scan\"：扫描附近网络，SAVED 列显示已知网络\n- \"x wifi connect\"：连接 WiFi 网络\n- \"x wifi enable/disable\"：开启/关闭 WiFi\n- \"x wifi prefer\"：管理已保存/首选网络\n跨平台（macOS/Linux/Windows），支持 TTY 彩色输出。\n"
+}
+,
+"#subcmd:Option"
+:
+[
+"-h"
+,
+"--help"
+]
+,
+"sum"
+:
+{
+"#synopsis"
+:
+""
+,
+"#desc"
+:
+{
+"en"
+:
+"Display full WiFi overview (same as running bare \"x wifi\").\n"
+,
+"cn"
+:
+"显示完整 WiFi 概览（等同于直接运行 \"x wifi\"）。\n"
+}
+}
+,
+"info"
+:
+{
+"#synopsis"
+:
+"[-s|--simple] [--fresh]"
+,
+"#desc"
+:
+{
+"en"
+:
+"WiFi adapter hardware info. Use --simple for interface/card/MAC/status only.\n"
+,
+"cn"
+:
+"WiFi 适配器硬件信息。加 --simple 仅显示接口/网卡/MAC/状态。\n"
+}
+}
+,
+"stat"
+:
+{
+"#synopsis"
+:
+"[--fresh]"
+,
+"#desc"
+:
+{
+"en"
+:
+"Compact table of all available networks. Signal colored: green/cyan/yellow/red.\n"
+,
+"cn"
+:
+"所有可用网络紧凑表格。信号着色：绿/青/黄/红。\n"
+}
+}
+,
+"scan"
+:
+{
+"#synopsis"
+:
+"[--fresh]"
+,
+"#desc"
+:
+{
+"en"
+:
+"Scan nearby networks. Shows SSID, PHY, channel, security, SAVED (*=known), signal.\n"
+,
+"cn"
+:
+"扫描附近网络：SSID、PHY、频道、安全、SAVED（* = 已知）、信号。\n"
+}
+}
+,
+"connect"
+:
+{
+"#synopsis"
+:
+"<SSID> [password]"
+,
+"#desc"
+:
+{
+"en"
+:
+"Connect to WiFi by SSID. Provide password for secured networks.\n"
+,
+"cn"
+:
+"通过 SSID 连接 WiFi。加密网络需提供密码。\n"
+}
+}
+,
+"enable"
+:
+{
+"#synopsis"
+:
+""
+,
+"#desc"
+:
+{
+"en"
+:
+"Turn WiFi on.\n"
+,
+"cn"
+:
+"开启 WiFi。\n"
+}
+}
+,
+"disable"
+:
+{
+"#synopsis"
+:
+""
+,
+"#desc"
+:
+{
+"en"
+:
+"Turn WiFi off.\n"
+,
+"cn"
+:
+"关闭 WiFi。\n"
+}
+}
+,
+"prefer"
+:
+{
+"#synopsis"
+:
+"[ls|list|forget <SSID>]"
+,
+"#desc"
+:
+{
+"en"
+:
+"Manage saved networks. ls: list, forget <SSID>: remove.\n"
+,
+"cn"
+:
+"管理已保存网络。ls: 列出, forget <SSID>: 移除。\n"
+}
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x wifi"
+,
+"cn"
+:
+"示例: 显示完整 WiFi 概览（info + 网络表格）"
+,
+"en"
+:
+"Example: Display full WiFi overview (info + networks table)"
+}
+,
+{
+"cmd"
+:
+"x wifi info --fresh"
+,
+"cn"
+:
+"示例: 强制刷新缓存，重新获取 WiFi 信息"
+,
+"en"
+:
+"Example: Force cache refresh, re-fetch WiFi info"
+}
+,
+{
+"cmd"
+:
+"x wifi stat"
+,
+"cn"
+:
+"示例: 显示所有可用网络表格"
+,
+"en"
+:
+"Example: Show all available networks table"
+}
+,
+{
+"cmd"
+:
+"x wifi scan"
+,
+"cn"
+:
+"示例: 扫描附近 WiFi 网络"
+,
+"en"
+:
+"Example: Scan nearby WiFi networks"
+}
+,
+{
+"cmd"
+:
+"x wifi connect MyNetwork mypassword"
+,
+"cn"
+:
+"示例: 连接到加密网络"
+,
+"en"
+:
+"Example: Connect to a secured network"
+}
+,
+{
+"cmd"
+:
+"x wifi prefer ls"
+,
+"cn"
+:
+"示例: 列出已保存的网络"
+,
+"en"
+:
+"Example: List saved networks"
+}
+]
+,
+"#other"
+:
+{
+"en"
+:
+{
+"Please visit our homepage for more information:"
+:
+"https://x-cmd.com"
+}
+,
+"cn"
+:
+{
+"请访问我们的主页以获取更多信息："
+:
+"https://x-cmd.com"
+}
+}
+}
+

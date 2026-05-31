@@ -1,0 +1,26 @@
+{
+  "lang": "CSS",
+  "homepage": "https://github.com/ryanoasis/nerd-fonts",
+  "desc": {
+    "cn": "CodeNewRoman 字体",
+    "en": "CodeNewRoman font"
+  },
+  "rule": {
+    "(linux|darwin|wsl2)/": {
+      "cmd": "x font nerd install CodeNewRoman",
+      "reference": "https://x-cmd.com/mod/font"
+    },
+    "win/powershell": {
+      "cmd": "x pwsh Invoke-WebRequest -Uri https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/CodeNewRoman.zip -OutFile CodeNewRoman.zip",
+      "reference": "https://github.com/ryanoasis/nerd-fonts/releases/"
+    },
+    "/curl": {
+      "cmd": "curl -OL https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/CodeNewRoman.tar.xz",
+      "reference": "https://github.com/ryanoasis/nerd-fonts/releases/"
+    },
+    "darwin/curl": {
+      "cmd": "curl -OL https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/CodeNewRoman.tar.xz",
+      "reference": "https://github.com/ryanoasis/nerd-fonts/releases/"
+    }
+  }
+}

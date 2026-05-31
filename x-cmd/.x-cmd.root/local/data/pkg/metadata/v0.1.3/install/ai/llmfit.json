@@ -1,0 +1,29 @@
+{
+  "lang": "Rust",
+  "homepage": "https://github.com/AlexsJones/llmfit",
+  "desc": {
+    "en": "Hundreds of models & providers. One command to find what runs on your hardware.",
+    "cn": "数百个模型和提供商，一个命令找到能在你的硬件上运行的模型"
+  },
+  "rule": {
+    "(win|wsl2)/scoop": {
+      "cmd": "x scoop install llmfit",
+      "reference": "https://github.com/AlexsJones/llmfit?tab=readme-ov-file#install"
+    },
+    "darwin/brew": {
+      "cmd": "brew install llmfit",
+      "reference": "https://github.com/AlexsJones/llmfit?tab=readme-ov-file#install"
+    },
+    "darwin/port": {
+      "cmd": "port install llmfit",
+      "reference": "https://github.com/AlexsJones/llmfit?tab=readme-ov-file#install"
+    },
+    "/curl": {
+      "cmd": "curl -fsSL https://llmfit.axjns.dev/install.sh | sh",
+      "reference": "https://github.com/AlexsJones/llmfit?tab=readme-ov-file#install"
+    }
+  },
+  "binlist": [
+    "llmfit"
+  ]
+}

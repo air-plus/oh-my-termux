@@ -1,0 +1,25 @@
+{
+  "lang": "rust",
+  "homepage": "https://github.com/Watfaq/PowerSession-rs",
+  "desc": {
+    "cn": "基于 Windows 伪控制台 (ConPTY) 的 asciinema Windows 移植版",
+    "en": "A port of asciinema for Windows, based on Windows Pseudo Console(ConPTY)"
+  },
+  "rule": {
+    "(win|wsl2)/cargo": {
+      "cmd": "cargo install PowerSession",
+      "reference": "https://github.com/Watfaq/PowerSession-rs?tab=readme-ov-file#installation"
+    },
+    "(win|wsl2)/winget": {
+      "cmd": "winget install Watfaq.PowerSession",
+      "reference": "https://github.com/Watfaq/PowerSession-rs?tab=readme-ov-file#installation"
+    },
+    "(win|wsl2)/scoop": {
+      "cmd": "scoop install powersession-rs",
+      "reference": "https://github.com/Watfaq/PowerSession-rs?tab=readme-ov-file#installation"
+    }
+  },
+  "binlist": [
+    "powersession"
+  ]
+}

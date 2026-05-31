@@ -1,0 +1,15 @@
+{
+  "homepage": "https://maven.apache.org/download.cgi",
+  "license": "Apache License",
+  "desc": {
+    "cn": "基于 java 的项目管理器",
+    "en": "Java-based project management"
+  },
+  "bin": "mvn",
+  "v3.8.9": {
+    "info": null
+  },
+  "v3.9.14": {
+    "info": null
+  }
+}

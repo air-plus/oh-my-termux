@@ -1,0 +1,14 @@
+{
+  "lang": "Shell",
+  "homepage": "https://github.com/txthinking/google-hosts",
+  "desc": {
+    "cn": "谷歌主机生成器",
+    "en": "Google hosts generator"
+  },
+  "rule": {
+    "/git": {
+      "cmd": "git clone https://github.com/txthinking/google-hosts.git",
+      "reference": "https://github.com/txthinking/google-hosts/blob/master/scripts/README.md"
+    }
+  }
+}

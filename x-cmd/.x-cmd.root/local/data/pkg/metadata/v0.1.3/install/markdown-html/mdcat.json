@@ -1,0 +1,23 @@
+{
+  "lang": "rust",
+  "homepage": "https://crates.io/crates/mdcat",
+  "desc": {
+    "cn": "在终端中显示 markdown 文档",
+    "en": "Show markdown documents in terminals"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use mdcat",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "arch/yay": {
+      "cmd": "yay -S mdcat",
+      "reference": "https://aur.archlinux.org/packages/mdcat"
+    },
+    "/cargo": {
+      "cmd": "cargo install mdcat",
+      "reference": "https://crates.io/crates/mdcat",
+      "dsnap": "mdcat"
+    }
+  }
+}

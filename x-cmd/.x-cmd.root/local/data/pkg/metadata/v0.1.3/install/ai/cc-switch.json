@@ -1,0 +1,18 @@
+{
+  "lang": "Rust",
+  "homepage": "https://github.com/farion1231/cc-switch",
+  "desc": {
+    "cn": "CC-Switch 是一款跨平台桌面应用，用于统一管理和一键切换多个 AI CLI 编程助手（Claude Code、Codex、Gemini CLI 等）的 API 配置、MCP 服务器和 Skills。",
+    "en": "CC-Switch is a cross-platform desktop app for unified management and one-click switching of API configurations, MCP servers, and Skills across multiple AI CLI coding assistants."
+  },
+  "rule": {
+    "darwin/brew": {
+      "cmd": "brew tap farion1231/ccswitch && brew install --cask cc-switch\n",
+      "reference": "https://github.com/farion1231/cc-switch?tab=readme-ov-file#download--installation"
+    },
+    "arch/paru": {
+      "cmd": "paru -S cc-switch-bin",
+      "reference": "https://github.com/farion1231/cc-switch?tab=readme-ov-file#arch-linux-users"
+    }
+  }
+}

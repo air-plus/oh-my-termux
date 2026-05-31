@@ -1,0 +1,14 @@
+{
+  "lang": "typescript",
+  "desc": {
+    "cn": "用于在整个软件开发生命周期（从本地环境一直到云端）管理 MongoDB Atlas。",
+    "en": "Used to manage MongoDB Atlas throughout the entire software development lifecycle (from local environments to the cloud)."
+  },
+  "homepage": "https://www.mongodb.com/try/download/atlascli",
+  "rule": {
+    "/curl": {
+      "cmd": "curl -L -o mongodb-atlas-cli_1.53.0_macos_arm64.zip https://fastdl.mongodb.org/mongocli/mongodb-atlas-cli_1.53.0_macos_arm64.zip",
+      "reference": "https://www.mongodb.com/try/download/atlascli"
+    }
+  }
+}

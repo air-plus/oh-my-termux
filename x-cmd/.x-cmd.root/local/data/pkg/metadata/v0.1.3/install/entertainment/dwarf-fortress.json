@@ -1,0 +1,22 @@
+{
+  "lang": "C++",
+  "homepage": "https://www.bay12games.com/dwarves",
+  "desc": {
+    "cn": "《Dwarf Fortress》（矮人要塞），一款极具深度的建造与模拟游戏，以复杂的系统与自由度闻名",
+    "en": "Dwarf Fortress is a deeply complex building and simulation game, known for its intricate systems and high player freedom."
+  },
+  "rule": {
+    "(win|wsl2)/scoop": {
+      "cmd": "x scoop bucket add games\nx scoop install games/dwarf-fortress\n",
+      "reference": "https://scoop.sh/#/apps?q=dwarf-fortress"
+    },
+    "ubuntu/apt": {
+      "cmd": "apt install dwarf-fortress",
+      "reference": "https://packages.ubuntu.com/oracular/dwarf-fortress",
+      "dsnap": "dwarf-fortress"
+    }
+  },
+  "binlist": [
+    "dwarffortress"
+  ]
+}

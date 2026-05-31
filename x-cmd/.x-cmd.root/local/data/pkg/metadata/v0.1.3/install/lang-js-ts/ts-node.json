@@ -1,0 +1,19 @@
+{
+  "lang": "TypeScript",
+  "homepage": "https://typestrong.org/ts-node/",
+  "desc": {
+    "cn": "Node.js 的 TypeScript 执行和 REPL",
+    "en": "TypeScript execution and REPL for node.js"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use ts-node",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/npm": {
+      "cmd": "npm install -g ts-node",
+      "reference": "https://github.com/TypeStrong/ts-node?tab=readme-ov-file#installation",
+      "dsnap": "ts-node"
+    }
+  }
+}

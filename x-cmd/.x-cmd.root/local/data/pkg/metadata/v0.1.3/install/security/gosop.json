@@ -1,0 +1,19 @@
+{
+  "lang": "Go",
+  "homepage": "https://github.com/ProtonMail/gosop",
+  "desc": {
+    "cn": "GopenPGP 无状态 CLI",
+    "en": "Stateless CLI for GopenPGP"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use gosop",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/go": {
+      "cmd": "mkdir -p $GOPATH/src/github.com/ProtonMail/\ncd $GOPATH/src/github.com/ProtonMail/\ngit clone git@github.com:ProtonMail/gosop.git && cd gosop\ngo install\n",
+      "reference": "https://github.com/ProtonMail/gosop?tab=readme-ov-file#install",
+      "dsnap": "github.com/ProtonMail/gosop@main"
+    }
+  }
+}

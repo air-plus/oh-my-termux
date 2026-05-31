@@ -1,0 +1,18 @@
+{
+  "lang": "Go",
+  "homepage": "https://github.com/particledecay/kconf",
+  "desc": {
+    "cn": "一种用于管理多个 kubeconfigs 的有用命令行工具",
+    "en": "An opinionated command line tool for managing multiple kubeconfigs"
+  },
+  "rule": {
+    "arch/yay": {
+      "cmd": "yay -S kconf",
+      "reference": "https://aur.archlinux.org/packages/kconf"
+    },
+    "/asdf": {
+      "cmd": "x asdf use kconf",
+      "reference": "https://github.com/particledecay/asdf-kconf?tab=readme-ov-file#install"
+    }
+  }
+}

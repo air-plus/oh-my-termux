@@ -1,0 +1,42 @@
+{
+  "lang": "powershell & shell",
+  "homepage": "https://github.com/anthropics/claude-code",
+  "desc": {
+    "cn": "Claude Code 是一种代理编码工具，它存在于您的终端中，可以理解您的代码库，并通过执行常规任务、解释复杂代码和处理 git 工作流程来帮助您更快地编写代码 - 所有这些都通过自然语言命令完成。",
+    "en": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands."
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use claude-code",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/curl": {
+      "cmd": "curl -fsSL https://claude.ai/install.sh | bash",
+      "reference": "https://docs.claude.com/en/docs/claude-code/quickstart#native-install"
+    },
+    "darwin/brew": {
+      "cmd": "brew install --cask claude-code",
+      "reference": "https://docs.claude.com/en/docs/claude-code/quickstart"
+    },
+    "win/powershell": {
+      "cmd": "x pwsh 'irm https://claude.ai/install.ps1 | iex'",
+      "reference": "https://docs.claude.com/en/docs/claude-code/quickstart#native-install"
+    },
+    "win/winget": {
+      "cmd": "x winget install Anthropic.ClaudeCode",
+      "reference": "https://code.claude.com/docs/en/quickstart#winget"
+    },
+    "/npm": {
+      "cmd": "npm install -g @anthropic-ai/claude-code",
+      "reference": "https://github.com/anthropics/claude-code?tab=readme-ov-file#get-started",
+      "dsnap": "@anthropic-ai/claude-code"
+    },
+    "arch/yay": {
+      "cmd": "yay -S claude-code",
+      "reference": "https://aur.archlinux.org/packages/claude-code"
+    }
+  },
+  "binlist": [
+    "claude"
+  ]
+}

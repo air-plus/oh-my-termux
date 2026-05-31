@@ -1,0 +1,42 @@
+{
+  "lang": "python",
+  "homepage": "https://github.com/dbcli/pgcli",
+  "desc": {
+    "cn": "postgres 的 CLI，具有自动补全和语法突出显示功能",
+    "en": "CLI for postgres with autocompletion and syntax highlighting"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use pgcli",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/pip": {
+      "cmd": "pip install -U pgcli",
+      "reference": "https://github.com/dbcli/pgcli#quick-start",
+      "dsnap": "pgcli"
+    },
+    "darwin/brew": {
+      "cmd": "brew install pgcli",
+      "reference": "https://formulae.brew.sh/formula/pgcli#default"
+    },
+    "debian/apt": {
+      "cmd": "sudo apt install pgcli",
+      "reference": "https://command-not-found.com/pgcli",
+      "dsnap": "pgcli"
+    },
+    "ubuntu/apt": {
+      "cmd": "sudo apt install pgcli",
+      "reference": "https://command-not-found.com/pgcli",
+      "dsnap": "pgcli"
+    },
+    "kali/apt": {
+      "cmd": "sudo apt install pgcli",
+      "reference": "https://command-not-found.com/pgcli",
+      "dsnap": "pgcli"
+    },
+    "raspbian/apt": {
+      "cmd": "sudo apt-get install pgcli",
+      "reference": "https://command-not-found.com/pgcli"
+    }
+  }
+}

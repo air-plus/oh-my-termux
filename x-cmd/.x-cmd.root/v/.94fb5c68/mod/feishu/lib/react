@@ -1,0 +1,102 @@
+# shellcheck shell=sh disable=SC2016,SC3043
+
+___x_cmd_feishu_reactor_echo(){
+    ___x_cmd_feishu_abot_send_text --chatid "$MSG_CHATID" "$MSG_BODY"
+}
+
+___x_cmd_feishu_reactor_repl(){
+    local resp; resp="$(eval "$MSG_BODY" 2>&1)"
+    if [ -z "$resp" ]; then
+        feishu:warn "Send message skipped: executed command returned empty output"
+        return $?
+    fi
+    ___x_cmd_feishu_abot_send_text --chatid "$MSG_CHATID" "$resp"
+}
+
+___x_cmd_feishu_react(){
+    param:void
+
+    local timeout=$(( 1 * 60 * 60 * 1000 ))
+    local runner=""
+
+    while [ $# -gt 0 ]; do
+        case "$1" in
+            -h|--help|"")       ___x_cmd help -m feishu bot react ;     return 0 ;;
+            --timeout)          timeout="$2" ; arg:2:shift ;;
+            --runner)           runner="$2" ; arg:2:shift ;;
+            --)                 shift ; break ;;
+            *)                  break ;;
+        esac
+    done
+
+    if [ $# -eq 0 ]; then
+        runner="${runner:-echo}"
+        case "$runner" in
+            echo)       set -- ___x_cmd_feishu_reactor_echo ;;
+            repl)       set -- ___x_cmd_feishu_reactor_repl ;;
+        esac
+    fi
+
+    local cur_token=
+    local x_=
+    ____x_cmd_tenant_token || return
+    cur_token="$x_"
+
+    while true; do
+        {
+            ___x_cmd_feishu_listen --json
+        } | {
+            local msg_line=""
+            local MSG_CHATID=""  MSG_FROM=""
+            while read -r msg_line; do
+                ___x_cmd pipevar msg_line   ___x_cmd jo env .   \
+                        MSG_ID=.message_id                     \
+                        MSG_FROM=.sender.id                     \
+                        MSG_FROM_TYPE=.sender.sender_type       \
+                        MSG_CHATID=.chat_id                     \
+                        MSG_TYPE=.msg_type                      \
+                        MSG_CONTENT=.body.content
+
+                ___x_cmd_feishu_item_decrypt___
+                "$@"
+            done
+        }
+
+        ___x_cmd sleep 5 || return $?
+    done
+}
+
+___x_cmd_feishu_item_decrypt___(){
+    local FILE_KEY
+    case "$MSG_TYPE" in
+        text)
+            MSG_BODY="$(printf "%s" "$MSG_CONTENT" | ___x_cmd jq -r .text)"
+            feishu:info "Received a message: $MSG_BODY"
+            return
+            ;;
+        image)
+            FILE_KEY="$(printf "%s" "$MSG_CONTENT" | ___x_cmd jq -r .image_key)"
+            MSG_FILE_NAME="${FILE_KEY}.jpg"
+            ;;
+        file)
+            FILE_KEY="$(printf "%s" "$MSG_CONTENT" | ___x_cmd jq -r .file_key)"
+            MSG_FILE_NAME="$(printf "%s" "$MSG_CONTENT" | ___x_cmd jq -r .file_name)"
+            ;;
+    esac
+
+    feishu:info "Downloading media file..."
+    ___x_cmd_feishu_download_resource "$MSG_ID" "$FILE_KEY" "$MSG_TYPE" "$MSG_FILE_NAME"
+    MSG_BODY="File save success"
+}
+
+___x_cmd_feishu_download_resource(){
+    local message_id="$1"
+    local file_key="$2"
+    local type="$3"
+    local output_file="$4"
+
+    curl -s -L -X GET "https://open.feishu.cn/open-apis/im/v1/messages/${message_id}/resources/${file_key}?type=${type}" \
+        -H "Authorization: Bearer $cur_token" \
+        -o "$output_file"
+}
+

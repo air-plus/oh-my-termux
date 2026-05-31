@@ -1,0 +1,19 @@
+{
+  "lang": "Go",
+  "homepage": "https://github.com/mark3labs/mcphost",
+  "desc": {
+    "cn": "一个 CLI 主机应用程序，支持大型语言模型 (LLM) 通过模型上下文协议 (MCP) 与外部工具交互。",
+    "en": "A CLI host application that enables Large Language Models (LLMs) to interact with external tools through the Model Context Protocol (MCP)."
+  },
+  "rule": {
+    "/go": {
+      "cmd": "go install github.com/mark3labs/mcphost@latest",
+      "reference": "https://github.com/mark3labs/mcphost?tab=readme-ov-file#installation-",
+      "dsnap": "github.com/mark3labs/mcphost@latest"
+    },
+    "arch/yay": {
+      "cmd": "yay -S mcphost",
+      "reference": "https://aur.archlinux.org/packages/mcphost"
+    }
+  }
+}

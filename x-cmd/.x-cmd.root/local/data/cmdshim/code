@@ -1,0 +1,41 @@
+
+___x_cmd_cmds_mv(){
+    /bin/mv "$@"
+}
+
+___x_cmd_cmds_cp(){
+    /bin/cp "$@"
+}
+
+___x_cmd_cmds_mkdir(){
+    /bin/mkdir "$@"
+}
+
+___x_cmd_cmds_rm(){
+    /bin/rm "$@"
+}
+
+___x_cmd_cmds_touch(){
+    /bin/touch "$@"
+}
+
+___x_cmd_cmds_awk(){
+    /bin/awk "$@"
+}
+
+___x_cmd_cmds_ls(){
+    /bin/ls "$@"
+}
+
+___x_cmd_cmds_cat(){
+    /bin/cat "$@"
+}
+
+___x_cmd_cmds_sleep(){
+    /bin/sleep "$@"
+}
+
+___x_cmd_cmds_ln(){
+    /bin/ln "$@"
+}
+

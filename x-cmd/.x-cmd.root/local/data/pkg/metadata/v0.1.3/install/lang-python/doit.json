@@ -1,0 +1,19 @@
+{
+  "lang": "Python",
+  "homepage": "https://pydoit.org/",
+  "desc": {
+    "cn": "任务运行器和构建工具",
+    "en": "task management & automation tool"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use doit",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/pip": {
+      "cmd": "pip install doit",
+      "reference": "https://pydoit.org/install.html",
+      "dsnap": "doit"
+    }
+  }
+}

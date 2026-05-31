@@ -1,0 +1,69 @@
+# shellcheck shell=dash
+
+# MACOS -- opendirectory --
+# Require sudo
+# /private/var/db/dslocal/nodes/Default/users/
+
+___x_cmd_passwd___main(){
+    [ $# -gt 0 ]    ||  set -- --auto
+
+    local op="$1";      shift
+    case "$op" in
+        --help|-h)      ___x_cmd help -m passwd ; return 0 ;;
+
+        --app|--csv|--tsv|--raw|--auto)
+                        "___x_cmd_passwd___${op#--}" "$@" ;;
+    esac
+}
+
+___x_cmd_passwd___tsv(){
+    ___x_cmd_passwd___csv | ___x_cmd tsv fromcsv
+}
+
+___x_cmd_passwd___csv(){
+    ___x_cmd_cmds_awk -F: '
+    function csv_quote( e ){
+        gsub("\"", "\"\"", e)
+        return "\"" e "\""
+    }
+
+    function csv_quote_ifmust( e ){
+        return (e ~ "(\")|[\r\n,]") ? csv_quote( e ) : e
+    }
+    $0 ~ /^[\s]*#/ {
+        next
+    }
+
+    BEGIN{
+        printf("%s,%s,%s,%s,%s,%s,%s\n", "user", "password", "uid", "gid", "comment", "homedir", "shell")
+    }
+
+    {
+        user    =   csv_quote_ifmust($1)
+        passwd  =   csv_quote_ifmust($2)
+        uid     =   csv_quote_ifmust($3)
+        gid     =   csv_quote_ifmust($4)
+        comment =   csv_quote_ifmust($5)
+        homedir =   csv_quote_ifmust($6)
+        shell   =   csv_quote_ifmust($7)
+
+        printf("%s,%s,%s,%s,%s,%s,%s\n", user, passwd, uid, gid, comment, homedir, shell)
+    }' /etc/passwd
+
+}
+
+___x_cmd_passwd___raw(){
+    ___x_cmd_cmds cat /etc/passwd
+}
+
+___x_cmd_passwd___app(){
+    ___x_cmd_passwd___csv | ___x_cmd csv --app
+}
+
+___x_cmd_passwd___auto(){
+    if [ -t 1 ]; then
+        ___x_cmd_passwd___app
+    else
+        ___x_cmd_passwd___tsv
+    fi
+}

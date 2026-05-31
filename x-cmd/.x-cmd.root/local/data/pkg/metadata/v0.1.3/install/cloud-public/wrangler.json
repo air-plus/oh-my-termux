@@ -1,0 +1,19 @@
+{
+  "lang": "typescript",
+  "homepage": "https://github.com/cloudflare/workers-sdk",
+  "desc": {
+    "cn": "Cloudflare Workers 的 CLI",
+    "en": "the CLI for Cloudflare Workers"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use wrangler",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/npm": {
+      "cmd": "npm install -g wrangler",
+      "reference": "https://github.com/cloudflare/workers-sdk?tab=readme-ov-file#quick-start",
+      "dsnap": "wrangler"
+    }
+  }
+}

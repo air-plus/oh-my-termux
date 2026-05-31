@@ -1,0 +1,15 @@
+{
+  "desc": {
+    "cn": "命令行录制工具，用于将终端的操作过程录制成视频文件",
+    "en": "Command line recording tool, used to record terminal operations into video files"
+  },
+  "homepage": "https://github.com/charmbracelet/vhs",
+  "license": "MIT",
+  "bin": "vhs",
+  "v0.5.0": {
+    "info": null
+  },
+  "v0.7.1": {
+    "info": null
+  }
+}

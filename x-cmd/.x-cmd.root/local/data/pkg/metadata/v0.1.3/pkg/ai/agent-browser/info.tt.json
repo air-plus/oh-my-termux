@@ -1,0 +1,12 @@
+{
+  "homepage": "https://github.com/vercel-labs/agent-browser",
+  "desc": {
+    "cn": "AI 代理的无头浏览器自动化 CLI。快速 Rust CLI，带 Node.js 后备。",
+    "en": "Headless browser automation CLI for AI agents. Fast Rust CLI with Node.js fallback."
+  },
+  "license": "Apache-2.0",
+  "bin": "agent-browser",
+  "v0.26.0": {
+    "info": null
+  }
+}

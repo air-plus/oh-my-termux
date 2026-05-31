@@ -1,0 +1,30 @@
+{
+  "lang": "C++",
+  "homepage": "https://www.blender.org/download/",
+  "desc": {
+    "cn": "免费、开源、跨平台的专业 3D 创作软件",
+    "en": "Free, open-source, cross-platform professional 3D creation software."
+  },
+  "rule": {
+    "darwin/brew": {
+      "cmd": "brew install --cask blender",
+      "reference": "https://formulae.brew.sh/cask/blender#default"
+    },
+    "ubuntu/snap": {
+      "cmd": "snap install blender --classic",
+      "reference": "https://docs.blender.org/manual/en/latest/getting_started/installing/linux.html"
+    },
+    "debian/snap": {
+      "cmd": "snap install blender --classic",
+      "reference": "https://docs.blender.org/manual/en/latest/getting_started/installing/linux.html"
+    },
+    "fedora/snap": {
+      "cmd": "snap install blender --classic",
+      "reference": "https://docs.blender.org/manual/en/latest/getting_started/installing/linux.html"
+    },
+    "arch/yay": {
+      "cmd": "yay -S blender-bin",
+      "reference": "https://aur.archlinux.org/packages/blender-bin"
+    }
+  }
+}

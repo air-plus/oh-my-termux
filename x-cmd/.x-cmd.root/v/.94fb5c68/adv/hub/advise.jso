@@ -1,0 +1,180 @@
+{
+"#name"
+:
+{
+"hub"
+:
+null
+,
+"en"
+:
+"Securely upload, store, and share scripts in the cloud"
+,
+"cn"
+:
+"快速上传、加密托管并分享脚本"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"hub 是构建在 x-cmd 云服务上的脚本管理工具，致力于帮助用户打造专属的云端脚本空间。它支持将脚本安全地上传至云端加密托管，确保隐私不泄露，同时便于随时访问、跨设备调用或分享给他人。\n"
+,
+"en"
+:
+"`hub` is a script management tool powered by the x-cmd cloud service, designed to help users build a personal cloud space for scripts.\nIt enables secure, encrypted storage of scripts in the cloud, making them easy to access, execute, and share across devices.\n"
+}
+,
+"#tip"
+:
+[
+{
+"cn"
+:
+"AI Agent 可直接运行 `x hub login`，会自动获取登录 URL，将 URL 发送给用户在浏览器中完成授权即可"
+,
+"en"
+:
+"AI agents can run `x hub login` directly to get a login URL, then send the URL to the user to authorize in their browser"
+}
+,
+{
+"cn"
+:
+"使用 hub 模块需要 x-cmd hub 账号，支持使用 GitHub 或微信登录"
+,
+"en"
+:
+"An x-cmd hub account is required to use the hub module. Login via GitHub or WeChat is supported."
+}
+]
+,
+"#subcmd:main"
+:
+[
+"account"
+,
+"access"
+,
+"file"
+,
+"cc"
+,
+"rag"
+]
+,
+"#subcmd:shortcut"
+:
+[
+"login"
+,
+"logout"
+,
+"info"
+,
+"bind"
+]
+,
+"#subcmd:inner"
+:
+[
+"ai"
+,
+"org"
+,
+"keypair"
+,
+"_advise"
+]
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x hub login"
+,
+"cn"
+:
+"登录 Hub 账号，AI Agent 直接运行即可，将输出的 URL 发给用户完成授权"
+,
+"en"
+:
+"Login to Hub account, AI agents can run this directly and send the URL output to the user for authorization"
+}
+,
+{
+"cmd"
+:
+"x hub file put --public example.txt"
+,
+"cn"
+:
+"上传本地文件 example.txt 到云端 me:example.txt, 并设置为公开文件"
+,
+"en"
+:
+"Upload local file example.txt to cloud me:example.txt, and set it as a public file"
+}
+,
+{
+"cmd"
+:
+"x hub rag ask \"x-cmd 如何使用\""
+,
+"cn"
+:
+"在知识库中搜索相关问题答案。"
+,
+"en"
+:
+"Search the knowledge base for answers to a question."
+}
+]
+,
+"$ref"
+:
+"x-advise://hub/data/main.jso"
+,
+":"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"使用指定的 profile"
+,
+"en"
+:
+"Use the specified profile"
+}
+,
+"#tag"
+:
+[
+"inner"
+]
+,
+"#nospace"
+:
+true
+,
+"#option"
+:
+true
+,
+"#1"
+:
+{
+"#exec"
+:
+"candidate_exec_arr=( $(x cfgy advise profile hub) )"
+}
+}
+}
+

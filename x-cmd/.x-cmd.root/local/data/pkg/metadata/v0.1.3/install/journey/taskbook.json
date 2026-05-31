@@ -1,0 +1,31 @@
+{
+  "lang": "Javascript",
+  "homepage": "https://github.com/klaussinani/taskbook",
+  "desc": {
+    "cn": "命令行栖息地的任务、看板和注释",
+    "en": "Tasks, boards & notes for the command-line habitat"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use taskbook",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/npm": {
+      "cmd": "npm install --global taskbook",
+      "reference": "https://github.com/klaudiosinani/taskbook?tab=readme-ov-file#npm",
+      "dsnap": "taskbook"
+    },
+    "/yarn": {
+      "cmd": "yarn global add taskbook",
+      "reference": "https://github.com/klaudiosinani/taskbook?tab=readme-ov-file#yarn"
+    },
+    "/snap": {
+      "cmd": "snap install taskbook",
+      "reference": "https://github.com/klaudiosinani/taskbook?tab=readme-ov-file#snapcraft"
+    },
+    "arch/yay": {
+      "cmd": "yay -S taskbook-bin",
+      "reference": "https://aur.archlinux.org/packages/taskbook-bin"
+    }
+  }
+}

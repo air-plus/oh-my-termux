@@ -1,0 +1,25 @@
+{
+  "lang": "Go",
+  "homepage": "https://github.com/anthropics/anthropic-cli",
+  "desc": {
+    "cn": "Claude 开发者平台的官方 CLI",
+    "en": "The official CLI for the Claude Developer Platform"
+  },
+  "rule": {
+    "darwin/brew": {
+      "cmd": "brew install anthropics/tap/ant",
+      "reference": "https://platform.claude.com/docs/en/api/sdks/cli#installation"
+    },
+    "linux/curl": {
+      "cmd": "VERSION=1.0.0\nOS=$(uname -s | tr '[:upper:]' '[:lower:]')\nARCH=$(uname -m | sed -e 's/x86_64/amd64/' -e 's/aarch64/arm64/')\ncurl -fsSL \"https://github.com/anthropics/anthropic-cli/releases/download/v${VERSION}/ant_${VERSION}_${OS}_${ARCH}.tar.gz\" \\\n  | sudo tar -xz -C /usr/local/bin ant\n",
+      "reference": "https://platform.claude.com/docs/en/api/sdks/cli#installation"
+    },
+    "/go": {
+      "cmd": "go install 'github.com/anthropics/anthropic-cli/cmd/ant@latest'",
+      "reference": "https://platform.claude.com/docs/en/api/sdks/cli#installation"
+    }
+  },
+  "binlist": [
+    "ant"
+  ]
+}

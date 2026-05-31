@@ -1,0 +1,21 @@
+{
+  "lang": "Rust",
+  "homepage": "https://gitlab.exherbo.org/sydbox/sydbox",
+  "desc": {
+    "cn": "Rock-solid 应用沙箱内核，为 Linux 应用提供强隔离。",
+    "en": "Rock-solid application kernel to sandbox applications on Linux>=5.19."
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use sydbox",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/cargo": {
+      "cmd": "cargo install sydbox",
+      "reference": "https://crates.io/crates/syd"
+    }
+  },
+  "binlist": [
+    "syd"
+  ]
+}

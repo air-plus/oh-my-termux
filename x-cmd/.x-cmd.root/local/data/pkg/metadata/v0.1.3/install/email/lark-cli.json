@@ -1,0 +1,26 @@
+{
+  "lang": "Go",
+  "homepage": "https://github.com/larksuite/cli",
+  "desc": {
+    "cn": "飞书/Lark 开放平台命令行工具",
+    "en": "A command-line tool for Lark/Feishu Open Platform"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use lark-cli",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "arch/yay": {
+      "cmd": "yay -S lark-cli-bin",
+      "reference": "https://aur.archlinux.org/packages/lark-cli-bin"
+    },
+    "/npm": {
+      "cmd": "npm install -g @larksuite/cli",
+      "reference": "https://github.com/larksuite/cli?tab=readme-ov-file#install-cli",
+      "dsnap": "@larksuite/cli"
+    }
+  },
+  "binlist": [
+    "lark-cli"
+  ]
+}

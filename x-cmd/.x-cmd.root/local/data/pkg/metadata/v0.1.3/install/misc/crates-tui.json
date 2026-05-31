@@ -1,0 +1,23 @@
+{
+  "lang": "Rust",
+  "homepage": "https://github.com/ratatui-org/crates-tui",
+  "desc": {
+    "en": "crates-tui is a simple terminal user interface explorer for crates.io based on Ratatui",
+    "cn": "crates-tui 是一个基于 Ratatui 的、用于 crates.io 的简洁终端用户界面浏览器。"
+  },
+  "rule": {
+    "/cargo": {
+      "cmd": "cargo install crates-tui",
+      "reference": "https://github.com/ratatui/crates-tui?tab=readme-ov-file#install",
+      "dsnap": "crates-tui"
+    },
+    "arch/paru": {
+      "cmd": "paru -S crates-tui",
+      "reference": "https://github.com/ratatui/crates-tui?tab=readme-ov-file#install"
+    },
+    "arch/yay": {
+      "cmd": "yay -S crates-tui",
+      "reference": "https://aur.archlinux.org/packages/crates-tui"
+    }
+  }
+}

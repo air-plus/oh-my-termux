@@ -1,0 +1,18 @@
+{
+  "homepage": "https://github.com/rustfs/rustfs",
+  "desc": {
+    "cn": "用 Rust 构建的高性能分布式对象存储系统",
+    "en": "A high-performance, distributed object storage system built in Rust"
+  },
+  "license": "Apache-2.0",
+  "bin": "rustfs",
+  "v1.0.0-alpha.90": {
+    "info": null
+  },
+  "v1.0.0-alpha.96": {
+    "info": null
+  },
+  "v1.0.0-beta.1": {
+    "info": null
+  }
+}

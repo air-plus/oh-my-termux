@@ -1,0 +1,23 @@
+{
+  "lang": "Python",
+  "homepage": "https://github.com/KillianLucas/open-interpreter",
+  "desc": {
+    "cn": "OpenAI 代码解释器的一个开源的、本地运行的实现",
+    "en": "An open-source, locally running implementation of OpenAI's Code Interpreter"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use open-interpreter",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/pip": {
+      "cmd": "pip install open-interpreter",
+      "reference": "https://github.com/KillianLucas/open-interpreter?tab=readme-ov-file#quick-start",
+      "dsnap": "open-interpreter"
+    },
+    "arch/yay": {
+      "cmd": "yay -S open-interpreter-desktop-bin",
+      "reference": "https://aur.archlinux.org/packages/open-interpreter-desktop-bin"
+    }
+  }
+}

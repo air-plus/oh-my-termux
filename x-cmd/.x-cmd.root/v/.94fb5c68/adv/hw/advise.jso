@@ -1,0 +1,214 @@
+{
+"#name"
+:
+{
+"hw"
+:
+null
+,
+"en"
+:
+"Hardware peripherals overview"
+,
+"cn"
+:
+"外设硬件聚合概览"
+}
+,
+"#synopsis"
+:
+[
+{
+"x hw [subcommand]"
+:
+null
+}
+,
+{
+"x hw"
+:
+null
+}
+,
+{
+"x hw info"
+:
+null
+}
+,
+{
+"x hw ls"
+:
+null
+}
+,
+{
+"x hw --fresh"
+:
+null
+}
+]
+,
+"#desc"
+:
+{
+"en"
+:
+"Hardware peripherals tool with three modes: x hw (default = sum), x hw info, x hw ls, x hw --fresh. Cross-platform (macOS/Linux) with TTY color support."
+,
+"cn"
+:
+"外设硬件工具三种模式：x hw（默认=sum）、x hw info、x hw ls、x hw --fresh。跨平台（macOS/Linux），支持 TTY 彩色输出。"
+}
+,
+"#subcmd:Option"
+:
+[
+"-h"
+,
+"--help"
+,
+"--fresh"
+]
+,
+"sum"
+:
+{
+"#synopsis"
+:
+""
+,
+"#desc"
+:
+{
+"en"
+:
+"Default subcommand (same as running bare x hw). Shows peripheral overview table then network interface table."
+,
+"cn"
+:
+"默认子命令（等同于直接运行 x hw）。显示外设概览表格，然后显示网络接口表格。"
+}
+}
+,
+"info"
+:
+{
+"#synopsis"
+:
+""
+,
+"#desc"
+:
+{
+"en"
+:
+"Show detailed peripheral info in key:value format. Sections: Bluetooth, Audio, Camera, Card Reader, Battery, Thunderbolt, HID."
+,
+"cn"
+:
+"以 key:value 格式显示详细外设信息。段落：蓝牙、音频、摄像头、读卡器、电池、Thunderbolt、HID。"
+}
+}
+,
+"ls"
+:
+{
+"#synopsis"
+:
+""
+,
+"#desc"
+:
+{
+"en"
+:
+"Show compact device table with columns: TYPE, DEVICE, DETAIL."
+,
+"cn"
+:
+"显示紧凑设备表格，列：TYPE、DEVICE、DETAIL。"
+}
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x hw"
+,
+"cn"
+:
+"示例: 显示完整外设概览（外设表格 + 网络接口）"
+,
+"en"
+:
+"Example: Display full peripheral overview (peripherals + network)"
+}
+,
+{
+"cmd"
+:
+"x hw info"
+,
+"cn"
+:
+"示例: 显示详细外设信息"
+,
+"en"
+:
+"Example: Show detailed peripheral info"
+}
+,
+{
+"cmd"
+:
+"x hw ls"
+,
+"cn"
+:
+"示例: 紧凑表格列出所有外设"
+,
+"en"
+:
+"Example: List all peripherals in compact table"
+}
+,
+{
+"cmd"
+:
+"x hw --fresh"
+,
+"cn"
+:
+"示例: 强制刷新缓存并显示概览"
+,
+"en"
+:
+"Example: Force refresh cache and show overview"
+}
+]
+,
+"#other"
+:
+{
+"en"
+:
+{
+"Please visit our homepage for more information:"
+:
+"https://x-cmd.com"
+}
+,
+"cn"
+:
+{
+"请访问我们的主页以获取更多信息："
+:
+"https://x-cmd.com"
+}
+}
+}
+

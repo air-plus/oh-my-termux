@@ -1,0 +1,23 @@
+{
+  "lang": "Python",
+  "homepage": "https://github.com/microsoft/markitdown",
+  "desc": {
+    "cn": "用于将文件和办公文档转换为 Markdown 的 Python 工具",
+    "en": "Python tool for converting files and office documents to Markdown."
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use markitdown",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "arch/yay": {
+      "cmd": "yay -S python-markitdown-git",
+      "reference": "https://aur.archlinux.org/packages/python-markitdown-git"
+    },
+    "/pip": {
+      "cmd": "pip install 'markitdown[all]'",
+      "reference": "https://github.com/microsoft/markitdown?tab=readme-ov-file#installation",
+      "dsnap": "markitdown[all]"
+    }
+  }
+}

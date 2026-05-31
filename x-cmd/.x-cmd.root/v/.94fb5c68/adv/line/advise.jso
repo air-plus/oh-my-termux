@@ -1,0 +1,1286 @@
+{
+"#name"
+:
+{
+"line"
+:
+null
+,
+"en"
+:
+"functions for line-oriented situation"
+,
+"cn"
+:
+"行处理函数"
+}
+,
+"#synopsis"
+:
+[
+{
+"x line [<subcommand>...]"
+:
+null
+}
+]
+,
+"#subcmd:Iter"
+:
+[
+"uni"
+,
+"duo"
+,
+"uno"
+,
+"minus"
+]
+,
+"#subcmd:Transform"
+:
+[
+"join"
+,
+"wrap"
+,
+"prf"
+,
+"prln"
+]
+,
+"#subcmd:Parse"
+:
+[
+"from"
+,
+"fromcomma"
+,
+"fromcolon"
+,
+"fromeq"
+,
+"split"
+]
+,
+"#subcmd:Search"
+:
+[
+"indexof"
+,
+"contain"
+]
+,
+"#subcmd:Process"
+:
+[
+"args"
+,
+"arg1"
+,
+"count"
+]
+,
+"#tip"
+:
+[
+{
+"en"
+:
+"Most subcommands have a `_` suffix variant that stores result in `x_` variable for scripting (e.g. `join_`, `count_`, `indexof_`)."
+,
+"cn"
+:
+"大多数子命令有 `_` 后缀变体，将结果存入 `x_` 变量供脚本使用（如 `join_`、`count_`、`indexof_`）。"
+}
+,
+{
+"en"
+:
+"Use `x uni`, `x uno`, `x duo` as shortcuts for `x line uni`, `x line uno`, `x line duo`. These are set operations on lines."
+,
+"cn"
+:
+"可用 `x uni`、`x uno`、`x duo` 作为 `x line uni` 等的快捷方式，属于集合计算。"
+}
+,
+{
+"en"
+:
+"The `from` and `split` families use pure shell to avoid external commands. For large strings, prefer `tr` instead."
+,
+"cn"
+:
+"`from` 和 `split` 系列使用纯 shell 实现以避免调用外部命令。字符串过大时请使用 `tr`。"
+}
+]
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"{ seq 1 3; seq 3 1; } | x line uni"
+,
+"en"
+:
+"Deduplicate lines (like `sort | uniq` but faster)."
+,
+"cn"
+:
+"流式去重（类似 `sort | uniq` 但更快）。"
+}
+,
+{
+"cmd"
+:
+"seq 5 | x line join \", \""
+,
+"en"
+:
+"Join lines with separator."
+,
+"cn"
+:
+"使用分隔符连接行。"
+}
+,
+{
+"cmd"
+:
+"seq 3 | x line wrap \"[\" \"]\""
+,
+"en"
+:
+"Wrap each line with prefix and suffix."
+,
+"cn"
+:
+"用前缀和后缀包裹每行。"
+}
+,
+{
+"cmd"
+:
+"seq 3 | x line prf \"item_%s\\n\""
+,
+"en"
+:
+"Format each line with printf-style pattern."
+,
+"cn"
+:
+"使用 printf 格式化每行。"
+}
+,
+{
+"cmd"
+:
+"x line prln a b c"
+,
+"en"
+:
+"Print each argument on a new line."
+,
+"cn"
+:
+"将每个参数打印在新的一行。"
+}
+,
+{
+"cmd"
+:
+"seq 6 | x line args -n 2 'echo pair $1 $2'"
+,
+"en"
+:
+"Group lines in pairs (outputs: pair 1 2, pair 3 4, pair 5 6)."
+,
+"cn"
+:
+"将行两两分组（输出：pair 1 2, pair 3 4, pair 5 6）。"
+}
+,
+{
+"cmd"
+:
+"seq 10 | x line minus 3 5 7"
+,
+"en"
+:
+"Filter out lines matching patterns."
+,
+"cn"
+:
+"过滤掉匹配模式的行。"
+}
+,
+{
+"cmd"
+:
+"x line from \"$PATH\""
+,
+"en"
+:
+"Parse colon-separated string into lines."
+,
+"cn"
+:
+"将冒号分隔的字符串拆分为多行。"
+}
+,
+{
+"cmd"
+:
+"x line split \";\" \"a;b;c\""
+,
+"en"
+:
+"Split string by custom separator."
+,
+"cn"
+:
+"按自定义分隔符拆分字符串。"
+}
+,
+{
+"cmd"
+:
+"x line indexof pattern file.txt"
+,
+"en"
+:
+"Find line number of first match."
+,
+"cn"
+:
+"查找第一个匹配的行号。"
+}
+,
+{
+"cmd"
+:
+"x line count LICENSE .gitignore"
+,
+"en"
+:
+"Count lines in files."
+,
+"cn"
+:
+"统计文件行数。"
+}
+]
+,
+"uni"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Deduplicate lines from stdin, output only the first occurrence of each. Using a set for O(1) lookup, faster than `sort | uniq`."
+,
+"cn"
+:
+"流式去重：从标准输入读取数据，保留首次出现的行并输出，使用集合实现 O(1) 去重，无需排序，比 `sort | uniq` 更高效。"
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"{ seq 1 3; seq 3 1; } | x line uni"
+,
+"en"
+:
+"Deduplicate two number lists (1, 2, 3 and 3, 2, 1), output unique sequence 1, 2, 3."
+,
+"cn"
+:
+"对两个数字列表（1 2 3 和 3 2 1）进行去重，输出唯一序列 1 2 3。"
+}
+,
+{
+"cmd"
+:
+"{ ls /bin /usr/bin; } | x line uni"
+,
+"en"
+:
+"Show all commands in /bin and /usr/bin, each command listed only once."
+,
+"cn"
+:
+"显示在 /bin 和 /usr/bin 中的所有命令，同名命令只显示一次。"
+}
+]
+}
+,
+"duo"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Find and print duplicate lines from stdin, preserving the order of their second appearance. Supports `-f field` to check a specific field and `-s separator` for custom field separator."
+,
+"cn"
+:
+"从标准输入中查找并打印重复的行，保留第二次出现的顺序。支持 `-f 字段` 检查特定字段和 `-s 分隔符` 自定义字段分隔符。"
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"{ seq 1 3; seq 5 -1 3; } | x line duo"
+,
+"en"
+:
+"Process two lists (1,2,3 and 5,4,3), print duplicates (3) at 2nd occurrence."
+,
+"cn"
+:
+"处理两个列表（1,2,3 和 5,4,3），打印重复行（3）的第二次出现。"
+}
+,
+{
+"cmd"
+:
+"{ ls /bin /usr/bin; } | x line duo"
+,
+"en"
+:
+"Show commands appearing more than once in /bin and /usr/bin."
+,
+"cn"
+:
+"显示在 /bin 和 /usr/bin 中出现两次及以上的命令。"
+}
+]
+}
+,
+"uno"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Find and print unique lines from stdin, preserving the order of their first appearance."
+,
+"cn"
+:
+"从标准输入中查找并打印只出现一次的行，保留第一次出现的顺序。"
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"{ seq 1 3; seq 1 3; echo 2; } | x line uno"
+,
+"en"
+:
+"Process two number lists and an extra line, output lines appearing only once."
+,
+"cn"
+:
+"处理两个数字列表和一个额外行，输出仅出现一次的行。"
+}
+,
+{
+"cmd"
+:
+"{ ls /bin /usr/bin; } | x line uno"
+,
+"en"
+:
+"Show commands found only once in either /bin or /usr/bin."
+,
+"cn"
+:
+"显示在 /bin 或 /usr/bin 中只出现一次的命令。"
+}
+]
+}
+,
+"join"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Join all lines from stdin with a specified separator. Supports `--noblank` to skip empty lines, and optional `begin`/`end` to wrap each element."
+,
+"cn"
+:
+"使用指定的分隔符连接标准输入中的所有行。支持 `--noblank` 跳过空行，以及可选的 `begin`/`end` 参数包裹每个元素。"
+}
+,
+"#tip"
+:
+[
+{
+"en"
+:
+"Scripting: `join_`"
+,
+"cn"
+:
+"脚本开发可用 `join_`"
+}
+]
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"echo -e \"a\\nb\\nc\" | x line join \", \""
+,
+"en"
+:
+"Join lines with a comma and space."
+,
+"cn"
+:
+"使用逗号和空格连接行。"
+}
+,
+{
+"cmd"
+:
+"seq 3 | x line join \" | \""
+,
+"en"
+:
+"Join lines with a pipe separator."
+,
+"cn"
+:
+"使用管道符连接行。"
+}
+,
+{
+"cmd"
+:
+"echo -e \"a\\n\\nb\" | x line join --noblank \", \""
+,
+"en"
+:
+"Join lines, skipping blank lines."
+,
+"cn"
+:
+"连接行时跳过空行。"
+}
+]
+}
+,
+"wrap"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Wrap each line from stdin with a prefix and suffix."
+,
+"cn"
+:
+"用前缀和后缀包裹标准输入中的每一行。"
+}
+,
+"#tip"
+:
+[
+{
+"en"
+:
+"Scripting: `wrap_`"
+,
+"cn"
+:
+"脚本开发可用 `wrap_`"
+}
+]
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"seq 3 | x line wrap \"[\" \"]\""
+,
+"en"
+:
+"Wrap lines with square brackets."
+,
+"cn"
+:
+"用方括号包裹行。"
+}
+,
+{
+"cmd"
+:
+"seq 3 | x line wrap \"\\\"\" \"\\\"\""
+,
+"en"
+:
+"Wrap lines with double quotes."
+,
+"cn"
+:
+"用双引号包裹行。"
+}
+]
+}
+,
+"count"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Count lines from stdin or files, equivalent to `wc -l` but outputs only the number."
+,
+"cn"
+:
+"统计标准输入或文件的行数，相当于 `wc -l` 但只输出数字。"
+}
+,
+"#tip"
+:
+[
+{
+"en"
+:
+"Scripting: `count_`"
+,
+"cn"
+:
+"脚本开发可用 `count_`"
+}
+]
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x line count LICENSE .gitignore"
+,
+"en"
+:
+"Count lines in multiple files (prints total)."
+,
+"cn"
+:
+"统计多个文件的行数（打印总计）。"
+}
+,
+{
+"cmd"
+:
+"x line count <LICENSE"
+,
+"en"
+:
+"Count lines from stdin."
+,
+"cn"
+:
+"统计标准输入的行数。"
+}
+]
+}
+,
+"prf"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Format and print each line from stdin using printf-style format string."
+,
+"cn"
+:
+"使用 printf 风格的格式字符串格式化并打印标准输入中的每一行。"
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"seq 3 | x line prf \"item_%s\\n\""
+,
+"en"
+:
+"Prefix each line with \"item_\"."
+,
+"cn"
+:
+"为每行添加 \"item_\" 前缀。"
+}
+,
+{
+"cmd"
+:
+"seq 10 10 30 | x line prf \"%d -> %d\\n\""
+,
+"en"
+:
+"Format each line with custom pattern."
+,
+"cn"
+:
+"使用自定义模式格式化每行。"
+}
+]
+}
+,
+"prln"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Print arguments as separate lines."
+,
+"cn"
+:
+"将参数作为单独的行打印输出。"
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x line prln a b c"
+,
+"en"
+:
+"Print arguments a, b, c each on a new line."
+,
+"cn"
+:
+"将参数 a、b、c 每个打印在新的一行。"
+}
+,
+{
+"cmd"
+:
+"x line prln /path/to/dir/*"
+,
+"en"
+:
+"Expand glob pattern and print each file on a new line."
+,
+"cn"
+:
+"展开通配符模式并将每个文件打印在新的一行。"
+}
+]
+}
+,
+"minus"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Filter lines from stdin, removing lines that match specified patterns."
+,
+"cn"
+:
+"从标准输入过滤行，移除与指定模式匹配的行。"
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"seq 5 | x line minus 2"
+,
+"en"
+:
+"Remove line containing '2' from sequence 1 to 5."
+,
+"cn"
+:
+"从序列 1 到 5 中移除包含 '2' 的行。"
+}
+,
+{
+"cmd"
+:
+"seq 10 | x line minus 3 5 7"
+,
+"en"
+:
+"Remove multiple lines (3, 5, 7) from sequence."
+,
+"cn"
+:
+"从序列中移除多行（3、5、7）。"
+}
+]
+}
+,
+"args"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Group lines from stdin into batches of n lines, process each batch with a shell function."
+,
+"cn"
+:
+"将标准输入的行分组为每 n 行一批，使用 shell 函数处理每批数据。"
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"seq 6 | x line args -n 2 'echo group $1 $2'"
+,
+"en"
+:
+"Group every 2 lines, output \"group 1 2\", \"group 3 4\", \"group 5 6\"."
+,
+"cn"
+:
+"每两行分为一组，输出 \"group 1 2\"、\"group 3 4\"、\"group 5 6\"。"
+}
+,
+{
+"cmd"
+:
+"seq 9 | x line args -n 3 'echo batch $1 $2 $3'"
+,
+"en"
+:
+"Group every 3 lines, output \"batch 1 2 3\", \"batch 4 5 6\", \"batch 7 8 9\"."
+,
+"cn"
+:
+"每三行分为一组，输出 \"batch 1 2 3\"、\"batch 4 5 6\"、\"batch 7 8 9\"。"
+}
+]
+}
+,
+"arg1"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Process each line from stdin as $1 to a shell function, one line at a time."
+,
+"cn"
+:
+"将标准输入的每行作为 $1 传给 shell 函数，每次处理一行。"
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"seq 5 | x line arg1 'echo item $1'"
+,
+"en"
+:
+"Add \"item\" prefix to each line (outputs \"item 1\", \"item 2\", etc.)."
+,
+"cn"
+:
+"为每行添加 \"item\" 前缀（输出 \"item 1\"、\"item 2\" 等）。"
+}
+,
+{
+"cmd"
+:
+"printf \"%s\\n\" a b c | x line arg1 'echo got $1'"
+,
+"en"
+:
+"Process each line and show the value of $1."
+,
+"cn"
+:
+"处理每行并显示 $1 的值。"
+}
+]
+}
+,
+"from"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Parse a delimited string and print each element on a new line. Auto-detects colon, comma, or space as separator."
+,
+"cn"
+:
+"解析分隔字符串并将每个元素打印在新的一行。自动识别冒号、逗号或空格作为分隔符。"
+}
+,
+"#tip"
+:
+[
+{
+"en"
+:
+"Scripting: `from_`"
+,
+"cn"
+:
+"脚本开发可用 `from_`"
+}
+]
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x line from \"a:b:c\""
+,
+"en"
+:
+"Parse colon-separated string."
+,
+"cn"
+:
+"解析冒号分隔的字符串。"
+}
+,
+{
+"cmd"
+:
+"x line from \"a,b,c\""
+,
+"en"
+:
+"Parse comma-separated string."
+,
+"cn"
+:
+"解析逗号分隔的字符串。"
+}
+]
+}
+,
+"fromcomma"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Parse a comma-separated string and print each element on a new line."
+,
+"cn"
+:
+"解析逗号分隔的字符串并将每个元素打印在新的一行。"
+}
+,
+"#tip"
+:
+[
+{
+"en"
+:
+"Scripting: `fromcomma_`"
+,
+"cn"
+:
+"脚本开发可用 `fromcomma_`"
+}
+]
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x line fromcomma \"a,b,c,d\""
+,
+"en"
+:
+"Parse comma-separated values, print each on a new line."
+,
+"cn"
+:
+"解析逗号分隔的值，每个打印在新的一行。"
+}
+,
+{
+"cmd"
+:
+"x line fromcomma \"/usr/bin,/usr/local/bin,/bin\""
+,
+"en"
+:
+"Parse comma-separated path list."
+,
+"cn"
+:
+"解析逗号分隔的路径列表。"
+}
+]
+}
+,
+"fromcolon"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Parse a colon-separated string and print each element on a new line."
+,
+"cn"
+:
+"解析冒号分隔的字符串并将每个元素打印在新的一行。"
+}
+,
+"#tip"
+:
+[
+{
+"en"
+:
+"Scripting: `fromcolon_`"
+,
+"cn"
+:
+"脚本开发可用 `fromcolon_`"
+}
+]
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x line fromcolon \"a:b:c:d\""
+,
+"en"
+:
+"Parse colon-separated values, print each on a new line."
+,
+"cn"
+:
+"解析冒号分隔的值，每个打印在新的一行。"
+}
+,
+{
+"cmd"
+:
+"x line fromcolon \"$PATH\""
+,
+"en"
+:
+"Parse PATH environment variable."
+,
+"cn"
+:
+"解析 PATH 环境变量。"
+}
+]
+}
+,
+"fromeq"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Parse an equals-separated string and print each element on a new line. Useful for parsing key=value pairs like environment variables."
+,
+"cn"
+:
+"解析等号分隔的字符串并将每个元素打印在新的一行。常用于解析 key=value 形式的数据，如环境变量。"
+}
+,
+"#tip"
+:
+[
+{
+"en"
+:
+"Scripting: `fromeq_`"
+,
+"cn"
+:
+"脚本开发可用 `fromeq_`"
+}
+]
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x line fromeq \"a=b=c\""
+,
+"en"
+:
+"Parse equals-separated string, print each on a new line."
+,
+"cn"
+:
+"解析等号分隔的字符串，每个打印在新的一行。"
+}
+,
+{
+"cmd"
+:
+"x line fromeq \"$HOME\""
+,
+"en"
+:
+"Parse environment variable (e.g. HOME=/home/user)."
+,
+"cn"
+:
+"解析环境变量（如 HOME=/home/user）。"
+}
+]
+}
+,
+"split"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Split a string by a specified separator and print each element on a new line."
+,
+"cn"
+:
+"使用指定的分隔符拆分字符串并将每个元素打印在新的一行。"
+}
+,
+"#tip"
+:
+[
+{
+"en"
+:
+"Scripting: `split_`"
+,
+"cn"
+:
+"脚本开发可用 `split_`"
+}
+]
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x line split \";\" \"a;b;c\""
+,
+"en"
+:
+"Split semicolon-separated string."
+,
+"cn"
+:
+"拆分分号分隔的字符串。"
+}
+,
+{
+"cmd"
+:
+"x line split \"::\" \"one::two::three\""
+,
+"en"
+:
+"Split by multi-character separator."
+,
+"cn"
+:
+"按多字符分隔符拆分。"
+}
+]
+}
+,
+"indexof"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Find the line number of the first line containing the target string in a file or stdin."
+,
+"cn"
+:
+"查找第一个包含目标字符串的行号。"
+}
+,
+"#tip"
+:
+[
+{
+"en"
+:
+"Scripting: `indexof_` (supports `--awk`/`--sh` mode)"
+,
+"cn"
+:
+"脚本开发可用 `indexof_`（支持 `--awk`/`--sh` 模式）"
+}
+]
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x line indexof hello <<EOF hello world this is a test EOF"
+,
+"en"
+:
+"Find line number of \"hello\" from stdin."
+,
+"cn"
+:
+"从标准输入中查找 \"hello\" 的行号。"
+}
+,
+{
+"cmd"
+:
+"x line indexof pattern /path/to/file"
+,
+"en"
+:
+"Find line number of \"pattern\" in file."
+,
+"cn"
+:
+"在文件中查找 \"pattern\" 的行号。"
+}
+]
+}
+,
+"contain"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Check if a file or stdin contains the target string, returns 0 if found."
+,
+"cn"
+:
+"检查文件或标准输入是否包含目标字符串，找到则返回 0。"
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x line contain pattern /path/to/file && echo \"found\""
+,
+"en"
+:
+"Check if file contains \"pattern\", print \"found\" if yes."
+,
+"cn"
+:
+"检查文件是否包含 \"pattern\"，如果存在则打印 \"found\"。"
+}
+]
+}
+,
+"#other"
+:
+{
+"en"
+:
+{
+"Please visit our homepage for more information:"
+:
+"https://x-cmd.com"
+}
+,
+"cn"
+:
+{
+"请访问我们的主页以获取更多信息："
+:
+"https://x-cmd.com"
+}
+}
+}
+

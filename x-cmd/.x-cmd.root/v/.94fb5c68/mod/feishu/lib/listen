@@ -1,0 +1,140 @@
+# shellcheck shell=dash
+
+___x_cmd_feishu_listen(){
+    param:void
+
+    local chat_type="admin"
+    local format="" fp="" chatid=""
+    while [ $# -gt 0 ]; do
+        case "$1" in
+            -h|--help)      ___x_cmd help -m feishu listen "$@" ; return 0 ;;
+            --fp)           fp=1 ;          shift ;;
+            --json)         format="json";  shift ;;
+            --admin)        chat_type="admin"; chatid="$2";    arg:2:shift ;;
+            --group)
+                            if [ -n "$2" ]; then
+                                chat_type="group"; chatid="$2"; shift 2
+                            else
+                                chat_type="group"; shift
+                            fi
+                            ;;
+            *)              N=feishu M="Unknown op -> $1" log:ret:64   ;;
+        esac
+    done
+
+    local chats=
+    if [ -n "$chatid" ]; then
+        chats="$chatid"
+    else
+        chats="$(___x_cmd feishu group ls --json | ___x_cmd jq -r '.data.items[].chat_id' 2>/dev/null)"
+        [ -n "$chats" ] || N=feishu M="Failed to start listener: cannot get group list." log:ret:64
+    fi
+
+    local x_
+    local cur_token
+    ____x_cmd_tenant_token ; cur_token="$x_"
+    local start_time=; ___x_cmd date timestamp_ ; start_time="$x_"
+
+    local date=;
+    local sync_buf_file="${___X_CMD_FEISHU_TMP}/sync_buf"
+    ___x_cmd date timestamp_ ; date="$x_"
+    printf "%s" "$date" > "$sync_buf_file"
+    sleep 1
+
+    local fail_count=0
+    local curl_errcode=0
+    while true; do
+        [ ! -f "$sync_buf_file" ] || read -r date <"$sync_buf_file"
+
+        # Refresh token every 30 minutes
+        local now=; ___x_cmd date timestamp_ ; now="$x_"
+        if [ $((now - start_time)) -ge 1800 ]; then
+            ____x_cmd_tenant_token ; cur_token="$x_"
+            start_time="$now"
+        fi
+
+        local chatid
+        while IFS= read -r chatid; do
+            local resp=;
+            resp="$(___x_cmd_feishu_getmessages "$chatid" "$date")" || {
+                curl_errcode=$?
+                case "$curl_errcode" in
+                    28) continue ;;
+                    130)
+                        feishu:error "Exit because recved Interrupt."
+                        return 1 ;;
+                    *)
+                        feishu:error "Failed to start listener: $resp"
+                        ___x_cmd sleep 1
+                        return 1 ;;
+                esac
+            }
+
+            local msg="" sender="" last_msg_time="" code=""
+            ___x_cmd jo env .data.items msg=.1 sender=.1.sender.sender_type last_msg_time=.1.create_time code=.code <<A
+$resp
+A
+
+            # if [ -n "$code" ] && [ "$code" != "0" ]; then
+            #     fail_count=$((fail_count+1))
+            #     feishu:error "[fail-count=$fail_count] Failed to start listener: $resp"
+            #     if [ "$fail_count" -lt 5 ]; then
+            #         ___x_cmd sleep 1s || return $?
+            #         continue
+            #     else
+            #         return 1
+            #     fi
+            # fi
+            # fail_count=0
+
+            [ "$msg" != "[]" ]     || continue
+            [ "$sender" = "user" ] || continue
+            date="$(( (last_msg_time / 1000) + 1 ))"
+            printf "%s" "$date" > "$sync_buf_file"
+
+            if [ -n "$fp" ]; then
+                if [ "$chat_type" = "admin" ]; then
+                    chatid="admin"
+                fi
+
+                [ -n "$chatid" ] || {
+                    feishu:error "Failed to get chat id, cannot save data to file"
+                    continue
+                }
+                ___X_CMD_FEISHU_BOT_DATA="${___X_CMD_FEISHU_BOT_PATH}/data_${chatid}.tsv"
+                ___x_cmd ensurefp "$___X_CMD_FEISHU_BOT_DATA"
+                printf "%s\n" "$msg"  >> "$___X_CMD_FEISHU_BOT_DATA"
+                ___x_cmd tailer pub "$___X_CMD_ROOT_DATA/feishu/sub" "feishu:${chatid}"
+            elif [ "$format" = "json" ]; then
+                printf "%s\n" "$msg"
+            else
+                printf "%s\n" "$msg"
+            fi
+        done <<A
+$chats
+A
+    done
+}
+
+___x_cmd_feishu_getmessages(){
+    local chatid="$1"
+    local start_time="$2"
+    ___x_cmd curl -s "https://open.feishu.cn/open-apis/im/v1/messages?container_id=$chatid&container_id_type=chat&page_size=20&sort_type=ByCreateTimeDesc&start_time=$start_time" \
+                  -H "Authorization: Bearer $cur_token"
+}
+
+# ___x_cmd_feishu_parsemsg(){
+#     ___x_cmd awk0 -m j/json -m j/jiter '
+# { jiparse_after_tokenize(o, $0); }
+# END{
+#     kp = SUBSEP "\"1\"" SUBSEP "\"data\"" SUBSEP "\"items\""
+#     l = o[ kp L ]
+#     for (i=1; i<=l; ++i){
+#         kp_i = kp SUBSEP "\""i"\""
+#         kp_sender_type = kp_i SUBSEP "\"sender\"" SUBSEP "\"sender_type\""
+#         if (o[ kp_sender_type ] == "\"user\""){
+#             print jstr0(o, kp_i, " ")
+#         }
+#     }
+# }'
+# }

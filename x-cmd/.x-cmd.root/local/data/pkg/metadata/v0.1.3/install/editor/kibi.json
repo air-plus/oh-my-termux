@@ -1,0 +1,33 @@
+{
+  "lang": "Rust",
+  "homepage": "https://github.com/ilai-deutel/kibi",
+  "desc": {
+    "en": "A text editor in ≤1024 lines of code, written in Rust",
+    "cn": "用 Rust 编写的不超过 1024 行代码的文本编辑器"
+  },
+  "rule": {
+    "/cargo": {
+      "cmd": "cargo install kibi",
+      "reference": "https://github.com/ilai-deutel/kibi?tab=readme-ov-file#installation",
+      "dsnap": "kibi"
+    },
+    "arch/yay": {
+      "cmd": "yay -Syu kibi",
+      "reference": "https://github.com/ilai-deutel/kibi?tab=readme-ov-file#installation"
+    },
+    "fedora/dnf": {
+      "cmd": "dnf copr enable atim/kibi -y\ndnf install kibi\n",
+      "reference": "https://github.com/ilai-deutel/kibi?tab=readme-ov-file#installation",
+      "dsnap": "kibi"
+    },
+    "netbsd/pkgin": {
+      "cmd": "pkgin install kibi",
+      "reference": "https://github.com/ilai-deutel/kibi?tab=readme-ov-file#installation"
+    },
+    "alpine/apk": {
+      "cmd": "apk add kibi",
+      "reference": "https://github.com/ilai-deutel/kibi?tab=readme-ov-file#installation",
+      "dsnap": "kibi"
+    }
+  }
+}

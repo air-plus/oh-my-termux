@@ -1,0 +1,42 @@
+# Author:       Li Junhao       l@x-cmd.com
+# shellcheck    shell=sh        disable=SC2039,SC1090,SC3043,SC2263
+# license:      AGPLv3 | GPLv3
+
+___x_cmd_agent_request___workspace_prompt_(){
+    local workspace="$1"
+
+    x_="
+<WORKSPACE path=\"${workspace}\">
+
+You are working in workspace: \`${workspace}\`
+
+Read \`AGENTS.md\` or \`Agents.md\` (if it exists) for workspace structure, rules, and bootstrap instructions. Different workspaces may have different file layouts — let AGENTS.md guide what to read and how to use the workspace.
+
+## Current Files
+$(___x_cmd_cmds find "$workspace" -maxdepth 2 -type f 2>/dev/null | head -30)
+
+</WORKSPACE>
+"
+}
+
+___x_cmd_agent_request___reference_workspace_prompt_(){
+    local primary_workspace="$1"
+    local reference_workspace="$2"
+    local reference_name="$3"
+    [ -d "$reference_workspace" ] || return 0
+
+    x_="
+## Workspace Permission Declaration
+
+| Space | Path | Permission | Purpose |
+|-------|------|------------|---------|
+| **Current Workspace** | \`${primary_workspace}\` | **Read-Write** | Where you work |
+| **${reference_name} Reference Archive** | \`${reference_workspace}\` | **Read-Only** | User historical memory and preferences for reference |
+
+<READONLY-REFERENCE name=\"${reference_name}\" path=\"${reference_workspace}\">
+
+Read memory-related files in this reference workspace on demand for historical context and user preferences. Check \`AGENTS.md\` or \`Agents.md\` (if it exists) to locate them. This space is read-only — do not write, modify, or delete any files here.
+
+</READONLY-REFERENCE>
+"
+}

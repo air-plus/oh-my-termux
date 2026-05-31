@@ -1,0 +1,22 @@
+{
+  "lang": "C++",
+  "homepage": "https://protobuf.dev/",
+  "desc": {
+    "en": "Protocol Buffers are language-neutral, platform-neutral extensible mechanisms for serializing structured data",
+    "cn": "Protocol Buffers 是用于序列化结构化数据的语言中立、平台中立的可扩展机制"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use protobuf",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/curl": {
+      "cmd": "curl -sSL https://github.com/protocolbuffers/protobuf/releases/download/v34.0/protoc-34.0-linux-x86_64.zip -o protoc.zip",
+      "reference": "https://github.com/protocolbuffers/protobuf?tab=readme-ov-file#protobuf-compiler-installation"
+    },
+    "arch/yay": {
+      "cmd": "yay -S protobuf-git",
+      "reference": "https://aur.archlinux.org/packages/protobuf-git"
+    }
+  }
+}

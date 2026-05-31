@@ -1,0 +1,33 @@
+{
+  "homepage": "https://github.com/anomalyco/opencode",
+  "desc": {
+    "cn": "开源人工智能编码代理",
+    "en": "The open source AI coding agent."
+  },
+  "license": "MIT",
+  "bin": "opencode",
+  "v1.1.32": {
+    "info": null
+  },
+  "v1.1.43": {
+    "info": null
+  },
+  "v1.2.10": {
+    "info": null
+  },
+  "v1.2.26": {
+    "info": null
+  },
+  "v1.4.0": {
+    "info": null
+  },
+  "v1.14.19": {
+    "info": null
+  },
+  "v1.14.30": {
+    "info": null
+  },
+  "v1.14.48": {
+    "info": null
+  }
+}

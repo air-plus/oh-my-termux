@@ -1,0 +1,116 @@
+{
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x hub cc <file>"
+,
+"cn"
+:
+"云端编译脚本，二进制下载到当前目录"
+,
+"en"
+:
+"Cloud compile a script, binary downloaded to current directory"
+}
+,
+{
+"cmd"
+:
+"x hub cc -o <output_path> <file>"
+,
+"cn"
+:
+"编译并输出到指定路径"
+,
+"en"
+:
+"Compile and output to a specified path"
+}
+,
+{
+"cmd"
+:
+"x hub cc -o /usr/local/bin/<name> <file>"
+,
+"cn"
+:
+"编译并安装到系统路径"
+,
+"en"
+:
+"Compile and install to system path"
+}
+]
+,
+"#desc"
+:
+{
+"cn"
+:
+"云端编译脚本为二进制文件（支持 Go、Gop、Zig），默认下载到当前目录"
+,
+"en"
+:
+"Cloud compile scripts into binaries (supports Go, Gop, Zig), downloads to current directory by default"
+}
+,
+"-o|--output"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"指定输出文件路径"
+,
+"en"
+:
+"Specify output file path"
+}
+,
+"#1"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"输出文件路径"
+,
+"en"
+:
+"Output file path"
+}
+,
+"#exec"
+:
+"___x_cmd_advise__file"
+}
+}
+,
+"#1"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"需要编译的脚本文件路径"
+,
+"en"
+:
+"Script file path to compile"
+}
+,
+"#exec"
+:
+"___x_cmd_advise__file"
+}
+}
+

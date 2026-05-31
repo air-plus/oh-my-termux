@@ -1,0 +1,26 @@
+{
+  "lang": "CSS",
+  "homepage": "https://github.com/ryanoasis/nerd-fonts",
+  "desc": {
+    "cn": "Monofur 字体",
+    "en": "Monofur font"
+  },
+  "rule": {
+    "(linux|darwin|wsl2)/": {
+      "cmd": "x font nerd install Monofur",
+      "reference": "https://x-cmd.com/mod/font"
+    },
+    "win/powershell": {
+      "cmd": "x pwsh Invoke-WebRequest -Uri https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Monofur.zip -OutFile Monofur.zip",
+      "reference": "https://github.com/ryanoasis/nerd-fonts/releases/"
+    },
+    "/curl": {
+      "cmd": "curl -OL https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Monofur.tar.xz",
+      "reference": "https://github.com/ryanoasis/nerd-fonts/releases/"
+    },
+    "/wget": {
+      "cmd": "wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Monofur.tar.xz",
+      "reference": "https://github.com/ryanoasis/nerd-fonts/releases/"
+    }
+  }
+}

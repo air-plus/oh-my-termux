@@ -1,0 +1,26 @@
+{
+  "lang": "Go",
+  "homepage": "https://github.com/ossf/scorecard",
+  "desc": {
+    "cn": "OpenSSF 记分卡 - 开源的安全健康指标",
+    "en": "OpenSSF Scorecard - Security health metrics for Open Source"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use scorecard",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "darwin/brew": {
+      "cmd": "brew install scorecard",
+      "reference": "https://github.com/ossf/scorecard?tab=readme-ov-file#installation"
+    },
+    "/nix-shell": {
+      "cmd": "nix-shell -p nixpkgs.scorecard",
+      "reference": "https://github.com/ossf/scorecard?tab=readme-ov-file#installation"
+    },
+    "arch/yay": {
+      "cmd": "yay -S scorecard-bin",
+      "reference": "https://aur.archlinux.org/packages/scorecard-bin"
+    }
+  }
+}

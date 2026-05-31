@@ -1,0 +1,30 @@
+{
+  "lang": "shell",
+  "homepage": "https://github.com/akinomyoga/ble.sh",
+  "desc": {
+    "cn": "用 Bash 编写的命令行编辑器，具有语法高亮、自动建议、vim 模式等功能",
+    "en": "a line editor written in pure Bash with syntax highlighting, auto suggestions, vim modes, etc."
+  },
+  "rule": {
+    "/git": {
+      "cmd": "git clone --recursive --depth 1 --shallow-submodule https://github.com/akinomyoga/ble.sh.git ~/.local/share/blesh\necho 'source ~/.local/share/blesh/ble.sh' >> ~/.bashrc\n",
+      "reference": "https://github.com/akinomyoga/ble.sh?tab=readme-ov-file#quick-instructions"
+    },
+    "/curl": {
+      "cmd": "curl -L https://github.com/akinomyoga/ble.sh/releases/download/nightly/ble-nightly.tar.xz | tar xJf -\nsource ble-nightly/ble.sh\n",
+      "reference": "https://github.com/akinomyoga/ble.sh?tab=readme-ov-file#quick-instructions"
+    },
+    "/wget": {
+      "cmd": "wget -O - https://github.com/akinomyoga/ble.sh/releases/download/nightly/ble-nightly.tar.xz | tar xJf -\nsource ble-nightly/ble.sh\n",
+      "reference": "https://github.com/akinomyoga/ble.sh?tab=readme-ov-file#quick-instructions"
+    },
+    "arch/yay": {
+      "cmd": "git clone https://aur.archlinux.org/blesh.git && cd blesh && makepkg -fsi\nyay -S blesh\n",
+      "reference": "https://github.com/akinomyoga/ble.sh/wiki/Manual-A1-Installation#user-content-AUR"
+    },
+    "arch/paru": {
+      "cmd": "git clone https://aur.archlinux.org/blesh.git && cd blesh && makepkg -fsi\nparu -S blesh-git\n",
+      "reference": "https://github.com/akinomyoga/ble.sh/wiki/Manual-A1-Installation#user-content-AUR"
+    }
+  }
+}

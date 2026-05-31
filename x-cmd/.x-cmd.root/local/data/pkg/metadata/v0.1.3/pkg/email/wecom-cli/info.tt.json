@@ -1,0 +1,15 @@
+{
+  "homepage": "https://github.com/WecomTeam/wecom-cli",
+  "desc": {
+    "cn": "企业微信开放平台命令行工具",
+    "en": "A command-line tool for WeCom Open Platform"
+  },
+  "license": "MIT",
+  "bin": "wecom-cli",
+  "v0.1.5": {
+    "info": null
+  },
+  "v0.1.8": {
+    "info": null
+  }
+}

@@ -1,0 +1,53 @@
+# shellcheck shell=dash
+
+___x_cmd log init install
+xrc pkg ui
+
+xrc:mod:lib     install      snaplookup  update  fz     \
+                info/_index  run/_index
+
+# x install get linux/apt
+# x install get /apt
+
+___x_cmd_install___main(){
+    [ "$#" -gt 0 ] ||   set -- --fz
+
+    local op="$1";      shift
+    case "$op" in
+        -h|--help)          ___x_cmd help -m install "$@" ; return 0 ;;
+        --printinfo|--cat)  ___x_cmd_install_printinfo      "$@" ;;
+        --printcmd|--dry-run)
+                            ___x_cmd_install_printcmd       "$@" ;;
+
+        --available-tool)   ___x_cmd_install_available_tool "$@" ;;
+
+        --ls)               ___x_cmd_install_ls "$@" ;;
+
+        --fz|--fzf)         ___x_cmd_install___fz           "$@" ;;
+        --fzdata)           ___x_cmd_install___fz_data      "$@" ;;
+        --fzpreview)        ___x_cmd_install___fz_preview   "$@" ;;
+
+        -u|--update)        ___x_cmd_install_update     "$@" ;;
+        --co|,)             X_CO_MSHOT_CMD="x install" ___x_cmd co --mshot "$@" ;;
+
+        snaplookup_|snaplookup)
+                            ___x_cmd_install_"$op"      "$@" ;;
+
+        --best|--sys|--withtool)
+                            ___x_cmd_install_"${op#--}" "$@" ;;
+        --|--run)           ___x_cmd_install_run        "$@" ;;
+
+        *)                  ___x_cmd_install_run "$op"  "$@" ;;
+    esac
+}
+
+___x_cmd_install___init(){
+    ___X_CMD_INSTALL_VERSION="$___X_CMD_PKG_VERSION"
+    ___X_CMD_INSTALL_DATA="$___X_CMD_PKG_ROOT_PATH/metadata/$___X_CMD_PKG_VERSION/install"
+    ___X_CMD_INSTALL_DATA_ALLTSV="$___X_CMD_INSTALL_DATA/all.tsv"
+
+}
+
+
+___x_cmd_install___init
+

@@ -1,0 +1,23 @@
+{
+  "lang": "Go",
+  "homepage": "https://github.com/leg100/pug",
+  "desc": {
+    "cn": "用于高级 Terraform 用户的 TUI 工具。",
+    "en": "A terminal user interface for terraform power users."
+  },
+  "rule": {
+    "arch/yay": {
+      "cmd": "yay -S terraform-pug-bin",
+      "reference": "https://aur.archlinux.org/packages/terraform-pug-bin"
+    },
+    "/go": {
+      "cmd": "go install github.com/leg100/pug@latest",
+      "reference": "https://github.com/leg100/pug?tab=readme-ov-file#install-instructions",
+      "dsnap": "github.com/leg100/pug@latest"
+    },
+    "/brew": {
+      "cmd": "brew install leg100/tap/pug",
+      "reference": "https://github.com/leg100/pug?tab=readme-ov-file#install-instructions"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "lang": "Go",
+  "homepage": "https://github.com/maaslalani/invoice",
+  "desc": {
+    "cn": "命令行发票生成器",
+    "en": "Generate invoices from the command line"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use invoice",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "darwin/brew": {
+      "cmd": "brew install invoice",
+      "reference": "https://formulae.brew.sh/formula/invoice#default"
+    },
+    "arch/yay": {
+      "cmd": "yay -S invoice",
+      "reference": "https://aur.archlinux.org/packages/invoice"
+    },
+    "/go": {
+      "cmd": "go install github.com/maaslalani/invoice@main",
+      "reference": "https://github.com/maaslalani/invoice?tab=readme-ov-file#installation",
+      "dsnap": "github.com/maaslalani/invoice"
+    }
+  }
+}

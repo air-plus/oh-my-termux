@@ -1,0 +1,62 @@
+# shellcheck shell=dash
+
+___x_cmd log init helpapp
+
+___x_cmd_helpapp___main(){
+    if [ 0 -eq "$#" ]; then
+        ___x_cmd_helpapp___show_x_help
+        return
+    fi
+
+    local ___X_CMD_HELP_SHORT_MODE="$___X_CMD_HELP_SHORT_MODE"
+    case "$1" in
+        -h|--help)      M='helpapp' help:ret:0 ;;
+        --short)        shift; ___X_CMD_HELP_SHORT_MODE=1 ___x_cmd_helpapp___main "$@";;
+        -g|--generate)  shift; ___x_cmd_helpapp_gen_help "$@" ;;
+        -m)             shift; ___x_cmd_helpapp_gen_help_mod "$@" ;;
+
+        --show)         shift; ___x_cmd_x_cmd_help___show "$@" ;;
+        -c)             shift; ___x_cmd_helpapp_context "$@" ;;
+
+        *)              ___x_cmd_helpapp___show_x_help "$@" ;;
+    esac
+}
+
+# Cannot create repo in gitee named help
+___x_cmd_helpapp___show_x_help(){
+    ___x_cmd advise gen_x_advise
+    [ -f "$___X_CMD_ADVISE_MAN_CACHE_X_ADVISE_JSO" ] || N=help M="Not found x advise jso file[$___X_CMD_ADVISE_MAN_CACHE_X_ADVISE_JSO]" log:ret:1
+    if ___x_cmd_is_stdout2tty && ___x_cmd_runmode_allow_chatty; then
+        ___x_cmd_helpapp_app "$@"
+    else
+        ___x_cmd_helpapp_gen_help "$___X_CMD_ADVISE_MAN_CACHE_X_ADVISE_JSO" "$@"
+    fi
+}
+
+___x_cmd_helpapp___color_init_(){
+    # TODO: use ___x_cmd __termcolor_
+
+    ___X_CMD_HELP_NAME_COLOR='\033[36m'
+    # ___X_CMD_HELP_DESC_COLOR='\033[32m'
+    ___X_CMD_HELP_TITLE_COLOR='\033[93m'
+    ___X_CMD_HELP_RULE_COLOR='\033[90m'
+    ___X_CMD_HELP_CMD_COLOR='\033[32m'
+    # ___X_CMD_HELP_OTHER_NAME_COLOR='\033[36m'
+    ___X_CMD_HELP_OTHER_DESC_COLOR='\033[35m'
+    # ___X_CMD_HELP_TLDR_CMD_COLOR='\033[36m'
+    ___X_CMD_HELP_TLDR_DESC_COLOR='\033[36m'
+}
+
+___x_cmd_helpapp___color_init_
+
+___x_cmd_x_cmd_help___show(){
+    if [ $# -eq 0 ]; then
+        [ -n "$X_help_cmd" ] || {
+            helpapp:error "No help command provided."
+            return 1
+        }
+        eval "$X_help_cmd"
+    else
+        "$@"
+    fi
+}

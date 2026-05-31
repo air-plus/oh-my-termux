@@ -1,0 +1,32 @@
+{
+  "lang": "python",
+  "desc": {
+    "cn": "ddgr 是一个命令行实用程序，用于从终端搜索 DuckDuckGo（html 版本）",
+    "en": "ddgr is a cmdline utility to search DuckDuckGo (html version) from the terminal"
+  },
+  "homepage": "https://github.com/jarun/ddgr",
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use ddgr",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "darwin/brew": {
+      "cmd": "brew install ddgr",
+      "reference": "https://formulae.brew.sh/formula/ddgr"
+    },
+    "ubuntu/apt": {
+      "cmd": "sudo apt install ddgr",
+      "reference": "https://github.com/jarun/ddgr?tab=readme-ov-file#from-a-package-manager",
+      "dsnap": "ddgr"
+    },
+    "fedora/dnf": {
+      "cmd": "sudo dnf install ddgr",
+      "reference": "https://github.com/jarun/ddgr?tab=readme-ov-file#from-a-package-manager",
+      "dsnap": "ddgr"
+    },
+    "arch/yay": {
+      "cmd": "yay -S ddgr-git",
+      "reference": "https://aur.archlinux.org/packages/ddgr-git"
+    }
+  }
+}

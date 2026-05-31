@@ -1,0 +1,22 @@
+{
+  "lang": "Python",
+  "homepage": "https://github.com/laude-institute/terminal-bench",
+  "desc": {
+    "cn": "终端环境中人工智能代理的基准测试（依赖 git 和 Docker）",
+    "en": "a benchmark for ai agents in terminal environments (requires git and Docker)"
+  },
+  "rule": {
+    "/uv": {
+      "cmd": "uv tool install terminal-bench",
+      "reference": "https://github.com/laude-institute/terminal-bench?tab=readme-ov-file#quickstart"
+    },
+    "/pip": {
+      "cmd": "pip install terminal-bench",
+      "reference": "https://github.com/laude-institute/terminal-bench?tab=readme-ov-file#quickstart"
+    }
+  },
+  "binlist": [
+    "terminal-bench",
+    "tb"
+  ]
+}

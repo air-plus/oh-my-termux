@@ -1,0 +1,43 @@
+{
+  "lang": "rust",
+  "homepage": "https://asciinema.org",
+  "desc": {
+    "cn": "终端会话录制器、直播器和播放器",
+    "en": "Terminal session recorder, streamer and player"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use asciinema",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "ubuntu/apt": {
+      "cmd": "sudo apt install asciinema",
+      "reference": "https://docs.asciinema.org/getting-started/#__tabbed_1_2",
+      "dsnap": "asciinema"
+    },
+    "debian/apt": {
+      "cmd": "sudo apt install asciinema",
+      "reference": "https://docs.asciinema.org/getting-started/#__tabbed_1_2",
+      "dsnap": "asciinema"
+    },
+    "arch/pacman": {
+      "cmd": "sudo pacman -S asciinema",
+      "reference": "https://docs.asciinema.org/getting-started/#__tabbed_1_3"
+    },
+    "darwin/brew": {
+      "cmd": "brew install asciinema",
+      "reference": "https://docs.asciinema.org/getting-started/#__tabbed_1_4"
+    },
+    "/cargo": {
+      "cmd": "cargo install --locked --git https://github.com/asciinema/asciinema",
+      "reference": "https://github.com/asciinema/asciinema?tab=readme-ov-file#building"
+    },
+    "/pipx": {
+      "cmd": "pipx install asciinema",
+      "reference": "https://docs.asciinema.org/getting-started/#__tabbed_1_5"
+    }
+  },
+  "binlist": [
+    "asciinema"
+  ]
+}

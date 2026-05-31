@@ -1,0 +1,29 @@
+{
+  "lang": "Rust",
+  "homepage": "https://github.com/always-further/nono",
+  "desc": {
+    "cn": "为 AI 代理、MCP 和 LLM 工作负载提供安全、内核强制执行的沙箱",
+    "en": "Secure, kernel-enforced sandbox for AI agents, MCP and LLM workloads."
+  },
+  "rule": {
+    "darwin/brew": {
+      "cmd": "brew install nono",
+      "reference": "https://nono.sh/"
+    },
+    "arch/yay": {
+      "cmd": "yay -S nono-ai",
+      "reference": "https://aur.archlinux.org/packages/nono-ai"
+    },
+    "/cargo": {
+      "cmd": "cargo install nono-cli",
+      "reference": "https://nono.sh/"
+    },
+    "(debian|ubuntu)/curl": {
+      "cmd": "VERSION=$(curl -sI https://github.com/always-further/nono/releases/latest | grep -i location | grep -oP 'v\\K[0-9.]+')\nARCH=$(dpkg --print-architecture)\nwget https://github.com/always-further/nono/releases/download/v${VERSION}/nono-cli_${VERSION}_${ARCH}.deb\nsudo dpkg -i nono-cli_${VERSION}_${ARCH}.deb\n",
+      "reference": "https://nono.sh/docs/cli/getting_started/installation"
+    }
+  },
+  "binlist": [
+    "nono"
+  ]
+}

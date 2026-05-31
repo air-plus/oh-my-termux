@@ -1,0 +1,35 @@
+{
+  "lang": "Go",
+  "homepage": "https://github.com/steveyegge/beads",
+  "desc": {
+    "cn": "为您的编码代理提供内存升级",
+    "en": "A memory upgrade for your coding agent"
+  },
+  "rule": {
+    "/curl": {
+      "cmd": "curl -fsSL https://raw.githubusercontent.com/steveyegge/beads/main/scripts/install.sh | bash",
+      "reference": "https://github.com/steveyegge/beads?tab=readme-ov-file#-quick-start"
+    },
+    "/npm": {
+      "cmd": "npm install -g @beads/bd",
+      "reference": "https://github.com/steveyegge/beads?tab=readme-ov-file#-installation",
+      "dsnap": "@beads/bd"
+    },
+    "/go": {
+      "cmd": "go install github.com/steveyegge/beads/cmd/bd@latest",
+      "reference": "https://github.com/steveyegge/beads?tab=readme-ov-file#-installation",
+      "dsnap": "github.com/steveyegge/beads/cmd/bd@latest"
+    },
+    "darwin/brew": {
+      "cmd": "brew install beads",
+      "reference": "https://github.com/steveyegge/beads?tab=readme-ov-file#-installation"
+    },
+    "arch/yay": {
+      "cmd": "yay -S beads-bin",
+      "reference": "https://aur.archlinux.org/packages/beads-bin"
+    }
+  },
+  "binlist": [
+    "bd"
+  ]
+}

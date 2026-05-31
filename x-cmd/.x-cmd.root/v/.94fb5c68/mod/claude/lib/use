@@ -1,0 +1,136 @@
+# shellcheck shell=dash
+
+___x_cmd_claude_unuse(){
+    case "$1" in
+        -h|--help)      ___x_cmd help -m claude unuse "$@" ; return 0 ;;
+    esac
+
+    local settings_json="${HOME}/.claude/settings.json"
+    if [ ! -f "$settings_json" ]; then
+        claude:info "No settings file found at -> $settings_json"
+        return 0
+    fi
+
+    local tmpfile="${settings_json}.tmp.$$"
+    if ___x_cmd jq \
+        'del(.env.ANTHROPIC_BASE_URL) |
+         del(.env.ANTHROPIC_AUTH_TOKEN) |
+         del(.env.API_TIMEOUT_MS) |
+         del(.env.CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC) |
+         del(.env.CLAUDE_CODE_EFFORT_LEVEL) |
+         del(.env.ANTHROPIC_MODEL) |
+         del(.env.ANTHROPIC_SMALL_FAST_MODEL) |
+         del(.env.ANTHROPIC_DEFAULT_SONNET_MODEL) |
+         del(.env.ANTHROPIC_DEFAULT_OPUS_MODEL) |
+         del(.env.ANTHROPIC_DEFAULT_HAIKU_MODEL)' "$settings_json" > "$tmpfile";
+    then
+        ___x_cmd_cmds mv "$tmpfile" "$settings_json"
+        claude:info "Successfully removed provider settings from -> $settings_json"
+    else
+        ___x_cmd_cmds rm -f "$tmpfile"
+        claude:error "Failed to update settings file"
+        return 1
+    fi
+}
+
+# x claude use other <url> <apikey> <model> <fastmodel> <effortlevel>        # configure qwen
+
+___x_cmd_claude_use(){
+    [ $# -gt 0  ]   ||  set -- --help
+
+    local scope=""
+
+    while [ $# -gt 0 ]; do
+        case "$1" in
+            -h|--help)      ___x_cmd help -m claude use "$@" ; return 0 ;;
+            -p|--project)   scope=project ; shift ;;
+            *)              break ;;
+        esac
+    done
+
+    local provider="$1"
+
+    local model=""
+    local apikey=""
+
+    local codeplan_apikey=""
+    local endpoint=""
+
+    claude:provider:fetch:init
+
+    case "$provider" in
+        deepseek|ds)    ___x_cmd_claude_ds___fetch_         ||  return $?   ;;
+        kimi)           ___x_cmd_claude_kimi___fetch_       ||  return $?   ;;
+
+        minimax|mm)     ___x_cmd_claude_minimax___fetch_    ||  return $?   ;;
+        mthreads|mt)    ___x_cmd_claude_mthreads___fetch_   ||  return $?   ;;
+        zhipu|glm)      ___x_cmd_claude_zhipu___fetch_      ||  return $?   ;;
+
+        # TODO: qwen , ...
+        moonshot|doubao|sili|openrouter|ali|baidu|tencent)
+                        ___x_cmd_claude_"$provider"___fetch_ ||  return $?   ;;
+
+        custom|other)
+                        x_url="$2"
+                        x_apikey="$3"
+                        x_model="$4"
+                        x_fastmodel="${5:-"$x_model"}"
+                        x_effortlevel="${6:-"auto"}"
+                        claude:info "Setting provide -> $provider with [url=$x_url] [apikey=$x_apikey] [model=$x_model] [fastmodel=$x_fastmodel]"
+                        ;;
+
+        *)              claude:error "Unknown provider -> $provider"
+                        return 1
+    esac
+
+    claude:debug    \
+        --url "$x_url" --token "$x_apikey" --timeout "$x_timeout"   \
+        --model "$x_model" --fast_model "$x_fastmodel"              \
+        --nonessential_traffic "$x_nonessential_traffic"            \
+        --effortlevel "$x_effortlevel"                              \
+        "Use provider[$provider] to run claude-code"
+
+    local settings_json="${HOME}/.claude/settings.json"
+
+    if [ "$scope" = project ]; then
+        local x_=""
+        ___x_cmd_claude_setting_locate_or_create_ || return $?
+        settings_json="$x_"
+    fi
+
+    [ -f "$settings_json" ] || ___x_cmd fprintf "$settings_json" "{}"
+
+    local tmpfile="${settings_json}.tmp.$$"
+    if ___x_cmd jq \
+        --arg url "$x_url" \
+        --arg token "$x_apikey" \
+        --arg timeout "$x_timeout" \
+        --arg model "$x_model" \
+        --arg fastmodel "$x_fastmodel" \
+        --arg effortlevel "$x_effortlevel" \
+        '(.env.ANTHROPIC_BASE_URL) = $url |
+         (.env.ANTHROPIC_AUTH_TOKEN) = $token |
+         (.env.API_TIMEOUT_MS) = $timeout |
+         (.env.CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC) = "1" |
+         (.env.CLAUDE_CODE_EFFORT_LEVEL) = $effortlevel |
+         (.env.ANTHROPIC_MODEL) = $model |
+         (.env.ANTHROPIC_SMALL_FAST_MODEL) = $fastmodel |
+         (.env.ANTHROPIC_DEFAULT_SONNET_MODEL) = $model |
+         (.env.ANTHROPIC_DEFAULT_OPUS_MODEL) = $model |
+         (.env.ANTHROPIC_DEFAULT_HAIKU_MODEL) = $fastmodel' "$settings_json" > "$tmpfile"; then
+
+        ___x_cmd_cmds mv "$tmpfile" "$settings_json"
+
+        claude:info "Successfully update file -> $settings_json"
+    fi
+
+    local claude_json="${HOME}/.claude.json"
+    [ -f "$claude_json" ] || ___x_cmd_cmds touch "$claude_json"
+
+    tmpfile="${claude_json}.tmp.$$"
+    if ___x_cmd jq '.hasCompletedOnboarding = true' "$claude_json" > "$tmpfile"; then
+        ___x_cmd_cmds mv "$tmpfile" "$claude_json"
+        claude:info "Successfully update file -> $claude_json"
+    fi
+}
+

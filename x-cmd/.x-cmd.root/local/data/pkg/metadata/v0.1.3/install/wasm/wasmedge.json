@@ -1,0 +1,34 @@
+{
+  "lang": "C++",
+  "homepage": "https://wasmedge.org/",
+  "desc": {
+    "cn": "WasmEdge 是一个轻量级、高性能和可扩展的 WebAssembly 运行时，适用于云原生、边缘和去中心化应用程序",
+    "en": "WasmEdge is a lightweight, high-performance, and extensible WebAssembly runtime for cloud-native, edge, and decentralized applications"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use wasmedge",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "linux/curl": {
+      "cmd": "curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/install.sh | bash",
+      "reference": "https://wasmedge.org/docs/start/install#generic-linux-and-macos"
+    },
+    "darwin/curl": {
+      "cmd": "curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/install.sh | bash",
+      "reference": "https://wasmedge.org/docs/start/install#generic-linux-and-macos"
+    },
+    "(win|wsl2)/winget": {
+      "cmd": "x winget install wasmedge",
+      "reference": "https://wasmedge.org/docs/start/install#windows"
+    },
+    "fedora/dnf": {
+      "cmd": "sudo dnf install wasmedge",
+      "reference": "https://wasmedge.org/docs/start/install#fedora-and-red-hat-linux"
+    },
+    "arch/yay": {
+      "cmd": "yay -S wasmedge",
+      "reference": "https://aur.archlinux.org/packages/wasmedge"
+    }
+  }
+}

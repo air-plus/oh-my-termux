@@ -1,0 +1,26 @@
+{
+  "lang": "Typescript",
+  "homepage": "https://github.com/musistudio/claude-code-router",
+  "desc": {
+    "cn": "一个为 Claude Code 提供多模型支持的路由器，可将请求分配到不同的模型后端，实现灵活切换、自动路由与多模型协作",
+    "en": "A router that enables Claude Code to work with multiple model backends, supporting flexible switching, automatic routing, and seamless multi-model collaboration."
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use claude-code-router",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/npm": {
+      "cmd": "npm install -g @musistudio/claude-code-router",
+      "reference": "https://github.com/musistudio/claude-code-router?tab=readme-ov-file#1-installation",
+      "dsnap": "@musistudio/claude-code-router"
+    },
+    "arch/yay": {
+      "cmd": "yay -S claude-code-router",
+      "reference": "https://aur.archlinux.org/packages/claude-code-router"
+    }
+  },
+  "binlist": [
+    "ccr"
+  ]
+}

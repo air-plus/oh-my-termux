@@ -1,0 +1,12 @@
+{
+  "homepage": "https://github.com/rvben/rumdl",
+  "desc": {
+    "cn": "用 Rust 编写的 Markdown 代码检查和格式化工具",
+    "en": "Markdown Linter and Formatter written in Rust"
+  },
+  "license": "MIT",
+  "bin": "rumdl",
+  "v0.1.25": {
+    "info": null
+  }
+}

@@ -1,0 +1,312 @@
+{
+"#name"
+:
+{
+"module_name"
+:
+"epoch"
+,
+"cn"
+:
+"Unix 时间戳工具"
+,
+"en"
+:
+"Unix epoch timestamp utility"
+}
+,
+"#synopsis"
+:
+[
+{
+"x epoch [subcmd] [options]"
+:
+null
+,
+"cn"
+:
+"子命令与选项"
+,
+"en"
+:
+"Subcommand and options"
+}
+]
+,
+"#desc"
+:
+{
+"cn"
+:
+"获取和计算 Unix 时间戳（秒级和毫秒级）。\n支持获取当前 epoch、精确到毫秒的实时时间、以及时间戳差值计算。\n自动适配多种平台（bash EPOCHSECONDS、/proc/uptime、date +%s）。\n"
+,
+"en"
+:
+"Get and compute Unix epoch timestamps (seconds and milliseconds).\nSupports current epoch, millisecond-precision realtime, and timestamp difference calculation.\nAuto-adapts to multiple platforms (bash EPOCHSECONDS, /proc/uptime, date +%s).\n"
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x epoch get"
+,
+"cn"
+:
+"示例: 获取当前 Unix 时间戳（秒）"
+,
+"en"
+:
+"Example: Get current Unix timestamp (seconds)"
+}
+,
+{
+"cmd"
+:
+"x epoch ms"
+,
+"cn"
+:
+"示例: 当前毫秒时间戳（如 1710000000123）"
+,
+"en"
+:
+"Example: Current timestamp in milliseconds (e.g. 1710000000123)"
+}
+,
+{
+"cmd"
+:
+"x epoch real"
+,
+"cn"
+:
+"示例: 带毫秒小数的秒级时间戳（如 1710000000.123）"
+,
+"en"
+:
+"Example: Seconds with millisecond decimal (e.g. 1710000000.123)"
+}
+,
+{
+"cmd"
+:
+"x epoch minus 1710000000"
+,
+"cn"
+:
+"示例: 计算指定时间戳到当前的秒数"
+,
+"en"
+:
+"Example: Calculate seconds from a specific timestamp to now"
+}
+,
+{
+"cmd"
+:
+"x epoch minus 1710000000 1709990000"
+,
+"cn"
+:
+"示例: 计算两个时间戳的差值"
+,
+"en"
+:
+"Example: Calculate difference between two timestamps"
+}
+,
+{
+"cmd"
+:
+"x epoch minus -H 1710000000"
+,
+"cn"
+:
+"示例: 以人类可读格式输出时间差"
+,
+"en"
+:
+"Example: Output time difference in human-readable format"
+}
+,
+{
+"cmd"
+:
+"x epoch minus -H 1710000000 1709990000"
+,
+"cn"
+:
+"示例: 两个时间戳相差多久（人类可读格式）"
+,
+"en"
+:
+"Example: Time span between two timestamps in human-readable format"
+}
+,
+{
+"cmd"
+:
+"x epoch minus -H 0"
+,
+"cn"
+:
+"示例: Unix 纪元至今已过多久（人类可读格式）"
+,
+"en"
+:
+"Example: Time elapsed since Unix epoch in human-readable format"
+}
+]
+,
+"#tip"
+:
+[
+{
+"cn"
+:
+"脚本计时：先 `start=$(x epoch ms)`，结束后 `x epoch minus \"$start\"` 即可得到耗时秒数；加 -H 输出人类可读格式\n"
+,
+"en"
+:
+"Script timing: `start=$(x epoch ms)`, then `x epoch minus \"$start\"` for elapsed seconds; add -H for human-readable\n"
+}
+,
+{
+"cn"
+:
+"三种精度各有所长：get（秒整数）适合日志、ms（毫秒整数）适合性能测量、real（秒.毫秒）适合调试\n"
+,
+"en"
+:
+"Three precision levels: get (seconds) for logs, ms (milliseconds) for profiling, real (seconds.decimal) for debugging\n"
+}
+]
+,
+"#subcmd:Get"
+:
+[
+"get"
+,
+"ms"
+,
+"real"
+]
+,
+"#subcmd:Calculate"
+:
+[
+"minus"
+]
+,
+"get"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"获取当前 Unix 时间戳（整数，以秒为单位）"
+,
+"en"
+:
+"Get current Unix timestamp (seconds)"
+}
+}
+,
+"ms"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"获取当前 Unix 时间戳（整数，以毫秒为单位，如 1777307684454）"
+,
+"en"
+:
+"Get current Unix timestamp in milliseconds (integer, e.g. 1777307684454)"
+}
+}
+,
+"real"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"获取当前 Unix 时间戳（秒，带毫秒小数，如 1710000000.123）"
+,
+"en"
+:
+"Get current Unix timestamp in seconds with millisecond decimal (e.g. 1710000000.123)"
+}
+}
+,
+"minus"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"计算时间戳差值，支持人类可读格式输出"
+,
+"en"
+:
+"Calculate timestamp difference, with optional human-readable output"
+}
+,
+"#tip"
+:
+[
+{
+"cn"
+:
+"一个参数时计算该时间戳到当前的秒数，两个参数时计算前者减后者"
+,
+"en"
+:
+"One argument: seconds from that timestamp to now. Two arguments: first minus second"
+}
+,
+{
+"cn"
+:
+"加 -H 输出类似 1h30m 的人类可读格式"
+,
+"en"
+:
+"Add -H for human-readable output like 1h30m"
+}
+]
+}
+,
+"#other"
+:
+{
+"en"
+:
+{
+"Please visit our homepage for more information:"
+:
+"https://x-cmd.com/mod/epoch"
+}
+,
+"cn"
+:
+{
+"请访问我们的主页以获取更多信息："
+:
+"https://x-cmd.com/mod/epoch"
+}
+}
+}
+

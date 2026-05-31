@@ -1,0 +1,234 @@
+
+
+___x_cmd_cron_run(){
+    [ $# -gt 0 ]    ||  set -- --help
+
+    local ns="DEFAULT"
+    local joblist_dir=""
+    while [ $# -gt 0 ]; do
+        case "$1" in
+            --help|-h)  ___x_cmd help -m cron run; return 0 ;;
+            --ns)       ns="$2" ;       arg:2:shift ;;
+            --fp)       joblist_dir="$2"; arg:2:shift ;;
+            *)          break ;;
+        esac
+    done
+
+    # --fp allows external modules (e.g., claw) to specify custom data path
+    if [ -n "$joblist_dir" ]; then
+        ___x_cmd_cron_run___loop "$ns" "$joblist_dir"
+    else
+        ___x_cmd mkdirp "$___X_CMD_CRON/$ns/job"
+        ___x_cmd_cron_run___loop "$ns" "$___X_CMD_CRON/$ns/job"
+    fi
+}
+
+___x_cmd_cron_run___tz_normalize_(){
+    local tz="$1"
+    # If already POSIX format (contains offset digits), use as-is
+    case "$tz" in
+        *[0-9]*) x_="$tz"; return ;;
+    esac
+
+    # If the system has tzdata for this zone, use the original name
+    [ ! -f "/usr/share/zoneinfo/$tz" ] || { x_="$tz"; return; }
+
+    # Fallback: lookup in the bundled POSIX mapping table
+    local name
+    local posix
+    [ -f "$___X_CMD_CRON_TZMAP" ] || { x_="$tz"; return; }
+
+    while read -r name posix; do
+        [ -n "$name" ] || continue
+        case "$name" in
+            \#*) continue ;;
+        esac
+        [ "$name" = "$tz" ] && { x_="$posix"; return; }
+    done < "$___X_CMD_CRON_TZMAP"
+
+    x_="$tz"
+}
+
+___x_cmd_cron_run___loop(){
+    local ns="$1"
+    local joblist_dir="$2"
+
+    local datestr
+    local sleepsec
+    local tz
+    local x_
+
+    # Read TZ for this ns (do not export, only pass to date)
+    if [ -f "$___X_CMD_CRON/$ns/tz" ]; then
+        read -r tz < "$___X_CMD_CRON/$ns/tz"
+        x_=""; ___x_cmd_cron_run___tz_normalize_ "$tz"
+        tz="$x_"
+    fi
+
+    while true; do
+        ___x_cmd epoch get_     # the epoch seconds stored in x_
+
+        sleepsec=$(( 60 - $(( x_ % 60 )) ))
+        ___x_cmd_cmds sleep "${sleepsec}"
+        # sleep until the next minute boundary; command startup delay (sleep and date, ~5-10ms) ensures datestr reflects the intended minute
+
+        # Get current time as cron fields: min hour day month dow
+        if [ -n "$tz" ]; then
+            datestr="$( TZ="$tz" ___x_cmd_cmds date '+%M %H %d %m %w' )"
+        else
+            datestr="$( ___x_cmd_cmds date '+%M %H %d %m %w' )"
+        fi
+
+        # Find and execute matching cron jobs
+        ___x_cmd_cron_run___find_and_exec "$ns" "$datestr" "$joblist_dir"
+    done
+}
+
+___x_cmd_cron_runonce(){
+    local ns="DEFAULT"
+    local joblist_dir=""
+    while [ $# -gt 0 ]; do
+        case "$1" in
+            --help|-h)  ___x_cmd help -m cron runonce; return 0 ;;
+            --ns)       ns="$2" ;       arg:2:shift ;;
+            --fp)       joblist_dir="$2"; arg:2:shift ;;
+            *)          break ;;
+        esac
+    done
+
+    if [ -z "$joblist_dir" ]; then
+        joblist_dir="$___X_CMD_CRON/$ns/job"
+    fi
+
+    local tz
+    local x_
+    if [ -f "$___X_CMD_CRON/$ns/tz" ]; then
+        read -r tz < "$___X_CMD_CRON/$ns/tz"
+        x_=""; ___x_cmd_cron_run___tz_normalize_ "$tz"
+        tz="$x_"
+    fi
+
+    local datestr
+    if [ -n "$tz" ]; then
+        datestr="$( TZ="$tz" ___x_cmd_cmds date '+%M %H %d %m %w' )"
+    else
+        datestr="$( ___x_cmd_cmds date '+%M %H %d %m %w' )"
+    fi
+
+    ___x_cmd_cron_run___find_and_exec "$ns" "$datestr" "$joblist_dir"
+}
+
+___x_cmd_cron_run___find_and_exec(){
+    local ns="$1"
+    local datestr="$2"
+    local joblist_dir="$3"
+    local name
+    local cron_pat
+    local IFS
+    local x_
+
+    [ -d "$joblist_dir" ] || return 0
+    ___x_cmd fsiter --dir_ "$joblist_dir"
+
+    IFS="$___X_CMD_UNSEENCHAR_NEWLINE"
+    while read -r name ; do
+        [ -n "$name" ] || continue
+        read -r cron_pat < "$joblist_dir/$name/cron"
+        if ___x_cmd_cron_match "$cron_pat" "$datestr"; then
+            ___x_cmd_cron_run___execute_async "$ns" "$joblist_dir/$name"
+        fi
+    done <<A
+$x_
+A
+}
+
+___x_cmd_cron_run___execute_async(){
+    local ns="$1"
+    local jobdir="$2"
+    local name
+    local instance_dir
+    local instance_file
+    local prev_pid
+    local fingerprint
+    local pid
+
+    name="${jobdir##*/}"
+    instance_dir="$___X_CMD_CRON/$ns/run"
+    instance_file="$instance_dir/$name"
+
+    # Check if previous execution is still running
+    if [ -f "$instance_file" ]; then
+        {
+            read -r prev_pid
+            read -r fingerprint
+        } <"$instance_file"
+
+        if ___x_cmd ps fingerprint check "$prev_pid" "$fingerprint"; then
+            return 0
+        fi
+    fi
+
+    [ -f "$jobdir/cmd" ] || return 0
+    ___x_cmd mkdirp "$instance_dir"
+
+    (
+        trap ":;" HUP
+
+        local state_dir
+        local epoch_dir
+        local x_
+
+        state_dir="$___X_CMD_CRON/$ns/state/$name"
+
+        # Clean old records before creating new one
+        ___x_cmd_cron_history___cleanup "$state_dir" 10
+
+        ___x_cmd epoch get_
+        epoch_dir="$state_dir/$x_"
+        ___x_cmd mkdirp "$epoch_dir"
+
+        . "$jobdir/cmd" >"$epoch_dir/out" 2>"$epoch_dir/err" </dev/null &
+
+        pid="$!"
+
+        local cron_desc=""
+        if [ -f "$jobdir/desc" ]; then
+            read -r cron_desc < "$jobdir/desc"
+        fi
+        cron:info ${cron_desc:+"--description"} ${cron_desc:+"$cron_desc"} "Cron job $name triggered (pid=$pid)"
+
+        if ___x_cmd os is darwin; then
+            # The darwin will use ps to get fingerprint, while the linux just readfile, so in darwin, use &
+            {
+                printf '%s\n' "$pid"
+                ___x_cmd ps fingerprint get "$pid"
+            } > "$instance_file" &
+        else
+            {
+                printf '%s\n' "$pid"
+                ___x_cmd ps fingerprint get "$pid"
+            } > "$instance_file"
+        fi
+
+        # Wait for completion and record result in background
+        {
+            wait "$pid"
+            local exit_code=$?
+            # Record end time (unix epoch)
+            ___x_cmd epoch get > "$epoch_dir/end_time"
+            printf '%s\n' "$exit_code" > "$epoch_dir/exit_code"
+
+        } &
+
+        if [ -f "$jobdir/once" ]; then
+            # Wait for job to finish, then auto-delete
+            {
+                while kill -0 "$pid" 2>/dev/null; do
+                    ___x_cmd_cmds sleep 1
+                done
+                cron:info "Auto-remove once job: $name"
+                ___x_cmd_cron_rm --ns "$ns" --name "$name"
+            } &
+        fi
+    )
+}

@@ -1,0 +1,98 @@
+# shellcheck shell=dash
+
+___x_cmd_telegram_listen(){
+    param:void
+
+    local format=;
+    local fp=;
+    local offset=;
+    local timeout=;
+
+    while [ $# -gt 0 ]; do
+        case "$1" in
+            -h|--help)      ___x_cmd help -m telegram listen "$@" ; return 0 ;;
+            --fp)           fp=1 ;          shift ;;
+            --json)         format="json";  shift ;;
+            --timeout)      timeout="$2" ;  arg:2:shift ;;
+            --offset)       offset="$2"  ;  arg:2:shift ;;
+            *)              break ;;
+        esac
+    done
+
+    timeout="${timeout:-100}"
+    local token=;
+    ___x_cmd_telegram_cur token:= 2>/dev/null
+    [ -n "$token" ] || N=telegram M="Please setting up your token first ==> 'x telegram --cfg token=<your token>'" log:ret:1
+
+    local proxy=
+    ___x_cmd_telegram_cur proxy:= 2>/dev/null
+
+
+    local offsetfp="$___X_CMD_TELEGRAM_TMP/offset"
+    [ ! -f "$offsetfp" ] || read -r offset <"$offsetfp"
+
+    local curl_errcode=0
+    local fail_count=0
+    while true; do
+        local resp=;
+        resp="$(___x_cmd_telegram_getupdates | ___x_cmd jq -c )" || {
+            curl_errcode=$?
+            case "$curl_errcode" in
+                28)
+                    continue ;;
+                130)
+                    telegram:error "Exit because recved Interrupt."
+                    return 1 ;;
+                *)
+                    telegram:error "Failed to get updates: $resp"
+                    ___x_cmd sleep 1
+                    return 1 ;;
+            esac
+        }
+
+        local msg="" status="" chatid="" error_code=""
+        ___x_cmd jo env . msg=.result status=.ok error_code=.error_code chatid=.result.1.message.chat.id <<A
+$resp
+A
+
+        if [ "$status" = "false" ] || [ -n "$error_code" ]; then
+            fail_count=$((fail_count+1))
+            telegram:error "[fail-count=$fail_count] Failed to get updates: $resp"
+            case "$error_code" in
+                401) return 1 ;;
+                *)
+                    if [ "$fail_count" -lt 5 ]; then
+                        ___x_cmd sleep 1s || return $?
+                        continue
+                    else
+                        return 1
+                    fi
+                    ;;
+            esac
+        fi
+        fail_count=0
+
+        [ "$msg" != "[]" ] || continue
+
+        offset="$(printf "%s\n" "$resp" | ___x_cmd jq ".result[-1].update_id + 1")"
+        printf "%s\n" "$offset" > "$offsetfp"
+
+        if [ -n "$fp" ]; then
+            if [ -n "$chatid" ]; then
+                ___X_CMD_TELEGRAM_BOT_DATA="${___X_CMD_TELEGRAM_BOT_PATH}/data_${chatid}.tsv"
+                ___x_cmd ensurefp "$___X_CMD_TELEGRAM_BOT_DATA"
+                printf "%s\n" "$resp"  >> "$___X_CMD_TELEGRAM_BOT_DATA"
+                ___x_cmd tailer pub "$___X_CMD_ROOT_DATA/telegram/sub" "telegram:${chatid}"
+            fi
+        elif [ "$format" = "json" ]; then
+            printf "%s\n" "$resp"
+        else
+            printf "%s\n" "$resp"
+        fi
+    done
+}
+
+___x_cmd_telegram_getupdates(){
+    ___x_cmd curl -s ${proxy:+-x} ${proxy:+"$proxy"} \
+            "https://api.telegram.org/bot${token}/getUpdates?timeout=${timeout}&offset=${offset}"
+}

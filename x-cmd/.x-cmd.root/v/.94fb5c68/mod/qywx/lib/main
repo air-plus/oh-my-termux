@@ -1,0 +1,57 @@
+# shellcheck shell=sh disable=SC2039,SC3043,SC2120,SC2154
+# reference:  https://developer.work.weixin.qq.com/document/path/91770#%E6%96%87%E6%9C%AC%E7%B1%BB%E5%9E%8B
+# Reference:  https://open.work.weixin.qq.com/api/doc/90000/90135/90239
+
+___x_cmd log init qywx
+xrc param http ui arg
+xrc:mod:lib qywx        type util cfg bot react listen abot/_index parse
+
+___x_cmd_qywx___main(){
+    arg:init qywx
+    local ___X_CMD_QYWX_LOCAL_CONFIG="${___X_CMD_QYWX_LOCAL_CONFIG}"
+    local ___X_CMD_QYWX_LOCAL_PROFILE="${___X_CMD_QYWX_LOCAL_PROFILE}"
+    ___X_CMD_QYWX_BOT_PATH="$___X_CMD_ROOT_DATA/qywx/bot"
+    ___X_CMD_QYWX_BOT_WEBSOCKET="$___X_CMD_ROOT_DATA/qywx/bot/websocket"
+    ___X_CMD_QYWX_BOT_DATA_MEDIA_DIR="$___X_CMD_ROOT_DATA/qywx/bot/data"
+    ___X_CMD_QYWX_TMP="$___X_CMD_ROOT_TMP/qywx"
+    ___x_cmd mkdirp "${___X_CMD_QYWX_TMP}" "$___X_CMD_QYWX_BOT_PATH"
+
+    while [ $# -gt 0 ]; do
+        case "${1}" in
+            --config)       ___X_CMD_QYWX_LOCAL_CONFIG="$2";        arg:2:shift ;;
+            @*)             ___X_CMD_QYWX_LOCAL_CONFIG="${1#@}";    shift       ;;
+            --profile)      ___X_CMD_QYWX_LOCAL_PROFILE="$2";       arg:2:shift ;;
+            :*)             ___X_CMD_QYWX_LOCAL_PROFILE="${1#:}";   shift       ;;
+            *)              break;;
+        esac
+    done
+
+    param:advise qywx
+    param:subcmd ___x_cmd_qywx                                  \
+        abot            "abot"                                  \
+        bot             "qywx bot"                              \
+        listen          "listen"                                \
+        parse           "react"                                 \
+        react           "react"                                 \
+        --isready       "check qywx bot is ready"               \
+        --cfg           "manage configuration for qywx"         \
+        --cur           "current configuration for qywx"        \
+        init            "Interactive UI init configuration"
+    param:subcmd:try
+
+    param:subcmd ___x_cmd_qywx_bot               \
+        send             "send msg"
+    param:subcmd:try
+    # member          "member manage"
+    # department      "department manage"
+    # auth            "Manage qywx authentication state"
+
+    param:run
+
+    ___x_cmd_qywx _param_help_doc
+    return 1
+}
+
+___x_cmd_qywx_help(){
+    ___x_cmd help -m qywx "$@" >&2
+}

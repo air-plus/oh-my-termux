@@ -1,0 +1,23 @@
+{
+  "lang": "typescript",
+  "homepage": "https://github.com/mixn/carbon-now-cli",
+  "desc": {
+    "cn": "Carbon 可让您创建并分享源代码的精美图像",
+    "en": "Carbon lets you create and share beautiful images of your source code"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use carbon-now-cli",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/npm": {
+      "cmd": "npm i -g carbon-now-cli",
+      "reference": "https://github.com/mixn/carbon-now-cli?tab=readme-ov-file#npm",
+      "dsnap": "carbon-now-cli"
+    },
+    "arch/yay": {
+      "cmd": "yay -S carbon-now-cli-bin",
+      "reference": "https://aur.archlinux.org/packages/carbon-now-cli-bin"
+    }
+  }
+}

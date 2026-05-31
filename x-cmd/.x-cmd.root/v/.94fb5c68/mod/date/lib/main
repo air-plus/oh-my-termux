@@ -1,0 +1,182 @@
+# shellcheck shell=dash disable=2120
+
+xrc:mod:lib date    epochminus
+
+___x_cmd_date___main(){
+    [ $# -gt 0 ]    ||      set -- iso
+
+    local op="$1";          shift
+    case "$op" in
+        -h|--help)          ___x_cmd help -m date   "$@" ;;
+        str|varname|varname0|vlid|\
+        iso|iso0|\
+        timestamp|timestamp_|\
+        iso2ts|iso2ts_|\
+        counter|diff|epochminus)
+                            ___x_cmd_date_"$op"     "$@" ;;
+        *)                  N=date M="Unknown subcmd -> $op" log:ret:64 ;;
+    esac
+}
+
+___x_cmd_date_iso(){
+    if [ $# -eq 0 ]; then
+        ___x_cmd_cmds date +"%Y-%m-%d %H:%M:%S%z"
+    else
+        ___x_cmd_date_util___ts2str "$1" "%Y-%m-%d %H:%M:%S%z"
+    fi
+}
+
+___x_cmd_date_iso0(){
+    TZ=UTC0 ___x_cmd_date_iso
+}
+
+___x_cmd_date_str(){
+    if [ $# -eq 0 ]; then
+        ___x_cmd_cmds date +"%Y-%m-%d_%H:%M:%S%z"
+    else
+        ___x_cmd_date_util___ts2str "$1" "%Y-%m-%d_%H:%M:%S%z"
+    fi
+}
+
+___x_cmd_date_varname(){
+    if [ $# -eq 0 ]; then
+        ___x_cmd_cmds date +"%Y_%m_%d_%H_%M_%S%z" | tr '+' '_'
+    else
+        ___x_cmd_date_util___ts2str "$1" "%Y_%m_%d_%H_%M_%S%z" | tr '+' '_'
+    fi
+}
+
+___x_cmd_date_varname0(){
+    if [ $# -eq 0 ]; then
+        TZ=UTC0 ___x_cmd_cmds date +"%Y_%m_%d_%H_%M_%S%z" | tr '+' '_'
+    else
+        TZ=UTC0 ___x_cmd_date_util___ts2str "$1" "%Y_%m_%d_%H_%M_%S%z" | tr '+' '_'
+    fi
+}
+
+# TODO: Using UTC-00
+# variable length ID
+# In 22 century, just add 1 digit before the result. This function will be modified (possibly by AI) at that time if needed. Definitly I(L) want to live long enough to witness.
+# In 100 centure, just add 2 digit before the result. Human will envolve in this way and definity don't need to worry about it.
+___x_cmd_date_vlid(){
+    if [ $# -eq 0 ]; then
+        TZ=UTC0 ___x_cmd_cmds date +"%y%m%d_%H%M%S"
+    else
+        TZ=UTC0 ___x_cmd_date_util___ts2str "$1" "%y%m%d_%H%M%S"
+    fi
+}
+
+___x_cmd_date_timestamp(){
+    if [ "$#" -gt 0 ]; then
+        ___x_cmd_date_iso2ts "$@"
+    else
+        ___x_cmd epoch get
+    fi
+}
+
+___x_cmd_date_timestamp_(){
+    if [ "$#" -gt 0 ]; then
+        ___x_cmd_date_iso2ts_ "$@"
+    else
+        ___x_cmd epoch get_
+    fi
+}
+
+___x_cmd_date_iso2ts_(){
+    x_="$(___x_cmd_date_iso2ts "$@")"
+}
+
+# x date iso2ts '1990-3-25 0:0:0+8000'
+___x_cmd_date_iso2ts(){
+    if ! date -j 1>/dev/null 2>/dev/null; then
+        ___x_cmd_date_iso2ts(){
+            ___x_cmd_cmds date -d "$1" +%s
+        }
+    else
+        ___x_cmd_date_iso2ts(){
+            case "$1" in
+                *-*-*\ *:*:*)
+                    ___x_cmd_cmds date -j -f "%Y-%m-%d %H:%M:%S%z" "$1" +%s
+                    ;;
+                *-*-*)
+                    ___x_cmd_cmds date -j -f "%Y-%m-%d" "$1" +%s
+                    ;;
+                *-*)
+                    ___x_cmd_cmds date -j -f "%Y-%m" "$1" +%s
+                    ;;
+                *)
+                    ___x_cmd is int "$1" || return 1
+                    if [ "$1" -gt 9999 ]; then
+                        ___x_cmd_cmds date -j -f "%Y%m%d" "$1" +%s
+                    else
+                        ___x_cmd_cmds date -j -f "%m%d" "$1" +%s
+                    fi
+                    ;;
+            esac
+        }
+    fi
+
+    ___x_cmd_date_iso2ts "$@"
+}
+
+___x_cmd_date_vlid2ts(){
+    [ -n "$1" ] || return 1
+    local vlid; vlid="$1"
+
+    local date_part; date_part="${vlid%%_*}"
+    local time_part; time_part="${vlid#*_}"
+
+    local rest yy mm dd HH MM SS
+    rest="${date_part#??}"; yy="${date_part%"$rest"}"
+    rest="${date_part#????}"; mm="${date_part#??}"; mm="${mm%"$rest"}"
+    rest="${date_part#??????}"; dd="${date_part#????}"; dd="${dd%"$rest"}"
+
+    rest="${time_part#??}"; HH="${time_part%"$rest"}"
+    rest="${time_part#????}"; MM="${time_part#??}"; MM="${MM%"$rest"}"
+    rest="${time_part#??????}"; SS="${time_part#????}"; SS="${SS%"$rest"}"
+
+    ___x_cmd_date_iso2ts "20${yy}-${mm}-${dd} ${HH}:${MM}:${SS}+0000"
+}
+
+___x_cmd_date_counter(){
+    # local var="${name}"
+    :
+}
+
+
+___x_cmd_date_diff_(){
+    [ -n "$1" ] || return 1
+    local a; a="$(___x_cmd_date_iso2ts "$1")"
+    local b;
+    if [ -z "$2" ]; then    b="$(___x_cmd_cmds date +%s)"
+    else                    b="$(___x_cmd_date_iso2ts "$2")"
+    fi
+
+    if [ "$a" -gt "$b" ]; then      x_="$(( (a - b) / 60 / 60 / 24 ))"
+    else                            x_="$(( (b - a) / 60 / 60 / 24 ))"
+    fi
+}
+
+# L: 20230214: To answer the embarrass question like how may days since ...
+___x_cmd_date_diff(){
+    local x_
+    ___x_cmd_date_diff_ "$@"
+    printf "%s\n" "$x_"
+}
+
+___x_cmd_date_util___ts2str(){
+    local ts="$1"
+    local format="$2"
+
+    case "$ts" in
+        *.*)            ts="${ts%.*}" ;;
+        ?????????????)  ts="${ts%???}" ;;
+    esac
+
+    local x_
+    ___x_cmd os name_
+    case "$x_" in
+        darwin)  ___x_cmd_cmds date -j -f "%s" "$ts" +"$format" ;;
+        *)       ___x_cmd_cmds date +"$format" -d @"$ts" ;;
+    esac
+}

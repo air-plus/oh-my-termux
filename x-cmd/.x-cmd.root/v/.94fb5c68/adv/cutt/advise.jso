@@ -1,0 +1,230 @@
+{
+"#name"
+:
+{
+"cutt"
+:
+null
+,
+"cn"
+:
+"与 cut 类似, 用于从数据表输入中选择行列范围输出"
+,
+"en"
+:
+"Similar to cut, used to select row and column ranges for output from tabular data input"
+}
+,
+"#desc"
+:
+{
+"en"
+:
+"print in tabular form using matrix data"
+,
+"cn"
+:
+"从数据表中选择行列范围输出. 本命令目标是简化日常诸如 awk 'NR>3{ print $1, $5, $6 }' 的使用."
+}
+,
+"--auto"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Default mode. Reads the first line of input; if it contains a tab character (\\\\t), both input and output field separators are set to tab. Otherwise falls back to AWK's default whitespace-based field splitting."
+,
+"cn"
+:
+"默认模式。自动检测首行是否包含 tab 字符 (\\\\t)：若包含，则输入和输出的列分隔符均设为 tab；若不包含，则采用 AWK 默认的空白字符分隔（空格、TAB 等）。"
+}
+}
+,
+"--tab|--tsv"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Force tab as the field separator for both input and output."
+,
+"cn"
+:
+"强制将输入和输出的列分隔符均设为 \\\\t (tab)。"
+}
+}
+,
+"--normal"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Use AWK's default field separator. Fields are split by whitespace (spaces, tabs, etc.), and output fields are joined by a single space. No auto-detection is performed."
+,
+"cn"
+:
+"使用 AWK 默认的列分隔符模式。字段按空白字符（空格、TAB 等）分割，输出时字段间以单个空格连接。不进行自动检测。"
+}
+}
+,
+"-d"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Specify the delimiter character or string used to separate columns in the input data.  If omitted, the command attempts to auto-detect the delimiter."
+,
+"cn"
+:
+"指定用于分隔输入数据中列的定界符字符或字符串。如果省略，命令将尝试自动检测定界符。"
+}
+,
+"#1"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Delimiter like \t or :"
+,
+"cn"
+:
+"用户所指定的列分隔符, 例如 \t 或者 :"
+}
+}
+}
+,
+"#1"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Row range [start:end].  Start and end are 1-based indices.  Use a single number for a single row.  A negative number indicates an offset from the end of the file (e.g., -1 is the last row, -2 is the second to last).  Ranges are inclusive."
+,
+"cn"
+:
+"行范围 [起始行:结束行]。起始行和结束行都是基于 1 的索引。可以使用单个数字表示单行。负数表示从文件末尾的偏移量（例如，-1 是最后一行，-2 是倒数第二行）。范围是包含起始行和结束行的."
+}
+}
+,
+"#2"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Column range [start:end]. Start and end are 1-based indices. Use a single number for a single column.  A negative number indicates an offset from the end of the line (e.g., -1 is the last column, -2 is the second to last). Ranges are inclusive."
+,
+"cn"
+:
+"列范围 [起始列:结束列]。起始列和结束列都是基于 1 的索引。可以使用单个数字表示单列。负数表示从行尾的偏移量（例如，-1 是最后一列，-2 是倒数第二列）。范围是包含起始列和结束列的。"
+}
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x ascii | x cutt 100:-10 1,3,6:"
+,
+"en"
+:
+"The `x ascii` command outputs a TSV table to the pipe.  `x cutt` selects rows 100-N (where N is ten rows from the end) and columns 1, 3, and 6-end."
+,
+"cn"
+:
+"`x ascii` 命令输出一个 TSV 表格到管到; `x cutt`则从中选取第 100 行到倒数第十行（包含倒数第十行）的数据，以及第 1 列、第 3 列和从第 6 列到最后一列的数据。"
+}
+,
+{
+"cmd"
+:
+"echo 'a1 a2 a3\nb1 b2 b3\nc1 c2 c3' | x cutt 1:3 2\n"
+,
+"en"
+:
+"Output the second column data of rows 1 to 3 in the matrix data"
+,
+"cn"
+:
+"输出矩阵数据中第 1 至 3 行的第二列数据"
+}
+,
+{
+"cmd"
+:
+"echo 'a1 a2 a3\nb1 b2 b3\nc1 c2 c3' | x cutt 1,3 2\n"
+,
+"en"
+:
+"Output the second column data of rows 1 and 3 in the matrix data"
+,
+"cn"
+:
+"输出矩阵数据中第 1, 3 行的第二列数据"
+}
+,
+{
+"cmd"
+:
+"printf 'a1\\tb1\\tc1\\na2\\tb2\\tc2\\na3\\tb3\\tc3\\n' | x cutt --tab : 1,3\n"
+,
+"en"
+:
+"Use --tab to force tab-separated output for TSV data"
+,
+"cn"
+:
+"使用 --tab 模式处理 tab 分隔的数据并输出指定列"
+}
+,
+{
+"cmd"
+:
+"printf 'a1\\tb1\\tc1\\na2\\tb2\\tc2\\na3\\tb3\\tc3\\n' | x cutt --normal : 1,3\n"
+,
+"en"
+:
+"Use --normal to ignore tab detection and force whitespace splitting with space-separated output"
+,
+"cn"
+:
+"使用 --normal 忽略 tab 检测，强制按空白字符分隔并以空格连接输出"
+}
+,
+{
+"cmd"
+:
+"printf 'a1:b1:c1\\na2:b2:c2\\na3:b3:c3\\n' | x cutt -d : : 2\n"
+,
+"en"
+:
+"Use -d to specify a custom colon delimiter"
+,
+"cn"
+:
+"使用 -d 指定冒号作为列分隔符"
+}
+]
+}
+

@@ -1,0 +1,18 @@
+{
+  "lang": "go",
+  "desc": {
+    "en": "CLI for managing resources in InfluxDB v2",
+    "cn": "用于管理 InfluxDB v2 中资源的 CLI"
+  },
+  "homepage": "https://github.com/influxdata/influx-cli",
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use influx",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "darwin/brew": {
+      "cmd": "brew install influxdb-cli",
+      "reference": "https://docs.influxdata.com/influxdb/v2/tools/influx-cli/#use-homebrew"
+    }
+  }
+}

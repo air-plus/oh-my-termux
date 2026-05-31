@@ -1,0 +1,33 @@
+{
+  "lang": "TypeScript",
+  "homepage": "https://github.com/openclaw/openclaw",
+  "desc": {
+    "cn": "一款在你个人设备上运行的私人 AI 助手",
+    "en": "a personal AI assistant you run on your own devices."
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x openclaw --install",
+      "reference": "https://www.x-cmd.com/mod/openclaw"
+    },
+    "/curl": {
+      "cmd": "curl -fsSL https://openclaw.ai/install.sh | bash",
+      "reference": "https://openclaw.ai/"
+    },
+    "/npm": {
+      "cmd": "npm install -g openclaw@latest",
+      "reference": "https://github.com/openclaw/openclaw?tab=readme-ov-file#install-recommended"
+    },
+    "win/powershell": {
+      "cmd": "x pwsh 'iwr -useb https://openclaw.ai/install.ps1 | iex'",
+      "reference": "https://docs.openclaw.ai/start/getting-started#1-install-the-cli-recommended"
+    },
+    "arch/yay": {
+      "cmd": "yay -S openclaw-git",
+      "reference": "https://aur.archlinux.org/packages/openclaw-git"
+    }
+  },
+  "binlist": [
+    "openclaw"
+  ]
+}

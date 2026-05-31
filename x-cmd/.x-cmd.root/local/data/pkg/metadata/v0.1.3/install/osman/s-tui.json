@@ -1,0 +1,39 @@
+{
+  "lang": "python",
+  "homepage": "https://github.com/amanusk/s-tui",
+  "desc": {
+    "cn": "基于终端的 CPU 压力和监控实用程序",
+    "en": "Stress Terminal UI stress test and monitoring tool"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use s-tui",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "arch/yay": {
+      "cmd": "yay -S s-tui-git",
+      "reference": "https://aur.archlinux.org/packages/s-tui-git"
+    },
+    "/pip": {
+      "cmd": "pip install s-tui --user",
+      "reference": "https://github.com/amanusk/s-tui?tab=readme-ov-file#simple-installation",
+      "dsnap": "s-tui"
+    },
+    "/apt": {
+      "cmd": "sudo apt install s-tui",
+      "reference": "https://github.com/amanusk/s-tui?tab=readme-ov-file#simple-installation"
+    },
+    "/pacman": {
+      "cmd": "sudo pacman -S s-tui",
+      "reference": "https://github.com/amanusk/s-tui?tab=readme-ov-file#simple-installation"
+    },
+    "/zypper": {
+      "cmd": "sudo zypper install s-tui",
+      "reference": "https://github.com/amanusk/s-tui?tab=readme-ov-file#simple-installation"
+    },
+    "/dnf": {
+      "cmd": "sudo dnf install s-tui",
+      "reference": "https://github.com/amanusk/s-tui?tab=readme-ov-file#simple-installation"
+    }
+  }
+}

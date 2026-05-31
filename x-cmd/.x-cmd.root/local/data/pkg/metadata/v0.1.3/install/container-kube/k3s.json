@@ -1,0 +1,18 @@
+{
+  "lang": "go",
+  "homepage": "https://docs.k3s.io/",
+  "desc": {
+    "cn": "K3s 是轻量级的 Kubernetes",
+    "en": "K3s is Lightweight Kubernetes"
+  },
+  "rule": {
+    "arch/yay": {
+      "cmd": "yay -S k3s-bin",
+      "reference": "https://aur.archlinux.org/packages/k3s-bin"
+    },
+    "/curl": {
+      "cmd": "if [ \"$___X_CMD_WEBSRC_REGION\" = \"cn\" ]; then\n  curl -sfL https://rancher-mirror.rancher.cn/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn sh -\nelse\n  curl -sfL https://get.k3s.io | sh -\nfi\n",
+      "reference": "https://docs.k3s.io/zh/quick-start"
+    }
+  }
+}

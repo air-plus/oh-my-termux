@@ -1,0 +1,30 @@
+{
+  "lang": "Rust",
+  "homepage": "https://github.com/Hmbown/DeepSeek-TUI",
+  "desc": {
+    "cn": "终端原生的 DeepSeek AI 编程 Agent，支持 1M token 上下文窗口，内置 MCP 客户端、沙箱和持久任务队列",
+    "en": "A terminal-native AI coding agent for DeepSeek models, featuring 1M token context window, built-in MCP client, sandbox, and persistent task queue"
+  },
+  "rule": {
+    "/npm": {
+      "cmd": "npm install -g deepseek-tui",
+      "reference": "https://github.com/Hmbown/DeepSeek-TUI#1%EF%B8%8F%E2%83%A3-npm",
+      "dsnap": "deepseek-tui"
+    },
+    "/cargo": {
+      "cmd": "cargo install deepseek-tui --locked",
+      "reference": "https://github.com/Hmbown/DeepSeek-TUI#2%EF%B8%8F%E2%83%A3-cargo"
+    },
+    "darwin/brew": {
+      "cmd": "brew tap Hmbown/deepseek-tui && brew install deepseek-tui",
+      "reference": "https://github.com/Hmbown/DeepSeek-TUI#4%EF%B8%8F%E2%83%A3-homebrew-macos"
+    },
+    "arch/yay": {
+      "cmd": "yay -S deepseek-tui",
+      "reference": "https://aur.archlinux.org/packages/deepseek-tui"
+    }
+  },
+  "binlist": [
+    "deepseek"
+  ]
+}

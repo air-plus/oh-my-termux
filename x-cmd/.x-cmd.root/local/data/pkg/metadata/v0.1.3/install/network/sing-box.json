@@ -1,0 +1,31 @@
+{
+  "lang": "go",
+  "homepage": "https://sing-box.sagernet.org/",
+  "desc": {
+    "cn": "通用代理平台",
+    "en": "The universal proxy platform"
+  },
+  "rule": {
+    "/go": {
+      "cmd": "go install github.com/sagernet/sing-box/cmd/sing-box@stable",
+      "reference": "https://github.com/SagerNet/sing-box",
+      "dsnap": "github.com/sagernet/sing-box/cmd/sing-box@stable"
+    },
+    "arch/yay": {
+      "cmd": "yay -S sing-box",
+      "reference": "https://aur.archlinux.org/packages/sing-box"
+    },
+    "/curl": {
+      "cmd": "curl -fsSL https://sing-box.app/install.sh | sh",
+      "reference": "https://sing-box.sagernet.org/installation/package-manager/"
+    },
+    "darwin/brew": {
+      "cmd": "brew install sing-box",
+      "reference": "https://sing-box.sagernet.org/installation/package-manager/"
+    },
+    "(win|wsl2)/scoop": {
+      "cmd": "scoop install sing-box",
+      "reference": "https://sing-box.sagernet.org/installation/package-manager/"
+    }
+  }
+}

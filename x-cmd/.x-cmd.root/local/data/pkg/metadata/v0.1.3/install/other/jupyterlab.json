@@ -1,0 +1,19 @@
+{
+  "homepage": "https://jupyter.org/",
+  "lang": "python",
+  "desc": {
+    "en": "JupyterLab computational environment",
+    "cn": "JupyterLab 计算环境"
+  },
+  "rule": {
+    "/x": {
+      "cmd": "x pkg use jupyterlab",
+      "reference": "https://x-cmd.com/install/"
+    },
+    "/pip": {
+      "cmd": "pip install jupyterlab",
+      "reference": "https://jupyter.org/install",
+      "dsnap": "jupyterlab"
+    }
+  }
+}

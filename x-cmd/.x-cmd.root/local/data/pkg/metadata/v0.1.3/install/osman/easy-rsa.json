@@ -1,0 +1,51 @@
+{
+  "lang": "shell",
+  "homepage": "https://github.com/OpenVPN/easy-rsa",
+  "desc": {
+    "cn": "Easy-rsa 是一个用于构建和管理 PKI CA 的 CLI 实用程序",
+    "en": "Easy-rsa is a CLI utility to build and manage a PKI CA"
+  },
+  "rule": {
+    "darwin/brew": {
+      "cmd": "brew install easy-rsa",
+      "reference": "https://formulae.brew.sh/formula/easy-rsa#default"
+    },
+    "debian/apt": {
+      "cmd": "sudo apt-get install easy-rsa",
+      "reference": "https://command-not-found.com/easyrsa",
+      "dsnap": "easy-rsa"
+    },
+    "ubuntu/apt": {
+      "cmd": "sudo apt-get install easy-rsa",
+      "reference": "https://command-not-found.com/easyrsa",
+      "dsnap": "easy-rsa"
+    },
+    "alpine/apk": {
+      "cmd": "sudo apk add easy-rsa",
+      "reference": "https://command-not-found.com/easyrsa",
+      "dsnap": "easy-rsa"
+    },
+    "arch/pacman": {
+      "cmd": "sudo pacman -S easy-rsa",
+      "reference": "https://command-not-found.com/easyrsa"
+    },
+    "arch/yay": {
+      "cmd": "yay -S easy-rsa-git",
+      "reference": "https://aur.archlinux.org/packages/easy-rsa-git"
+    },
+    "kali/apt": {
+      "cmd": "sudo apt-get install easy-rsa",
+      "reference": "https://command-not-found.com/easyrsa",
+      "dsnap": "easy-rsa"
+    },
+    "fedora/dnf": {
+      "cmd": "sudo dnf install easy-rsa",
+      "reference": "https://command-not-found.com/easyrsa",
+      "dsnap": "easy-rsa"
+    },
+    "raspbian/apt": {
+      "cmd": "sudo apt-get install easy-rsa",
+      "reference": "https://command-not-found.com/easyrsa"
+    }
+  }
+}
