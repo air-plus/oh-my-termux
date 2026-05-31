@@ -6,6 +6,7 @@ set -gx XDG_STATE_HOME "$HOME/.local/state"
 
 # 设置默认编辑器
 set -gx EDITOR nvim
+set -gx VISUAL nvim
 
 # 设置 GPG_TTY
 set -gx GPG_TTY (tty)
