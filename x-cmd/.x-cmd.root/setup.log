@@ -14,3 +14,9 @@
 [2026-05-31/16:57:19] Archival SUCCESS: /data/data/com.termux/files/home/.x-cmd.root/v/latest.16727.2026-05-31_16-57-09/download_tmp.tgz
 [2026-05-31/16:57:19] Folder already existed ==> /data/data/com.termux/files/home/.x-cmd.root/v/.94fb5c68
 [2026-05-31/16:57:23] This installation/upgrade is performed by an external call, so the interactive shell for the new version will not automatically open.
+[2026-05-31/16:58:14] ------------------ 2026-05-31_16-58-14
+[2026-05-31/16:58:14] Download script archieve from https://raw.githubusercontent.com/x-cmd/release/main/dist/latest.tgz
+[2026-05-31/16:58:25] Download SUCCESS: /data/data/com.termux/files/home/.x-cmd.root/v/latest.17943.2026-05-31_16-58-14/download_tmp.tgz ( size: 4260.86 KB )
+[2026-05-31/16:58:25] Archival SUCCESS: /data/data/com.termux/files/home/.x-cmd.root/v/latest.17943.2026-05-31_16-58-14/download_tmp.tgz
+[2026-05-31/16:58:25] Folder already existed ==> /data/data/com.termux/files/home/.x-cmd.root/v/.94fb5c68
+[2026-05-31/16:58:29] This installation/upgrade is performed by an external call, so the interactive shell for the new version will not automatically open.
