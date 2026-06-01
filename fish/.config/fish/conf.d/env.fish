@@ -18,8 +18,5 @@ set -gx FZF_DEFAULT_OPTS \
     '--color=info:#d65d0e,prompt:#458588,pointer:#fe8019 ' \
     '--color=marker:#8ec07c,spinner:#cc241d,header:#fabd2f'
 
-# ------ Man 手册分页器器 ------
-set -gx MANPAGER 'bat -l man -p'
-
 # ------ 关闭欢迎语 ------
 set -g fish_greeting ''
