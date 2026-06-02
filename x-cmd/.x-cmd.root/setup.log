@@ -20,3 +20,15 @@
 [2026-05-31/16:58:25] Archival SUCCESS: /data/data/com.termux/files/home/.x-cmd.root/v/latest.17943.2026-05-31_16-58-14/download_tmp.tgz
 [2026-05-31/16:58:25] Folder already existed ==> /data/data/com.termux/files/home/.x-cmd.root/v/.94fb5c68
 [2026-05-31/16:58:29] This installation/upgrade is performed by an external call, so the interactive shell for the new version will not automatically open.
+[2026-06-02/17:59:54] ------------------ 2026-06-02_17-59-54
+[2026-06-02/17:59:54] Download script archieve from https://x-cmd-resource.oss-cn-heyuan.aliyuncs.com/x-cmd/release/dist/latest.tgz
+[2026-06-02/17:59:55] Download SUCCESS: /data/data/com.termux/files/home/.x-cmd.root/v/latest.2332.2026-06-02_17-59-54/download_tmp.tgz ( size: 4260.86 KB )
+[2026-06-02/17:59:56] Archival SUCCESS: /data/data/com.termux/files/home/.x-cmd.root/v/latest.2332.2026-06-02_17-59-54/download_tmp.tgz
+[2026-06-02/17:59:56] Folder already existed ==> /data/data/com.termux/files/home/.x-cmd.root/v/.94fb5c68
+[2026-06-02/18:00:00] This installation/upgrade is performed by an external call, so the interactive shell for the new version will not automatically open.
+[2026-06-02/18:00:24] ------------------ 2026-06-02_18-00-23
+[2026-06-02/18:00:24] Download script archieve from https://x-cmd-resource.oss-cn-heyuan.aliyuncs.com/x-cmd/release/dist/latest.tgz
+[2026-06-02/18:00:25] Download SUCCESS: /data/data/com.termux/files/home/.x-cmd.root/v/latest.3800.2026-06-02_18-00-23/download_tmp.tgz ( size: 4260.86 KB )
+[2026-06-02/18:00:25] Archival SUCCESS: /data/data/com.termux/files/home/.x-cmd.root/v/latest.3800.2026-06-02_18-00-23/download_tmp.tgz
+[2026-06-02/18:00:25] Folder already existed ==> /data/data/com.termux/files/home/.x-cmd.root/v/.94fb5c68
+[2026-06-02/18:00:28] This installation/upgrade is performed by an external call, so the interactive shell for the new version will not automatically open.
