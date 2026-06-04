@@ -12,7 +12,8 @@
   ![CONTRIBUTORS](https://img.shields.io/github/contributors/air-plus/oh-my-termux?logo=git&colorA=363a4f&colorB=a6da95&logoColor=cad3f5&style=for-the-badge)
 ](https://github.com/air-plus/oh-my-termux/contributors)
 
-现在就开始吧，为了 Termux！
+Oh My Termux 起初只是我的个人的 Termux Dotfiles 仓库  
+现在，它将公开给所有人
 
 </div>
 
