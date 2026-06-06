@@ -41,7 +41,6 @@ chmod +x setup.sh
 ```bash
 pkg update && pkg upgrade
 zinit self-update && zinit update
-x upgrade
 ```
 随后输入 `nvim`，输入 `:Lazy sync` 和 `:MasonUpdate`
 
