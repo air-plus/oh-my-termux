@@ -1,7 +1,0 @@
-# shellcheck shell=dash
-# TODO: Intercept the argument
-
-___x_cmd_zig___xrun(){
-    ___x_cmd_zig___command  run "$@"
-}
-

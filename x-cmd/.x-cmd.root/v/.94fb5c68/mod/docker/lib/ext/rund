@@ -1,4 +1,0 @@
-___x_cmd_docker_rund(){
-    ___x_cmd docker run -d "$@"
-}
-

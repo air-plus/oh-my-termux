@@ -1,5 +1,0 @@
-
-# remove the file whose last modfied is more than ...
-___x_cmd_fileage_rm(){
-    :
-}

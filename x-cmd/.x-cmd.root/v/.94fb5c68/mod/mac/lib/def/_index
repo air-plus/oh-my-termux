@@ -1,4 +1,0 @@
-# default interface is not a standard output format.
-
-# the only way can works is --> using xml, then convert the xml to json ...
-

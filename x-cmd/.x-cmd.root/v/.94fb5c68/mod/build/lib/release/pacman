@@ -1,5 +1,0 @@
-
-# Alias for archlinux - Arch Linux package release
-___x_cmd_build_release_pacman(){
-    ___x_cmd_build_release_archlinux "$@"
-}

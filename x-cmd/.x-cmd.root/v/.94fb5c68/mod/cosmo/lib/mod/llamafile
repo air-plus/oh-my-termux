@@ -1,5 +1,0 @@
-
-___x_cmd_llamafile(){
-    ___x_cmd cosmo llamafile "$@" ;
-}
-

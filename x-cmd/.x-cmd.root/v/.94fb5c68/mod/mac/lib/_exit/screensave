@@ -1,5 +1,0 @@
-# shellcheck shell=dash
-
-___x_cmd_mac_screensave(){
-    ___x_cmd_mac___cmd open -a ScreenSaverEngine
-}

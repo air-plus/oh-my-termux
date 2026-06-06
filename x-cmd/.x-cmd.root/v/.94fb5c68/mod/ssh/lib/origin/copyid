@@ -1,3 +1,0 @@
-___x_cmd_ssh___copy_id(){
-    command ssh-copy-id "$@"
-}

@@ -1,8 +1,0 @@
---no-net
--v
--a rwx:/etc
--d rwx:/usr
---multi rwx:/bin\
-rwx:/proc \
-    "rwx:/nix"
-

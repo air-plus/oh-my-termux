@@ -1,5 +1,0 @@
-
-___x_cmd_vim(){
-    ___x_cmd cosmo vim "$@" ;
-}
-

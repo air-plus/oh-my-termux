@@ -1,2 +1,0 @@
-#! /bin/sh
-doas /usr/bin/apt "$@"

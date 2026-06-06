@@ -1,4 +1,0 @@
-# shellcheck shell=sh
-___x_cmd_pkg_build(){
-    :
-}

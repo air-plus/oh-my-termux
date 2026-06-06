@@ -1,5 +1,0 @@
-
-___x_cmd_truncate(){
-    ___x_cmd cosmo truncate "$@" ;
-}
-

@@ -1,5 +1,0 @@
-
-# create three ssh server
-# in every server, there is a http service
-
-# docker require local build

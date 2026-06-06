@@ -1,9 +1,0 @@
-
-xrc:mod:lib     ssh     \
-    ext/key             \
-    ext/proxy
-
-    # ext/direct          \
-    # ext/reverse         \
-    # ext/jump
-

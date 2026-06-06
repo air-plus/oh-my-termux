@@ -1,5 +1,0 @@
-
-___x_cmd_wget(){
-    ___x_cmd cosmo wget "$@" ;
-}
-

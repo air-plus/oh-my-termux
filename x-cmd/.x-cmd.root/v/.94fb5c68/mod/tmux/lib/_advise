@@ -1,6 +1,0 @@
-# shellcheck shell=dash     disable=2207,3030,2034
-# For tmux complete advise
-
-___x_cmd_tmux___ls_session_name(){
-    ___x_cmd___tmux_origin ls 2>/dev/null | ___x_cmd_cmds_awk '{ gsub(":$", "", $1); print $1; }'
-}

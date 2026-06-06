@@ -1,7 +1,0 @@
-# add
-
-# $PROFIEL
-# add line like
-# Set-PSReadlineKeyHandler -Key 'Ctrl+d' -Function ViExit
-
-# so we can ctlr-d to exit ViExit

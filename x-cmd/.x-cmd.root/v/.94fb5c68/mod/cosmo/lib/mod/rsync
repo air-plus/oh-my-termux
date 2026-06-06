@@ -1,5 +1,0 @@
-
-___x_cmd_rsync(){
-    ___x_cmd cosmo rsync "$@" ;
-}
-

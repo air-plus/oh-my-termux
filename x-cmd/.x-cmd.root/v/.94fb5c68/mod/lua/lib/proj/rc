@@ -1,6 +1,0 @@
-# shellcheck shell=dash
-
-# about luarc.json -> https://luals.github.io/wiki/settings/
-___x_cmd_lua_proj_rc(){
-    :
-}

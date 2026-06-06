@@ -1,6 +1,0 @@
-
-# Speedup for theme module ...
-___x_cmd___hostname_(){
-    x_="${HOSTNAME:-"${HOST}"}"
-    [ -n "$x_" ] || x_="$(uname -n)"
-}

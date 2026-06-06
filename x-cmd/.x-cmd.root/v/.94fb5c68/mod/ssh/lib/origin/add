@@ -1,3 +1,0 @@
-___x_cmd_ssh___add(){
-    command ssh-add "$@"
-}

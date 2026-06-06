@@ -1,5 +1,0 @@
-
-# Alias for deb - Debian/Ubuntu package release
-___x_cmd_build_release_apt(){
-    ___x_cmd_build_release_deb "$@"
-}

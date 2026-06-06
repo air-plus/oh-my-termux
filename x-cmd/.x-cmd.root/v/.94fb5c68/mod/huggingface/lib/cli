@@ -1,5 +1,0 @@
-
-
-___x_cmd_huggingface_cli(){
-    ___x_cmd huggingface-cli "$@"
-}

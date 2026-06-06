@@ -1,9 +1,0 @@
-# shellcheck shell=dash
-___x_cmd_osv_deter(){
-    :
-}
-
-___x_cmd_osv_deter___raw(){
-    :
-}
-

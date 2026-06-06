@@ -1,4 +1,0 @@
-# shellcheck shell=dash
-
-xrc:mod:lib     ldict   posix
-

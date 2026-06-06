@@ -1,5 +1,0 @@
-# shellcheck shell=dash
-
-___x_cmd_mac_info(){
-    command sw_vers
-}

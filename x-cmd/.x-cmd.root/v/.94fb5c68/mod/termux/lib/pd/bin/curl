@@ -1,6 +1,0 @@
-#! /data/data/com.termux/files/usr/bin/sh
-
-. "${___X_CMD_ROOT:-$HOME/.x-cmd.root}"/X
-
-___x_cmd termux pd curlaria2c "$@"
-

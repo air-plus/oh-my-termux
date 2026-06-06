@@ -1,4 +1,0 @@
-
-. "$___X_CMD_ROOT_CODE/X" || exit 1
-export PATH=$1; shift
-"$@"

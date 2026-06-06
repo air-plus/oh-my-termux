@@ -1,4 +1,0 @@
-
-___x_cmd_fslock_available(){
-    ___x_cmd_fslock_defuse "$@"
-}

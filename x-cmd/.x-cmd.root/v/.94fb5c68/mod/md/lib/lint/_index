@@ -1,9 +1,0 @@
-
-# x md lint link *.md
-# x md fmt *.md
-
-# x rumdl
-
-___x_cmd_md_lint(){
-    :
-}

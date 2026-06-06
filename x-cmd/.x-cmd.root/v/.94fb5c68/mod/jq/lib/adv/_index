@@ -1,6 +1,0 @@
-# shellcheck shell=dash
-
-___x_cmd_jq_adv___expr(){
-    :
-}
-

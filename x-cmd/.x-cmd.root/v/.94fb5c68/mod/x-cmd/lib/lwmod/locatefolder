@@ -1,6 +1,0 @@
-
-___x_cmd_locatefolder(){
-    local x_
-    ___x_cmd locatefolder_ || return $?
-    printf "%s\n" "$x_"
-}

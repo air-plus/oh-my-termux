@@ -1,3 +1,0 @@
-# shellcheck shell=sh
-. "$___X_CMD_ROOT_MOD/theme/lib/theme/l/_index"
-

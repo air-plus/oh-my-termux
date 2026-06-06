@@ -1,5 +1,0 @@
-
-___x_cmd_redbean(){
-    ___x_cmd cosmo redbean "$@" ;
-}
-

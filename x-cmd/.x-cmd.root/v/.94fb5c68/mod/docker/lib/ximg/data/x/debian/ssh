@@ -1,2 +1,0 @@
-# x-cmd.FROM:             x/debian/openssh
-# x-cmd.ENTRYPOINT:       [ "ssh" ]

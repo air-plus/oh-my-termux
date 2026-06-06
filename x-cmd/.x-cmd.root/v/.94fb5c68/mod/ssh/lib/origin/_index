@@ -1,7 +1,0 @@
-
-xrc:mod:lib     ssh     \
-    origin/add          \
-    origin/agent        \
-    origin/copyid       \
-    origin/keygen       \
-    origin/keyscan
