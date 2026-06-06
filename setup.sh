@@ -30,7 +30,7 @@ clear
 info '✨ 欢迎使用 Oh My Termux'
 echo
 
-if [[ -z ${TERMUX_VERSION:-} ]]; then
+if [[ -z "${TERMUX_VERSION:-}" ]]; then
   error '当前环境不是 Termux'
 fi
 
@@ -50,7 +50,7 @@ info '🔗 建立配置文件软链接'
 stow --adopt --verbose=0 -t "$HOME" $HOME/oh-my-termux/*/ || error '配置文件软链接建立失败'
 
 info '🔧 修改 Termux 原生配置'
-cat >$HOME/.termux/termux.properties <<'EOF'
+cat >"$HOME/.termux/termux.properties" <<'EOF'
 volume-keys = volume
 terminal-cursor-blink-rate = 500
 extra-keys-style = arrows-all
