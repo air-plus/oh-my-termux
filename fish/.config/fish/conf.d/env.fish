@@ -12,11 +12,12 @@ set -gx VISUAL nvim
 set -gx GPG_TTY (tty)
 
 # ------ FZF 主题 ------
-set -gx FZF_DEFAULT_OPTS \
-    '--color=fg:#ebdbb2,bg:#282828,hl:#b16286 ' \
-    '--color=fg+:#689d6a,bg+:#32302f,hl+:#d3869b ' \
-    '--color=info:#d65d0e,prompt:#458588,pointer:#fe8019 ' \
-    '--color=marker:#8ec07c,spinner:#cc241d,header:#fabd2f'
+set -gx FZF_DEFAULT_OPTS "\
+--color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
+--color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
+--color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
+--color=selected-bg:#45475A \
+--color=border:#6C7086,label:#CDD6F4"
 
 # ------ 关闭欢迎语 ------
 set -g fish_greeting ''
