@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ------ 颜色定义 ------
+# --- 颜色定义 ---
 COLOR_OFF='' # 无色
 
 RED='' # 红色
@@ -14,7 +14,7 @@ if [[ -t 1 ]]; then
   DIM='\033[0;2m'  # 灰色
 fi
 
-# ------ 函数定义 ------
+# --- 函数定义 ---
 error() {
   echo -e "${RED}↳ ❌ 错误：${COLOR_OFF}" "$@" >&2
   exit 1
@@ -24,7 +24,7 @@ info() {
   echo -e "${DIM}$@ ${COLOR_OFF}"
 }
 
-# ------ 脚本主体 ------
+# --- 脚本主体 ---
 clear
 
 info '✨ 欢迎使用 Oh My Termux'
@@ -39,7 +39,7 @@ apt install -y tur-repo &>/dev/null || error 'TUR 添加失败'
 
 info '📥 安装基本工具包（此过程耗时较长）'
 apt install -y \
-  fish git-delta fastfetch eza \
+  zsh git-delta fastfetch eza \
   zoxide bat fd ripgrep \
   starship fzf jq htop yazi \
   file stow lazygit neovim \
@@ -60,6 +60,6 @@ info '📦 构建 Bat 缓存'
 bat cache --build &>/dev/null || error 'Bat 缓存构建失败'
 
 info '🐚 切换默认 Shell'
-chsh -s fish
+chsh -s zsh
 
 info '✨ Oh My Termux 安装完成'

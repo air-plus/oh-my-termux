@@ -18,7 +18,7 @@ Oh My Termux 起初只是我的个人的 Termux Dotfiles 仓库
 </div>
 
 ## ✨ 特性
-* **🐚 体验优化**：`fish` + `fisher` 和一些插件
+* **🐚 体验优化**：`zsh` + `zinit`
 * **🎨 界面美化**：**FiraCode** + **Catppuccin Mocha**
 * **🛠 常用工具**：`bat`，`fd`，`rg` 等现代化工具
 
@@ -40,7 +40,7 @@ chmod +x setup.sh
 在你的 Termux 执行下面这些命令 👇
 ```bash
 pkg update && pkg upgrade
-fisher update
+zinit self-update && zinit update
 x upgrade
 ```
 随后输入 `nvim`，输入 `:Lazy sync` 和 `:MasonUpdate`
