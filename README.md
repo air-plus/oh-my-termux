@@ -40,7 +40,7 @@ chmod +x setup.sh
 在你的 Termux 执行下面这些命令 👇
 ```bash
 pkg update && pkg upgrade
-zinit self-update && zinit update
+zinit self-update && zinit update -p
 ```
 随后输入 `nvim`，输入 `:Lazy sync` 和 `:MasonUpdate`
 
