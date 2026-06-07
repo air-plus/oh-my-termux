@@ -20,6 +20,8 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
+
+# --- 加载插件 ---
 zinit wait lucid for \
   atinit'ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay' \
     zdharma-continuum/fast-syntax-highlighting \
@@ -27,17 +29,34 @@ zinit wait lucid for \
     zsh-users/zsh-autosuggestions \
     zsh-users/zsh-history-substring-search
 
+# --- 外部集成 ---
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
-HISTFILE="$HOME/.zsh_history"
+# --- 历史记录 ---
+HISTFILE="$XDG_STATE_HOME/zsh/history.txt"
 HISTSIZE=100000
 SAVEHIST=100000
 
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+
+# --- Shell 功能 ---
+setopt AUTOCD
+setopt NOBEEP
+setopt NUMERIC_GLOB_SORT
+
+# --- 自动补全 ---
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
+# --- 引用别名 ---
 source "$XDG_CONFIG_HOME/zsh/aliases.zsh"
 
+# --- fastfetch ---
 fastfetch -c examples/10.jsonc

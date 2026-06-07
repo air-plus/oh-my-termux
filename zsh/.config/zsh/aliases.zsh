@@ -1,3 +1,4 @@
+# --- EZA 相关 ---
 alias ls='eza --icons'
 alias ll='ls -lh --git'
 alias la='ll -a'
