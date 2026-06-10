@@ -26,8 +26,7 @@ Oh My Termux 起初只是我的个人的 Termux Dotfiles 仓库
 ### 安装
 在你的 Termux 执行下面这些命令 👇
 ```bash
-termux-change-repo
-pkg upgrade
+pkg update && pkg upgrade
 pkg install git
 git clone https://github.com/air-plus/oh-my-termux.git
 cd oh-my-termux
