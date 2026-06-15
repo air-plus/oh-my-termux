@@ -18,7 +18,7 @@ Oh My Termux 起初只是我的个人的 Termux Dotfiles 仓库
 </div>
 
 ## ✨ 特性
-* **🐚 体验优化**：`zsh` + `zinit`
+* **🐚 体验优化**：`zsh` + `zimfw`
 * **🎨 界面美化**：**FiraCode** + **Catppuccin Mocha**
 * **🛠 常用工具**：`bat`，`fd`，`rg` 等现代化工具
 
