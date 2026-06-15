@@ -33,7 +33,7 @@ cd oh-my-termux
 chmod +x setup.sh
 ./setup.sh
 ```
-完成后，重启 Termux 再输入 `nvim` 初始化编辑器即可（你应该需要双指捏合屏幕缩小视图）
+输入 `nvim` 初始化编辑器即可（你应该需要双指捏合屏幕缩小视图）
 
 ### 更新
 在你的 Termux 执行下面这些命令 👇
@@ -46,7 +46,6 @@ zinit self-update && zinit update -p
 ## 🚨 注意事项
 * 脚本执行时**尽量保持亮屏**且**留在 Termux**
 * 别去删什么乱七八糟的文件，先问问 AI
-* `termux-change-repo` 命令会交互式切换源，请手动切换至清华源
 * 如果在 `pkg upgrade` 的过程中遇到交互式确认时直接回车即可
 
 ## ❓ FAQ
