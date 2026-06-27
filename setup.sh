@@ -34,10 +34,7 @@ if [[ -z "$TERMUX_VERSION" ]]; then
   error '当前环境不是 Termux'
 fi
 
-info '➕ 添加 TUR'
-apt-get install -y tur-repo &>/dev/null || error 'TUR 添加失败'
-
-info '📥 安装基本工具包（此过程耗时较长）'
+info '📥 安装依赖项（此过程耗时较长）'
 mkdir -p "$HOME/.local/state/zsh"
 apt-get install -y \
   zsh git-delta fastfetch eza \
@@ -45,10 +42,10 @@ apt-get install -y \
   starship fzf jq htop yazi \
   file stow lazygit neovim \
   zellij build-essential nodejs-lts \
-  &>/dev/null || error '基本工具包安装失败'
+  &>/dev/null || error '依赖项安装失败'
 
 info '🔗 建立配置文件软链接'
-stow --adopt --verbose=0 -t "$HOME" */ || error '配置文件软链接建立失败'
+stow --adopt --verbose=0 -t "$HOME" */ || error '建立配置文件软链接失败'
 
 info '🔧 修改 Termux 原生配置'
 cat >"$HOME/.termux/termux.properties" <<'EOF'
