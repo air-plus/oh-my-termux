@@ -35,7 +35,6 @@ if [[ -z "$TERMUX_VERSION" ]]; then
 fi
 
 info '📥 安装依赖项（此过程耗时较长）'
-mkdir -p "$HOME/.local/state/zsh"
 apt-get install -y \
   zsh git-delta fastfetch eza \
   zoxide bat fd ripgrep \
