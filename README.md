@@ -51,8 +51,8 @@ Oh My Termux 是一个 Termux 一键配置脚本，集成 Zsh、Neovim、Git、Z
 ### 安装
 在你的 Termux 执行下面这些命令 👇
 ```bash
-pkg update && pkg upgrade
-pkg install git
+pkg update -y && pkg upgrade -y
+pkg install -y git
 git clone https://github.com/air-plus/oh-my-termux.git
 cd oh-my-termux
 chmod +x setup.sh
@@ -64,15 +64,14 @@ chmod +x setup.sh
 ### 更新
 在你的 Termux 执行下面这些命令 👇
 ```bash
-pkg update && pkg upgrade
+pkg update -y && pkg upgrade -y
 zimfw upgrade && zimfw update
 ```
 随后输入 `nvim`，输入 `:Lazy sync` 和 `:MasonUpdate`
 
 ## 🚨 注意事项
-* 脚本执行时**尽量保持亮屏**且**留在 Termux**
+* 脚本执行时**尽量保持亮屏且留在 Termux**
 * **在删除任何文件前，三思而后行**
-* 如果在 `pkg upgrade` 的过程中遇到交互式确认时直接回车即可
 
 ## ❓ FAQ
 <details>
@@ -92,6 +91,6 @@ zimfw upgrade && zimfw update
 <details>
   <summary>可以在已有 Termux 配置的情况下安装吗？</summary>
 
-> 不可以
+> 不可以，这会覆盖一部分已有配置
 
 </details>
