@@ -1,5 +1,4 @@
 <div align="center">
-
   <h1>🌐 Oh My Termux</h1>
 
 [
@@ -15,6 +14,8 @@
 Oh My Termux 是我的个人 Termux 配置
 
 </div>
+
+---
 
 ## ✨ 特性
 * **Shell**：Zsh + Zimfw
