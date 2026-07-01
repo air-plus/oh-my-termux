@@ -12,15 +12,32 @@
   ![CONTRIBUTORS](https://img.shields.io/github/contributors/air-plus/oh-my-termux?logo=git&colorA=363a4f&colorB=a6da95&logoColor=cad3f5&style=for-the-badge)
 ](https://github.com/air-plus/oh-my-termux/contributors)
 
-Oh My Termux 起初只是我的个人的 Termux Dotfiles 仓库  
-现在，它将公开给所有人
+Oh My Termux 是我的个人 Termux 配置
 
 </div>
 
 ## ✨ 特性
-* **🐚 体验优化**：`zsh` + `zimfw`
-* **🎨 界面美化**：**FiraCode** + **Catppuccin Mocha**
-* **🛠 常用工具**：`bat`，`fd`，`rg` 等现代化工具
+* **Shell**：Zsh + Zimfw
+* **代码编辑器**：Neovim + LazyVim
+* **版本控制**：Git + Lazygit + Delta
+* **提示符**：Starship
+* **文件管理器**：Yazi
+* **终端复用器**：Zellij
+<details>
+  <summary>其它</summary>
+
+* **信息展示**：Fastfetch
+* **`ls`替代**：eza
+* **`find`替代**：fd
+* **`grep`替代**：Ripgrep
+* **`cat`替代**：Bat
+* **`cd`替代**：Zoxide
+* **模糊查找**：FZF
+* **Dotfile 管理**：Stow
+* **数据处理**：jq
+* **进程监控**：htop
+
+</details>
 
 ## 🚀 快速开始
 ### 安装
