@@ -1,7 +1,7 @@
 git:
   pagers:
-    - pager: delta --paging=never
-
+    - colorArg: always
+      pager: delta --dark --paging=never
 gui:
   nerdFontsVersion: "3"
   theme:
@@ -30,6 +30,5 @@ gui:
       - '#f38ba8'
     defaultFgColor:
       - '#cdd6f4'
-
   authorColors:
     '*': '#b4befe'
