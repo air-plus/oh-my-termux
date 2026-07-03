@@ -50,7 +50,6 @@ info '🔧 修改 Termux 原生配置'
 cat >"$HOME/.termux/termux.properties" <<'EOF'
 volume-keys = volume
 terminal-cursor-blink-rate = 500
-extra-keys-style = arrows-all
 EOF
 
 info '📦 构建 Bat 缓存'

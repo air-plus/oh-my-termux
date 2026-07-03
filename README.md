@@ -33,7 +33,7 @@ Oh My Termux 是一个 Termux 一键配置脚本，集成 Zsh、Neovim、Git、Z
 * **`grep`替代**：Ripgrep
 * **`cat`替代**：Bat
 * **`cd`替代**：Zoxide
-* **模糊查找**：FZF
+* **模糊查找**：fzf
 * **Dotfile 管理**：Stow
 * **数据处理**：jq
 * **进程监控**：htop
@@ -41,7 +41,7 @@ Oh My Termux 是一个 Termux 一键配置脚本，集成 Zsh、Neovim、Git、Z
 </details>
 
 ## ⚡ 依赖
-* **一个已安装且未进行任何操作的 Termux 环境**
+* **一个未进行任何操作的 Termux 环境**
 * **Android 9+**
 
 ## 🚀 快速开始
