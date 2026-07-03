@@ -1,9 +1,14 @@
+# --- Git 配置 ---
 git:
+  # --- 分页器配置 ---
   pagers:
-    - colorArg: always
-      pager: delta --dark --paging=never
+    - colorArg: always # 启用颜色
+      pager: delta --dark --paging=never # 设置分页器为 Delta
+
+# --- GUI 配置 ---
 gui:
-  nerdFontsVersion: "3"
+  nerdFontsVersion: "3" # 启用图标
+  # --- 主题设置 ---
   theme:
     activeBorderColor:
       - '#cba6f7'

@@ -1,5 +1,5 @@
 return {
-  -- 配置 LazyVim
+  -- --- 配置 LazyVim ---
   {
     "LazyVim/LazyVim",
     opts = {
