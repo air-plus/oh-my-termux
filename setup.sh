@@ -40,7 +40,7 @@ apt-get install -y \
   zoxide bat fd ripgrep \
   starship fzf jq htop yazi \
   file stow lazygit neovim \
-  zellij build-essential nodejs-lts vivid \
+  zellij build-essential nodejs-lts \
   &>/dev/null || error '依赖项安装失败'
 
 info '🔗 建立配置文件软链接'

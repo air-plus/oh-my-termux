@@ -11,9 +11,6 @@ export VISUAL='nvim'
 # --- GPG TTY ---
 export GPG_TTY=$(tty)
 
-# --- PATH ---
-export PATH="$HOME/.local/bin:$PATH"
-
 # --- FZF ---
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
@@ -21,6 +18,3 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
 --color=selected-bg:#45475A \
 --color=border:#6C7086,label:#CDD6F4"
-
-# --- EZA ---
-export LS_COLORS="$(vivid generate catppuccin-mocha)"
