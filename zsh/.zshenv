@@ -21,7 +21,7 @@ export FZF_DEFAULT_OPTS=" \
 --height 40% \
 --layout=reverse \
 --border \
---preview 'bat --style=numbers --color=always {}'"
+--preview 'bat --style=numbers --color=always --theme=\"Catppuccin Mocha\" {}'"
 
 # --- fzf 搜索引擎 ---
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --strip-cwd-prefix --exclude .git'
