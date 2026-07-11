@@ -58,14 +58,6 @@ chmod +x setup.sh
 这会触发安装脚本，脚本非交互式，会自动安装并配置一切  
 随后，输入 `nvim` 初始化编辑器即可（你应该需要双指捏合屏幕缩小视图）
 
-### 更新
-在你的 Termux 执行下面这些命令 👇
-```bash
-pkg update -y && pkg upgrade -y
-zimfw upgrade && zimfw update
-```
-随后输入 `nvim`，输入 `:Lazy sync` 和 `:MasonUpdate`
-
 ## 🚨 注意事项
 * 脚本执行时**尽量保持亮屏且留在 Termux**
 * **在删除任何文件前，三思而后行**
