@@ -8,6 +8,9 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+# --- PATH ---
+export PATH=$PATH:"$HOME/.local/bin"
+
 # --- GPG TTY ---
 export GPG_TTY=$(tty)
 
