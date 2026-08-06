@@ -23,7 +23,7 @@ Oh My Termux 是一个 Termux 一键配置脚本，集成 Zsh、Neovim、Git、H
 * **版本控制**：Git + Lazygit + Delta
 * **提示符**：Starship
 * **文件管理器**：Yazi
-* **终端复用器**:Herdr
+* **终端复用器**：Herdr
 <details>
   <summary>其它</summary>
 
