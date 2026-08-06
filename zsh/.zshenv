@@ -9,7 +9,7 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 
 # --- PATH ---
-export PATH=$PATH:"$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # --- GPG TTY ---
 export GPG_TTY=$(tty)
