@@ -1,7 +1,7 @@
 <div align="center">
   <h1>🌐 Oh My Termux</h1>
 
-Oh My Termux 是一个 Termux 一键配置脚本，集成 Zsh、Neovim、Git、Zellij 等开发工具，开箱即用，让移动端编码体验接近桌面
+Oh My Termux 是一个 Termux 一键配置脚本，集成 Zsh、Neovim、Git、Herdr 等开发工具，开箱即用，让移动端编码体验接近桌面
 
 [
   ![STARS](https://img.shields.io/github/stars/air-plus/oh-my-termux?logo=starship&colorA=363a4f&colorB=b7bdf8&logoColor=cad3f5&style=for-the-badge)
@@ -23,11 +23,11 @@ Oh My Termux 是一个 Termux 一键配置脚本，集成 Zsh、Neovim、Git、Z
 * **版本控制**：Git + Lazygit + Delta
 * **提示符**：Starship
 * **文件管理器**：Yazi
-* **终端复用器**：Zellij
+* **终端复用器**:Herdr
 <details>
   <summary>其它</summary>
 
-* **信息展示**：Fastfetch
+* **信息展示**：fastfetch
 * **`ls`替代**：eza
 * **`find`替代**：fd
 * **`grep`替代**：Ripgrep
