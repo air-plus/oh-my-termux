@@ -43,6 +43,9 @@ apt-get install -y \
   build-essential nodejs-lts \
   &>/dev/null || error '依赖项安装失败'
 
+info '🐏 安装 Herdr'
+curl -fsSL https://herdr.dev/install.sh | sh &>/dev/null || error 'Herdr 安装失败'
+
 info '🔗 建立配置文件软链接'
 stow --adopt --verbose=0 -t "$HOME" */ || error '建立配置文件软链接失败'
 
