@@ -44,7 +44,22 @@ apt-get install -y \
   &>/dev/null || error '依赖项安装失败'
 
 info '🐏 安装 Herdr'
-curl -fsSL https://herdr.dev/install.sh | sh &>/dev/null || error 'Herdr 安装失败'
+while true; do
+  read -p '⚠️ 安装Herdr可能需要链接境外服务器，过程可能需要VPN技术，确定吗？如果你选择不安装，那么将为您安装 Zellij [y/N]' confirm
+  confirm=${confirm:-N}
+  case "$confirm" in
+  [Yy])
+    curl -fsSL https://herdr.dev/install.sh | sh &>/dev/null || error 'Herdr 安装失败'
+    ;;
+  [Nn])
+    apt-get install -y zellij &>/dev/null || error 'Zellij 安装失败'
+    ;;
+  *)
+    continue
+    ;;
+  esac
+  break
+done
 
 info '🔗 建立配置文件软链接'
 stow --adopt --verbose=0 -t "$HOME" */ || error '建立配置文件软链接失败'
