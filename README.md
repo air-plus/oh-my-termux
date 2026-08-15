@@ -45,7 +45,7 @@ Oh My Termux 是一个 Termux 配置集合仓库，集成 Zsh、Neovim、Git、H
 * **Android 9+**
 
 ## 🚀 快速开始
-### 安装
+### 全量安装
 在你的 Termux 执行下面这些命令 👇
 ```bash
 pkg update -y && pkg upgrade -y
@@ -57,6 +57,18 @@ chmod +x setup.sh
 ```
 这会触发半交互式安装脚本  
 随后，输入 `nvim` 初始化编辑器即可（你应该需要双指捏合屏幕缩小视图）
+
+### 指定安装（实验性）
+在你的 Termux 执行下面这些命令 👇
+```bash
+pkg update -y && pkg upgrade -y
+pkg install -y git
+git clone https://github.com/air-plus/oh-my-termux.git
+cd oh-my-termux
+chmod +x setup.sh
+./setup.sh -m <MODULE(s)_NAME>
+```
+将 `<MODULE(s)_NAME>` 替换为有效模块名称即可
 
 ## 🚨 注意事项
 * 脚本执行时**尽量保持亮屏且留在 Termux**
