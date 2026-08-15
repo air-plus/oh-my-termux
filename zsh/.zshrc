@@ -106,12 +106,20 @@ source ${ZIM_HOME}/init.zsh
 # }}} End configuration added by Zim Framework install
 
 # --- 外部集成 ---
-source <(fzf --zsh)
-eval "$(zoxide init zsh)"
-eval "$(starship init zsh)"
+if (( $+commands[fzf] )); then
+  source <(fzf --zsh)
+fi
+if (( $+commands[zoxide])); then
+  eval "$(zoxide init zsh)"
+fi
+if (( $+commands[starship] )); then
+  eval "$(starship init zsh)"
+fi
 
 # --- 引用外部文件 ---
 source "$XDG_CONFIG_HOME/zsh/aliases.zsh"
 
 # --- fastfetch ---
-fastfetch -c examples/10.jsonc
+if (( $+commands[fastfetch] )); then
+  fastfetch -c examples/10.jsonc
+fi

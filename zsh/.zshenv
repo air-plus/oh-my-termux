@@ -5,8 +5,10 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 # --- 默认编辑器 ---
-export EDITOR='nvim'
-export VISUAL='nvim'
+if (( $+commands[nvim] )); then
+  export EDITOR='nvim'
+  export VISUAL='nvim'
+fi
 
 # --- PATH ---
 export PATH="$PATH:$HOME/.local/bin"
