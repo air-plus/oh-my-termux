@@ -21,61 +21,71 @@ EOF
 pre_stow() {
   local module="$1"
   case "$module" in
-    herdr)
-      while true; do
-        read -p '⚠️ 安装 Herdr 可能需要 VPN 技术，确定吗？如果你选择不安装，那么将为您安装 Zellij [y/N]：' confirm
-        confirm=${confirm:-N}
-        case "$confirm" in
-          [Yy])
-            curl -fsSL https://herdr.dev/install.sh | sh &>/dev/null || error 'Herdr 安装失败'
-            ;;
-          [Nn])
-            apt-get install -y zellij &>/dev/null || error 'Zellij 安装失败'
-            ;;
-          *)
-            continue
-            ;;
-        esac
-        break
-      done
-      ;;
-    delta|git-delta)
-      info '📥 安装 Delta'
-      apt-get install -y git-delta &>/dev/null || error 'Delta 安装失败'
-      ;;
-    npm|nodejs)
-      info '📥 安装 Node.js'
-      apt-get install -y nodejs-lts &>/dev/null || error 'Node.js 安装失败'
-      ;;
-    yazi)
-      info '📥 安装 Yazi'
-      apt-get install -y yazi file &>/dev/null || error 'Yazi 安装失败'
-      ;;
-    *)
-      info "📥 安装 $module"
-      apt-get install -y "$module" &>/dev/null || error "$module 安装失败"
-      ;;
+  herdr)
+    while true; do
+      read -p '⚠️ 安装 Herdr 可能需要 VPN 技术，确定吗？如果你选择不安装，那么将为您安装 Zellij [y/N]：' confirm
+      confirm=${confirm:-N}
+      case "$confirm" in
+      [Yy])
+        curl -fsSL https://herdr.dev/install.sh | sh &>/dev/null || error 'Herdr 安装失败'
+        ;;
+      [Nn])
+        apt-get install -y zellij &>/dev/null || error 'Zellij 安装失败'
+        ;;
+      *)
+        continue
+        ;;
+      esac
+      break
+    done
+    ;;
+  delta | git-delta)
+    info '📥 安装 Delta'
+    apt-get install -y git-delta &>/dev/null || error 'Delta 安装失败'
+    ;;
+  npm | nodejs)
+    info '📥 安装 Node.js'
+    apt-get install -y nodejs-lts &>/dev/null || error 'Node.js 安装失败'
+    ;;
+  yazi)
+    info '📥 安装 Yazi'
+    apt-get install -y yazi file &>/dev/null || error 'Yazi 安装失败'
+    ;;
+  nvim | neovim)
+    info '📥 安装 Neovim'
+    apt-get install -y neovim &>/dev/null || error 'Neovim 安装失败'
+    ;;
+  python | pip)
+    info '📥 安装 Python'
+    apt-get install -y python &>/dev/null || error 'Python 安装失败'
+    ;;
+  termux)
+    ;;
+  *)
+    info "📥 安装 $module"
+    apt-get install -y "$module" &>/dev/null || error "$module 安装失败"
+    ;;
   esac
 }
 
 post_stow() {
   local module="$1"
   case "$module" in
-    termux)
-      info '🔧 修改 Termux 原生配置'
-      cat >"$HOME/.termux/termux.properties" <<'EOF'
+  termux)
+    info '🔧 修改 Termux 原生配置'
+    cat >"$HOME/.termux/termux.properties" <<'EOF'
 volume-keys = volume
 terminal-cursor-blink-rate = 500
 EOF
-      ;;
-    bat)
-      info '📦 构建 Bat 缓存'
-      bat cache --build &>/dev/null || error 'Bat 缓存构建失败'
-      ;;
-    zsh)
-      info '🐚 切换默认 Shell'
-      chsh -s zsh
-      ;;
+    ;;
+  bat)
+    info '📦 构建 Bat 缓存'
+    bat cache --build &>/dev/null || error 'Bat 缓存构建失败'
+    ;;
+  zsh)
+    info '🐚 切换默认 Shell'
+    chsh -s zsh
+    ;;
   esac
 }
 
@@ -108,25 +118,25 @@ eval set -- "$OPTS"
 
 while true; do
   case "$1" in
-    -h | --help)
-      show_help
-      exit 0
-      ;;
-    -a | --all)
-      all=true
-      shift
-      ;;
-    -m | --module)
-      modules+=("$2")
-      shift 2
-      ;;
-    --)
-      shift
-      break
-      ;;
-    *)
-      error "unknown option '$1'"
-      ;;
+  -h | --help)
+    show_help
+    exit 0
+    ;;
+  -a | --all)
+    all=true
+    shift
+    ;;
+  -m | --module)
+    modules+=("$2")
+    shift 2
+    ;;
+  --)
+    shift
+    break
+    ;;
+  *)
+    error "unknown option '$1'"
+    ;;
   esac
 done
 
@@ -149,10 +159,10 @@ apt-get install -y stow &>/dev/null || error 'Stow 安装失败'
 
 if $all; then
   info '📥 安装额外依赖'
-    apt-get install -y \
-      jq fzf build-essential fastfetch \
-      eza zoxide fd ripgrep \
-      &>/dev/null || error '额外依赖安装失败'
+  apt-get install -y \
+    jq fzf build-essential fastfetch \
+    eza zoxide fd ripgrep \
+    &>/dev/null || error '额外依赖安装失败'
 
   for module in */; do
     module="${module%/}"
