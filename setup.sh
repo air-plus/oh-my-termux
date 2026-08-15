@@ -189,3 +189,6 @@ fi
 
 info '✨ Oh My Termux 安装完成'
 termux-reload-settings
+if command -v zsh &> /dev/null; then
+  exec zsh
+fi
