@@ -23,7 +23,7 @@ pre_stow() {
   case "$module" in
   herdr)
     while true; do
-      read -p '⚠️ 安装 Herdr 可能需要 VPN 技术，确定吗？如果你选择不安装，那么将为您安装 Zellij [y/N]' confirm
+      read -p '⚠️ 安装 Herdr 可能需要 VPN 技术，确定吗？如果你选择不安装，那么将为您安装 Zellij [y/N]：' confirm
       confirm=${confirm:-N}
       case "$confirm" in
       [Yy])
