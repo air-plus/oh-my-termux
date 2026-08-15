@@ -99,16 +99,16 @@ info() {
 }
 
 # --- 变量定义 ---
-COLOR_OFF='' # 无色
-RED=''       # 红色
+COLOR_OFF=''
+RED=''
 OPTS=$(getopt -o ham: -l help,all,module: -n "$0" -- "$@")
 
 all=false
 modules=()
 
 if [[ -t 1 ]]; then
-  COLOR_OFF='\033[0m' # 无色
-  RED='\033[0;31m'    # 红色
+  COLOR_OFF='\033[0m'
+  RED='\033[0;31m'
 fi
 
 if [ $? -ne 0 ]; then
