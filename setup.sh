@@ -10,8 +10,8 @@ Setter of Oh My Termux.
 Usage: $0 [OPTION]
 
 Options:
-  -h, --help                       Show this help info.
-  -a, --all                        Install all modules.
+  -h, --help                    Show this help info.
+  -a, --all                     Install all modules.
   -m, --module <MODULE_NAME>    Install <MODULE_NAME>.
 
 If no options are provided, install all modules.
@@ -127,7 +127,12 @@ while true; do
     shift
     ;;
   -m | --module)
-    modules+=("$2")
+    IFS=',' read -ra mods <<<"$2"
+    for mod in "${mods[@]}"; do
+      mod="${mod#"${mod%%[![:space:]]*}"}"
+      mod="${mod%"${mod##*[![:space:]]}"}"
+      [ -n "$mod" ] && modules+=("$mod")
+    done
     shift 2
     ;;
   --)
