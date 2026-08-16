@@ -58,7 +58,7 @@ chmod +x setup.sh
 这会触发半交互式安装脚本  
 随后，输入 `nvim` 初始化编辑器即可（你应该需要双指捏合屏幕缩小视图）
 
-### 指定安装（实验性）
+### 安装模块
 在你的 Termux 执行下面这些命令 👇
 ```bash
 pkg update -y && pkg upgrade -y
