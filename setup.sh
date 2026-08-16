@@ -199,7 +199,8 @@ else
   for module in "${MODULES[@]}"; do
     if [ ! -d "$module" ]; then
       error "模块 '$module' 不存在"
-      continue
+    elif [[ "$module" == ".git" ]]; then
+      error '禁止安装 .git 目录'
     fi
 
     pre_stow "$module"
