@@ -66,9 +66,9 @@ pkg install -y git
 git clone https://github.com/air-plus/oh-my-termux.git
 cd oh-my-termux
 chmod +x setup.sh
-./setup.sh -m <MODULE_NAME>
+./setup.sh -m MODULE_NAME
 ```
-将 `<MODULE_NAME>` 替换为有效模块名称即可
+将 `MODULE_NAME` 替换为有效模块名称即可
 
 ## 🚨 注意事项
 * 脚本执行时**尽量保持亮屏且留在 Termux**

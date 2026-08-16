@@ -1,23 +1,32 @@
 #!/usr/bin/env bash
+#
+# Oh My Termux 安装引导
+
 set -euo pipefail
 
 # --- 函数定义 ---
 show_help() {
   cat <<EOF
 setup.sh
-Setter of Oh My Termux.
+Oh My Termux 安装引导
 ========
-Usage: $0 [OPTION]
+使用: $0 [-a] [-m MODULE_NAME]
 
-Options:
-  -h, --help                    Show this help info.
-  -a, --all                     Install all modules.
-  -m, --module <MODULE_NAME>    Install <MODULE_NAME>.
+选项:
+  -h, --help                  显示此引导信息
+  -a, --all                   安装全部模块（默认行为）
+  -m, --module MODULE_NAME    安装 MODULE_NAME
 
-If no options are provided, install all modules.
+示例：
+  ./setup.sh -m zsh,nvim
 EOF
+  exit 0
 }
 
+# Stow 预处理钩子
+#   用于在执行 Stow 操作前进行特殊处理
+# 参数：
+#   $1 - 模块名称
 pre_stow() {
   local module="$1"
   case "$module" in
@@ -39,6 +48,7 @@ pre_stow() {
       break
     done
     ;;
+  # 以下是针对模块名称与包名不符歧义的特殊处理
   delta | git-delta)
     info '📥 安装 Delta'
     apt-get install -y git-delta &>/dev/null || error 'Delta 安装失败'
@@ -60,6 +70,7 @@ pre_stow() {
     apt-get install -y python &>/dev/null || error 'Python 安装失败'
     ;;
   termux)
+    # Termux 本体不走 apt-get
     ;;
   *)
     info "📥 安装 $module"
@@ -68,10 +79,15 @@ pre_stow() {
   esac
 }
 
+# Stow 后处理钩子
+#   用于在执行 Stow 操作后进行特殊处理
+# 参数：
+#   $1 - 模块名称
 post_stow() {
   local module="$1"
   case "$module" in
   termux)
+    # 由于 Termux 无法读取软链接之后的 termux.properties，故单独处理
     info '🔧 修改 Termux 原生配置'
     cat >"$HOME/.termux/termux.properties" <<'EOF'
 volume-keys = volume
@@ -103,8 +119,8 @@ COLOR_OFF=''
 RED=''
 OPTS=$(getopt -o ham: -l help,all,module: -n "$0" -- "$@")
 
-all=false
-modules=()
+ALL=false
+MODULES=()
 
 if [[ -t 1 ]]; then
   COLOR_OFF='\033[0m'
@@ -116,22 +132,23 @@ if [ $? -ne 0 ]; then
 fi
 eval set -- "$OPTS"
 
+# 解析选项
 while true; do
   case "$1" in
   -h | --help)
     show_help
-    exit 0
     ;;
   -a | --all)
-    all=true
+    ALL=true
     shift
     ;;
   -m | --module)
+    # 读取 -m / --module 的多个传参
     IFS=',' read -ra mods <<<"$2"
     for mod in "${mods[@]}"; do
       mod="${mod#"${mod%%[![:space:]]*}"}"
       mod="${mod%"${mod##*[![:space:]]}"}"
-      [ -n "$mod" ] && modules+=("$mod")
+      [ -n "$mod" ] && MODULES+=("$mod")
     done
     shift 2
     ;;
@@ -140,13 +157,13 @@ while true; do
     break
     ;;
   *)
-    error "unknown option '$1'"
+    error "未知选项 '$1'"
     ;;
   esac
 done
 
-if ! $all && [ ${#modules[@]} -eq 0 ]; then
-  all=true
+if ! $ALL && [ ${#MODULES[@]} -eq 0 ]; then
+  ALL=true
 fi
 
 # --- 脚本主体 ---
@@ -162,7 +179,7 @@ echo
 info '📥 安装 Stow'
 apt-get install -y stow &>/dev/null || error 'Stow 安装失败'
 
-if $all; then
+if $ALL; then
   info '📥 安装额外依赖'
   apt-get install -y \
     jq fzf build-essential fastfetch \
@@ -179,9 +196,9 @@ if $all; then
     fi
   done
 else
-  for module in "${modules[@]}"; do
+  for module in "${MODULES[@]}"; do
     if [ ! -d "$module" ]; then
-      error "module '$module' is not found"
+      error "模块 '$module' 不存在"
       continue
     fi
 
