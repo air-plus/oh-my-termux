@@ -24,27 +24,14 @@ Oh My Termux 是一个 Termux 配置集合仓库，集成 Zsh、Neovim、Git、H
 * **提示符**：Starship
 * **文件管理器**：Yazi
 * **终端复用器**：Herdr
-<details>
-  <summary>其它</summary>
 
-* **信息展示**：fastfetch
-* **`ls`替代**：eza
-* **`find`替代**：fd
-* **`grep`替代**：Ripgrep
-* **`cat`替代**：Bat
-* **`cd`替代**：Zoxide
-* **模糊查找**：fzf
-* **Dotfile 管理**：Stow
-* **数据处理**：jq
-* **进程监控**：htop
+---
 
-</details>
-
-## ⚡ 依赖
+## 🚀 快速开始
+## 环境要求
 * **一个未进行任何操作的 Termux 环境**
 * **Android 9+**
 
-## 🚀 快速开始
 ### 全量安装
 在你的 Termux 执行下面这些命令 👇
 ```bash
@@ -70,9 +57,13 @@ chmod +x setup.sh
 ```
 将 `MODULE_NAME` 替换为有效模块名称即可
 
+---
+
 ## 🚨 注意事项
 * 脚本执行时**尽量保持亮屏且留在 Termux**
 * **在删除任何文件前，三思而后行**
+
+---
 
 ## ❓ FAQ
 <details>
@@ -95,3 +86,5 @@ chmod +x setup.sh
 > 不可以，这会覆盖一部分已有配置
 
 </details>
+
+---
