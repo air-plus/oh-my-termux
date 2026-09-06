@@ -6,6 +6,7 @@ fi
 source "${ZDOTDIR:-$HOME}/.antidote/antidote.zsh"
 antidote load
 
+# --- 历史记录 ---
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
@@ -16,6 +17,7 @@ setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_ALL_DUPS
 
+# --- 补全 ---
 zstyle ':completion:*' menu select
 
 # --- 工具集成 ---
