@@ -1,7 +1,5 @@
 # --- Antidote ---
-if [[ ! -d "${ZDOTDIR:-$HOME}/.antidote" ]]; then
-  git clone --depth=1 https://github.com/mattmc3/antidote.git "${ZDOTDIR:-$HOME}/.antidote"
-fi
+[[ ! -d "${ZDOTDIR:-$HOME}/.antidote" ]] && git clone --depth=1 https://github.com/mattmc3/antidote.git "${ZDOTDIR:-$HOME}/.antidote"
 
 source "${ZDOTDIR:-$HOME}/.antidote/antidote.zsh"
 antidote load
@@ -21,17 +19,9 @@ setopt HIST_IGNORE_ALL_DUPS
 zstyle ':completion:*' menu select
 
 # --- 工具集成 ---
-if (( $+commands[fzf] )); then
-  source <(fzf --zsh)
-fi
-
-if (( $+commands[zoxide])); then
-  eval "$(zoxide init zsh)"
-fi
-
-if (( $+commands[starship] )); then
-  eval "$(starship init zsh)"
-fi
+(( $+commands[fzf] )) && source <(fzf --zsh)
+(( $+commands[zoxide])) && eval "$(zoxide init zsh)"
+(( $+commands[starship] )) && eval "$(starship init zsh)"
 
 # --- 引用外部文件 ---
 for file in $XDG_CONFIG_HOME/zsh/*.zsh; do
@@ -39,6 +29,4 @@ for file in $XDG_CONFIG_HOME/zsh/*.zsh; do
 done
 
 # --- fastfetch ---
-if (( $+commands[fastfetch] )); then
-  fastfetch -c examples/10.jsonc
-fi
+(( $+commands[fastfetch] )) && fastfetch -c examples/10.jsonc
