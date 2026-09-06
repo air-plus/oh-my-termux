@@ -18,7 +18,7 @@ Oh My Termux 是一个 Termux 配置集合仓库，集成 Zsh、Neovim、Git、H
 ---
 
 ## ✨ 特性
-* **Shell**：Zsh + Zimfw
+* **Shell**：Zsh + Antidote
 * **代码编辑器**：Neovim + LazyVim
 * **版本控制**：Git + Lazygit + Delta
 * **提示符**：Starship
