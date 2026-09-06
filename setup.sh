@@ -18,6 +18,9 @@ Oh My Termux 安装引导
   -m, --module MODULE_NAME    安装 MODULE_NAME
 
 示例：
+  ./setup.sh
+  ./setup.sh -a
+  ./setup.sh -m zsh
   ./setup.sh -m zsh,nvim
 EOF
   exit 0
@@ -33,7 +36,7 @@ pre_stow() {
   herdr)
     while true; do
       read -p '⚠️ 安装 Herdr 可能需要 VPN 技术，确定吗？如果你选择不安装，那么将为您安装 Zellij [y/N]：' confirm
-      confirm=${confirm:-N}
+      confirm="${confirm:-N}"
       case "$confirm" in
       [Yy])
         curl -fsSL https://herdr.dev/install.sh | sh &>/dev/null || error 'Herdr 安装失败'
@@ -117,20 +120,19 @@ info() {
 # --- 变量定义 ---
 COLOR_OFF=''
 RED=''
-OPTS=$(getopt -o ham: -l help,all,module: -n "$0" -- "$@")
-
-ALL=false
-MODULES=()
-
 if [[ -t 1 ]]; then
   COLOR_OFF='\033[0m'
   RED='\033[0;31m'
 fi
 
-if [ $? -ne 0 ]; then
+OPTS="$(getopt -o ham: -l help,all,module: -n "$0" -- "$@")"
+if [[ $? -ne 0 ]]; then
   exit 1
 fi
 eval set -- "$OPTS"
+
+ALL=false
+MODULES=()
 
 # 解析选项
 while true; do
@@ -162,7 +164,7 @@ while true; do
   esac
 done
 
-if ! $ALL && [ ${#MODULES[@]} -eq 0 ]; then
+if ! "$ALL" && [ "${#MODULES[@]}" -eq 0 ]; then
   ALL=true
 fi
 
@@ -179,7 +181,7 @@ echo
 info '📥 安装 Stow'
 apt-get install -y stow &>/dev/null || error 'Stow 安装失败'
 
-if $ALL; then
+if "$ALL"; then
   info '📥 安装额外依赖'
   apt-get install -y \
     jq fzf build-essential fastfetch \
