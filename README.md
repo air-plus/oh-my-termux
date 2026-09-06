@@ -1,4 +1,4 @@
-<div align="center">
+<div style="text-align: center">
   <h1>🌐 Oh My Termux</h1>
 
 Oh My Termux 是一个 Termux 配置集合仓库，集成 Zsh、Neovim、Git、Herdr 等开发工具，开箱即用，让移动端编码体验接近桌面
@@ -88,3 +88,5 @@ chmod +x setup.sh
 </details>
 
 ---
+
+<p style="text-align: center">Made with [Termux](https://github.com/termux/termux-app)</p>
