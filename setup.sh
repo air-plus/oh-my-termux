@@ -125,10 +125,7 @@ if [[ -t 1 ]]; then
   RED='\033[0;31m'
 fi
 
-OPTS="$(getopt -o ham: -l help,all,module: -n "$0" -- "$@")"
-if [[ $? -ne 0 ]]; then
-  exit 1
-fi
+OPTS="$(getopt -o ham: -l help,all,module: -n "$0" -- "$@")" || exit 1
 eval set -- "$OPTS"
 
 ALL=false
@@ -150,7 +147,7 @@ while true; do
     for mod in "${mods[@]}"; do
       mod="${mod#"${mod%%[![:space:]]*}"}"
       mod="${mod%"${mod##*[![:space:]]}"}"
-      [ -n "$mod" ] && MODULES+=("$mod")
+      [[ -n "$mod" ]] && MODULES+=("$mod")
     done
     shift 2
     ;;
@@ -164,14 +161,10 @@ while true; do
   esac
 done
 
-if ! "$ALL" && [ "${#MODULES[@]}" -eq 0 ]; then
-  ALL=true
-fi
+! "$ALL" && [[ "${#MODULES[@]}" -eq 0 ]] && ALL=true
 
 # --- 脚本主体 ---
-if [[ -z "$TERMUX_VERSION" ]]; then
-  error '当前环境不是 Termux'
-fi
+[[ -z "$TERMUX_VERSION" ]] && error '当前环境不是 Termux'
 
 clear
 
@@ -190,7 +183,7 @@ if "$ALL"; then
 
   for module in */; do
     module="${module%/}"
-    if [ -d "$module" ]; then
+    if [[ -d "$module" ]]; then
       pre_stow "$module"
       info "🔗 建立 $module 配置文件软链接"
       stow --adopt --verbose=0 -t "$HOME" "$module" || error "建立 $module 配置文件软链接失败"
@@ -199,7 +192,7 @@ if "$ALL"; then
   done
 else
   for module in "${MODULES[@]}"; do
-    if [ ! -d "$module" ]; then
+    if [[ ! -d "$module" ]]; then
       error "模块 '$module' 不存在"
     elif [[ "$module" == ".git" ]]; then
       error '禁止安装 .git 目录'
@@ -214,6 +207,4 @@ fi
 
 info '✨ Oh My Termux 安装完成'
 termux-reload-settings
-if command -v zsh &>/dev/null; then
-  exec zsh
-fi
+command -v zsh &>/dev/null && exec zsh
