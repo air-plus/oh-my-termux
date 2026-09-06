@@ -89,4 +89,4 @@ chmod +x setup.sh
 
 ---
 
-<p align="center">Made with [Termux](https://github.com/termux/termux-app)</p>
+<p style="text-align: center;">Made with <a href="https://github.com/termux/termux-app">Termux</a></p>
