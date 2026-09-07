@@ -46,7 +46,7 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # --- 工具集成 ---
 (( $+commands[fzf] )) && source <(fzf --zsh)
-(( $+commands[zoxide])) && eval "$(zoxide init zsh)"
+(( $+commands[zoxide])) && eval "$(zoxide init zsh --cmd cd)"
 (( $+commands[starship] )) && eval "$(starship init zsh)"
 
 # --- 引用外部文件 ---
