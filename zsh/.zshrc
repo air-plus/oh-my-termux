@@ -21,11 +21,17 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-# --- 插件 ---
-zinit light Aloxaf/fzf-tab
+# --- 插件 & 补全 ---
+zinit ice blockf
 zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light zdharma-continuum/fast-syntax-highlighting
+
+autoload -Uz compinit
+compinit -C
+
+zinit wait lucid light-mode for \
+    Aloxaf/fzf-tab \
+    zsh-users/zsh-autosuggestions \
+    zdharma-continuum/fast-syntax-highlighting
 
 # --- 历史记录 ---
 HISTFILE="$HOME/.zsh_history"
@@ -37,9 +43,6 @@ setopt EXTENDED_HISTORY
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_ALL_DUPS
-
-# --- 补全 ---
-zstyle ':completion:*' menu select
 
 # --- 工具集成 ---
 (( $+commands[fzf] )) && source <(fzf --zsh)
