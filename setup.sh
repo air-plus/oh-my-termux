@@ -26,25 +26,6 @@ EOF
 pre_stow() {
   local module="$1"
   case "$module" in
-  herdr)
-    while true; do
-      read -p '⚠️ 安装 Herdr 可能需要 VPN 技术，确定吗？如果你选择不安装，那么将为您安装 Zellij [y/N]：' confirm
-      confirm="${confirm:-N}"
-      case "$confirm" in
-      [Yy])
-        curl -fsSL https://herdr.dev/install.sh | sh &>/dev/null || error 'Herdr 安装失败'
-        ;;
-      [Nn])
-        apt-get install -y zellij &>/dev/null || error 'Zellij 安装失败'
-        ;;
-      *)
-        continue
-        ;;
-      esac
-      break
-    done
-    ;;
-  # 以下是针对模块名称与包名不符歧义的特殊处理
   delta | git-delta)
     info '📥 安装 Delta'
     apt-get install -y git-delta &>/dev/null || error 'Delta 安装失败'

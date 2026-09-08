@@ -1,7 +1,7 @@
 <div align="center">
   <h1>🌐 Oh My Termux</h1>
 
-Oh My Termux 是一个 Termux 配置集合仓库，集成 Zsh、Neovim、Git、Herdr 等开发工具，开箱即用，让移动端编码体验接近桌面
+Oh My Termux 是一个 Termux 配置集合仓库，集成 Zsh、Neovim、Git、Zellij 等开发工具，开箱即用，让移动端编码体验接近桌面
 
 [
   ![STARS](https://img.shields.io/github/stars/air-plus/oh-my-termux?logo=starship&colorA=363a4f&colorB=b7bdf8&logoColor=cad3f5&style=for-the-badge)
@@ -18,12 +18,12 @@ Oh My Termux 是一个 Termux 配置集合仓库，集成 Zsh、Neovim、Git、H
 ---
 
 ## ✨ 特性
-* **Shell**：Zsh + Antidote
+* **Shell**：Zsh + Zinit
 * **代码编辑器**：Neovim + LazyVim
 * **版本控制**：Git + Lazygit + Delta
 * **提示符**：Starship
 * **文件管理器**：Yazi
-* **终端复用器**：Herdr
+* **终端复用器**：Zellij
 
 ---
 
