@@ -153,6 +153,7 @@ if "$ALL"; then
   apt-get install -y \
     jq fzf build-essential fastfetch \
     eza zoxide fd ripgrep \
+    starship \
     &>/dev/null || error '额外依赖安装失败'
 
   for module in */; do
