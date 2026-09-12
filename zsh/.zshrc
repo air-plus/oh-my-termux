@@ -51,7 +51,7 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # --- 引用外部文件 ---
 for file in $XDG_CONFIG_HOME/zsh/*.zsh; do
-  source "$file"
+    source "$file"
 done
 
 # --- fastfetch ---
