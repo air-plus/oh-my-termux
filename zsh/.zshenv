@@ -1,10 +1,10 @@
-# --- XDG 标准 ---
+# --- XDG ---
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
-# --- 默认编辑器 ---
+# --- 编辑器 ---
 if (( $+commands[nvim] )); then
   export EDITOR='nvim'
   export VISUAL='nvim'
@@ -13,7 +13,7 @@ fi
 # --- Zsh ---
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-# --- GPG TTY ---
+# --- GPG ---
 export GPG_TTY="$(tty)"
 
 # --- fzf ---
