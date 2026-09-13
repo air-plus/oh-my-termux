@@ -26,11 +26,15 @@ EOF
 pre_stow() {
   local module="$1"
   case "$module" in
-  delta | git-delta)
-    info '📥 安装 Delta'
-    apt-get install -y git-delta &>/dev/null || error 'Delta 安装失败'
+  lazygit)
+    info '📥 安装 Lazygit'
+    apt-get install -y lazygit git-delta git || error 'Lazygit 安装失败'
     ;;
-  npm | nodejs)
+  delta)
+    info '📥 安装 Delta'
+    apt-get install -y git-delta git &>/dev/null || error 'Delta 安装失败'
+    ;;
+  npm)
     info '📥 安装 Node.js'
     apt-get install -y nodejs-lts &>/dev/null || error 'Node.js 安装失败'
     ;;
@@ -38,13 +42,9 @@ pre_stow() {
     info '📥 安装 Yazi'
     apt-get install -y yazi file &>/dev/null || error 'Yazi 安装失败'
     ;;
-  nvim | neovim)
+  nvim)
     info '📥 安装 Neovim'
     apt-get install -y neovim &>/dev/null || error 'Neovim 安装失败'
-    ;;
-  python | pip)
-    info '📥 安装 Python'
-    apt-get install -y python &>/dev/null || error 'Python 安装失败'
     ;;
   termux)
     # Termux 本体不走 apt-get
@@ -94,7 +94,7 @@ info() {
 # --- 变量定义 ---
 COLOR_OFF='\033[0m'
 RED='\033[0;31m'
-ALL=false
+ALL=0
 MODULES=()
 
 OPTS="$(getopt -o ham: -l help,all,module: -n "$0" -- "$@")" || exit 1
@@ -107,7 +107,7 @@ while true; do
     show_help
     ;;
   -a | --all)
-    ALL=true
+    ALL=1
     shift
     ;;
   -m | --module)
@@ -130,7 +130,7 @@ while true; do
   esac
 done
 
-! "$ALL" && [[ "${#MODULES[@]}" -eq 0 ]] && ALL=true
+! (( ALL )) && [[ "${#MODULES[@]}" -eq 0 ]] && ALL=1
 
 # --- 脚本主体 ---
 [[ -z "$TERMUX_VERSION" ]] && error '当前环境不是 Termux'
@@ -143,7 +143,7 @@ echo
 info '📥 安装 Stow'
 apt-get install -y stow &>/dev/null || error 'Stow 安装失败'
 
-if "$ALL"; then
+if (( ALL )); then
   info '📥 安装额外依赖'
   apt-get install -y \
     jq fzf build-essential fastfetch \
@@ -167,7 +167,19 @@ else
 
     pre_stow "$module"
     info "🔗 建立 $module 配置文件软链接"
-    stow --adopt -v 0 "$module" || error "建立 $module 配置文件软链接失败"
+
+    case "$module" in
+    delta)
+      stow --adopt -v 0 git delta || error '建立 Delta 配置文件软链接失败'
+      ;;
+    lazygit)
+      stow --adopt -v 0 lazygit git delta || error '建立 Lazygit 配置文件软链接失败'
+      ;;
+    *)
+      stow --adopt -v 0 "$module" || error "建立 $module 配置文件软链接失败"
+      ;;
+    esac
+
     post_stow "$module"
   done
 fi

@@ -7,7 +7,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 # --- 编辑器 ---
 if (( $+commands[nvim] )); then
   export EDITOR='nvim'
-  export VISUAL='nvim'
+  export VISUAL="$EDITOR"
 fi
 
 # --- Zsh ---
@@ -25,8 +25,11 @@ export FZF_DEFAULT_OPTS=" \
 --color=border:#6C7086,label:#CDD6F4 \
 --height=40% \
 --layout=reverse \
---border \
---preview 'bat -nr :500 --color=always --theme=\"Catppuccin Mocha\" {}'"
+--border"
 
-export FZF_DEFAULT_COMMAND='fd -HLt f -E .git'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+(( $+commands[bat] )) && export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --preview 'bat -nr :500 --color=always --theme=\"Catppuccin Mocha\" {}'"
+
+if (( $+commands[fd] )); then
+  export FZF_DEFAULT_COMMAND='fd -HLt f -E .git'
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+fi

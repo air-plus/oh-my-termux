@@ -53,15 +53,9 @@ pkg install -y git
 git clone https://github.com/air-plus/oh-my-termux.git
 cd oh-my-termux
 chmod +x setup.sh
-./setup.sh -m MODULE_NAME
+./setup.sh -m <MODULES>
 ```
 将 `MODULE_NAME` 替换为有效模块名称即可
-
----
-
-## 🚨 注意事项
-* 脚本执行时**尽量保持亮屏且留在 Termux**
-* **在删除任何文件前，三思而后行**
 
 ---
 
@@ -76,7 +70,7 @@ chmod +x setup.sh
 <details>
   <summary>可以自定义吗？</summary>
 
-> Oh My Termux 本身不支持自定义，但你可以更改各工具的 Dotfile
+> Oh My Termux 本身不支持自定义，但允许更改模块配置
 
 </details>
 
