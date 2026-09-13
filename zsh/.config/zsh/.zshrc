@@ -22,19 +22,17 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 # --- 插件 & 补全 ---
-zinit ice blockf
-zinit light zsh-users/zsh-completions
-
-autoload -Uz compinit
-compinit -C
-
 zinit wait lucid light-mode for \
+    blockf atload'zicompinit; zicdreplay' \
+    zsh-users/zsh-completions \
     Aloxaf/fzf-tab \
     zsh-users/zsh-autosuggestions \
     zdharma-continuum/fast-syntax-highlighting
 
 # --- 历史记录 ---
-HISTFILE="$HOME/.zsh_history"
+[[ ! -d "$XDG_STATE_HOME/zsh" ]] && mkdir "$XDG_STATE_HOME/zsh"
+
+HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=10000
 SAVEHIST=10000
 
@@ -50,7 +48,7 @@ setopt HIST_IGNORE_ALL_DUPS
 (( $+commands[starship] )) && eval "$(starship init zsh)"
 
 # --- 引用外部文件 ---
-for file in $XDG_CONFIG_HOME/zsh/*.zsh; do
+for file in $ZDOTDIR/*.zsh; do
     source "$file"
 done
 

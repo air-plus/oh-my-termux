@@ -10,6 +10,9 @@ if (( $+commands[nvim] )); then
   export VISUAL='nvim'
 fi
 
+# --- Zsh ---
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
 # --- GPG TTY ---
 export GPG_TTY="$(tty)"
 
