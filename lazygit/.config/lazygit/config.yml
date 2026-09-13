@@ -2,8 +2,7 @@
 git:
   # --- 分页器配置 ---
   diffRenderers:
-    - colorArg: always # 启用颜色
-      command: delta --dark --paging=never # 设置分页器为 Delta
+    - command: delta --dark --paging=never # 设置分页器为 Delta
 
 # --- GUI 配置 ---
 gui:
@@ -35,5 +34,6 @@ gui:
       - '#f38ba8'
     defaultFgColor:
       - '#cdd6f4'
+
   authorColors:
     '*': '#b4befe'

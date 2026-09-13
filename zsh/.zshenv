@@ -10,11 +10,8 @@ if (( $+commands[nvim] )); then
   export VISUAL='nvim'
 fi
 
-# --- PATH ---
-export PATH="$PATH:$HOME/.local/bin"
-
 # --- GPG TTY ---
-export GPG_TTY=$(tty)
+export GPG_TTY="$(tty)"
 
 # --- fzf ---
 export FZF_DEFAULT_OPTS=" \
@@ -23,10 +20,10 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
 --color=selected-bg:#45475A \
 --color=border:#6C7086,label:#CDD6F4 \
---height 40% \
+--height=40% \
 --layout=reverse \
 --border \
---preview 'bat --style=numbers --color=always --theme=\"Catppuccin Mocha\" {}'"
+--preview 'bat -nr :500 --color=always --theme=\"Catppuccin Mocha\" {}'"
 
-# --- fzf 搜索引擎 ---
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --strip-cwd-prefix --exclude .git'
+export FZF_DEFAULT_COMMAND='fd -HLt f -E .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

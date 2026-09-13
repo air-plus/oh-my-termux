@@ -1,4 +1,4 @@
-# --- eza 相关 ---
+# --- ls -> eza ---
 if (( $+commands[eza] )); then
   alias ls='eza --icons'
   alias ll='ls -lh --git'

@@ -9,12 +9,12 @@ show_help() {
   cat <<EOF
 setup.sh - Oh My Termux 安装引导
 
-使用: $0 [-a] [-m MODULE_NAME]
+使用: $0 [OPTIONS] [-m <MODULES>]
 
 选项:
-  -h, --help                  显示此引导信息
-  -a, --all                   安装全部模块（默认行为）
-  -m, --module MODULE_NAME    安装 MODULE_NAME
+  -h, --help                显示此引导信息
+  -a, --all                 安装全部模块，默认行为
+  -m, --module <MODULES>    安装 <MODULES>
 EOF
   exit 0
 }
@@ -92,18 +92,13 @@ info() {
 }
 
 # --- 变量定义 ---
-COLOR_OFF=''
-RED=''
-if [[ -t 1 ]]; then
-  COLOR_OFF='\033[0m'
-  RED='\033[0;31m'
-fi
+COLOR_OFF='\033[0m'
+RED='\033[0;31m'
+ALL=false
+MODULES=()
 
 OPTS="$(getopt -o ham: -l help,all,module: -n "$0" -- "$@")" || exit 1
 eval set -- "$OPTS"
-
-ALL=false
-MODULES=()
 
 # 解析选项
 while true; do
@@ -158,12 +153,10 @@ if "$ALL"; then
 
   for module in */; do
     module="${module%/}"
-    if [[ -d "$module" ]]; then
-      pre_stow "$module"
-      info "🔗 建立 $module 配置文件软链接"
-      stow --adopt --verbose=0 -t "$HOME" "$module" || error "建立 $module 配置文件软链接失败"
-      post_stow "$module"
-    fi
+    pre_stow "$module"
+    info "🔗 建立 $module 配置文件软链接"
+    stow --adopt -v 0 "$module" || error "建立 $module 配置文件软链接失败"
+    post_stow "$module"
   done
 else
   for module in "${MODULES[@]}"; do
@@ -175,7 +168,7 @@ else
 
     pre_stow "$module"
     info "🔗 建立 $module 配置文件软链接"
-    stow --adopt --verbose=0 -t "$HOME" "$module" || error "建立 $module 配置文件软链接失败"
+    stow --adopt -v 0 "$module" || error "建立 $module 配置文件软链接失败"
     post_stow "$module"
   done
 fi
