@@ -94,7 +94,7 @@ info() {
 # --- 变量定义 ---
 COLOR_OFF='\033[0m'
 RED='\033[0;31m'
-ALL=0
+ALL=false
 MODULES=()
 
 OPTS="$(getopt -o ham: -l help,all,module: -n "$0" -- "$@")" || exit 1
@@ -130,10 +130,10 @@ while true; do
   esac
 done
 
-! (( ALL )) && [[ "${#MODULES[@]}" -eq 0 ]] && ALL=1
+[[ "$ALL" != true && "${#MODULES[@]}" -eq 0 ]] && ALL=true
 
 # --- 脚本主体 ---
-[[ -z "$TERMUX_VERSION" ]] && error '当前环境不是 Termux'
+[[ -z "${TERMUX_VERSION:-}" ]] && error '当前环境不是 Termux'
 
 clear
 
@@ -143,7 +143,7 @@ echo
 info '📥 安装 Stow'
 apt-get install -y stow &>/dev/null || error 'Stow 安装失败'
 
-if (( ALL )); then
+if [[ "$ALL" == true ]]; then
   info '📥 安装额外依赖'
   apt-get install -y \
     jq fzf build-essential fastfetch \
@@ -161,7 +161,7 @@ else
   for module in "${MODULES[@]}"; do
     if [[ ! -d "$module" ]]; then
       error "模块 '$module' 不存在"
-    elif [[ "$module" == ".git" ]]; then
+    elif [[ "$module" == '.git' ]]; then
       error '禁止安装 .git 目录'
     fi
 
