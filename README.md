@@ -55,7 +55,7 @@ cd oh-my-termux
 chmod +x setup.sh
 ./setup.sh -m <MODULES>
 ```
-将 `MODULE_NAME` 替换为有效模块名称即可
+将 `MODULES` 替换为有效模块名称即可
 
 ---
 
