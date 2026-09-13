@@ -7,14 +7,14 @@ set -euo pipefail
 # --- 函数定义 ---
 show_help() {
   cat <<EOF
-setup.sh - Oh My Termux 安装引导
+Oh My Termux 安装引导
 
 使用: $0 [OPTIONS] [-m <MODULES>]
 
 选项:
-  -h, --help                显示此引导信息
-  -a, --all                 安装全部模块，默认行为
-  -m, --module <MODULES>    安装 <MODULES>
+  -a，--all                 安装全部模块，默认行为
+  -m，--module <MODULES>    安装 <MODULES>
+  -h，--help                显示此引导信息
 EOF
   exit 0
 }
