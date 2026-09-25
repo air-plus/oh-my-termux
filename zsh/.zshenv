@@ -1,22 +1,22 @@
-# --- XDG ---
+# XDG
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
-# --- 编辑器 ---
+# 编辑器
 if (( $+commands[nvim] )); then
   export EDITOR='nvim'
   export VISUAL="$EDITOR"
 fi
 
-# --- Zsh ---
+# Zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-# --- GPG ---
+# GPG
 export GPG_TTY="$(tty)"
 
-# --- fzf ---
+# fzf
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
 --color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \

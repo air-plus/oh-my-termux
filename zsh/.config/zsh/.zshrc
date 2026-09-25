@@ -21,7 +21,7 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-# --- 插件 & 补全 ---
+# 插件 & 补全
 zinit wait lucid light-mode for \
     blockf atload'zicompinit; zicdreplay' \
     zsh-users/zsh-completions \
@@ -29,7 +29,7 @@ zinit wait lucid light-mode for \
     zsh-users/zsh-autosuggestions \
     zdharma-continuum/fast-syntax-highlighting
 
-# --- 历史记录 ---
+# 历史记录
 [[ ! -d "$XDG_STATE_HOME/zsh" ]] && mkdir "$XDG_STATE_HOME/zsh"
 
 HISTFILE="$XDG_STATE_HOME/zsh/history"
@@ -42,15 +42,15 @@ setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_ALL_DUPS
 
-# --- 工具集成 ---
+# 工具集成
 (( $+commands[fzf] )) && source <(fzf --zsh)
 (( $+commands[zoxide])) && eval "$(zoxide init zsh --cmd cd)"
 (( $+commands[starship] )) && eval "$(starship init zsh)"
 
-# --- 引用外部文件 ---
+# 引用外部文件
 for file in $ZDOTDIR/*.zsh; do
     source "$file"
 done
 
-# --- fastfetch ---
+# fastfetch
 (( $+commands[fastfetch] )) && fastfetch -c examples/10.jsonc

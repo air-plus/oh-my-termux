@@ -1,9 +1,10 @@
 return {
-  -- --- 配置 LazyVim ---
+  -- 配置 LazyVim
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin", -- 使用 Catppuccin 主题
+      -- 使用 Catppuccin Mocha 主题
+      colorscheme = "catppuccin",
     },
   },
 }

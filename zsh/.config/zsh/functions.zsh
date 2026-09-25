@@ -1,4 +1,4 @@
-# --- Yazi ---
+# Yazi
 if (( $+commands[yazi] )); then
   y() {
     local tmp cwd; tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
@@ -9,7 +9,7 @@ if (( $+commands[yazi] )); then
   }
 fi
 
-# --- Lazygit ---
+# Lazygit
 if (( $+commands[lazygit] )); then
   lg() {
     export LAZYGIT_NEW_DIR_FILE="$HOME/.lazygit/newdir"
