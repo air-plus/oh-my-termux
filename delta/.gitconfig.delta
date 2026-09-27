@@ -3,6 +3,5 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
-	features = catppuccin-mocha
 	navigate = true
 	dark = true

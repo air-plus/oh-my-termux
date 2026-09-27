@@ -1,6 +1,6 @@
 [include]
 	path = ~/.gitconfig.local
-	path = ~/.config/delta/catppuccin.gitconfig
+	path = ~/.config/delta/tokyonight_night.gitconfig
 	path = ~/.gitconfig.delta
 [merge]
 	conflictStyle = zdiff3

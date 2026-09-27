@@ -3,8 +3,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      -- 使用 Catppuccin Mocha 主题
-      colorscheme = "catppuccin",
+      -- 使用 TokyoNight Night 主题
+      colorscheme = "tokyonight-night",
     },
   },
 }

@@ -24,6 +24,7 @@ Oh My Termux 是一个 Termux 配置集合仓库，集成 Zsh、Neovim、Git、Z
 * **提示符**：Starship
 * **文件管理器**：Yazi
 * **终端复用器**：Zellij
+* **配色方案**：TokyoNight Night
 
 ---
 
