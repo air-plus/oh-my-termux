@@ -3,5 +3,6 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
+	syntax-theme = tokyonight_night
 	navigate = true
 	dark = true
