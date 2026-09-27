@@ -43,7 +43,13 @@ export FZF_DEFAULT_OPTS="--highlight-line \
   --border \
 "
 
-(( $+commands[bat] )) && export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --preview 'bat -nr :500 --color=always --theme=\"tokyonight_night\" {}'"
+if (( $+commands[bat] )); then
+  export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+    --preview 'bat -nr :500 \
+    --color=always \
+    --theme=\"tokyonight_night\" {}' \
+  "
+fi
 
 if (( $+commands[fd] )); then
   export FZF_DEFAULT_COMMAND='fd -HLt f -E .git'

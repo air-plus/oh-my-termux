@@ -30,7 +30,9 @@ zinit wait lucid light-mode for \
     zdharma-continuum/fast-syntax-highlighting
 
 # 历史记录
-[[ ! -d "$XDG_STATE_HOME/zsh" ]] && mkdir "$XDG_STATE_HOME/zsh"
+if [[ ! -d "$XDG_STATE_HOME/zsh" ]]; then
+  mkdir "$XDG_STATE_HOME/zsh"
+fi
 
 HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=10000
@@ -43,9 +45,17 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_ALL_DUPS
 
 # 工具集成
-(( $+commands[fzf] )) && source <(fzf --zsh)
-(( $+commands[zoxide])) && eval "$(zoxide init zsh --cmd cd)"
-(( $+commands[starship] )) && eval "$(starship init zsh)"
+if (( $+commands[fzf] )); then
+  source <(fzf --zsh)
+fi
+
+if (( $+commands[zoxide])); then
+  eval "$(zoxide init zsh --cmd cd)"
+fi
+
+if (( $+commands[starship] )); then
+  eval "$(starship init zsh)"
+fi
 
 # 引用外部文件
 for file in $ZDOTDIR/*.zsh; do
@@ -53,4 +63,6 @@ for file in $ZDOTDIR/*.zsh; do
 done
 
 # fastfetch
-(( $+commands[fastfetch] )) && fastfetch -c examples/10.jsonc
+if (( $+commands[fastfetch] )); then
+  fastfetch -c examples/10.jsonc
+fi

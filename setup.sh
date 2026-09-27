@@ -130,10 +130,14 @@ while true; do
   esac
 done
 
-[[ "$ALL" != true && "${#MODULES[@]}" -eq 0 ]] && ALL=true
+if [[ "$ALL" != true && "${#MODULES[@]}" -eq 0 ]]; then
+  ALL=true
+fi
 
 # --- 脚本主体 ---
-[[ -z "${TERMUX_VERSION:-}" ]] && error '当前环境不是 Termux'
+if [[ -z "${TERMUX_VERSION:-}" ]]; then
+  error '当前环境不是 Termux'
+fi
 
 clear
 
