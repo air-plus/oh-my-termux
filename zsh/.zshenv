@@ -17,27 +17,10 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export GPG_TTY="$(tty)"
 
 # fzf
-export FZF_DEFAULT_OPTS="--highlight-line \
-  --info=inline-right \
-  --ansi \
-  --layout=reverse \
-  --border=none \
-  --color=bg+:#283457 \
-  --color=bg:#16161e \
-  --color=border:#27a1b9 \
-  --color=fg:#c0caf5 \
-  --color=gutter:#16161e \
-  --color=header:#ff9e64 \
-  --color=hl+:#2ac3de \
-  --color=hl:#2ac3de \
-  --color=info:#545c7e \
-  --color=marker:#ff007c \
-  --color=pointer:#ff007c \
-  --color=prompt:#2ac3de \
-  --color=query:#c0caf5:regular \
-  --color=scrollbar:#27a1b9 \
-  --color=separator:#ff9e64 \
-  --color=spinner:#ff007c \
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  --color=bg+:#3c3836,bg:#282828,spinner:#689d6a,hl:#458588 \
+  --color=fg:#928374,header:#458588,info:#d79921,pointer:#689d6a \
+  --color=marker:#689d6a,fg+:#fbf1c7,prompt:#d79921,hl+:#458588 \
   --height=40% \
   --layout=reverse \
   --border \
@@ -46,8 +29,8 @@ export FZF_DEFAULT_OPTS="--highlight-line \
 if (( $+commands[bat] )); then
   export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
     --preview 'bat -nr :500 \
-    --color=always \
-    --theme=\"tokyonight_night\" {}' \
+      --color=always \
+      --theme=\"gruvbox-dark\" {}' \
   "
 fi
 

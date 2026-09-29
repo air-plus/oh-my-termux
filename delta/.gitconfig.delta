@@ -3,6 +3,6 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
-	syntax-theme = tokyonight_night
+	syntax-theme = gruvbox-dark
 	navigate = true
 	dark = true
