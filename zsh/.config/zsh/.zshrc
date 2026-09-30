@@ -23,11 +23,11 @@ zinit light-mode for \
 
 # 插件 & 补全
 zinit wait lucid light-mode for \
-    blockf atload'zicompinit; zicdreplay' \
-    zsh-users/zsh-completions \
-    Aloxaf/fzf-tab \
-    zsh-users/zsh-autosuggestions \
-    zdharma-continuum/fast-syntax-highlighting
+  blockf atload'zicompinit; zicdreplay' \
+  zsh-users/zsh-completions \
+  Aloxaf/fzf-tab \
+  zsh-users/zsh-autosuggestions \
+  zdharma-continuum/fast-syntax-highlighting
 
 # 历史记录
 if [[ ! -d "$XDG_STATE_HOME/zsh" ]]; then
@@ -59,7 +59,7 @@ fi
 
 # 引用外部文件
 for file in $ZDOTDIR/*.zsh; do
-    source "$file"
+  source "$file"
 done
 
 # fastfetch
