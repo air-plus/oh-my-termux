@@ -23,15 +23,13 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=marker:#689d6a,fg+:#fbf1c7,prompt:#d79921,hl+:#458588 \
   --height=40% \
   --layout=reverse \
-  --border \
-"
+  --border"
 
 if (( $+commands[bat] )); then
   export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
     --preview 'bat -nr :500 \
       --color=always \
-      --theme=\"gruvbox-dark\" {}' \
-  "
+      --theme=\"gruvbox-dark\" {}'"
 fi
 
 if (( $+commands[fd] )); then
