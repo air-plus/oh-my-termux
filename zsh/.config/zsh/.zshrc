@@ -31,7 +31,7 @@ zinit wait lucid light-mode for \
 
 # 历史记录
 if [[ ! -d "$XDG_STATE_HOME/zsh" ]]; then
-  mkdir "$XDG_STATE_HOME/zsh"
+  mkdir -p "$XDG_STATE_HOME/zsh"
 fi
 
 HISTFILE="$XDG_STATE_HOME/zsh/history"
