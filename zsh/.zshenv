@@ -14,29 +14,35 @@ if (( $+commands[nvim] )); then
 fi
 
 # GPG
-export GPG_TTY="$(tty)"
-
-# Starship
-export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
-
-# fzf
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  --color=bg+:#3c3836,bg:#282828,spinner:#689d6a,hl:#458588 \
-  --color=fg:#928374,header:#458588,info:#d79921,pointer:#689d6a \
-  --color=marker:#689d6a,fg+:#fbf1c7,prompt:#d79921,hl+:#458588 \
-  --height=40% \
-  --layout=reverse \
-  --border"
-
-if (( $+commands[bat] )); then
-  export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-    --preview 'bat -nr :500 \
-      --color=always \
-      --theme=\"gruvbox-dark\" {}'"
+if (( $+commands[gpg] )); then
+  export GPG_TTY="$(tty)"
 fi
 
-if (( $+commands[fd] )); then
-  export FZF_DEFAULT_COMMAND='fd -HLt f -E .git'
+# Starship
+if (( $+commands[starship] )); then
+  export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
+fi
+
+# fzf
+if (( $+commands[fzf] )); then
+  export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+    --color=bg+:#3c3836,bg:#282828,spinner:#689d6a,hl:#458588 \
+    --color=fg:#928374,header:#458588,info:#d79921,pointer:#689d6a \
+    --color=marker:#689d6a,fg+:#fbf1c7,prompt:#d79921,hl+:#458588 \
+    --height=40% \
+    --layout=reverse \
+    --border"
+
+  if (( $+commands[bat] )); then
+    export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+      --preview 'bat -nr :500 \
+        --color=always \
+        --theme=\"gruvbox-dark\" {}'"
+  fi
+
+  if (( $+commands[fd] )); then
+    export FZF_DEFAULT_COMMAND='fd -HLt f -E .git'
+  fi
 fi
 
 # Zsh
