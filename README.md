@@ -31,7 +31,6 @@ Oh My Termux 是一个 Termux 配置集合仓库，集成 Zsh、Neovim、Git、Z
 ## 🚀 快速开始
 ## 环境要求
 * **一个未进行任何操作的 Termux 环境**
-* **Android 9+**
 
 ### 全量安装
 在你的 Termux 执行下面这些命令 👇
