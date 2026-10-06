@@ -4,13 +4,13 @@
 Oh My Termux 是一个 Termux 配置集合仓库，集成 Zsh、Neovim、Git、Zellij 等开发工具，开箱即用，让移动端编码体验接近桌面
 
 [
-  ![STARS](https://img.shields.io/github/stars/air-plus/oh-my-termux?style=for-the-badge)
+  ![STARS](https://img.shields.io/github/stars/air-plus/oh-my-termux)
 ](https://github.com/air-plus/oh-my-termux/stargazers)
 [
-  ![ISSUES](https://img.shields.io/github/issues/air-plus/oh-my-termux?style=for-the-badge)
+  ![ISSUES](https://img.shields.io/github/issues/air-plus/oh-my-termux)
 ](https://github.com/air-plus/oh-my-termux/issues)
 [
-  ![CONTRIBUTORS](https://img.shields.io/github/contributors/air-plus/oh-my-termux?style=for-the-badge)
+  ![CONTRIBUTORS](https://img.shields.io/github/contributors/air-plus/oh-my-termux)
 ](https://github.com/air-plus/oh-my-termux/contributors)
 
 </div>
@@ -24,7 +24,7 @@ Oh My Termux 是一个 Termux 配置集合仓库，集成 Zsh、Neovim、Git、Z
 * **提示符**：Starship
 * **文件管理器**：Yazi
 * **终端复用器**：Zellij
-* **配色方案**：Gruvbox Dark
+* **配色方案**：Gruvbox Dark Hard
 
 ---
 
