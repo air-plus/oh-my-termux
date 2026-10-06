@@ -151,7 +151,7 @@ if [[ "$ALL" == true ]]; then
   info '📥 安装额外依赖'
   apt-get install -y \
     jq fzf build-essential fastfetch \
-    zoxide fd ripgrep starship \
+    zoxide fd ripgrep \
     &>/dev/null || error '额外依赖安装失败'
 
   for module in */; do

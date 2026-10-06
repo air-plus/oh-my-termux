@@ -13,11 +13,11 @@ if (( $+commands[nvim] )); then
   export VISUAL="$EDITOR"
 fi
 
-# Zsh
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-
 # GPG
 export GPG_TTY="$(tty)"
+
+# Starship
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
 
 # fzf
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
@@ -38,3 +38,6 @@ fi
 if (( $+commands[fd] )); then
   export FZF_DEFAULT_COMMAND='fd -HLt f -E .git'
 fi
+
+# Zsh
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
