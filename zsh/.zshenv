@@ -26,9 +26,9 @@ fi
 # fzf
 if (( $+commands[fzf] )); then
   export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-    --color=bg+:#3c3836,bg:#282828,spinner:#689d6a,hl:#458588 \
-    --color=fg:#928374,header:#458588,info:#d79921,pointer:#689d6a \
-    --color=marker:#689d6a,fg+:#fbf1c7,prompt:#d79921,hl+:#458588 \
+    --color=bg+:#3c3836,bg:#1d2021,spinner:#8ec07c,hl:#83a598 \
+    --color=fg:#bdae93,header:#83a598,info:#fabd2f,pointer:#8ec07c \
+    --color=marker:#8ec07c,fg+:#ebdbb2,prompt:#fabd2f,hl+:#83a598
     --height=40% \
     --layout=reverse \
     --border"
