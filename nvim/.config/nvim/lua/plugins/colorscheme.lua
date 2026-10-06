@@ -1,6 +1,12 @@
 return {
   -- 安装并配置 Gruvbox 主题
-  { "ellisonleao/gruvbox.nvim" },
+  {
+    "ellisonleao/gruvbox.nvim",
+    opts = {
+      -- Hard 对比度
+      contrast = "hard",
+    },
+  },
 
   -- 配置 LazyVim
   {
