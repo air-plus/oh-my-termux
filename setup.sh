@@ -4,7 +4,23 @@
 
 set -euo pipefail
 
-# --- 函数定义 ---
+if [[ -t 1 ]]; then
+  COLOR_OFF='\033[0m'
+  RED='\033[0;31m'
+else
+  COLOR_OFF=''
+  RED=''
+fi
+
+info() {
+  echo -e "$@ ${COLOR_OFF}"
+}
+
+error() {
+  echo -e "${RED}❌ 错误：${COLOR_OFF}" "$@" >&2
+  exit 1
+}
+
 show_help() {
   cat <<EOF
 Oh My Termux 安装引导
@@ -26,33 +42,13 @@ EOF
 pre_stow() {
   local module="$1"
   case "$module" in
-  lazygit)
-    info '📥 安装 Lazygit'
-    apt-get install -y lazygit git-delta git >/dev/null
-    ;;
-  delta)
-    info '📥 安装 Delta'
-    apt-get install -y git-delta git >/dev/null
-    ;;
-  npm)
-    info '📥 安装 Node.js'
-    apt-get install -y nodejs-lts >/dev/null
-    ;;
-  yazi)
-    info '📥 安装 Yazi'
-    apt-get install -y yazi file >/dev/null
-    ;;
-  nvim)
-    info '📥 安装 Neovim'
-    apt-get install -y neovim >/dev/null
-    ;;
-  termux)
-    # Termux 本体不走 apt-get
-    ;;
-  *)
-    info "📥 安装 $module"
-    apt-get install -y "$module" >/dev/null
-    ;;
+  lazygit) info '📥 安装 Lazygit'; apt-get install -y lazygit git-delta git >/dev/null ;;
+  delta)   info '📥 安装 Delta';   apt-get install -y git-delta git         >/dev/null ;;
+  npm)     info '📥 安装 Node.js'; apt-get install -y nodejs-lts            >/dev/null ;;
+  yazi)    info '📥 安装 Yazi';    apt-get install -y yazi file             >/dev/null ;;
+  nvim)    info '📥 安装 Neovim';  apt-get install -y neovim                >/dev/null ;;
+  termux) : ;;
+  *)       info "📥 安装 $module"; apt-get install -y "$module"             >/dev/null ;;
   esac
 }
 
@@ -64,36 +60,18 @@ post_stow() {
   local module="$1"
   case "$module" in
   termux)
-    # 由于 Termux 无法读取软链接之后的 termux.properties，故单独处理
+    # Termux 无法读取软链接之后的 termux.properties，故单独处理
     info '🔧 修改 Termux 原生配置'
     cat >> "$HOME/.termux/termux.properties" <<'EOF'
 volume-keys = volume
 terminal-cursor-blink-rate = 500
 EOF
     ;;
-  bat)
-    info '📦 构建 Bat 缓存'
-    bat cache --build >/dev/null
-    ;;
-  zsh)
-    info '🐚 切换默认 Shell'
-    chsh -s zsh
-    ;;
+  bat) info '📦 构建 Bat 缓存';  bat cache --build >/dev/null ;;
+  zsh) info '🐚 切换默认 Shell'; chsh -s zsh ;;
   esac
 }
 
-info() {
-  echo -e "$@ ${COLOR_OFF}"
-}
-
-error() {
-  echo -e "${RED}❌ 错误：${COLOR_OFF}" "$@" >&2
-  exit 1
-}
-
-# --- 变量定义 ---
-COLOR_OFF='\033[0m'
-RED='\033[0;31m'
 ALL=false
 MODULES=()
 
@@ -103,13 +81,8 @@ eval set -- "$OPTS"
 # 解析选项
 while true; do
   case "$1" in
-  -h | --help)
-    show_help
-    ;;
-  -a | --all)
-    ALL=1
-    shift
-    ;;
+  -h | --help) show_help ;;
+  -a | --all) ALL=true; shift ;;
   -m | --module)
     # 读取 -m / --module 的多个传参
     IFS=',' read -ra mods <<<"$2"
@@ -120,23 +93,17 @@ while true; do
     done
     shift 2
     ;;
-  --)
-    shift
-    break
-    ;;
-  *)
-    error "未知选项 '$1'"
-    ;;
+  --) shift; break ;;
+  *) error "未知选项 '$1'" ;;
   esac
 done
 
-if [[ "$ALL" != true && "${#MODULES[@]}" -eq 0 ]]; then
-  ALL=true
-fi
-
-# --- 脚本主体 ---
 if [[ -z "${TERMUX_VERSION:-}" ]]; then
   error '当前环境不是 Termux'
+fi
+
+if [[ "$ALL" == false && "${#MODULES[@]}" -eq 0 ]]; then
+  ALL=true
 fi
 
 clear
@@ -157,7 +124,7 @@ if [[ "$ALL" == true ]]; then
     module="${module%/}"
     pre_stow "$module"
     info "🔗 建立 $module 配置文件软链接"
-    stow --adopt "$module"
+    stow "$module"
     post_stow "$module"
   done
 else
@@ -172,15 +139,9 @@ else
     info "🔗 建立 $module 配置文件软链接"
 
     case "$module" in
-    delta)
-      stow --adopt git delta
-      ;;
-    lazygit)
-      stow --adopt lazygit git delta
-      ;;
-    *)
-      stow --adopt "$module"
-      ;;
+    delta)   stow git delta ;;
+    lazygit) stow lazygit git delta ;;
+    *)       stow "$module" ;;
     esac
 
     post_stow "$module"
@@ -189,4 +150,7 @@ fi
 
 info '✨ Oh My Termux 安装完成'
 termux-reload-settings
-command -v zsh &>/dev/null && exec zsh
+
+if command -v zsh &>/dev/null; then
+  exec zsh
+fi
