@@ -28,30 +28,30 @@ pre_stow() {
   case "$module" in
   lazygit)
     info '📥 安装 Lazygit'
-    apt-get install -y lazygit git-delta git &>/dev/null || error 'Lazygit 安装失败'
+    apt-get install -y lazygit git-delta git >/dev/null
     ;;
   delta)
     info '📥 安装 Delta'
-    apt-get install -y git-delta git &>/dev/null || error 'Delta 安装失败'
+    apt-get install -y git-delta git >/dev/null
     ;;
   npm)
     info '📥 安装 Node.js'
-    apt-get install -y nodejs-lts &>/dev/null || error 'Node.js 安装失败'
+    apt-get install -y nodejs-lts >/dev/null
     ;;
   yazi)
     info '📥 安装 Yazi'
-    apt-get install -y yazi file &>/dev/null || error 'Yazi 安装失败'
+    apt-get install -y yazi file >/dev/null
     ;;
   nvim)
     info '📥 安装 Neovim'
-    apt-get install -y neovim &>/dev/null || error 'Neovim 安装失败'
+    apt-get install -y neovim >/dev/null
     ;;
   termux)
     # Termux 本体不走 apt-get
     ;;
   *)
     info "📥 安装 $module"
-    apt-get install -y "$module" &>/dev/null || error "$module 安装失败"
+    apt-get install -y "$module" >/dev/null
     ;;
   esac
 }
@@ -73,7 +73,7 @@ EOF
     ;;
   bat)
     info '📦 构建 Bat 缓存'
-    bat cache --build &>/dev/null || error 'Bat 缓存构建失败'
+    bat cache --build >/dev/null
     ;;
   zsh)
     info '🐚 切换默认 Shell'
@@ -82,13 +82,13 @@ EOF
   esac
 }
 
+info() {
+  echo -e "$@ ${COLOR_OFF}"
+}
+
 error() {
   echo -e "${RED}❌ 错误：${COLOR_OFF}" "$@" >&2
   exit 1
-}
-
-info() {
-  echo -e "$@ ${COLOR_OFF}"
 }
 
 # --- 变量定义 ---
@@ -145,20 +145,19 @@ info '✨ 欢迎使用 Oh My Termux'
 echo
 
 info '📥 安装 Stow'
-apt-get install -y stow &>/dev/null || error 'Stow 安装失败'
+apt-get install -y stow >/dev/null
 
 if [[ "$ALL" == true ]]; then
   info '📥 安装额外依赖'
   apt-get install -y \
     jq fzf build-essential fastfetch \
-    zoxide fd ripgrep \
-    &>/dev/null || error '额外依赖安装失败'
+    zoxide fd ripgrep >/dev/null
 
   for module in */; do
     module="${module%/}"
     pre_stow "$module"
     info "🔗 建立 $module 配置文件软链接"
-    stow --adopt -v 0 "$module" || error "建立 $module 配置文件软链接失败"
+    stow --adopt "$module"
     post_stow "$module"
   done
 else
@@ -174,13 +173,13 @@ else
 
     case "$module" in
     delta)
-      stow --adopt -v 0 git delta || error '建立 Delta 配置文件软链接失败'
+      stow --adopt git delta
       ;;
     lazygit)
-      stow --adopt -v 0 lazygit git delta || error '建立 Lazygit 配置文件软链接失败'
+      stow --adopt lazygit git delta
       ;;
     *)
-      stow --adopt -v 0 "$module" || error "建立 $module 配置文件软链接失败"
+      stow --adopt "$module"
       ;;
     esac
 
