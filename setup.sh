@@ -28,7 +28,7 @@ pre_stow() {
   case "$module" in
   lazygit)
     info '📥 安装 Lazygit'
-    apt-get install -y lazygit git-delta git || error 'Lazygit 安装失败'
+    apt-get install -y lazygit git-delta git &>/dev/null || error 'Lazygit 安装失败'
     ;;
   delta)
     info '📥 安装 Delta'
@@ -66,7 +66,7 @@ post_stow() {
   termux)
     # 由于 Termux 无法读取软链接之后的 termux.properties，故单独处理
     info '🔧 修改 Termux 原生配置'
-    cat >"$HOME/.termux/termux.properties" <<'EOF'
+    cat >> "$HOME/.termux/termux.properties" <<'EOF'
 volume-keys = volume
 terminal-cursor-blink-rate = 500
 EOF
