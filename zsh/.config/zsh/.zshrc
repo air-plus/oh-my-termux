@@ -28,6 +28,8 @@ zinit wait lucid light-mode for \
   zsh-users/zsh-autosuggestions \
   zdharma-continuum/fast-syntax-highlighting
 
+zstyle ':completion:*' menu select
+
 # 历史记录
 if [[ ! -d "$XDG_STATE_HOME/zsh" ]]; then
   mkdir -p "$XDG_STATE_HOME/zsh"
