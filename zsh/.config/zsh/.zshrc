@@ -25,7 +25,6 @@ zinit light-mode for \
 zinit wait lucid light-mode for \
   blockf atload'zicompinit; zicdreplay' \
   zsh-users/zsh-completions \
-  Aloxaf/fzf-tab \
   zsh-users/zsh-autosuggestions \
   zdharma-continuum/fast-syntax-highlighting
 
@@ -49,7 +48,7 @@ if (( $+commands[fzf] )); then
   source <(fzf --zsh)
 fi
 
-if (( $+commands[zoxide])); then
+if (( $+commands[zoxide] )); then
   eval "$(zoxide init zsh --cmd cd)"
 fi
 
