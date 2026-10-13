@@ -25,6 +25,7 @@ zinit light-mode for \
 zinit wait lucid light-mode for \
   blockf atload'zicompinit; zicdreplay' \
   zsh-users/zsh-completions \
+  zsh-users/zsh-history-substring-search \
   zsh-users/zsh-autosuggestions \
   zdharma-continuum/fast-syntax-highlighting
 
@@ -57,6 +58,10 @@ fi
 if (( $+commands[starship] )); then
   eval "$(starship init zsh)"
 fi
+
+# 键位映射
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # 引用外部文件
 for file in $ZDOTDIR/*.zsh; do
