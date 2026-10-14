@@ -23,6 +23,8 @@ zinit light-mode for \
 
 # 插件 & 补全
 zinit wait lucid light-mode for \
+  OMZL::directories.zsh \
+  OMZL::history.zsh \
   atload'zicompinit; zicdreplay' \
   zsh-users/zsh-completions \
   zsh-users/zsh-history-substring-search \
@@ -39,12 +41,6 @@ fi
 HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=10000
 SAVEHIST=10000
-
-setopt SHARE_HISTORY
-setopt EXTENDED_HISTORY
-setopt INC_APPEND_HISTORY
-setopt HIST_IGNORE_SPACE
-setopt HIST_IGNORE_ALL_DUPS
 
 # 工具集成
 if (( $+commands[fzf] )); then
