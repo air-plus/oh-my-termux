@@ -22,6 +22,8 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 # 插件 & 补全
+fpath=($XDG_DATA_HOME/zinit/plugins/zsh-users---zsh-completions/src $fpath)
+
 zinit wait lucid light-mode for \
   blockf atload'zicompinit; zicdreplay' \
   zsh-users/zsh-completions \
