@@ -21,7 +21,7 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-# 插件 & 补全
+# 插件
 zinit wait lucid light-mode for \
   OMZL::completion.zsh \
   OMZL::directories.zsh \
