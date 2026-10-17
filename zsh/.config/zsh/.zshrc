@@ -21,17 +21,20 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-# 插件 & 补全
+# 插件
 zinit wait lucid light-mode for \
   OMZL::directories.zsh \
   OMZL::history.zsh \
   OMZL::key-bindings.zsh \
+  OMZP::git \
   atload'zicompinit; zicdreplay' \
   zsh-users/zsh-completions \
   zsh-users/zsh-history-substring-search \
   zsh-users/zsh-autosuggestions \
   zdharma-continuum/fast-syntax-highlighting
 
+
+# 补全
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
