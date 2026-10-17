@@ -33,7 +33,6 @@ zinit wait lucid light-mode for \
   zsh-users/zsh-autosuggestions \
   zdharma-continuum/fast-syntax-highlighting
 
-
 # 补全
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
