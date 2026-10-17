@@ -23,15 +23,15 @@ zinit light-mode for \
 
 # 插件 & 补全
 zinit wait lucid light-mode for \
+  OMZL::completion.zsh \
   OMZL::directories.zsh \
   OMZL::history.zsh \
+  OMZL::key-bindings.zsh \
   atload'zicompinit; zicdreplay' \
   zsh-users/zsh-completions \
   zsh-users/zsh-history-substring-search \
   zsh-users/zsh-autosuggestions \
   zdharma-continuum/fast-syntax-highlighting
-
-zstyle ':completion:*' menu select
 
 # 历史记录
 if [[ ! -d "$XDG_STATE_HOME/zsh" ]]; then
@@ -66,5 +66,5 @@ done
 
 # fastfetch
 if (( $+commands[fastfetch] )); then
-  fastfetch -l linux -c examples/7.jsonc
+  fastfetch -c examples/7.jsonc
 fi
