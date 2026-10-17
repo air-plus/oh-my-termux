@@ -42,7 +42,7 @@ if [[ ! -d "$XDG_STATE_HOME/zsh" ]]; then
   mkdir -p "$XDG_STATE_HOME/zsh"
 fi
 
-HISTFILE="$XDG_STATE_HOME/zsh/history"
+HISTFILE="$XDG_STATE_HOME/zsh/history.txt"
 HISTSIZE=10000
 SAVEHIST=10000
 
