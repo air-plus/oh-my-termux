@@ -21,9 +21,8 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-# 插件
+# 插件 & 补全
 zinit wait lucid light-mode for \
-  OMZL::completion.zsh \
   OMZL::directories.zsh \
   OMZL::history.zsh \
   OMZL::key-bindings.zsh \
@@ -32,6 +31,9 @@ zinit wait lucid light-mode for \
   zsh-users/zsh-history-substring-search \
   zsh-users/zsh-autosuggestions \
   zdharma-continuum/fast-syntax-highlighting
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # 历史记录
 if [[ ! -d "$XDG_STATE_HOME/zsh" ]]; then
