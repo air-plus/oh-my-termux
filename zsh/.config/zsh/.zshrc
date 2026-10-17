@@ -66,5 +66,5 @@ done
 
 # fastfetch
 if (( $+commands[fastfetch] )); then
-  fastfetch -c examples/10.jsonc
+  fastfetch -c examples/7.jsonc
 fi
