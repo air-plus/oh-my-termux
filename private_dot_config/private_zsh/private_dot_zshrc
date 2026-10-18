@@ -34,7 +34,6 @@ zinit wait lucid light-mode for \
 
 # 补全
 zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # 历史记录
 if [[ ! -d "$XDG_STATE_HOME/zsh" ]]; then
