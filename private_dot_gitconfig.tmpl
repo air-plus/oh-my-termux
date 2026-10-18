@@ -1,0 +1,18 @@
+[user]
+  name = {{ .name | quote }}
+  email = {{ .email | quote }}
+  signingkey = {{ .signingkey | quote }}
+[core]
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  syntax-theme = gruvbox-dark
+  navigate = true
+  dark = true
+[commit]
+  gpgsign = {{ .gpgsign }}
+[merge]
+  conflictStyle = zdiff3
+[init]
+  defaultBranch = main
