@@ -127,7 +127,6 @@ if [[ $# -gt 0 ]]; then
 fi
 
 if [[ "$ALL_FLAG" == true || ${#SELECTED_MODULES[@]} -eq 0 ]]; then
-  warn "选项覆盖：重定向至全部模块"
   SELECTED_MODULES=("${MODULES[@]}")
 fi
 
