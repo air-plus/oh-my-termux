@@ -91,8 +91,8 @@ add_module() {
   SELECTED_MODULES+=("$m")
 }
 
-OPTS=$(getopt -o am:h --long all,module:,help,list-modules -n "$0" -- "$@") \
-  || error '选项解析失败'
+OPTS=$(getopt -o am:h --long all,module:,help,list-modules -n "$0" -- "$@") ||
+  error '选项解析失败'
 eval set -- "$OPTS"
 
 while true; do
@@ -248,6 +248,8 @@ run_module() {
   info "正在处理：$module"
   "$fn" || error "模块 '$module' 处理失败"
 }
+
+info 'Oh My Termux 开始安装'
 
 for _m in "${SELECTED_MODULES[@]}"; do
   run_module "$_m"
