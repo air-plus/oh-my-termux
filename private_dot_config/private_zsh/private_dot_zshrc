@@ -21,11 +21,14 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-# 插件
-zinit wait lucid light-mode for \
+# Oh My Zsh 库
+zinit light-mode for \
   OMZL::directories.zsh \
   OMZL::history.zsh \
-  OMZL::key-bindings.zsh \
+  OMZL::key-bindings.zsh
+
+# 插件
+zinit wait lucid light-mode for \
   atload'zicompinit; zicdreplay' \
   zsh-users/zsh-completions \
   zsh-users/zsh-history-substring-search \
