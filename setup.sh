@@ -44,6 +44,7 @@ readonly MODULES=(
   'lazygit'
   'nodejs-lts'
   'nvim'
+  'pi'
   'ripgrep'
   'starship'
   'termux'
@@ -196,6 +197,17 @@ module_nvim() {
   chezmoi apply "$HOME/.config/nvim"
 }
 
+module_pi() {
+  info 'Pi 是一个 Agent 框架'
+  info '考虑到可能有人不需要这个功能，因此作为可选项'
+  read -rp '是否安装 Pi？（y/N）：' choice
+  choice=${choice:-n}
+  case "${choice,,}" in
+  y | yes) curl -fsSL https://pi.dev/install.sh | sh ;;
+  *) : ;;
+  esac
+}
+
 module_ripgrep() {
   apt-get install -y ripgrep >/dev/null
 }
@@ -230,15 +242,12 @@ run_module() {
   local fn="module_$module"
 
   if ! declare -F "$fn" >/dev/null; then
-    error "软件 '$module' 不存在处理函数"
+    error "模块 '$module' 不存在处理函数"
   fi
 
   info "正在处理：$module"
-  "$fn" || error "软件 '$module' 处理失败"
+  "$fn" || error "模块 '$module' 处理失败"
 }
-
-info '安装 Chezmoi...'
-apt-get install -y chezmoi >/dev/null
 
 for _m in "${SELECTED_MODULES[@]}"; do
   run_module "$_m"
