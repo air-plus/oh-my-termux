@@ -38,6 +38,7 @@ readonly MODULES=(
   'fastfetch'
   'fd'
   'fzf'
+  'gh'
   'git'
   'htop'
   'jq'
@@ -55,6 +56,7 @@ readonly MODULES=(
 )
 
 ALL_FLAG=false
+YES_FLAG=false
 SELECTED_MODULES=()
 declare -A SEEN_MODULES=()
 
@@ -67,6 +69,7 @@ Oh My Termux 安装引导
 选项:
   -a，--all                 安装全部模块，默认行为
   -m，--module <MODULES>    安装 <MODULES>
+  -y, --yes                 非交互模式，所有提示采用默认值
   -h，--help                显示此引导信息
   --list-modules            列出全部模块
 EOF
@@ -91,7 +94,7 @@ add_module() {
   SELECTED_MODULES+=("$m")
 }
 
-OPTS=$(getopt -o am:h --long all,module:,help,list-modules -n "$0" -- "$@") ||
+OPTS=$(getopt -o am:yh --long all,module:,yes,help,list-modules -n "$0" -- "$@") ||
   error '选项解析失败'
 eval set -- "$OPTS"
 
@@ -113,6 +116,10 @@ while true; do
   --list-modules)
     printf '%s\n' "${MODULES[@]}"
     exit 0
+    ;;
+  -y | --yes)
+    YES_FLAG=true
+    shift
     ;;
   -h | --help) show_help ;;
   --)
@@ -172,6 +179,10 @@ module_fzf() {
   apt-get install -y fzf >/dev/null
 }
 
+module_gh() {
+  apt-get install -y gh >/dev/null
+}
+
 module_htop() {
   apt-get install -y htop >/dev/null
   chezmoi apply "$HOME/.config/htop"
@@ -200,8 +211,13 @@ module_nvim() {
 module_pi() {
   info 'Pi 是一个 Agent 框架'
   info '考虑到可能有人不需要这个功能，因此作为可选项'
-  read -rp '是否安装 Pi？（y/N）：' choice
-  choice=${choice:-n}
+
+  local choice=n
+  if [[ "$YES_FLAG" == false ]]; then
+    read -rp '是否安装 Pi？（y/N）：' choice
+    choice=${choice:-n}
+  fi
+
   case "${choice,,}" in
   y | yes) curl -fsSL https://pi.dev/install.sh | sh ;;
   *) : ;;
@@ -258,6 +274,6 @@ done
 info 'Oh My Termux 安装完成'
 termux-reload-settings
 
-if command -v zsh &>/dev/null; then
+if [[ "$YES_FLAG" == false ]] && command -v zsh &>/dev/null; then
   exec zsh
 fi
