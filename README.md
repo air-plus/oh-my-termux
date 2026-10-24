@@ -38,7 +38,7 @@ Oh My Termux 是一个 Termux 配置集合仓库，集成 Zsh、Neovim、Git、Z
 ```bash
 pkg update -y && pkg upgrade -y
 pkg install -y chezmoi git
-chezmoi init -a air-plus
+chezmoi init air-plus/oh-my-termux
 chezmoi cd
 chmod +x setup.sh
 ./setup.sh
@@ -51,7 +51,7 @@ chmod +x setup.sh
 ```bash
 pkg update -y && pkg upgrade -y
 pkg install -y chezmoi git
-chezmoi init -a air-plus
+chezmoi init air-plus/oh-my-termux
 chezmoi cd
 chmod +x setup.sh
 ./setup.sh -m MODULES
