@@ -1,6 +1,6 @@
 return {
   -- 不再自动安装 Lua Language Server
-  "neovim/nvim-lspconfig",
+  'neovim/nvim-lspconfig',
   opts = {
     servers = {
       lua_ls = {
