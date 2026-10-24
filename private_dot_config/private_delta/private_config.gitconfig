@@ -5,6 +5,6 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
-	syntax-theme = catppuccin-mocha
+	features = catppuccin-mocha
 	navigate = true
 	dark = true
