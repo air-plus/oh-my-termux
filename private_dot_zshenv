@@ -26,9 +26,11 @@ fi
 # fzf
 if (( $+commands[fzf] )); then
   export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-    --color=bg+:#3c3836,bg:#1d2021,spinner:#8ec07c,hl:#83a598 \
-    --color=fg:#bdae93,header:#83a598,info:#fabd2f,pointer:#8ec07c \
-    --color=marker:#8ec07c,fg+:#ebdbb2,prompt:#fabd2f,hl+:#83a598
+    --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
+    --color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
+    --color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
+    --color=selected-bg:#45475A \
+    --color=border:#6C7086,label:#CDD6F4
     --height=40% \
     --layout=reverse \
     --border"
@@ -37,7 +39,7 @@ if (( $+commands[fzf] )); then
     export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
       --preview 'bat -nr :500 \
         --color=always \
-        --theme=\"gruvbox-dark\" {}'"
+        --theme=\"Catppuccin Mocha\" {}'"
   fi
 
   if (( $+commands[fd] )); then

@@ -139,7 +139,7 @@ if [[ "$ALL_FLAG" == true || ${#SELECTED_MODULES[@]} -eq 0 ]]; then
 fi
 
 module_termux() {
-  chezmoi apply "$HOME/.termux/colors.properties" "$HOME/.termux/font.ttf" "$HOME/.termux/termux.properties" "$HOME/.hushlogin"
+  chezmoi apply "$HOME/.termux" "$HOME/.hushlogin"
 }
 
 module_git() {
@@ -160,6 +160,7 @@ module_build-essential() {
 module_delta() {
   module_git
   apt-get install -y git-delta >/dev/null
+  chezmoi apply "$HOME/.config/delta"
 }
 
 module_eza() {
