@@ -1,6 +1,6 @@
 git:
   diffRenderers:
-    - command: delta --dark --paging=never
+    - command: delta --{{colorScheme}} --paging=never
 
 gui:
   nerdFontsVersion: "3"
