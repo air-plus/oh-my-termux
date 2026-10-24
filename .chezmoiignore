@@ -2,4 +2,3 @@ README.md
 LICENSE
 .gitignore
 setup.sh
-.config/nvim/lazyvim.json
