@@ -1,6 +1,8 @@
 git:
   diffRenderers:
     - command: delta --{{colorScheme}} --paging=never
+    - type: rawGit
+      name: default
 
 gui:
   nerdFontsVersion: "3"
