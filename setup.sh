@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [[ -t 1 ]]; then
+if [[ -t 1 && -z "${NO_COLOR:-}" ]]; then
   NC=$'\e[0m'
   GREEN=$'\e[32m'
   YELLOW=$'\e[33m'
