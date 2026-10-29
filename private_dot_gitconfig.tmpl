@@ -1,11 +1,15 @@
 [include]
 	path = ~/.config/delta/config.gitconfig
+{{- if and (hasKey . "name") (hasKey . "email") (hasKey . "signingkey") }}
 [user]
-	name = {{ .name | quote }}
-	email = {{ .email | quote }}
-	signingkey = {{ .signingkey | quote }}
+	name = {{ .name }}
+	email = {{ .email }}
+	signingkey = {{ .signingkey }}
+{{- end }}
+{{- if hasKey . "gpgsign" }}
 [commit]
 	gpgsign = {{ .gpgsign }}
+{{- end }}
 [merge]
 	conflictStyle = zdiff3
 [init]
