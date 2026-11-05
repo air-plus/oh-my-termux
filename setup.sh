@@ -273,8 +273,4 @@ for _m in "${SELECTED_MODULES[@]}"; do
 done
 
 info 'Oh My Termux 安装完成'
-termux-reload-settings
-
-if [[ "$YES_FLAG" == false ]] && command -v zsh &>/dev/null; then
-  exec zsh
-fi
+info '请重启 Termux'
