@@ -32,8 +32,7 @@ if (( $+commands[fzf] )); then
     --color=selected-bg:#45475A \
     --color=border:#6C7086,label:#CDD6F4
     --height=40% \
-    --layout=reverse \
-    --border"
+    --layout=reverse"
 
   if (( $+commands[bat] )); then
     export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
