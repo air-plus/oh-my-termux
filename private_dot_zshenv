@@ -13,11 +13,6 @@ if (( $+commands[nvim] )); then
   export VISUAL="$EDITOR"
 fi
 
-# GPG
-if (( $+commands[gpg] )); then
-  export GPG_TTY="$(tty)"
-fi
-
 # Starship
 if (( $+commands[starship] )); then
   export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
