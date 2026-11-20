@@ -6,6 +6,10 @@
 	email = {{ .email }}
 	signingkey = {{ .signingkey }}
 {{- end }}
+{{- if hasKey . "format" }}
+[gpg]
+	format = {{ .format }}
+{{- end }}
 {{- if hasKey . "gpgsign" }}
 [commit]
 	gpgsign = {{ .gpgsign }}
