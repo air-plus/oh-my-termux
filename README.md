@@ -11,20 +11,20 @@ Oh My Termux 是一个 Termux 配置集合仓库，集成 Zsh、Neovim、Git、Z
 ---
 
 ## ✨ 特性
-* **Shell**：Zsh + Zinit
-* **代码编辑器**：Neovim + LazyVim
-* **版本控制**：Git + Lazygit + Delta
-* **提示符**：Starship
-* **文件管理器**：Yazi
-* **终端复用器**：Zellij
-* **配色方案**：Catppuccin Mocha
-* **字体**：Maple Mono NF CN
+- **Shell**：Zsh + Zinit
+- **代码编辑器**：Neovim + LazyVim
+- **版本控制**：Git + Lazygit + Delta
+- **提示符**：Starship
+- **文件管理器**：Yazi
+- **终端复用器**：Zellij
+- **配色方案**：Catppuccin Mocha
+- **字体**：Maple Mono NF CN
 
 ---
 
 ## 🚀 快速开始
 ## 环境要求
-* **一个未进行任何操作的 Termux 环境**
+- **一个未进行任何操作的 Termux 环境**
 
 ### 全量安装
 在你的 Termux 执行下面这些命令 👇
@@ -77,4 +77,4 @@ chmod +x setup.sh
 
 ---
 
-<p align="center">Made with <a href="https://github.com/termux/termux-app">Termux</a></p>
+<p align="center">Made with ❤️</p>
