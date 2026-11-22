@@ -49,6 +49,7 @@ readonly MODULES=(
   'ripgrep'
   'starship'
   'termux'
+  'wget'
   'yazi'
   'zellij'
   'zoxide'
@@ -232,6 +233,10 @@ module_ripgrep() {
 module_starship() {
   apt-get install -y starship >/dev/null
   chezmoi apply "$HOME/.config/starship"
+}
+
+module_wget() {
+  apt-get install -y wget >/dev/null
 }
 
 module_yazi() {
