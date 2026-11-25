@@ -325,7 +325,7 @@ theme "default"
 // Theme to use when the host terminal reports a dark color palette.
 // Requires `theme_light` to also be set; otherwise `theme` is used.
 // 
-theme_dark "catppuccin-macchiato"
+theme_dark "catppuccin-mocha"
  
 // Theme to use when the host terminal reports a light color palette.
 // Requires `theme_dark` to also be set; otherwise `theme` is used.
