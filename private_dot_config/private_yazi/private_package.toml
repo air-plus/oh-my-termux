@@ -1,5 +1,17 @@
-[plugin]
-deps = []
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "1ef5fe0"
+hash = "187cc58ba7ac3befd49c342129e6f1b6"
+
+[[plugin.deps]]
+use = "peterfication/mux"
+rev = "e4e6771"
+hash = "1fcbcce39229bd75e81be4dcb1d3e5a8"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "1ef5fe0"
+hash = "d1e0499cae5f3aeb628c267616d4b682"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"

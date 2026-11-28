@@ -242,6 +242,7 @@ module_wget() {
 module_yazi() {
   apt-get install -y yazi file >/dev/null
   chezmoi apply "$HOME/.config/yazi"
+  ya pkg install >/dev/null
 }
 
 module_zellij() {
