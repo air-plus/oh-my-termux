@@ -1,24 +1,24 @@
 require("mux"):setup({
   aliases = {
-    eza_tree_1 = {
+    tree_level_1 = {
       previewer = "piper",
       args = {
         'eza -TL 1 -I "node_modules|.git" --group-directories-first --color=always --icons=always "$1"',
       },
     },
-    eza_tree_2 = {
+    tree_level_2 = {
       previewer = "piper",
       args = {
         'eza -TL 2 -I "node_modules|.git" --group-directories-first --color=always --icons=always "$1"',
       },
     },
-    eza_tree_3 = {
+    tree_level_3 = {
       previewer = "piper",
       args = {
         'eza -TL 3 -I "node_modules|.git" --group-directories-first --color=always --icons=always "$1"',
       },
     },
-    eza_tree_4 = {
+    tree_level_4 = {
       previewer = "piper",
       args = {
         'eza -TL 4 -I "node_modules|.git" --group-directories-first --color=always --icons=always "$1"',
