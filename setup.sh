@@ -240,6 +240,8 @@ module_wget() {
 }
 
 module_yazi() {
+  module_bat
+  module_eza
   apt-get install -y yazi file >/dev/null
   chezmoi apply "$HOME/.config/yazi"
   ya pkg install >/dev/null
