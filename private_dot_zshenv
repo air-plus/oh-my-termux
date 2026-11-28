@@ -32,8 +32,7 @@ if (( $+commands[fzf] )); then
   if (( $+commands[bat] )); then
     export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
       --preview 'bat -nr :500 \
-        --color=always \
-        --theme=\"Catppuccin Mocha\" {}'"
+        --color=always {}'"
   fi
 
   if (( $+commands[fd] )); then
