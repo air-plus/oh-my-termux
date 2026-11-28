@@ -13,6 +13,11 @@ use = "yazi-rs/plugins:piper"
 rev = "1ef5fe0"
 hash = "d1e0499cae5f3aeb628c267616d4b682"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-paste"
+rev = "1ef5fe0"
+hash = "5be02722d97561b6f7aec22429aa00be"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "38c08d8"

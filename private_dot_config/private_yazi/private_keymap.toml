@@ -1,9 +1,29 @@
 [[mgr.prepend_keymap]]
-on   = "P"
-run  = "plugin mux next"
-desc = "Cycle through mux previewers"
+on   = "!"
+run  = 'shell "$SHELL" --block'
+desc = "Open $SHELL here"
+
+[[mgr.prepend_keymap]]
+on   = "2"
+run  = "plugin smart-switch 1"
+desc = "Switch or create tab 2"
 
 [[mgr.prepend_keymap]]
 on   = "l"
 run  = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
+
+[[mgr.prepend_keymap]]
+on   = "p"
+run  = "plugin smart-paste"
+desc = "Paste into the hovered directory or CWD"
+
+[[mgr.prepend_keymap]]
+on   = "P"
+run  = "plugin mux next"
+desc = "Cycle through mux previewers"
+
+[[mgr.prepend_keymap]]
+on   = [ "t", "t" ]
+run  = "plugin smart-tab"
+desc = "Create a tab and enter the hovered directory"
