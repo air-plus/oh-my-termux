@@ -36,7 +36,7 @@ if (( $+commands[fzf] )); then
   fi
 
   if (( $+commands[fd] )); then
-    export FZF_DEFAULT_COMMAND='fd -HLt f -E .git'
+    export FZF_DEFAULT_COMMAND='fd -HLt f -E .git -E node_modules'
   fi
 fi
 
